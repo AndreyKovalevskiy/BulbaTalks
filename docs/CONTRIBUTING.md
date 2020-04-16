@@ -57,7 +57,7 @@ Supporting branches:
 1. Try to avoid using `git commit .`. Instead, try to get into the habit of checking which files are actually changed (with git status), and then adding files to your commits explicitly: `git add {file1} {file2}`.
 2. For local work!! If you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`.
 
-## <a name="Version"></a>
+## <a name="Version"> Versions</a>
 Version template X.Y.Z where:
 1. X, Y, Z - are non-negative integers, and MUST NOT contain leading zeroes.
 2. X is the major version, Y is the minor version, and Z is the patch version. <br/>
