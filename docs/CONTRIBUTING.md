@@ -111,5 +111,5 @@ WHAT — What have you done?
 HOW — What the reviewers should know?
 5. Use Tags, Labels if necessary.
 6. Add Project in Project section.
-
+7. Add Linked issue.
 
