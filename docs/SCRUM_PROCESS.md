@@ -1,7 +1,6 @@
 ### Team
 
-Product owner and Scram master:  
-[Dersim Davaod](https://github.com/dersim-davaod)  
+Product owner and Scram master: [Dersim Davaod](https://github.com/dersim-davaod)  
 Development team:  
  - [Tatsiana Gouteeva](https://github.com/TatsianaGouteeva)
  - [Tatsiana Khizhniak](https://github.com/badpanda13)
@@ -17,7 +16,6 @@ Sprint #1.
 Start: Wednesday 04/15  
 End: Tuesday 04/21  
 Goal: To prepare the development environment to be able to develop a Twitter-like application for iOS platform.  
-
 [Issue list](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/milestone/1)
 
 ### Links: 
