@@ -28,7 +28,7 @@ The BulbaTalks is an application using Twitter API with the same functionality.
 
 ## Installation
 
-### Upgrade MacOS and Xcode
+### Upgrade macOS and Xcode
 
 1. Upgrade MacOS to the latest version.
 2. Upgrade or install Xcode to the latest version.
