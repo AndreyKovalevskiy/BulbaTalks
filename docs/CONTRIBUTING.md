@@ -15,27 +15,27 @@ We Use [Github Flow](https://nvie.com/posts/a-successful-git-branching-model/).
 ### Branches model
 #### The main branches
 The central repo holds two main branches with an infinite lifetime:
-1. `master`:
+1. `master`: <br/>
 We consider `origin/master` to be the main branch where the source code of `HEAD` always reflects a production-ready state. When changes are merged into `master`, this is a new production release by definition.
-2. `develop`: 
+2. `develop`: <br/> 
 We consider `origin/develop` to be the main branch where the source code of `HEAD` always reflects a state with the latest delivered development changes for the next release. Some would call this the “integration branch”. When the source code in the `develop` branch reaches a stable point and is ready to be released, all of the changes should be merged back into `master` somehow and then tagged with a release number.
 
 #### Supporting branches
 Unlike the main branches, supporting branches always have a limited life time, since they will be removed eventually. 
 
-1. Feature branches 
+1. Feature branches <br/> 
 May branch off from develop. Must merge back into develop. In our model we use `--no-ff` flag, when we merge back into develop branch.
 
-2. Release branches
+2. Release branches <br/>
 May branch off from `develop`. Must merge back into `develop` and `master`. Release branches support preparation of a new production release. The key moment to branch off a new release branch `from develop` is when develop (almost) reflects the desired state of the new release. They allow for minor bug fixes and preparing meta-data for a release (version number, build dates, etc.), we can not add new features into release branch.
 
-3. Hotfix branches
+3. Hotfix branches <br/>
 May branch off from `master`. Must merge back into `develop` and `master`. They arise from the necessity to act immediately upon an undesired state of a live production version.
 
 ### Branches naming
 The main branches:
 - `master`
-- `develop`
+- `develop` <br/>
 Supporting branches:
 - `release-[issue number]`
 - `hotfix-issue number]`
@@ -60,7 +60,7 @@ Supporting branches:
 ## <a name="Version"></a>
 Version template X.Y.Z where:
 1. X, Y, Z - are non-negative integers, and MUST NOT contain leading zeroes.
-2. X is the major version, Y is the minor version, and Z is the patch version.
+2. X is the major version, Y is the minor version, and Z is the patch version. <br/>
 `1.9.0 -> 1.10.0 -> 1.11.0.`
 3. Once a versioned package has been released, the contents of that version MUST NOT be modified. Any modifications MUST be released as a new version.
 4. Major version zero (0.y.z) is for initial development. 
