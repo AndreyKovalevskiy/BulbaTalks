@@ -110,6 +110,6 @@ WHY — Which tickets/issues/proposals you are working on?
 WHAT — What have you done?
 HOW — What the reviewers should know?
 5. Use Tags, Labels if necessary.
-
+6. Add Project in Project section.
 
 
