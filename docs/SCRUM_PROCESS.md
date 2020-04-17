@@ -39,7 +39,7 @@ Sprint Goal?
 Here you can find the Daily Scrum status of our Development Team [The daily status](https://docs.google.com/spreadsheets/d/1swL2wWhy6hZb2XJzyvXoQbx3UiBeuGJYmSXoTl4N0NA/edit#gid=0)   
 
 ### Sprint Review  
-The Sprint Review icludes following elements:  
+The Sprint Review include following elements:  
 1. The Development Team demonstrates the work it has "Done"  
 2. The Product Owner demonstrates what Product Backlog items have been "Done" and what has not been "Done"  
 3. The Scrum Group make a decision on what to do next.  
@@ -51,6 +51,7 @@ Three main actions of the Sprint Retrospective:
 1. Answer the question: what went well?    
 2. Answer the question: what went not so good?    
 3. Distribute the action items.  
+  
 Here you can find the [Notes about retrospective](https://docs.google.com/spreadsheets/d/17-9C6O2Z3nYUSz6iaBnfQODPEN3vocRj19LgzYjfdxg/edit#gid=0)
 
 ### The schedule of key Scrum events  
