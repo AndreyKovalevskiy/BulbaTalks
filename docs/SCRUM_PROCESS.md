@@ -1,6 +1,12 @@
+This doc contains the definition of: Scrum structure, information about team, information about sprints, Scrum artifacts, events and Scrum's role.   
+
+### Scrum 
+BulbaTalks project’s team use Scrum framework for developing product.  
+More information about Scrum you can find here: [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v1/scrum-guide-us.pdf)    
+
 ### Team
 
-Product owner and Scram master: [Dersim Davaod](https://github.com/dersim-davaod)  
+Product owner and Scrum master: [Dersim Davaod](https://github.com/dersim-davaod)  
 Development team:  
  - [Tatsiana Gouteeva](https://github.com/TatsianaGouteeva)
  - [Tatsiana Khizhniak](https://github.com/badpanda13)
@@ -10,54 +16,63 @@ Development team:
  - [Andrey Pogosskiy](https://github.com/BongDiDong)
  - [Dzmitry Krukov](https://github.com/silvaby)
 
-### Sprints
+### **Scrum Events**    
+### The Sprint  
 
-Sprint #1.  
-Start: Wednesday 04/15  
-End: Tuesday 04/21  
-Goal: To prepare the development environment to be able to develop a Twitter-like application for iOS platform.  
-[Issue list](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/milestone/1)
+Sprints consist of the Sprint Planning, Daily Scrums, the development work, the Sprint Review, and the Sprint Retrospective.
 
-### Links: 
+**Sprint Planning**
+Sprint Planning is creating of Product Backlog items which should be done in Sprint by Development Team to achieve the Sprint Goal.  
+Sprint Goal is established reference point for Sprint that will be achieved through the execution of a part of Product Backlog items.   
 
-[The daily status](https://docs.google.com/spreadsheets/d/1swL2wWhy6hZb2XJzyvXoQbx3UiBeuGJYmSXoTl4N0NA/edit#gid=0)  
-[The notes about retrospective](https://docs.google.com/spreadsheets/d/17-9C6O2Z3nYUSz6iaBnfQODPEN3vocRj19LgzYjfdxg/edit#gid=0)
+Here you can find current status of the Sprint Goal [Sprint notes](https://docs.google.com/document/d/1PxbVa85ZyZQN0tlnibdIgxR1PC301dWRXumpPnWi33w/edit)  
+Link to [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)   
+
+### Daily Scrum  
+The Daily Scrum is a 15-minute time-boxed event for the Development Team to synchronize activities and create a plan for the next 24 hours.   
+During the meeting, each member of the Development Team explain:  
+1. What did I do yesterday that helped the Development Team meet the Sprint Goal?  
+2. What will I do today to help the Development Team meet the Sprint Goal?  
+3. Do I see any impediment that prevents me or the Development Team from meeting the
+Sprint Goal?   
+
+Here you can find the Daily Scrum status of our Development Team [The daily status](https://docs.google.com/spreadsheets/d/1swL2wWhy6hZb2XJzyvXoQbx3UiBeuGJYmSXoTl4N0NA/edit#gid=0)   
+
+### Sprint Review  
+The Sprint Review icludes following elements:  
+1. The Development Team demonstrates the work it has "Done"  
+2. The Product Owner demonstrates what Product Backlog items have been "Done" and what has not been "Done"  
+3. The Scrum Group make a decision on what to do next.  
+
+### Sprint Retrospective  
+The Sprint Retrospective is an opportunity for the Scrum Team to inspect itself and create a plan for improvements to be enacted during the next Sprint.  
+The Sprint Retrospective occurs after the Sprint Review and prior to the next Sprint Planning.  
+Three main actions of the Sprint Retrospective:   
+1. Answer the question: what went well?    
+2. Answer the question: what went not so good?    
+3. Distribute the action items.  
+Here you can find the [Notes about retrospective](https://docs.google.com/spreadsheets/d/17-9C6O2Z3nYUSz6iaBnfQODPEN3vocRj19LgzYjfdxg/edit#gid=0)
 
 ### The schedule of key Scrum events  
 
-Daily scrum meetings: each workday 8:00 - 8:15 p.m.  
-Review: Monday 04/20  
-Retro:  Tuesday 04/21  
-Sprint planning: Wednesday 04/22  
+**Daily scrum meetings:** each workday 8:00 - 8:15 p.m.    
+**Review:** Monday  
+**Retro:**  Tuesday  
+**Sprint planning:** Wednesday  
 
-[Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)  
+### **Scrum Artifacts**   
+Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation.    
+### Product Backlog  
+Product Backlog is an ordered list of everything that the product need. The Product Owner is responsible for the Product Backlog, including its content, availability, and ordering.    
+### Sprint Backlog  
+The Sprint Backlog is the set of Product Backlog items selected for the Sprint, plus a plan for delivering the product Increment and realizing the Sprint Goal. The Sprint Backlog describes whole amount of work that should be done by the Development Team.  
+### Increment    
+The Increment is the sum of all the Product Backlog items completed during a Sprint and the value of the increments of all previous Sprints.   
 
-### Issues 
+Here you can find the Scrum Artifacts [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)   
 
-1. [How create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue)
-2. Title:
-- Keep your titles short and descriptive.
-- Title should always be 50 characters or less.
-3. Description:
-- Include links to the specific application views you’re describing.
-- Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”
-- Use @mentions and references inside of Issues, for notify other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
->This is subtask for #2
-4. Use color-coded labels, they help us categorize and filter our issues .
-5. Add Project in Project section, and issue will be displayed on [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1).
-6. Avoid duplication in issues.
-7. When you choose an issue, you should add yourself (someone from your team) in the assignees' section.
+### How to create a new issue  
+Follow the link [CONTRIBUTE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CONTRIBUTING.md) in section **Issue**.    
 
-
-### Dragging the issue between the columns on [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1).
-
-Each of the step in the process requires 4 statuses: **Sprint Backlog**, **In Progress**, **PR**, **Done**.    
-**Sprint Backlog** - the issue is waiting to start.  
-**In Progress** - the issue is currently being worked on.  
-**PR** - the issue is request review from collaborators.  
-**Done** - the issues has been completed.  
-When dragging issue between the columns on Agile board it changes the status of issue.   
-1. When developer assignees issue he dragging it **In Progress**, it means he start working.   
-2. After the work is done he opens a new PR and request review from collaborators, it means that the issue can be dragged to **PR**.    
-3. If all reviwers approves it - the task can be dragged in **Done**.  
-4. If reviewer request changes, the task will be dragged back to **In Progress**.  
+### Dragging the issue between the columns on [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)   
+Follow the link [CONTRIBUTE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CONTRIBUTING.md) in section **Agile board movement**.   
