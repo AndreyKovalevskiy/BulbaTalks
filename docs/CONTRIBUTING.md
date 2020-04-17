@@ -98,6 +98,7 @@ Manual tests and unit tests.
 1.3 Use color-coded labels, they help us categorize and filter our issues.
 
 1.4 When you choose an issue, you should add yourself (someone from your team) in the assignees' section.
+
 2. Avoid duplication in issues.
 
 #### Issue estimation
@@ -111,11 +112,11 @@ Matching Scrum Methodology.
 
 1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-1.2. Pull request title: 
+1.2 Pull request title: 
 
 The pull request’s name should tell the changes itself generally, to give an overview idea of what the pull request is about.
 
-1.3. Pull request’s description: 
+1.3 Pull request’s description: 
 
 Should answer the following questions:
 
