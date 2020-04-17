@@ -52,7 +52,7 @@ Supporting branches:
 
 ### Operations that are allowed on the commit history
 
-1. Try to avoid using `git commit .`. Instead, try to get into the habit of checking which files are actually changed (with git status), and then add files to your commits explicitly: `git add {file1} {file2}`. If you made changes in one document that is related, you can use `git commit .`. 
+1. Try to avoid using `git commit .`. Instead, try to get into the habit of checking which files are actually changed (with git status), and then add files to your commits explicitly: `git add {file1} {file2}`.
 2. For local repository!! If you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`.
 
 ## Versions
