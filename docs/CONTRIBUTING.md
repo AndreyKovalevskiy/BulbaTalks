@@ -81,10 +81,14 @@ Manual tests and unit tests.
 #### Create a new issue
 
 1. [How create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue)
+
 1.1 Title:
+
 - Keep your titles short and descriptive.
 - The title should always be 50 characters or less.
+
 1.2 Description:
+
 - Include links to the specific application views you’re describing.
 - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”
 - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
@@ -92,6 +96,7 @@ Manual tests and unit tests.
 >This is subtask for #2
 
 1.3 Use color-coded labels, they help us categorize and filter our issues.
+
 1.4 When you choose an issue, you should add yourself (someone from your team) in the assignees' section.
 2. Avoid duplication in issues.
 
@@ -105,9 +110,11 @@ Matching Scrum Methodology.
 ### Pull Request
 
 1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
 1.2 Pull request title: 
 
 The pull request’s name should tell the changes itself generally, to give an overview idea of what the pull request is about.
+
 1.3 Pull request’s description: 
 
 Should answer the following questions:
