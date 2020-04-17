@@ -1,6 +1,6 @@
 # BulbaTalks
 
-The BulbaTalks is an application using Twitter API. BulbaTalks has the same functionality like a Twitter.
+The BulbaTalks is an application using Twitter API. BulbaTalks has the same functionality as Twitter.
 
 **Twitter** is a microblogging system that allows you to send and receive short posts called tweets. Tweets can be up to 140 characters long and can include links to relevant websites and resources.
 
@@ -26,7 +26,7 @@ Install development environment tools.
 1. Upgrade macOS to the latest version.
 2. Upgrade or install Xcode to the latest version.
 
-**NOTE:** all the commands below must be entered into the [Terminal](https://support.apple.com/ru-ru/guide/terminal/welcome/mac).
+**NOTE:** all the commands below must be entered into the [Terminal](https://support.apple.com/guide/terminal/welcome/mac).
 
 ### Install [Homebrew](https://brew.sh)
 
@@ -60,7 +60,7 @@ git clone https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project
 
 ## Usage
 
-1. Open file with `*.xcodeproj` extension.
+1. Open the file with `*.xcodeproj` extension.
 2. Select a device or simulator.
 3. Press the `RUN` button.
 4. Enjoy it.
