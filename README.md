@@ -19,14 +19,14 @@ The BulbaTalks is an application using Twitter API. BulbaTalks has the same func
 
 ## Installation
 
-Itall dev environment tools.
+Install development environment tools.
 
 ### Upgrade macOS and Xcode
 
 1. Upgrade macOS to the latest version.
 2. Upgrade or install Xcode to the latest version.
 
-**NOTE:** all the commands below must be entered into the terminal.
+**NOTE:** all the commands below must be entered into the [Terminal](https://support.apple.com/ru-ru/guide/terminal/welcome/mac).
 
 ### Install [Homebrew](https://brew.sh)
 
@@ -40,7 +40,7 @@ Itall dev environment tools.
 brew install git
 ```
 
-### Install SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
+### Install [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
 
 ```
 brew install swiftformat
@@ -68,12 +68,6 @@ git clone https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project
 ## Built With
 
 [Twitter API](https://developer.twitter.com/en/docs)
-
-## Contributing
-
-If you want to contribute, read the [CONTRIBUTE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CONTRIBUTING.md)
-
-Also read the [CODE_OF_CONDUCT.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CODE_OF_CONDUCT.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
