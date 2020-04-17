@@ -7,7 +7,9 @@ If you believe someone is violating the code of conduct, we ask that you report 
 The BulbaTalks project`s team has committees to handle specific tasks. The current committees are:
 
 •  Dersim Davaod  (Telegram: @dersimdavaod)
+
 •  Tatsiana Khizhniak (Telegram: @tanyakhiz)
+
 •  Dzmitry Krukov (Telegram: @silvaby)
 
 ## Code of Conduct
