@@ -4,7 +4,7 @@ This Contribution guide describes:
 
 - [Work with branches](#branches-model-and-naming).
 - [Work with commits](#commit).
-- [Version our app](#version).
+- [Version our app](#versions).
 - [Test our application](#testing).
 - [Work with issues/PRs](#issues-and-pull-requests).
 
