@@ -5,13 +5,13 @@ This Contribution guide describes:
 - [Work with branches](#branches-model-and-naming).
 - [Work with commits](#commit).
 - [Version our app](#versions).
-- [Test our application](#testing).
+- [Test our app](#testing).
 - [Work with issues/PRs](#issues-and-pull-requests).
 
 
 ## Branches model and naming
 
-We Use [git-flow model](https://nvie.com/posts/a-successful-git-branching-model/).
+We use [git-flow model](https://nvie.com/posts/a-successful-git-branching-model/).
 
 ### Branches model 
 
@@ -44,8 +44,8 @@ Supporting branches:
 
 ### Commit Message
 
-1. Use present tense.
-2. Start your message  with an uppercase letter.
+1. Use the present tense.
+2. Start your message with an uppercase letter.
 3. Write in English.
 4. The first line of your commit message must be maximum 50 characters long. If you need more verbose description, write the first line as a summary, leave a blank line and then start writing the description. Each line in the description should though wrap at the 72nd mark.
 5. Use the imperative in the title. For example, you can start the title with these words: Refactor, Update, Remove, Release, Fix, Merge, Rename, etc.
@@ -63,15 +63,15 @@ Version template X.Y.Z. [Here](https://semver.org/) you can read rules.
 
 ### In our project we use:
 
-Manual tests and unit tests.
+Manual and unit tests.
 
 ### Process
 
 1. Make sure everything is stable in your branch before the merge:
 - Do manual testing.
 - Create your own unit test to test your feature, if it is needed.
-3. Merge.
-4. If you found a bug, file a new issue.
+2. Merge.
+3. If you found a bug, file a new issue.
 
 
 ## Issues and Pull Requests
