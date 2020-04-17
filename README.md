@@ -1,6 +1,6 @@
 # BulbaTalks
 
-The BulbaTalks is an application using Twitter API with the same functionality.
+The BulbaTalks is an application using Twitter API. BulbaTalks has the same functionality like a Twitter.
 
 **Twitter** is a microblogging system that allows you to send and receive short posts called tweets. Tweets can be up to 140 characters long and can include links to relevant websites and resources.
 
@@ -13,70 +13,55 @@ The BulbaTalks is an application using Twitter API with the same functionality.
 ## Getting Started
 
 - Read this Readme doc
-- Read the [CONTRIBUTE.md]()
-- Read the [LICENSE.md]()
-- Read the [CODE_OF_CONDUCT.md]()
-
-### Prerequisites
-
-- install dev environment tools:
-  - [macOS 10.15.4](https://support.apple.com/downloads/macos)
-  - [Xcode 11.4](https://developer.apple.com/download/)
-  - [Homebrew](https://brew.sh)
-  - via brew: latest version of [SwiftFormat](https://github.com/nicklockwood/SwiftFormat), [SwiftLint](https://github.com/realm/SwiftLint), [Git](https://git-scm.com/download/mac)
-- clone [the repository](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project)
+- Read the [CONTRIBUTE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CONTRIBUTING.md)
+- Read the [LICENSE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/LICENSE.md)
+- Read the [CODE_OF_CONDUCT.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CODE_OF_CONDUCT.md)
 
 ## Installation
 
+Itall dev environment tools.
+
 ### Upgrade macOS and Xcode
 
-1. Upgrade MacOS to the latest version.
+1. Upgrade macOS to the latest version.
 2. Upgrade or install Xcode to the latest version.
 
-### Install Homebrew
+**NOTE:** all the commands below must be entered into the terminal.
 
-Paste that into Terminal: 
-```
+### Install [Homebrew](https://brew.sh)
+
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-### Install Git
+### Install [Git](https://git-scm.com/download/mac)
 
-Paste that into Terminal:
 ```
 brew install git
 ```
 
-### Install SwiftFormat
+### Install SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
 
-Paste that into Terminal:
 ```
 brew install swiftformat
 ```
 
-[More info about SwiftFormat here.](https://github.com/nicklockwood/SwiftFormat)
+### Install [SwiftLint](https://github.com/realm/SwiftLint)
 
-
-### Install SwiftLint
-
-Paste that into Terminal:
 ```
 brew install swiftlint
 ```
 
-[More info about SwiftLint here.](https://github.com/realm/SwiftLint)
-
 ### Clone the repository
 
-Paste that into Terminal:
 ```
 git clone https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project.git
 ```
 
 ## Usage
 
-1. Open the `BulbaTalks.xcodeproj`.
-2. Set the active scheme.
+1. Open file with `*.xcodeproj` extension.
+2. Select a device or simulator.
 3. Press the `RUN` button.
 4. Enjoy it.
 
@@ -86,7 +71,9 @@ git clone https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project
 
 ## Contributing
 
-Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
+If you want to contribute, read the [CONTRIBUTE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CONTRIBUTING.md)
+
+Also read the [CODE_OF_CONDUCT.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CODE_OF_CONDUCT.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
@@ -97,8 +84,7 @@ Please read [CONTRIBUTING.md]() for details on our code of conduct, and the proc
 - [Andrey Kovalevskiy](https://github.com/AndreyKovalevskiy)
 - [Andrey Pogosskiy](https://github.com/BongDiDong)
 - [Dzmitry Krukov](https://github.com/silvaby)
-- [Dersim Davaod](https://github.com/dersim-davaod)
 
 ## License
 
-This project is licensed under the `Do What The F_ck You Want To Public License` - see the [LICENSE.md](http://www.wtfpl.net) file for details.
+This project is licensed under the `Do What The F_ck You Want To Public License` - see the [LICENSE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/LICENSE.md) file for details.
