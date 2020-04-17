@@ -1,115 +1,131 @@
 # Contributing
+
 This Contribution guide describes:
 
-- [How we work with branches](*Branches)?
-- [How we work with commits](*Commits)?
-- [How we version our app?](*Version)
-- [how we test our application?](*Testing)
-- [How we work with issues/PRs](*Issue)?
+- [Work with branches](#branches-model-and-naming).
+- [Work with commits](#commit).
+- [Version our app](#version).
+- [Test our application](#testing).
+- [Work with issues/PRs](#issues-and-pull-requests).
 
 
-## <a name="Branches">Branches model and naming</a>
+## Branches model and naming</a>
 
-We Use [Github Flow](https://nvie.com/posts/a-successful-git-branching-model/).
+We Use [git-flow model](https://nvie.com/posts/a-successful-git-branching-model/).
 
-### Branches model
+### Branches model 
+
 #### The main branches
-The central repo holds two main branches with an infinite lifetime:
-1. `master`: <br/>
-We consider `origin/master` to be the main branch where the source code of `HEAD` always reflects a production-ready state. When changes are merged into `master`, this is a new production release by definition.
-2. `develop`: <br/> 
-We consider `origin/develop` to be the main branch where the source code of `HEAD` always reflects a state with the latest delivered development changes for the next release. Some would call this the “integration branch”. When the source code in the `develop` branch reaches a stable point and is ready to be released, all of the changes should be merged back into `master` somehow and then tagged with a release number.
+
+The central repo holds [two main branches](https://nvie.com/posts/a-successful-git-branching-model/#the-main-branches) with an infinite lifetime:
+
+`master` and `develop`.
 
 #### Supporting branches
-Unlike the main branches, supporting branches always have a limited life time, since they will be removed eventually. 
 
-1. Feature branches <br/> 
-May branch off from develop. Must merge back into develop. In our model we use `--no-ff` flag, when we merge back into develop branch.
-
-2. Release branches <br/>
-May branch off from `develop`. Must merge back into `develop` and `master`. Release branches support preparation of a new production release. The key moment to branch off a new release branch `from develop` is when develop (almost) reflects the desired state of the new release. They allow for minor bug fixes and preparing meta-data for a release (version number, build dates, etc.), we can not add new features into release branch.
-
-3. Hotfix branches <br/>
-May branch off from `master`. Must merge back into `develop` and `master`. They arise from the necessity to act immediately upon an undesired state of a live production version.
+As supporting branches we will use branches with limited lifetime: 
+- [Feature branches](https://nvie.com/posts/a-successful-git-branching-model/#feature-branches) (use `--no-ff` flag, when merging back into develop)
+- [Release branches](https://nvie.com/posts/a-successful-git-branching-model/#release-branches)
+- [Hotfix branches](https://nvie.com/posts/a-successful-git-branching-model/#hotfix-branches)
 
 ### Branches naming
+
 The main branches:
 - `master`
-- `develop` <br/>
+- `develop`
+
 Supporting branches:
-- `release-[issue number]`
-- `hotfix-issue number]`
-- `feature-issue number]`
+- `release-[issue number]` (`release-2`)
+- `hotfix-[issue number]` (`hotfix-45`)
+- `feature-[issue number]` (`feature-59`)
 
 
-## <a name="Commits">Commit</a>
+## Commit
 
 ### Commit Message
 
-1. Do not use past tense.
-2. Message starts with a uppercase letter.
+1. Use present tense.
+2. Start your message  with an uppercase letter.
 3. Write in English.
-4. The first line(title) should always be 50 characters or less and that it should be followed by a blank line and then a more detailed description.
-5. Use the imperative in the title. For example, you can start title with this words: Refactor, Update, Remove, Release, Fix, Merge, Rename and etc.
+4. The first line of your commit message must be maximum 50 characters long. If you need more verbose description, write the first line as a summary, leave a blank line and then start writing the description. Each line in the description should though wrap at the 72nd mark.
+5. Use the imperative in the title. For example, you can start the title with these words: Refactor, Update, Remove, Release, Fix, Merge, Rename, etc.
 
-### Operations that are allowed over history
+### Operations that are allowed on the commit history
 
-1. Try to avoid using `git commit .`. Instead, try to get into the habit of checking which files are actually changed (with git status), and then adding files to your commits explicitly: `git add {file1} {file2}`.
-2. For local work!! If you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`.
+1. Try to avoid using `git commit .`. Instead, try to get into the habit of checking which files are actually changed (with git status), and then add files to your commits explicitly: `git add {file1} {file2}`. If you made changes in one document that is related, you can use `git commit .`. 
+2. For local repository!! If you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`.
 
-## <a name="Version"> Versions</a>
-Version template X.Y.Z where:
-1. X, Y, Z - are non-negative integers, and MUST NOT contain leading zeroes.
-2. X is the major version, Y is the minor version, and Z is the patch version. <br/>
-`1.9.0 -> 1.10.0 -> 1.11.0.`
-3. Once a versioned package has been released, the contents of that version MUST NOT be modified. Any modifications MUST be released as a new version.
-4. Major version zero (0.y.z) is for initial development. 
-5. Version 1.0.0 defines the public API.
-6. Patch version Z MUST be incremented if only backwards compatible bug fixes are introduced.
-7. Minor version Y MUST be incremented if new, backwards compatible functionality is introduced to the public API.
-8. Major version X MUST be incremented if any backwards incompatible changes are introduced to the public API. 
+## Versions
 
-## <a name="Testing"> Testing</a>
+Version template X.Y.Z. [Here](https://semver.org/) you can read rules.
+
+## Testing
+
 ### In our project we use:
-1. iOS UI Testing
-2. Automated Testing using CI/CD.
+
+Manual tests and unit tests.
 
 ### Process
-1. Make sure everything is stable in your branch befome merge:
+
+1. Make sure everything is stable in your branch before the merge:
 - Do manual testing.
-- Create your own Unit test for testing your feature and test your feature, if it needed.
+- Create your own unit test to test your feature, if it is needed.
 3. Merge.
-4. If an bag is found, a new issue is created.
+4. If you found a bug, file a new issue.
 
 
 ## Issues and Pull Requests
 
 ### Issues 
+
+#### Create a new issue
+
 1. [How create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue)
-2. Title:
+1.1 Title:
 - Keep your titles short and descriptive.
-- Title should always be 50 characters or less.
-3. Description:
+- The title should always be 50 characters or less.
+1.2 Description:
 - Include links to the specific application views you’re describing.
 - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”
-- Use @mentions and references inside of Issues, for notify other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
+- Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
+
 >This is subtask for #2
-4. Use color-coded labels, they helps us categorize and filter our issues .
-5. Add Project in Project section, and issue will be displayed on board.
-6. Avoid duplication in issues.
-7. When you choose an issue, you should add yourself (someone from your team) in the assignees' section.
+
+1.3 Use color-coded labels, they help us categorize and filter our issues.
+1.4 When you choose an issue, you should add yourself (someone from your team) in the assignees' section.
+2. Avoid duplication in issues.
+
+#### Issue estimation
+
+Matching Scrum Methodology.
+1. The Development Team is responsible for all estimates.
+2. Issues are estimated before the sprint on Sprint Planning.
+3. Update the estimate of the remaining work when part of the work is completed.
 
 ### Pull Request
-1. [How create an pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
-2. [List of reviewers changes every sprint](https://docs.google.com/spreadsheets/d/1qT-_LOewagvy2EIWhjzVdvrnLMwuYYRqaSpaFY1JTdk/edit?usp=sharing)
-3. Pull request name: 
+
+1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1.2 Pull request title: 
+
 The pull request’s name should tell the changes itself generally, to give an overview idea of what the pull request is about.
-4. Pull request’s descriptions:
+1.3 Pull request’s description: 
+
 Should answer the following questions:
-WHY — Which tickets/issues/proposals you are working on? 
+
+WHY — Which tickets/issues/proposals you are working on?
+
 WHAT — What have you done?
+
 HOW — What the reviewers should know?
-5. Use Tags, Labels if necessary.
+2. A list of reviewers does not change for every sprint.
+3. Use Labels if necessary.
+4. Add Project in Project section.
+5. Add Linked issue.
 
+### Agile board movement
 
-
+1. Backlog - ordered list of known product requirements.
+2. Sprint Backlog - set of Backlog issues that are taken in Sprint.
+3. In Progress - set of Sprint Backlog issues that are assigned to the developer.
+4. PR - set of In Progress issues that are having a Pull Request.
+5. Done - set of completed tasks.
