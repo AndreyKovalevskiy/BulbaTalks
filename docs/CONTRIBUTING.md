@@ -9,7 +9,7 @@ This Contribution guide describes:
 - [Work with issues/PRs](#issues-and-pull-requests).
 
 
-## Branches model and naming</a>
+## Branches model and naming
 
 We Use [git-flow model](https://nvie.com/posts/a-successful-git-branching-model/).
 
