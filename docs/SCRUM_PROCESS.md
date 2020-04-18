@@ -1,7 +1,7 @@
 This doc contains the definition of: Scrum structure, information about team, information about sprints, Scrum artifacts, events and Scrum's role.   
 
 ### Scrum 
-BulbaTalks project’s team use Scrum framework for developing product.  
+BulbaTalks project’s team uses the Scrum framework for developing the product.  
 More information about Scrum you can find here: [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v1/scrum-guide-us.pdf)    
 
 ### Team
@@ -17,16 +17,17 @@ Development team:
  - [Dzmitry Krukov](https://github.com/silvaby)
 
 ### **Scrum Events**    
-### The Sprint  
+### The Sprint    
 
-Sprints consist of the Sprint Planning, Daily Scrums, the development work, the Sprint Review, and the Sprint Retrospective.
+Sprints consist of the Sprint Planning, Daily Scrums, the development work, the Sprint Review, and the Sprint Retrospective. Sprints are lasts  one week.  
 
 **Sprint Planning**
 Sprint Planning is creating of Product Backlog items which should be done in Sprint by Development Team to achieve the Sprint Goal.  
 Sprint Goal is established reference point for Sprint that will be achieved through the execution of a part of Product Backlog items.   
+Sprint Planning is time-boxed to a maximum of two hours for a one-week Sprint.  
 
 Here you can find current status of the Sprint Goal [Sprint notes](https://docs.google.com/document/d/1PxbVa85ZyZQN0tlnibdIgxR1PC301dWRXumpPnWi33w/edit)  
-Link to [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)   
+See the current sprint backlog at [project's Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)   
 
 ### Daily Scrum  
 The Daily Scrum is a 15-minute time-boxed event for the Development Team to synchronize activities and create a plan for the next 24 hours.   
@@ -39,14 +40,10 @@ Sprint Goal?
 Here you can find the Daily Scrum status of our Development Team [The daily status](https://docs.google.com/spreadsheets/d/1swL2wWhy6hZb2XJzyvXoQbx3UiBeuGJYmSXoTl4N0NA/edit#gid=0)   
 
 ### Sprint Review  
-The Sprint Review include following elements:  
-1. The Development Team demonstrates the work it has "Done"  
-2. The Product Owner demonstrates what Product Backlog items have been "Done" and what has not been "Done"  
-3. The Scrum Group make a decision on what to do next.  
+The Sprint Review usually held each Monday. This is at most a one-hour meeting for one-week Sprints.
 
 ### Sprint Retrospective  
-The Sprint Retrospective is an opportunity for the Scrum Team to inspect itself and create a plan for improvements to be enacted during the next Sprint.  
-The Sprint Retrospective occurs after the Sprint Review and prior to the next Sprint Planning.  
+On the next day after the Sprint Review our Scrum Team usually have the Sprint Retrospective. This is at most a one-hour meeting for one-week Sprints.  
 Three main actions of the Sprint Retrospective:   
 1. Answer the question: what went well?    
 2. Answer the question: what went not so good?    
@@ -57,19 +54,12 @@ Here you can find the [Notes about retrospective](https://docs.google.com/spread
 ### The schedule of key Scrum events  
 
 **Daily scrum meetings:** each workday 8:00 - 8:15 p.m.    
-**Review:** Monday  
-**Retro:**  Tuesday  
-**Sprint planning:** Wednesday  
+**Review:** each Monday 8.00 - 9.00 p.m  
+**Retro:** each Tuesday 8.00 - 9.00 p.m 
+**Sprint planning:** each Wednesday 8.00 - 10.00 p.m 
 
 ### **Scrum Artifacts**   
-Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation.    
-### Product Backlog  
-Product Backlog is an ordered list of everything that the product need. The Product Owner is responsible for the Product Backlog, including its content, availability, and ordering.    
-### Sprint Backlog  
-The Sprint Backlog is the set of Product Backlog items selected for the Sprint, plus a plan for delivering the product Increment and realizing the Sprint Goal. The Sprint Backlog describes whole amount of work that should be done by the Development Team.  
-### Increment    
-The Increment is the sum of all the Product Backlog items completed during a Sprint and the value of the increments of all previous Sprints.   
-
+Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation. Our Scrum Team have a Product Backlog, Sprint Backlog, Increment and work with them in the same way as described in the [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v1/scrum-guide-us.pdf).      
 Here you can find the Scrum Artifacts [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)   
 
 ### How to create a new issue  
