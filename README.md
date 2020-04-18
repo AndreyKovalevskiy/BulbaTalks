@@ -1,6 +1,10 @@
+**CocoaHeads-iOS-School-Twitter-project** - the repository is created for educational purposes.
+
+The BulbaTalks is the name of a training project from CocoaHeads-iOS-School (first generation).
+
 # BulbaTalks
 
-The BulbaTalks is a learning project from CocoaHeads-iOS-School. BulbaTalks is an application using Twitter API. BulbaTalks has some features that are on Twitter.
+BulbaTalks is an application using Twitter API. This application has some features that are on Twitter.
 
 **Twitter** is a microblogging system that allows you to send and receive short posts called tweets. Tweets can be up to 140 characters long and can include links to relevant websites and resources.
 
