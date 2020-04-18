@@ -110,6 +110,8 @@ Matching Scrum Methodology.
 
 ### Pull Request
 
+#### Create Pull Request
+
 1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 1.2 Pull request title: 
@@ -126,10 +128,17 @@ WHAT — What have you done?
 
 HOW — What the reviewers should know?
 
+1.4 Add Linked issue.
+1.5 Add Project in the Project section.
 2. A list of reviewers does not change for every sprint.
 3. Use Labels if necessary.
-4. Add Project in Project section.
-5. Add Linked issue.
+4. Don't set a Milestone.
+
+#### Reviewing process
+
+1. If you do not like the existing implementation - suggest your implementation and justify why it is better.
+2. Resolve conversation can only a person, who opened it.
+3. Merge pull request can only a person, who created a pull request.
 
 ### Agile board movement
 
