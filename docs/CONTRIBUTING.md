@@ -129,7 +129,9 @@ WHAT — What have you done?
 HOW — What the reviewers should know?
 
 1.4 Add Linked issue.
+
 1.5 Add Project in the Project section.
+
 2. A list of reviewers does not change for every sprint.
 3. Use Labels if necessary.
 4. Don't set a Milestone.
