@@ -1,4 +1,4 @@
-This doc contains the definition of: Scrum structure, information about sprints, Scrum artifacts, events and team members' roles.   
+This doc contains the information about: Scrum structure, Sprints, Scrum artifacts, Scrum Events and team members' roles.   
 
 ### Scrum 
 BulbaTalks project’s [team](#team) uses the Scrum framework for developing the product.  
@@ -7,14 +7,7 @@ More information about Scrum you can find here: [Scrum Guide](https://www.scrumg
 ### Team
 
 Product owner and Scrum master: [Dersim Davaod](https://github.com/dersim-davaod)  
-Development team:  
- - [Tatsiana Gouteeva](https://github.com/TatsianaGouteeva)
- - [Tatsiana Khizhniak](https://github.com/badpanda13)
- - [Evgeniya Razvadovskaya](https://github.com/Iweinrazvadovskaya)
- - [Hanna Bolotova](https://github.com/Hannabolotova)
- - [Andrey Kovalevskiy](https://github.com/AndreyKovalevskiy)
- - [Andrey Pogosskiy](https://github.com/BongDiDong)
- - [Dzmitry Krukov](https://github.com/silvaby)
+[Development team ](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/README.md#authors)
 
 ### **Scrum Events**    
 ### The Sprint    
@@ -46,9 +39,23 @@ Here you can find the [Notes about retrospective](https://docs.google.com/spread
 **Daily scrum meetings:** each workday 8:00 - 8:15 p.m.      
 **Review:** each Monday 8.15 - 9.15 p.m    
 **Retro:** each Tuesday 8.15 - 9.15 p.m   
-**Sprint planning:** each Wednesday 8.00 - 10.00 p.m   
+**Sprint planning:** each Wednesday 8.15 - 10.00 p.m   
 
 ### **Scrum Artifacts**   
 Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation. Our Scrum Team have a Product Backlog, Sprint Backlog, Increment and work with them in the same way as described in the [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100).      
 Here you can find the Scrum Artifacts [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)  
 
+### Dragging the issue between the columns on [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)   
+
+Agile board consist of five columns that describe every step of the process: **Backlog**, **Sprint Backlog**, **In Progress**, **PR**, **Done**.  
+
+**Backlog** - ordered list of known product requirements.    
+**Sprint Backlog** - set of Backlog issues that are taken in Sprint.    
+**In Progress** - the issue is currently being worked on.      
+**PR** - the issue is request review from collaborators.      
+**Done** - the issues has been completed.  
+
+When dragging issue between the columns on Agile board it changes the status of issue.   
+1. When developer assignees issue he dragging it **In Progress**, it means he start working.     
+2. After the work is done he opens a new PR and request review from collaborators, it means that the issue can be dragged to **PR**.      
+3. If all reviewers approve it and the task will be merged - the task will be dragged in **Done** section.     
