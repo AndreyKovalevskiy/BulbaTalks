@@ -68,7 +68,7 @@ In our project we use manual and unit tests.
 
 3. When you decide that you will complet an issue, you should add yourself in the "Assignees" section.
 
-Read about issue estimation in [SCRUM_PROCESS.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md) file.
+Read about issue estimation in the [SCRUM_PROCESS.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md) file.
 
 4. The issue will closed, when PR merging
 
@@ -83,7 +83,7 @@ Read about issue estimation in [SCRUM_PROCESS.md](https://github.com/dersim-dava
      + WHAT — What have you done?
      + HOW — What the reviewers should know?
 
-   - Add [Linked issues using key words](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
+   - Add [Linked issues using keywords](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
   
    - Add Project in the Project section.
   
@@ -97,8 +97,8 @@ Read about issue estimation in [SCRUM_PROCESS.md](https://github.com/dersim-dava
 
 1. If you do not like the existing implementation - suggest your implementation and justify why it is better.
 2. Only the person, who opened a conversation (left first comment) can resolve it. 
-3. Approve PR if all conversation are resolved and you have no questions.
+3. Approve PR if all conversations are resolved and you have no questions.
 4. Merge pull request can only a person, who created a pull request. if the author of PR is absent and can't work merging is done by the person who replaces him.
-5. Change key words before merging (https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
+5. Change keywords before merging (https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 
-**We use Scrum framework for developing the product. Read more about when and how we can drag the issue between the columns on Agile board in [SCRUM_PROCESS.md file](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md)**
+**We use the Scrum framework for developing the product. Read more about when and how we can drag the issue between the columns on Agile board in [SCRUM_PROCESS.md file](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md)**
