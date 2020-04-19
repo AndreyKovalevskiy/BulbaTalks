@@ -50,17 +50,6 @@ We use [SemVer](https://semver.org/) for versioning.
 
 In our project we use manual and unit tests.
 
-### Process
-
-1. Make sure everything is stable in your branch before the merge:
-   - Do manual testing.
-   - Create your own unit test to test your feature, if it is needed.
-2. Create a Pull Request.
-3. Get approval from reviewers.
-4. Merge.
-5. If you found a bug, create a new issue.
-
-
 ## Work with issues and pull requests
 
 ### Issues 
@@ -98,15 +87,14 @@ Read about issue estimation in [SCRUM_PROCESS.md](https://github.com/dersim-dava
   
    - Add yourself in the "Assignees" section.
 
-2. A list of reviewers does not change for every sprint.
-3. Use Labels if necessary. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use
-4. Don't set a Milestone.
+2. Use the same Labels as in issues. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use
+3. Don't set a Milestone.
 
 #### Reviewing process
 
 1. If you do not like the existing implementation - suggest your implementation and justify why it is better.
-2. Only the person, who opened a conversation (left first comment) can resolve it.
+2. Only the person, who opened a conversation (left first comment) can resolve it. 
 3. Approve PR if all conversation are resolved and you have no questions.
-4. Merge pull request can only a person, who created a pull request.
+4. Merge pull request can only a person, who created a pull request. if the author of PR is absent and can't work merging is done by the person who replaces him.
 
 **We use Scrum framework for developing the product. Read more about when and how we can drag the issue between the columns on Agile board in [SCRUM_PROCESS.md file](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md)**
