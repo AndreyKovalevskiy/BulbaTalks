@@ -48,7 +48,7 @@ We use [SemVer](https://semver.org/) for versioning.
 
 ## Work with testing
 
-In our project we use manual and unit tests.
+In our project we use [manual unit tests](https://study.com/academy/lesson/manual-vs-automated-unit-testing.html).
 
 ## Work with issues and pull requests
 
