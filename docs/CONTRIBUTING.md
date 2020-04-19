@@ -53,8 +53,8 @@ In our project we use manual and unit tests.
 ### Process
 
 1. Make sure everything is stable in your branch before the merge:
-- Do manual testing.
-- Create your own unit test to test your feature, if it is needed.
+   - Do manual testing.
+   - Create your own unit test to test your feature, if it is needed.
 2. Create a Pull Request.
 3. Get approval from reviewers.
 4. Merge.
@@ -67,14 +67,13 @@ In our project we use manual and unit tests.
 
 1. [Create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue):
 
-- Keep your titles short and descriptive.
-- Include links to the specific application views you’re describing.
-- Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”
-- Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
+   - Keep your titles short and descriptive.
+   - Include links to the specific application views you’re describing.
+   - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”
+   - Use color-coded labels, they help us categorize and filter our issues. You can [create your own label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label).
+   - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
 
 >This is subtask for #2
-
-- Use color-coded labels, they help us categorize and filter our issues. You can [create your own label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label).
 
 2. Avoid duplication in issues (delete one of them if you have already duplicated it).
 
@@ -86,18 +85,18 @@ Read about issue estimation in [SCRUM_PROCESS.md](https://github.com/dersim-dava
 
 1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request):
 
-- The pull request’s title should tell the changes itself generally, to give an overview idea of what the pull request is about.
+   - The pull request’s title should tell the changes itself generally, to give an overview idea of what the pull request is about.
 
-- Pull request’s description should answer the following questions:
-   + WHY — Which tickets/issues/proposals you are working on?
-   + WHAT — What have you done?
-   + HOW — What the reviewers should know?
+   - Pull request’s description should answer the following questions:
+     + WHY — Which tickets/issues/proposals you are working on?
+     + WHAT — What have you done?
+     + HOW — What the reviewers should know?
 
-- Add Linked issues.
+   - Add Linked issues.
   
-- Add Project in the Project section.
+   - Add Project in the Project section.
   
-- Add yourself in the "Assignees" section.
+   - Add yourself in the "Assignees" section.
 
 2. A list of reviewers does not change for every sprint.
 3. Use Labels if necessary. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use
