@@ -1,12 +1,12 @@
-**CocoaHeads-iOS-School-Twitter-project** - the repository is created for educational purposes.
+The repository is used to store projects that students do in scope of iOS school.
 
-The BulbaTalks is the name of a training project from CocoaHeads-iOS-School (first generation).
+The repository contains the following projects:
+- [BulbaTalks app](#bulbatalks) and corresponding documentation
 
 # BulbaTalks
 
-BulbaTalks is an application using Twitter API. This application has some features that are on Twitter.
-
-**Twitter** is a microblogging system that allows you to send and receive short posts called tweets. Tweets can be up to 140 characters long and can include links to relevant websites and resources.
+BulbaTalks is an iOS client application for [Twitter API](https://developer.twitter.com/en/docs).
+The application can do a basic set of operations like fetching tweets, searching for profiles, subscribing and unsubscribing from another profile, editing your profile, putting "likes" someone’s tweet, retweets, creating tweets.
 
 ## Requirements
 
@@ -19,20 +19,20 @@ BulbaTalks is an application using Twitter API. This application has some featur
 1. Upgrade macOS to the latest version.
 2. Upgrade or install Xcode to the latest version.
 3. Install [Homebrew](https://brew.sh).
-4. Install [Git](https://git-scm.com/download/mac).
-5. Install [SwiftFormat](https://github.com/nicklockwood/SwiftFormat#how-do-i-install-it).
-6. Install [SwiftLint](https://github.com/realm/SwiftLint#installation).
-7. Clone [the repository](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project).
+4. Install [Git](https://git-scm.com/download/mac) via Homebrew.
+5. Install [SwiftFormat](https://github.com/nicklockwood/SwiftFormat#how-do-i-install-it) via Homebrew.
+6. Install [SwiftLint](https://github.com/realm/SwiftLint#installation) via Homebrew.
 
-## Built With
-
-[Twitter API](https://developer.twitter.com/en/docs)
+### [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the [repository](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project)
+```
+git clone https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project.git
+```
 
 ## Contributing
 
-If you want to contribute, read the [CONTRIBUTE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CONTRIBUTING.md) file.
+If you want to contribute, read the [CONTRIBUTE.md](docs/CONTRIBUTING.md) file.
 
-Also read the [CODE_OF_CONDUCT.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CODE_OF_CONDUCT.md) file for details on our code of conduct, and the process for submitting pull requests to us.
+Also read the [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md) file for details on our code of conduct.
 
 ## Authors
 
@@ -46,4 +46,4 @@ Also read the [CODE_OF_CONDUCT.md](https://github.com/dersim-davaod/CocoaHeads-i
 
 ## License
 
-Read the [LICENSE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/LICENSE.md) file for details.
+Read the [LICENSE.md](docs/LICENSE.md) file for details.
