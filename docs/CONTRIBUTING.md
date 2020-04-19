@@ -81,7 +81,7 @@ Read about issue estimation in [SCRUM_PROCESS.md](https://github.com/dersim-dava
      + WHAT — What have you done?
      + HOW — What the reviewers should know?
 
-   - Add Linked issues.
+   - Add [Linked issues using key words](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
   
    - Add Project in the Project section.
   
@@ -97,5 +97,6 @@ Read about issue estimation in [SCRUM_PROCESS.md](https://github.com/dersim-dava
 2. Only the person, who opened a conversation (left first comment) can resolve it. 
 3. Approve PR if all conversation are resolved and you have no questions.
 4. Merge pull request can only a person, who created a pull request. if the author of PR is absent and can't work merging is done by the person who replaces him.
+5. Change key words before merging (https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 
 **We use Scrum framework for developing the product. Read more about when and how we can drag the issue between the columns on Agile board in [SCRUM_PROCESS.md file](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md)**
