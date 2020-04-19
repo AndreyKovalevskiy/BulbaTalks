@@ -1,20 +1,24 @@
+# Educational projects for iOS school
+
 The repository is used to store projects that students do in scope of iOS school.
 
 The repository contains the following projects:
 - [BulbaTalks app](#bulbatalks) and corresponding documentation
 
-# BulbaTalks
+## BulbaTalks apps
 
 BulbaTalks is an iOS client application for [Twitter API](https://developer.twitter.com/en/docs).
 The application can do a basic set of operations like fetching tweets, searching for profiles, subscribing and unsubscribing from another profile, editing your profile, putting "likes" someone’s tweet, retweets, creating tweets.
 
-## Requirements
+### Requirements
 
 - macOS 10.15.4 or later
 - Xcode 11.4 or later
 - iOS 12.0 or later
 
-### Install development environment tools:
+#### How to set up the environment
+
+Install development environment tools:
 
 1. Upgrade macOS to the latest version.
 2. Upgrade or install Xcode to the latest version.
@@ -23,18 +27,21 @@ The application can do a basic set of operations like fetching tweets, searching
 5. Install [SwiftFormat](https://github.com/nicklockwood/SwiftFormat#how-do-i-install-it) via Homebrew.
 6. Install [SwiftLint](https://github.com/realm/SwiftLint#installation) via Homebrew.
 
-### [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the [repository](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project)
-```
+#### How to build the app
+
+1. Clone the repository
+```bash
 git clone https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project.git
 ```
+2. TBD
 
-## Contributing
+# Contributing
 
-If you want to contribute, read the [CONTRIBUTE.md](docs/CONTRIBUTING.md) file.
+If you want to contribute, read the [CONTRIBUTING.md](docs/CONTRIBUTING.md) file.
 
 Also read the [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md) file for details on our code of conduct.
 
-## Authors
+# Authors
 
 - [Tatsiana Gouteeva](https://github.com/TatsianaGouteeva)
 - [Tatsiana Khizhniak](https://github.com/badpanda13)
@@ -44,6 +51,6 @@ Also read the [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md) file for details on 
 - [Andrey Pogosskiy](https://github.com/BongDiDong)
 - [Dzmitry Krukov](https://github.com/silvaby)
 
-## License
+# License
 
 Read the [LICENSE.md](docs/LICENSE.md) file for details.
