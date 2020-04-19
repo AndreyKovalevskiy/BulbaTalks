@@ -3,7 +3,7 @@
 The repository is used to store projects that students do in scope of iOS school.
 
 The repository contains the following projects:
-- [BulbaTalks app](#bulbatalks) and corresponding documentation
+- [BulbaTalks app](#bulbatalks-apps) and corresponding documentation
 
 ## BulbaTalks apps
 
@@ -17,8 +17,6 @@ The application can do a basic set of operations like fetching tweets, searching
 - iOS 12.0 or later
 
 #### How to set up the environment
-
-Install development environment tools:
 
 1. Upgrade macOS to the latest version.
 2. Upgrade or install Xcode to the latest version.
