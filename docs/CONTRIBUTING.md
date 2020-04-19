@@ -3,13 +3,13 @@
 This Contribution guide describes:
 
 - [Work with branches](#branches-model-and-naming).
-- [Work with commits](#commit).
-- [Version our app](#versions).
-- [Test our app](#testing).
-- [Work with issues/PRs](#issues-and-pull-requests).
+- [Work with commits](#work-with-commits).
+- [Work with versions](#work-with-versions).
+- [Work with testing](#work-with-testing).
+- [Work with issues/PRs](#work-with-issues-and-pull-requests).
 
 
-## Branches model and naming
+## Work with branches
 
 We use [git-flow model](https://nvie.com/posts/a-successful-git-branching-model/).
 
@@ -24,7 +24,7 @@ The central repo holds [two main branches](https://nvie.com/posts/a-successful-g
 #### Supporting branches
 
 As supporting branches we will use branches with limited lifetime: 
-- [Feature branches](https://nvie.com/posts/a-successful-git-branching-model/#feature-branches) (use `--no-ff` flag, when merging back into develop)
+- [Feature branches](https://nvie.com/posts/a-successful-git-branching-model/#feature-branches)
 - [Release branches](https://nvie.com/posts/a-successful-git-branching-model/#release-branches)
 - [Hotfix branches](https://nvie.com/posts/a-successful-git-branching-model/#hotfix-branches)
 
@@ -35,12 +35,12 @@ The main branches:
 - `develop`
 
 Supporting branches:
-- `release-[issue number]` (`release-2`)
-- `hotfix-[issue number]` (`hotfix-45`)
+- `release-[version number in format X.Y+1]` (`release-1.2`)
+- `hotfix-[version number in format X.Y.(Z+1)]` (`hotfix-1.0.2`)
 - `feature-[issue number]` (`feature-59`)
 
 
-## Commit
+## Work with commits
 
 ### Commit Message
 
@@ -55,11 +55,11 @@ Supporting branches:
 1. Try to avoid using `git commit .`. Instead, try to get into the habit of checking which files are actually changed (with git status), and then add files to your commits explicitly: `git add {file1} {file2}`.
 2. For local repository!! If you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`.
 
-## Versions
+## Work with versions
 
-Version template X.Y.Z. [Here](https://semver.org/) you can read rules.
+We use [SemVer](https://semver.org/) for versioning.
 
-## Testing
+## Work with testing
 
 ### In our project we use:
 
@@ -74,7 +74,7 @@ Manual and unit tests.
 3. If you found a bug, file a new issue.
 
 
-## Issues and Pull Requests
+## Work with issues and pull requests
 
 ### Issues 
 
