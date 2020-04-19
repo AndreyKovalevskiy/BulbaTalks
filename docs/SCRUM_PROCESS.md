@@ -1,8 +1,8 @@
-This doc contains the definition of: Scrum structure, information about team, information about sprints, Scrum artifacts, events and Scrum's role.   
+This doc contains the definition of: Scrum structure, information about sprints, Scrum artifacts, events and team members' roles.   
 
 ### Scrum 
-BulbaTalks project’s team uses the Scrum framework for developing the product.  
-More information about Scrum you can find here: [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v1/scrum-guide-us.pdf)    
+BulbaTalks project’s [team](#team) uses the Scrum framework for developing the product.  
+More information about Scrum you can find here: [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100)    
 
 ### Team
 
@@ -19,7 +19,7 @@ Development team:
 ### **Scrum Events**    
 ### The Sprint    
 
-Sprints consist of the Sprint Planning, Daily Scrums, the development work, the Sprint Review, and the Sprint Retrospective. Sprints are lasts  one week.  
+Sprints consist of the Sprint Planning, Daily Scrums, the development work, the Sprint Review, and the Sprint Retrospective. Sprints are lasts one week.  
 
 **Sprint Planning**
 Sprint Planning is creating of Product Backlog items which should be done in Sprint by Development Team to achieve the Sprint Goal.  
@@ -40,7 +40,7 @@ Sprint Goal?
 Here you can find the Daily Scrum status of our Development Team [The daily status](https://docs.google.com/spreadsheets/d/1swL2wWhy6hZb2XJzyvXoQbx3UiBeuGJYmSXoTl4N0NA/edit#gid=0)   
 
 ### Sprint Review  
-The Sprint Review usually held each Monday. This is at most a one-hour meeting for one-week Sprints.
+The Sprint Review is held each Monday. This is at most a one-hour meeting for one-week Sprints.
 
 ### Sprint Retrospective  
 On the next day after the Sprint Review our Scrum Team usually have the Sprint Retrospective. This is at most a one-hour meeting for one-week Sprints.  
@@ -53,17 +53,11 @@ Here you can find the [Notes about retrospective](https://docs.google.com/spread
 
 ### The schedule of key Scrum events  
 
-**Daily scrum meetings:** each workday 8:00 - 8:15 p.m.    
-**Review:** each Monday 8.00 - 9.00 p.m  
-**Retro:** each Tuesday 8.00 - 9.00 p.m 
-**Sprint planning:** each Wednesday 8.00 - 10.00 p.m 
+**Daily scrum meetings:** each workday 8:00 - 8:15 p.m.      
+**Review:** each Monday 8.00 - 9.00 p.m    
+**Retro:** each Tuesday 8.00 - 9.00 p.m   
+**Sprint planning:** each Wednesday 8.00 - 10.00 p.m   
 
 ### **Scrum Artifacts**   
 Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation. Our Scrum Team have a Product Backlog, Sprint Backlog, Increment and work with them in the same way as described in the [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v1/scrum-guide-us.pdf).      
-Here you can find the Scrum Artifacts [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)   
-
-### How to create a new issue  
-Follow the link [CONTRIBUTE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CONTRIBUTING.md) in section **Issue**.    
-
-### Dragging the issue between the columns on [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)   
-Follow the link [CONTRIBUTE.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/CONTRIBUTING.md) in section **Agile board movement**.   
+Here you can find the Scrum Artifacts [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)  
