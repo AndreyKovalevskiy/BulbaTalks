@@ -86,6 +86,7 @@ Read about issue estimation in [SCRUM_PROCESS.md](https://github.com/dersim-dava
    - Add Project in the Project section.
   
    - Add yourself in the "Assignees" section.
+   - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
 
 2. Use the same Labels as in issues. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use
 3. Don't set a Milestone.
