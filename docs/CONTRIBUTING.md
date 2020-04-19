@@ -72,23 +72,23 @@ In our project we use manual and unit tests.
 
 ### Issues 
 
-1. [How to create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue)
+1. [How to create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue):
 
- 1.1 Title:
+- Title:
 
-- Keep your titles short and descriptive.
+ - Keep your titles short and descriptive.
 
- 1.2 Description:
+- Description:
 
-- Include links to the specific application views you’re describing.
-- Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”
-- Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
+ - Include links to the specific application views you’re describing.
+ - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”
+ - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
 
 >This is subtask for #2
 
-  1.3 Use color-coded labels, they help us categorize and filter our issues. You can [create your own label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label).
+- Use color-coded labels, they help us categorize and filter our issues. You can [create your own label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label).
 
-  1.4 When you decide that you will complet an issue, you should add yourself in the "Assignees" section.
+- When you decide that you will complet an issue, you should add yourself in the "Assignees" section.
 
 2. Avoid duplication in issues (delete one of them if you have already duplicated it).
 
@@ -96,13 +96,13 @@ Read about issue estimation in [SCRUM_PROCESS.md](https://github.com/dersim-dava
 
 ### Pull Request
 
-1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request):
 
-  1.1 Pull request title: 
+  - Pull request title: 
 
 The pull request’s name should tell the changes itself generally, to give an overview idea of what the pull request is about.
 
-  1.2 Pull request’s description: 
+  - Pull request’s description: 
 
 Should answer the following questions:
 
@@ -112,9 +112,11 @@ WHAT — What have you done?
 
 HOW — What the reviewers should know?
 
-  1.3 Add Linked issue.
-  1.4 Add Project in the Project section.
-  1.5 Add yourself in the "Assignees" section.
+  - Add Linked issue.
+  
+  - Add Project in the Project section.
+  
+  - Add yourself in the "Assignees" section.
 
 2. A list of reviewers does not change for every sprint.
 3. Use Labels if necessary. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use
