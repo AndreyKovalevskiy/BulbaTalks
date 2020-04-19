@@ -49,6 +49,7 @@ We use [SemVer](https://semver.org/) for versioning.
 ## Work with testing
 
 In our project we use [manual unit tests](https://study.com/academy/lesson/manual-vs-automated-unit-testing.html).
+Useful link: [iOS Unit Testing](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial).
 
 ## Work with issues and pull requests
 
