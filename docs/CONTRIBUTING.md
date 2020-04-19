@@ -70,6 +70,8 @@ In our project we use manual and unit tests.
 
 Read about issue estimation in [SCRUM_PROCESS.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md) file.
 
+4. The issue will closed, when PR merging
+
 ### Pull Request
 
 1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request):
