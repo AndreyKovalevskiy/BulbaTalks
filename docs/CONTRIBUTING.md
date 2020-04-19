@@ -21,11 +21,11 @@ Name brunch as `feature-[issue number]` (for example, `feature-59`)
 
 2. [Release branches](https://nvie.com/posts/a-successful-git-branching-model/#release-branches).
 
-Name branch as `release-[version number in format X.Y+1]` (for example, `release-1.2`)
+Name branch as `release-[version number in format X.Y+1]` (for example, `release-1.2`).
 
 3. [Hotfix branches](https://nvie.com/posts/a-successful-git-branching-model/#hotfix-branches).
 
-Name branch as `hotfix-[version number in format X.Y.(Z+1)]` (for example, `hotfix-1.0.2`)
+Name branch as `hotfix-[version number in format X.Y.(Z+1)]` (for example, `hotfix-1.0.2`).
 
 ## Work with commits
 
@@ -58,10 +58,11 @@ In our project we use manual and unit tests.
 
    - Keep your titles short and descriptive.
    - Include links to the specific application views you’re describing.
-   - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”
+   - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”.
    - Use color-coded labels, they help us categorize and filter our issues. You can [create your own label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label).
+   - Don't set a Milestone.
    - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
-
+ 
 >This is subtask for #2
 
 2. Avoid duplication in issues (delete one of them if you have already duplicated it).
@@ -70,7 +71,7 @@ In our project we use manual and unit tests.
 
 Read about issue estimation in the [SCRUM_PROCESS.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md) file.
 
-4. The issue will closed, when PR merging
+4. The issue will closed, when PR merging.
 
 ### Pull Request
 
@@ -83,14 +84,14 @@ Read about issue estimation in the [SCRUM_PROCESS.md](https://github.com/dersim-
      + WHAT — What have you done?
      + HOW — What the reviewers should know?
 
-   - Add [Linked issues using keywords](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
+   - Add [Linked issues using keywords](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
   
    - Add Project in the Project section.
   
    - Add yourself in the "Assignees" section.
    - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
 
-2. Use the same Labels as in issues. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use
+2. Use the same Labels as in issues. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use.
 3. Don't set a Milestone.
 
 #### Reviewing process
