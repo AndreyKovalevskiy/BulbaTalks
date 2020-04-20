@@ -106,7 +106,7 @@ Useful link: [iOS Unit Testing](https://www.raywenderlich.com/960290-ios-unit-te
 
 #### Reviewing process
 
-1. If you do not like the existing implementation - suggest your implementation and justify why it is better.
+1. If you do not like the existing implementation - [suggest your implementation and justify why it is better](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/).
 2. Only the person, who opened a conversation (left first comment) can resolve it. 
 3. Approve PR if all conversations are resolved and you have no questions.
 4. Merge pull request can only a person, who created a pull request. if the author of PR is absent and can't work merging is done by the person who replaces him.
