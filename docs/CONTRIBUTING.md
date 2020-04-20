@@ -1,5 +1,7 @@
 # Contributing
 
+Read the [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md) file for details on our code of conduct.
+
 This Contribution guide describes:
 
 - [Work with branches](#work-with-branches).
@@ -7,7 +9,6 @@ This Contribution guide describes:
 - [Work with versions](#work-with-versions).
 - [Work with testing](#work-with-testing).
 - [Work with issues/PRs](#work-with-issues-and-pull-requests).
-
 
 ## Work with branches
 
