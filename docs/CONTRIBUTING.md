@@ -97,7 +97,9 @@ Useful link: [iOS Unit Testing](https://www.raywenderlich.com/960290-ios-unit-te
   
    - Add yourself in the "Assignees" section.
    - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
-
+   
+       >This is subtask for #2
+       
 2. Use the same Labels as in issues. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use.
 3. Don't set a Milestone.
 
