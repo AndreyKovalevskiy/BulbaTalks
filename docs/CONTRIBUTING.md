@@ -68,7 +68,6 @@ Useful link: [iOS Unit Testing](https://www.raywenderlich.com/960290-ios-unit-te
    - Include links to the specific application views you’re describing.
    - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”.
    - Use color-coded labels, they help us categorize and filter our issues. You can [create your own label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label).
-   - Don't set a Milestone.
    - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
  
        >This is subtask for #2
