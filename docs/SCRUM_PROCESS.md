@@ -14,8 +14,8 @@ Product owner and Scrum master: [Dersim Davaod](https://github.com/dersim-davaod
 
 Sprints consist of the Sprint Planning, Daily Scrums, the development work, the Sprint Review, and the Sprint Retrospective. Sprints are lasting one week.  
 
-**Sprint Planning**
-Sprint Planning is creating of Product Backlog items which should be done in Sprint by Development Team to achieve the Sprint Goal.   
+**Sprint Planning**  
+Sprint Planning is creating Product Backlog items which should be done in Sprint by Development Team to achieve the Sprint Goal.   
 Sprint Planning is time-boxed to a maximum of two hours for a one-week Sprint.  
 
 Here you can find current status of the Sprint Goal [Sprint notes](https://docs.google.com/document/d/1PxbVa85ZyZQN0tlnibdIgxR1PC301dWRXumpPnWi33w/edit)  
@@ -42,20 +42,20 @@ Here you can find the [Notes about retrospective](https://docs.google.com/spread
 **Sprint planning:** each Wednesday 8.15 - 10.00 p.m   
 
 ### **Scrum Artifacts**   
-Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation. Our Scrum Team has a Product Backlog, Sprint Backlog, Increment and work with them in the same way as described in the [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100).      
+Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation. Our Scrum Team has a Product Backlog, Sprint Backlog, Increment and works with them in the same way as described in the [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100).      
 Here you can find the Scrum Artifacts [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)  
 
 ### Dragging the issue between the columns on [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/projects/1)   
 
-Agile board consist of five columns that describe every step of the process: **Backlog**, **Sprint Backlog**, **In Progress**, **PR**, **Done**.  
+Agile board consists of five columns that describe every step of the process: **Backlog**, **Sprint Backlog**, **In Progress**, **PR**, **Done**.  
 
-**Backlog** - ordered list of known product requirements.    
-**Sprint Backlog** - set of Backlog issues that are taken in Sprint.    
+**Backlog** - an ordered list of known product requirements.    
+**Sprint Backlog** - a set of Backlog issues that are taken in Sprint.    
 **In Progress** - the issue is currently being worked on.      
 **PR** - the issue is request review from collaborators.      
 **Done** - the issues have been completed.  
 
 When dragging issue between the columns on Agile board it changes the status of issue.   
 1. When developer assignees issue he dragging it **In Progress**, it means he starts to work.     
-2. After the work is done he opens a new PR and request review from collaborators, it means that the issue can be dragged to **PR**.      
-3. If all reviewers approve it and the task will be merged - the task will be dragged in **Done** section.     
+2. After the work is done he opens a new PR and requests review from collaborators, it means that the issue can be dragged to **PR**.      
+3. If all reviewers approve it and the task will be merged - the task will be dragged in the **Done** section.     
