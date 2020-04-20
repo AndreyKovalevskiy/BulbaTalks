@@ -76,9 +76,9 @@ Useful link: [iOS Unit Testing](https://www.raywenderlich.com/960290-ios-unit-te
 
 3. When you decide that you will complet an issue, you should add yourself in the "Assignees" section.
 
-Issues estimations are part of the process scrum that is described in the [SCRUM_PROCESS.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md) file.
+4. Issues estimations are part of the Scrum process that is described in the [SCRUM_PROCESS.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md) file.
 
-4. The issue will closed, when PR merging.
+5. The issue will closed, when PR merging.
 
 ### Pull Request
 
