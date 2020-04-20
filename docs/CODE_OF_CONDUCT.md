@@ -1,4 +1,4 @@
-This code of conduct applies to the BulbaTalks project’s team.  You can find a list of team members in the file [README.md](README.md#authors). In addition, violations of this code outside that project may affect a person’s ability to participate within them.
+This code of conduct applies to the BulbaTalks project’s team.  You can find a list of team members in the file [README.md](../README.md#authors). In addition, violations of this code outside that project may affect a person’s ability to participate within them.
 
 ## Code of Conduct Committee
 
