@@ -1,4 +1,4 @@
-This code of conduct applies to the BulbaTalks project’s team.  You can find a list of teammates in section "Authors" in file [README.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/README.md). In addition, violations of this code outside that project may affect a person's ability to participate within them.
+This code of conduct applies to the BulbaTalks project’s team.  You can find a list of team members in the file [README.md](README.md#authors). In addition, violations of this code outside that project may affect a person’s ability to participate within them.
 
 ## Code of Conduct Committee
 
@@ -18,9 +18,9 @@ The BulbaTalks project team has committees to handle cases of violation of the i
 
 -  **Be careful in the words that you choose.** We are a community of professionals, and we conduct ourselves professionally. Be kind to others. 
 
--  **Avoid discriminatory jokes and behaviour.** Do not insult or put down other participants. 
+-  **Avoid discriminatory jokes and behavior.** Do not insult or put down other participants. 
 
--  **When we disagree, try to understand why.** Disagreements, both social and technical, happen all the time and BulbaTalks project`s team is no exception. It is important that we resolve disagreements and differing views constructively. Remember that we’re different. Different people have different perspectives on issues. Being unable to understand why someone holds a viewpoint doesn’t mean that they’re wrong. Don’t forget that it is human to err and blaming each other doesn’t get us anywhere. Instead, focus on helping to resolve issues and learning from mistakes.
+-  **When we disagree, try to understand why.** Disagreements, both social and technical, happen all the time and BulbaTalks project’s team is no exception. It is important that we resolve disagreements and differing views constructively. Remember that we’re different. Different people have different perspectives on issues. Being unable to understand why someone holds a viewpoint doesn’t mean that they’re wrong. Don’t forget that it is human to err and blaming each other doesn’t get us anywhere. Instead, focus on helping to resolve issues and learning from mistakes.
 
 ## Reporting Guide
 
@@ -58,7 +58,7 @@ Once the working group has a complete account of the events they will make a dec
 
 -  A request for a public or private apology.
 
--  10 whips at the closest sprint`s retrospective.
+-  10 whips at the closest sprint’s retrospective.
 
 We'll respond within one week to the person who filed the report with either a resolution or an explanation of why the situation is not yet resolved.
 
