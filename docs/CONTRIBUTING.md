@@ -17,15 +17,21 @@ The central repo holds two main branches with an infinite lifetime as in [git-fl
 
 1. [Feature branches](https://nvie.com/posts/a-successful-git-branching-model/#feature-branches).
 
-Name brunch as `feature-[issue number]` (for example, `feature-59`)
+Name brunch as `feature-[issue number]`.
+
+Example: `feature-59`.
 
 2. [Release branches](https://nvie.com/posts/a-successful-git-branching-model/#release-branches).
 
-Name branch as `release-[version number in format X.Y+1]` (for example, `release-1.2`).
+Name branch as `release-[version number in format X.Y+1]` (X.Y.Z is the latest release version).
+
+Example: `release-1.2`.
 
 3. [Hotfix branches](https://nvie.com/posts/a-successful-git-branching-model/#hotfix-branches).
 
-Name branch as `hotfix-[version number in format X.Y.(Z+1)]` (for example, `hotfix-1.0.2`).
+Name branch as `hotfix-[version number in format X.Y.(Z+1)]` (X.Y.Z is the latest release version).
+
+Example: `hotfix-1.0.2`.
 
 ## Work with commits
 
@@ -70,7 +76,7 @@ Useful link: [iOS Unit Testing](https://www.raywenderlich.com/960290-ios-unit-te
 
 3. When you decide that you will complet an issue, you should add yourself in the "Assignees" section.
 
-Read about issue estimation in the [SCRUM_PROCESS.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md) file.
+Issues estimations are part of the process scrum that is described in the [SCRUM_PROCESS.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md) file.
 
 4. The issue will closed, when PR merging.
 
