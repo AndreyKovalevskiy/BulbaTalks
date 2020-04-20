@@ -70,7 +70,7 @@ Useful link: [iOS Unit Testing](https://www.raywenderlich.com/960290-ios-unit-te
    - Don't set a Milestone.
    - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
  
->This is subtask for #2
+       >This is subtask for #2
 
 2. Avoid duplication in issues (delete one of them if you have already duplicated it).
 
