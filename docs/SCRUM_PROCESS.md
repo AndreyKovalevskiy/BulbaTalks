@@ -39,7 +39,7 @@ Here you can find the [Notes about retrospective](https://docs.google.com/spread
 **Daily scrum meetings:** each workday 8:00 - 8:15 p.m.      
 **Review:** each Monday 8.15 - 9.15 p.m    
 **Retro:** each Tuesday 8.15 - 9.15 p.m   
-**Sprint planning:** each Wednesday 8.15 - 10.00 p.m   
+**Sprint planning:** each Wednesday 9.30 - 11.30 a.m   
 
 ### **Scrum Artifacts**   
 Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation. Our Scrum Team has a Product Backlog, Sprint Backlog, Increment and works with them in the same way as described in the [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100).      
