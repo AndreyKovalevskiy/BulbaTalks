@@ -1,6 +1,6 @@
 # Contributing
 
-Read the [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md) file for details on our code of conduct.
+Read the [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md) file for details on our code of conduct.
 
 This Contribution guide describes:
 
@@ -18,19 +18,19 @@ The central repo holds two main branches with an infinite lifetime as in [git-fl
 
 1. [Feature branches](https://nvie.com/posts/a-successful-git-branching-model/#feature-branches).
 
-Name brunch as `feature-[issue number]`.
+Name branch as `feature-[issue number]`.
 
 Example: `feature-59`.
 
 2. [Release branches](https://nvie.com/posts/a-successful-git-branching-model/#release-branches).
 
-Name branch as `release-[version number in format X.Y+1]` (X.Y.Z is the latest release version).
+Name branch as `release-[version number]`.
 
-Example: `release-1.2`.
+Example: `release-3.0.0`.
 
 3. [Hotfix branches](https://nvie.com/posts/a-successful-git-branching-model/#hotfix-branches).
 
-Name branch as `hotfix-[version number in format X.Y.(Z+1)]` (X.Y.Z is the latest release version).
+Name branch as `hotfix-[version number]`.
 
 Example: `hotfix-1.0.2`.
 
@@ -62,45 +62,45 @@ Useful link: [iOS Unit Testing](https://www.raywenderlich.com/960290-ios-unit-te
 
 ### Issues 
 
-1. [Create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue):
+1. [How to create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue):
 
    - Keep your titles short and descriptive.
    - Include links to the specific application views you’re describing.
    - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”.
    - Use color-coded labels, they help us categorize and filter our issues. You can [create your own label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label).
-   - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
+   - Use @mentions and references inside of issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
  
        >This is subtask for #2
 
 2. Avoid duplication in issues (delete one of them if you have already duplicated it).
 
-3. When you decide that you will complet an issue, you should add yourself in the "Assignees" section.
+3. When you decide that you will complete the issue, you should add yourself in the "Assignees" section.
 
-4. Issues estimations are part of the Scrum process that is described in the [SCRUM_PROCESS.md](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md) file.
+4. Issues estimations are part of the scrum process that is described in the [SCRUM_PROCESS.md](../SCRUM_PROCESS.md) file.
 
-5. The issue will closed, when PR merging.
+5. The issue will be closed when a pull request merging.
 
-### Pull Request
+### Pull Requests
 
 1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request):
 
    - The pull request’s title should tell the changes itself generally, to give an overview idea of what the pull request is about.
 
    - Pull request’s description should answer the following questions:
-     + WHY — Which tickets/issues/proposals you are working on?
+     + WHY - Which issues you are working on?
      + WHAT — What have you done?
      + HOW — What the reviewers should know?
 
-   - Add [Linked issues using keywords](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
+   - Add [linked issues using keywords](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
   
-   - Add Project in the Project section.
+   - In the Project section, select the project board where you want to add the issue.
   
    - Add yourself in the "Assignees" section.
    - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
    
        >This is subtask for #2
        
-2. Use the same Labels as in issues. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use.
+2. Use the same labels as in issues. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use.
 3. Don't set a Milestone.
 
 #### Reviewing process
@@ -111,4 +111,4 @@ Useful link: [iOS Unit Testing](https://www.raywenderlich.com/960290-ios-unit-te
 4. Merge pull request can only a person, who created a pull request. if the author of PR is absent and can't work merging is done by the person who replaces him.
 5. [Change keywords before merging](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 
-**We use the Scrum framework for developing the product. Read more about when and how we can drag the issue between the columns on Agile board in [SCRUM_PROCESS.md file](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/master/docs/SCRUM_PROCESS.md)**
+We use the Scrum framework for developing the product. Read more about when and how we can drag the issue between the columns on Agile board in [SCRUM_PROCESS.md file](../SCRUM_PROCESS.md)
