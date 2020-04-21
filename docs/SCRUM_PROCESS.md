@@ -7,7 +7,7 @@ More information about Scrum you can find here: [Scrum Guide](https://www.scrumg
 ### Team
 
 Product owner and Scrum master: [Dersim Davaod](https://github.com/dersim-davaod)  
-[Development team ](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/blob/README.md#authors)
+[Development team ](../README.md#authors)
 
 ### **Scrum Events**    
 ### The Sprint    
