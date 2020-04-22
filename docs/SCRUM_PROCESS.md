@@ -54,7 +54,8 @@ See the current sprint backlog at [project's Agile board](https://github.com/der
 
 ### Daily Scrum
 
-The Daily Scrum is a 15-minute time-boxed event for the Development Team to synchronize activities and create a plan for the next 24 hours. On the Daily Scrum meeting we discuss the questions in the same way as described in the [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100).
+The Daily Scrum is a 15-minute time-boxed event for the Development Team to synchronize activities and create a plan for the next 24 hours. We have our Daily Scrum each workday, but if someone want to work on weekends he should leave his status in the document asynchronously.
+On the Daily Scrum meeting we discuss the questions in the same way as described in the [Scrum Guide](https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100).
 
 Here you can find the Daily Scrum status of our Development Team [The daily status](https://docs.google.com/spreadsheets/d/1swL2wWhy6hZb2XJzyvXoQbx3UiBeuGJYmSXoTl4N0NA/edit#gid=0)   
 
