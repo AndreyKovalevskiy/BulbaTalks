@@ -26,9 +26,9 @@ Find the Development team at [README](../README.md#authors) file.
 
 **Daily scrum meetings:** each workday 8:00 - 8:15 p.m.
 
-**Review:** Thursday 04/29 8:15 - 9:15 p.m.
+**Review:** Thursday 04/30 8:15 - 9:15 p.m.
 
-**Retro:** Friday 04/30 8:15 - 9:15 p.m.
+**Retro:** Friday 05/01 8:15 - 9:15 p.m.
 
 **Sprint planning:** Thursday 04/23 8:15 - 10:15 p.m.
 
