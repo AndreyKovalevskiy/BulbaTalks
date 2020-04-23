@@ -44,7 +44,7 @@ We work with sprints as described in [Scrum Guide](https://www.scrumguides.org/d
 
   - if the beginning or end of the Sprint is public holiday, the team should agree on the updated date during the sprint planning.
 
-**Sprint Planning**
+### Sprint Planning
 
 Sprint Planning is time-boxed to a maximum of two hours for a one-week Sprint.
 
@@ -80,13 +80,9 @@ Find the Scrum Artifacts at [Agile board](https://github.com/dersim-davaod/Cocoa
 Agile board consists of five columns that describe every step of the process: **Backlog**, **Sprint Backlog**, **In Progress**, **PR**, **Done**.
 
 **Backlog** - an ordered list of known product requirements.
-
 **Sprint Backlog** - a set of Backlog issues that are taken in Sprint.
-
 **In Progress** - the issue is currently being worked on.
-
 **PR** - the issue is request review from collaborators.
-
 **Done** - the issues have been completed.
 
 When dragging issue between the columns on Agile board it changes the status of issue.
