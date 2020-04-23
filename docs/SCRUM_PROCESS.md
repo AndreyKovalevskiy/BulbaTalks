@@ -61,7 +61,7 @@ Here you can find the Daily Scrum status of our Development Team [The daily stat
 
 ### Sprint Review
 
-The Sprint Review is held each Monday. This is at most a one-hour meeting for one-week Sprints.
+The Sprint Review is held at the end of the Sprint. This is at most a one-hour meeting for one-week Sprints.
 
 ### Sprint Retrospective
 
