@@ -4,7 +4,7 @@ This doc contains the information about:
 
  - [Team](#team)
 
- - [The schedule of key Scrum events](#the-schedule_of_key-Scrum-events)
+ - [The schedule of key Scrum events](#the-schedule-of-key-Scrum-events)
 
  - [Scrum Events](#scrum-events)
 
