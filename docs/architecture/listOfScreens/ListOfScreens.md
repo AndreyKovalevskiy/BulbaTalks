@@ -10,7 +10,7 @@
 |![](./images/profile.jpg)         | Contains information about User e.g.: <br>-	account name; <br>-	@name (an unique identification of account);<br>-	day of registration in app.<br>User has an access to thumbnail presentation of all his Tweets and can open the desired Tweet. Also, the User could add a new Tweet by tapping on the button «Tweet»<br>From here User can navigate to the settings of his Profile and to the list of Following/Followers.|
 | **Edit profile**               |  |
 |![](./images/edit.jpg)            | Allows to load a header/profile photo and to change personal information.|
-| **Following/Followers**.       |  |
+| **Following/Followers**       |  |
 |![](./images/following.jpg)       | Displays the list of Following/Followers.<br> In these screens User could follow/unfollow selected account by tapping on the button «Following».|
 |![](./images/followers.jpg).      |  |
 | **Follow profile**             |  |
