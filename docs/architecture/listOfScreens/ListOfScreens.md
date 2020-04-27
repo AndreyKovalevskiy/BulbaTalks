@@ -19,9 +19,9 @@
 | **Sidebar menu**               |  |
 |![](./images/sidebar.jpg)         | From here User can navigate to the Profile, to the list of Following/Followers and to the settings of his account.|
 | **Tweet**                      |  |
-|![](./images/newTweet.jpg).       | Allows to create a new Tweet by entering a message (up to 280 characters) and to add an image or a location. |
+|![](./images/newTweet.jpg)      | Allows to create a new Tweet by entering a message (up to 280 characters) and to add an image or a location. |
 | **Location**                   |  |
-|![](./images/location.jpg).       | Displays the current location of  User and allows to search a required address.|
+|![](./images/location.jpg)      | Displays the current location of  User and allows to search a required address.|
 | **Selected Tweet**             |  |
 |![](./images/tweet.jpg)           | Displays selected Tweet.<br>User could comment, retweet and like a selected Tweet.|
 | **Comment**                    |  |
