@@ -22,7 +22,7 @@ The application can do a basic set of operations like fetching tweets, searching
 2. Upgrade or install Xcode to the latest version.
 3. Install [Homebrew](https://brew.sh).
 4. Install [Git](https://git-scm.com/download/mac) via Homebrew.
-5. Install [SwiftFormat](https://github.com/nicklockwood/SwiftFormat#how-do-i-install-it) via Homebrew.
+5. Read the [SwiftFormat.md](docs/SwiftFormat.md) file and set up SwiftFormat according to the instructions.
 6. Install [SwiftLint](https://github.com/realm/SwiftLint#installation) via Homebrew.
 
 #### How to build the app
