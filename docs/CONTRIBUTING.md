@@ -46,7 +46,7 @@ Example: `hotfix-1.0.2`.
 
 **Recommendation for creating commits**
 
-1. Try to avoid using `git commit .`. Instead, try to get into the habit of checking which files are actually changed (with git status), and then add files to your commits explicitly: `git add {file1} {file2}`.
+1. Try to avoid using `git commit .`. Instead, try to get into the habit of checking which files are actually changed (for example, using `git status`), and then add files to your commits explicitly: `git add {file1} {file2}`.
 1. When you work on local machine and you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`. Cannot be used if the commit was sent to a remote server.
 
 ## Work with versions
