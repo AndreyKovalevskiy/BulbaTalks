@@ -1,6 +1,6 @@
 # Contributing
 
-Read the [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md) file for details on our code of conduct.
+Read the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file for details on our code of conduct.
 
 This Contribution guide describes:
 
@@ -38,16 +38,16 @@ Example: `hotfix-1.0.2`.
 
 ### Commit Message
 
-1. Use the present tense.
-2. Use the imperative in the title. For example, you can start the title with these words: Refactor, Update, Remove, Release, Fix, Merge, Rename, etc.
-3. Start your message with an uppercase letter.
-4. Write in English.
-5. The first line of your commit message must be maximum 50 characters long. If you need more verbose description, write the first line as a summary, leave a blank line and then start writing the description. Each line in the description should though wrap at the 72nd mark.
+1. Write in English.
+1. Use the present tense in the title.
+1. Separate the title from the description with a blank line.
+1. Use the imperative in the title. For example, you can start the title with these words: Refactor, Update, Remove, Release, Fix, Merge, Rename, etc.
+1. Start your title and description with an uppercase letter.
 
 **Recommendation for creating commits**
 
 1. Try to avoid using `git commit .`. Instead, try to get into the habit of checking which files are actually changed (with git status), and then add files to your commits explicitly: `git add {file1} {file2}`.
-2. When you work on local machine and you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`. Cannot be used if the commit was sent to a remote server.
+1. When you work on local machine and you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`. Cannot be used if the commit was sent to a remote server.
 
 ## Work with versions
 
@@ -55,60 +55,47 @@ We use [SemVer](https://semver.org/) for versioning.
 
 ## Work with testing
 
-In our project we use [manual unit tests](https://study.com/academy/lesson/manual-vs-automated-unit-testing.html).
-Useful link: [iOS Unit Testing](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial).
+Before you contribute your PR, do some tests:
+1. Try test your changes on this [template](https://www.guru99.com/positive-and-negative-testing.html).
+1. If your changes are related to the UI. Check that your UI is correctly displayed both on devices with the smallest screen and with the largest; which support our minimum version of iOS in the project.(Do not forget to check the UI when rotating the device.)
+1. Try to test your changes on the real device, not simulator. If you can not, write it in PR.
 
 ## Work with issues and pull requests
 
 ### Issues 
 
+1. Before creating issue, please check this [list](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/issues) as you might find out that you don't need to create one. if you created a duplicate issue, leave the comment below duplicate like "Closed as a duplication for #50" (edit number 50 with your original issue number), then close the duplicate issue.
+
 1. [How to create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue):
 
    - Keep your titles short and descriptive.
-   - Include links to the specific application views you’re describing.
+   - Include links to the information that may help.
    - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”.
    - Use color-coded labels, they help us categorize and filter our issues. You can [create your own label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label).
-   - Use @mentions and references inside of issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
- 
-       >This is subtask for #2
+   - Use @mentions and references inside of issues, for notifying other GitHub users if needed, and cross-connect issues to each other. Sometimes issues are depend on other issues, or at least relate to them, write about that explicitly, example: "This is subtask for #2"
 
-2. Avoid duplication in issues (delete one of them if you have already duplicated it).
+1. When you decide that you understand the issue, you can add yourself in the "Assignees" section and start working on it.
 
-3. When you decide that you will complete the issue, you should add yourself in the "Assignees" section.
+1. Issues estimations are part of the scrum process that is described in the [SCRUM_PROCESS.md](SCRUM_PROCESS.md) file.
 
-4. Issues estimations are part of the scrum process that is described in the [SCRUM_PROCESS.md](../SCRUM_PROCESS.md) file.
-
-5. The issue will be closed when a pull request merging.
+1. You need to close the issue after successful merge PR that solves this issue.
 
 ### Pull Requests
 
-1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request):
+[How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request):
 
-   - The pull request’s title should tell the changes itself generally, to give an overview idea of what the pull request is about.
-
-   - Pull request’s description should answer the following questions:
-     + WHY - Which issues you are working on?
-     + WHAT — What have you done?
-     + HOW — What the reviewers should know?
-
-   - Add [linked issues using keywords](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
-  
-   - In the Project section, select the project board where you want to add the issue.
-  
-   - Add yourself in the "Assignees" section.
-   - Use @mentions and references inside of Issues, for notifying other GitHub users and teams, and cross-connect issues to each other. Often times issues are dependent on other issues, or at least relate to them and you’d like to connect the two, example:
-   
-       >This is subtask for #2
-       
-2. Use the same labels as in issues. [Create label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label), if there's no label that you want to use.
-3. Don't set a Milestone.
+1. Check this [approach to write a Pull Request](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#approach-to-writing-a-pull-request) and follow it.
+1. The pull request’s title should tell the changes itself generally, to give an overview idea of what the pull request is about.
+1. If PR solves some issue, then in the "Linked issues" section select the issue to be solved.
+1. In the "Projects" section select the project board where you want to add the issue.
+1. Add yourself in the "Assignees" section.
+1. Assign reviewers... TBD
 
 #### Reviewing process
 
-1. If you do not like the existing implementation - [suggest your implementation and justify why it is better](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/).
-2. Only the person, who opened a conversation (left first comment) can resolve it. 
-3. Approve PR if all conversations are resolved and you have no questions.
-4. Merge pull request can only a person, who created a pull request. if the author of PR is absent and can't work merging is done by the person who replaces him.
-5. [Change keywords before merging](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
+1. Check this [approach to offering feedback and responding](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#offering-feedback), try to follow it. Also check our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
+1. Only the person, who opened a conversation can resolve it. 
+1. Approve PR if all your conversations are resolved and you have no questions, otherwise request changes or leave a comment.
+1. Merge pull request can only a person, who created a pull request. If the author of PR is absent or can't work now for some reason, merge should be made by new assignee on this issue. 
 
-We use the Scrum framework for developing the product. Read more about when and how we can drag the issue between the columns on Agile board in [SCRUM_PROCESS.md file](../SCRUM_PROCESS.md)
+We use the Scrum framework for developing the product. Read more about when and how we can drag the issue between the columns on Agile board in [SCRUM_PROCESS.md file](SCRUM_PROCESS.md)
