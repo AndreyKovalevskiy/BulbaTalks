@@ -1,4 +1,4 @@
-# Scrum Guide for iOS school
+# Scrum Guide 
 
 The Scrum Guide is used to manage project that are developing by our [team](#team).
 
@@ -28,7 +28,7 @@ More information about Scrum you can find here: [Scrum Guide](https://www.scrumg
  * Daily Scrum: each workday 8:00 - 8:15 p.m.
  * Sprint Review: each Friday 8:15 - 9:00 p.m.
  * Sprint Retrospective: each Friday 9:05 - 10:05 p.m.
- * Sprint planning: each Monday 8:15 - 10:15 p.m.
+ * Sprint Planning: each Monday 8:15 - 10:15 p.m.
 
 #### Scrum Artifacts
 
