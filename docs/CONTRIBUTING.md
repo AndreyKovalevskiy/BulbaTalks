@@ -83,17 +83,24 @@ Before you contribute your PR, do some tests:
 
 ### Pull Requests
 
-[How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request):
+- [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request):
 
-1. Check this [approach to write a Pull Request](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#approach-to-writing-a-pull-request) and follow it.
-1. The pull request’s title should tell the changes itself generally, to give an overview idea of what the pull request is about.
-1. If PR solves some issue, then in the "Linked issues" section select the issue to be solved.
-1. In the "Projects" section select the project board where you want to add the issue.
-1. Add yourself in the "Assignees" section.
-1. Assign reviewers... TBD
+   1. Check this [approach to write a Pull Request](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#approach-to-writing-a-pull-request) and follow it.
+   1. The pull request’s title should tell the changes itself generally, to give an overview idea of what the pull request is about.
+   1. If PR solves some issue, then in the "Linked issues" section select the issue to be solved.
+   1. In the "Projects" section select the project board where you want to add the issue.
+   1. Add yourself in the "Assignees" section.
+   1. Assign reviewers... TBD
+
+- Notify the team explicitly if you have blockers(or notify assignee for this blocker).
+
+- If you have a controversial approach to solve the issue, discuss it with the team/TL.
 
 #### Reviewing process
 
+1. Try at the beginning of your workday make some reviews.
+1. Review one PR a day at least.
+1. If you need review as soon as possible, notify and ask about review explicitly, don't wait.
 1. Check this [approach to offering feedback and responding](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#offering-feedback), try to follow it. Also check our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
 1. Only the person, who opened a conversation can resolve it. 
 1. Approve PR if all your conversations are resolved and you have no questions, otherwise request changes or leave a comment.
