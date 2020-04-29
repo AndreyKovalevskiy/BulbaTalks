@@ -52,9 +52,9 @@ When a developer drags an issue on the Agile board, the issue changes its status
 
 We work with sprints as described in [Scrum Guide](#scrum) with some specific details:
 
-  - our sprints last one week.
-  - each sprint starts on Thursday and ends on the next Thursday.
-  - if the beginning or end of the Sprint is public holiday, the team should agree on the updated date during the sprint planning.
+ - our sprints last one week.
+ - each sprint starts on Thursday and ends on the next Thursday.
+ - if the beginning or end of the Sprint is public holiday, the team should agree on the updated date during the sprint planning.
 
 #### Daily Scrum
 
