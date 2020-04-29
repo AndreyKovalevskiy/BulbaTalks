@@ -26,8 +26,8 @@ More information about Scrum you can find here: [Scrum Guide](https://www.scrumg
 #### The schedule of key Scrum events
 
  * Daily Scrum: each workday 8:00 - 8:15 p.m.
- * Sprint Review: each Thursday 8:15 - 9:15 p.m.
- * Sprint Retrospective: each Friday 8:15 - 9:15 p.m.
+ * Sprint Review: each Friday 8:15 - 9:00 p.m.
+ * Sprint Retrospective: each Friday 9:05 - 10:05 p.m.
  * Sprint planning: each Monday 8:15 - 10:15 p.m.
 
 #### Scrum Artifacts
@@ -53,7 +53,7 @@ When a developer drags an issue on the Agile board, the issue changes its status
 We work with sprints as described in [Scrum Guide](#scrum) with some specific details:
 
  - our sprints last one week.
- - each sprint starts on Thursday and ends on the next Thursday.
+ - each sprint starts on Monday and ends on Friday.
  - if the beginning or end of the Sprint is public holiday, the team should agree on the updated date during the sprint planning.
 
 #### Daily Scrum
@@ -68,7 +68,7 @@ The Sprint Review is held at the end of the Sprint. This is at most a one-hour m
 
 #### Sprint Retrospective
 
-On the next day after the Sprint Review our Scrum Team usually have the Sprint Retrospective. This is at most a one-hour meeting for one-week Sprints. On the Sprint Retrospective meeting we discuss the questions in the same way as described in the [Scrum Guide](#scrum).
+After the Sprint Review our Scrum Team have the Sprint Retrospective. This is at most a one-hour meeting for one-week Sprints. On the Sprint Retrospective meeting we discuss the questions in the same way as described in the [Scrum Guide](#scrum).
 
 See [Notes about retrospective](https://docs.google.com/spreadsheets/d/17-9C6O2Z3nYUSz6iaBnfQODPEN3vocRj19LgzYjfdxg/edit#gid=0) for more details on past retrospectives.
 
