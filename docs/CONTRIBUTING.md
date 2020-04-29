@@ -40,13 +40,14 @@ Example: `hotfix-1.0.2`.
 
 1. Write in English.
 1. Use the present tense in the title.
-1. Separate the title from the description with a blank line.
 1. Use the imperative in the title. For example, you can start the title with these words: Refactor, Update, Remove, Release, Fix, Merge, Rename, etc.
+1. Separate the title from the description with a blank line.
+1. Write description if you think this is necessary.
 1. Start your title and description with an uppercase letter.
 
 **Recommendation for creating commits**
 
-1. Try to avoid using `git commit .`. Instead, try to get into the habit of checking which files are actually changed (for example, using `git status`), and then add files to your commits explicitly: `git add {file1} {file2}`.
+1. Try to avoid using `git add .`. Instead, try to get into the habit of checking which files are actually changed (for example, using `git status`), and then add files to your commits explicitly: `git add {file1} {file2}`.
 1. When you work on local machine and you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`. Cannot be used if the commit was sent to a remote server.
 
 ## Work with versions
@@ -67,16 +68,16 @@ Before you contribute your PR, do some tests:
 1. Before creating issue, please check this [list](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/issues) as you might find out that you don't need to create one. if you created a duplicate issue, leave the comment below duplicate like "Closed as a duplication for #50" (edit number 50 with your original issue number), then close the duplicate issue.
 
 1. [How to create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue):
-
-   - Keep your titles short and descriptive.
+- Keep your titles short and descriptive.
+   - Try to describe the issue detailed as possible and based on the description, make clear acceptance criteria.
    - Include links to the information that may help.
    - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”.
    - Use color-coded labels, they help us categorize and filter our issues. You can [create your own label](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label).
    - Use @mentions and references inside of issues, for notifying other GitHub users if needed, and cross-connect issues to each other. Sometimes issues are depend on other issues, or at least relate to them, write about that explicitly, example: "This is subtask for #2"
 
-1. When you decide that you understand the issue, you can add yourself in the "Assignees" section and start working on it.
+1. Don't start an issue until you make sure you understand AC.
 
-1. Issues estimations are part of the scrum process that is described in the [SCRUM_PROCESS.md](SCRUM_PROCESS.md) file.
+1. Issues estimations are part of the scrum process that is described in the [SCRUM_PROCESS.md](SCRUM_PROCESS.md) file. So if you write estimation by your own opinion, leave information about how you estimated it.
 
 1. You need to close the issue after successful merge PR that solves this issue.
 
