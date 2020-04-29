@@ -48,7 +48,7 @@ Example: `hotfix-1.0.2`.
 **Recommendation for creating commits**
 
 1. Try to avoid using `git add .`. Instead, try to get into the habit of checking which files are actually changed (for example, using `git status`), and then add files to your commits explicitly: `git add {file1} {file2}`.
-1. When you work on local machine and you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`. Cannot be used if the commit was sent to a remote server.
+1. When you work on the local machine and you’ve created a commit already, but then you do more work that should logically be included in that same commit, you can simply add new work to the previous commit with `git commit --amend`. This command cannot be used if the commit was sent to a remote server.
 
 ## Work with versions
 
@@ -57,15 +57,15 @@ We use [SemVer](https://semver.org/) for versioning.
 ## Work with testing
 
 Before you contribute your PR, do some tests:
-1. Try test your changes on this [template](https://www.guru99.com/positive-and-negative-testing.html).
-1. If your changes are related to the UI. Check that your UI is correctly displayed both on devices with the smallest screen and with the largest; which support our minimum version of iOS in the project.(Do not forget to check the UI when rotating the device.)
+1. Try to test your changes using the [template](https://www.guru99.com/positive-and-negative-testing.html).
+1. If your changes are related to the UI, check that your UI at least correctly displayed both on devices with the smallest screen and with the largest; which supports our minimum version of iOS in the project(Do not forget to check the UI when rotating the device). 
 1. Try to test your changes on the real device, not simulator. If you can not, write it in PR.
 
 ## Work with issues and pull requests
 
 ### Issues 
 
-1. Before creating issue, please check this [list](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/issues) as you might find out that you don't need to create one. if you created a duplicate issue, leave the comment below duplicate like "Closed as a duplication for #50" (edit number 50 with your original issue number), then close the duplicate issue.
+1. Before creating an issue, please check this [list](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/issues) as you might find out that you don't need to create one. If you created a duplicate issue, leave the comment below duplicate like this: "Closed as a duplication for #[issue-number]" (where issue-number is your original issue number, example: "Closed as a duplication for #23"), then close the duplicate issue.
 
 1. [How to create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue):
 - Keep your titles short and descriptive.
