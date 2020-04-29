@@ -68,7 +68,7 @@ Before you contribute your PR, do some tests:
 1. Before creating an issue, please check this [list](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/issues) as you might find out that you don't need to create one. If you created a duplicate issue, leave the comment below duplicate like this: "Closed as a duplication for #[issue-number]" (where issue-number is your original issue number, example: "Closed as a duplication for #23"), then close the duplicate issue.
 
 1. [How to create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue):
-- Keep your titles short and descriptive.
+   - Keep your titles short and descriptive.
    - Try to describe the issue detailed as possible and based on the description, make clear acceptance criteria.
    - Include links to the information that may help.
    - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”.
