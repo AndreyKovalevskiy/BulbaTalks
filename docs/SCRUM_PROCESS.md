@@ -25,10 +25,10 @@ More information about Scrum you can find here: [Scrum Guide](https://www.scrumg
 
 #### The schedule of key Scrum events
 
- Daily Scrum: each workday 8:00 - 8:15 p.m.
- Sprint Review: each Thursday 8:15 - 9:15 p.m.
- Sprint Retrospective: each Friday 8:15 - 9:15 p.m.
- Sprint planning: each Monday 8:15 - 10:15 p.m.
+ * Daily Scrum: each workday 8:00 - 8:15 p.m.
+ * Sprint Review: each Thursday 8:15 - 9:15 p.m.
+ * Sprint Retrospective: each Friday 8:15 - 9:15 p.m.
+ * Sprint planning: each Monday 8:15 - 10:15 p.m.
 
 #### Scrum Artifacts
 
@@ -36,17 +36,17 @@ See [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter
 
 Agile board consists of several columns that describe every step of the process:
 
- **Backlog** - an ordered list of known product requirements.
- **Sprint Backlog** - a set of Backlog issues that are taken in Sprint.
- **In Progress** - issues are currently being worked on.
- **PR** - issues which has active PRs and PRs cards.
- **Done** - issues have been completed.
+ - **Backlog** - an ordered list of known product requirements.
+ - **Sprint Backlog** - a set of Backlog issues that are taken in Sprint.
+ - **In Progress** - issues are currently being worked on.
+ - **PR** - issues which has active PRs and PRs cards.
+ - **Done** - issues have been completed.
 
 When a developer drags an issue on the Agile board, the issue changes its status.
-1. When a developer assignees issue he dragging it into the **In Progress** column, it means he starts to work. 
-1. After the work is done he opens a new PR and requests review from collaborators, at the same time the issue should be dragged into the **PR** column. Automatically PRs card adds into the **PR** column. 
-1. If all reviewers approve the task and it is merged, the issue must be dragged into the **Done** column.
-1. If someone doesn't approve the task, the issue must be dragged into the **In Progress** column. 
+ 1. When a developer assignees issue he dragging it into the **In Progress** column, it means he starts to work. 
+ 1. After the work is done he opens a new PR and requests review from collaborators, at the same time the issue should be dragged into the **PR** column. Automatically PRs card adds into the **PR** column. 
+ 1. If all reviewers approve the task and it is merged, the issue must be dragged into the **Done** column.
+ 1. If someone doesn't approve the task, the issue must be dragged into the **In Progress** column. 
 
 #### The Sprint
 
