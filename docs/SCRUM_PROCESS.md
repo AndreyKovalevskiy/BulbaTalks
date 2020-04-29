@@ -36,11 +36,11 @@ See [Agile board](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter
 
 Agile board consists of several columns that describe every step of the process:
 
- - **Backlog** - an ordered list of known product requirements.
- - **Sprint Backlog** - a set of Backlog issues that are taken in Sprint.
- - **In Progress** - issues are currently being worked on.
- - **PR** - issues which has active PRs and PRs cards.
- - **Done** - issues have been completed.
+ - Backlog - an ordered list of known product requirements.
+ - Sprint Backlog - a set of Backlog issues that are taken in Sprint.
+ - In Progress - issues are currently being worked on.
+ - PR - issues which has active PRs and PRs cards.
+ - Done - issues have been completed.
 
 When a developer drags an issue on the Agile board, the issue changes its status.
  1. When a developer assignees issue he dragging it into the **In Progress** column, it means he starts to work. 
