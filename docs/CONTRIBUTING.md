@@ -68,7 +68,7 @@ Before you contribute your PR, do some tests:
 1. Before creating an issue, please check this [list](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/issues) as you might find out that you don't need to create one. If you created a duplicate issue, leave the comment below duplicate like this: "Closed as a duplication for #[issue-number]" (where issue-number is your original issue number, example: "Closed as a duplication for #23"), then close the duplicate issue.
 
 1. [How to create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue):
-- Keep your titles short and descriptive.
+   - Keep your titles short and descriptive.
    - Try to describe the issue detailed as possible and based on the description, make clear acceptance criteria.
    - Include links to the information that may help.
    - Context: explain the conditions which led you to write this issue. For example: “Since we’ve moved to the latest version of smth, we’ve experienced a few performance issues (#14 and #15) on production.”.
@@ -83,24 +83,24 @@ Before you contribute your PR, do some tests:
 
 ### Pull Requests
 
-- [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request):
+1. [How to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request):
 
-   1. Check this [approach to write a Pull Request](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#approach-to-writing-a-pull-request) and follow it.
-   1. The pull request’s title should tell the changes itself generally, to give an overview idea of what the pull request is about.
-   1. If PR solves some issue, then in the "Linked issues" section select the issue to be solved.
-   1. In the "Projects" section select the project board where you want to add the issue.
-   1. Add yourself in the "Assignees" section.
-   1. Assign reviewers... TBD
+   - Check this [approach to write a Pull Request](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#approach-to-writing-a-pull-request) and follow it.
+   - The pull request’s title should tell the changes itself generally, to give an overview idea of what the pull request is about.
+   - If PR solves some issue, then in the "Linked issues" section select the issue to be solved.
+   - In the "Projects" section select the project board where you want to add the issue.
+   - Add yourself in the "Assignees" section.
+   - Assign reviewers... TBD
 
-- Notify the team explicitly if you have blockers(or notify assignee for this blocker).
+1. Notify the team explicitly if you have blockers(or notify assignee for this blocker).
 
-- If you have a controversial approach to solve the issue, discuss it with the team/TL.
+1. If you have a controversial approach to solve the issue, discuss it with the team/team lead.
 
 #### Reviewing process
 
 1. Try at the beginning of your workday make some reviews.
-1. Review one PR a day at least.
-1. If you need review as soon as possible, notify and ask about review explicitly, don't wait.
+1. Review one PR a day at least, if you have one.
+1. If you need a review as soon as possible, notify and ask about review explicitly, don't wait.
 1. Check this [approach to offering feedback and responding](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#offering-feedback), try to follow it. Also check our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
 1. Only the person, who opened a conversation can resolve it. 
 1. Approve PR if all your conversations are resolved and you have no questions, otherwise request changes or leave a comment.
