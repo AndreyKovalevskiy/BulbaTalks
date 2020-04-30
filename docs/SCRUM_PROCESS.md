@@ -81,7 +81,7 @@ Sprint Planning is time-boxed to a maximum of two hours for a one-week Sprint.
    - We are using a three-points technique for exposure of Estimation. More information about the three-points technique you can find here: [Three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation). 
    - Don't forget to add unimportant tasks when counting time for Estimation.
  * Also, each member of the team must notify about the number of hours that he can spend on the project daily during the Sprint.
- * During the Sprint Planning we calculate our Capacity and then we define amount of tasks that we can bring in the Sprint. 
+ * During the Sprint Planning we calculate our Capacity and then we define amount of tasks that we can take in the Sprint. 
  * Also during Sprint Planning we make Acceptance Criteria.
    - Don't assign an issue if the issue doesn't have Acceptance Criteria.
    - If you don't understand Acceptance Criteria, don't be afraid to clarify it.
