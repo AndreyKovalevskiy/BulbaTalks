@@ -77,14 +77,14 @@ See [Notes about retrospective](https://docs.google.com/spreadsheets/d/17-9C6O2Z
 Sprint Planning is time-boxed to a maximum of two hours for a one-week Sprint.
  * During the Sprint Planning our team make Estimation of the tasks.
    - You should write Estimation in the issue. More details about the issues you can find in the [CONTRIBUTING.md](CONTRIBUTING.md#issues)
-   - Estimation defines by hours.
+   - Estimation defines in hours.
    - We are using a three-points technique for exposure of Estimation. More information about the three-points technique you can find here: [Three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation). 
    - Don't forget to add unimportant tasks when counting time for Estimation.
- * Also, each member of the team should notify about work time during the Sprint.
+ * Also, each member of the team must notify about the number of hours that he can spend on the project daily during the Sprint.
  * During the Sprint Planning we calculate our Capacity and then we define amount of tasks that we can bring in the Sprint. 
  * Also during Sprint Planning we make Acceptance Criteria.
-   - Don't start a task if the issue doesn't have AC.
-   - If you don't understand AC, don't be afraid to clarify it.
+   - Don't assign an issue if the issue doesn't have Acceptance Criteria.
+   - If you don't understand Acceptance Criteria, don't be afraid to clarify it.
 
 See [Sprint notes](https://docs.google.com/document/d/1PxbVa85ZyZQN0tlnibdIgxR1PC301dWRXumpPnWi33w/edit) document to find the Sprint Goal, Capacity and Sprint Notes for the current and past sprints.
 
