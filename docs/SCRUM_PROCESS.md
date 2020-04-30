@@ -28,7 +28,7 @@ More information about Scrum you can find here: [Scrum Guide](https://www.scrumg
  * Daily Scrum: each workday 8:00 - 8:15 p.m.
  * Sprint Review: each Friday 8:15 - 9:00 p.m.
  * Sprint Retrospective: each Friday 9:05 - 10:05 p.m.
- * Sprint Planning: each Monday 8:15 - 10:15 p.m.
+ * Sprint Planning: each Monday 8:15 - 10:15 p.m. (break 9:15 - 9:20 p.m)
 
 #### Scrum Artifacts
 
@@ -75,7 +75,17 @@ See [Notes about retrospective](https://docs.google.com/spreadsheets/d/17-9C6O2Z
 #### Sprint Planning
 
 Sprint Planning is time-boxed to a maximum of two hours for a one-week Sprint.
+ * During the Sprint Planning our team make Estimation of the tasks.
+   - You should write Estimation in the issue. More details about the issues you can find in the [CONTRIBUTING.md](CONTRIBUTING.md#issues)
+   - Estimation defines by hours.
+   - We are using a three-points technique for exposure of Estimation. More information about the three-points technique you can find here: [Three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation). 
+   - Don't forget to add unimportant tasks when counting time for Estimation.
+ * Also, each member of the team should notify about work time during the Sprint.
+ * During the Sprint Planning we calculate our Capacity and then we define amount of tasks that we can bring in the Sprint. 
+ * Also during Sprint Planning we make Acceptance Criteria.
+   - Don't start a task if the issue doesn't have AC.
+   - If you don't understand AC, don't be afraid to clarify it.
 
-See [Sprint notes](https://docs.google.com/document/d/1PxbVa85ZyZQN0tlnibdIgxR1PC301dWRXumpPnWi33w/edit) document to find the Sprint Goal and sprint notes for the current and past sprints.
+See [Sprint notes](https://docs.google.com/document/d/1PxbVa85ZyZQN0tlnibdIgxR1PC301dWRXumpPnWi33w/edit) document to find the Sprint Goal, Capacity and Sprint Notes for the current and past sprints.
 
 See the current sprint backlog at [project's Agile board](#scrum-artifacts) 
