@@ -4,10 +4,13 @@ This file describes how to set up and integrate SwiftFormat into our project.
 
 ## How to set up the environment
 
-1. [Install SwiftFormat via Homebrew](https://github.com/nicklockwood/SwiftFormat#command-line-tool).
-2. [Integrate SwiftFormat into an Xcode scheme](https://github.com/nicklockwood/SwiftFormat#alternative-locally-installed-swiftformat). Just add a new ["Run Script Phase"](https://stackoverflow.com/questions/39632301/where-is-the-run-script-and-build-phase-in-xcode).
+- Install SwiftFormat via Homebrew
 
-**NOTE:** We are using version 0.44.7
+```bash
+brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/5b81b0915660fd159c0bb3e98783a28b258bf7fb/Formula/swiftformat.rb
+```
+
+- [Integrate SwiftFormat into an Xcode scheme](https://github.com/nicklockwood/SwiftFormat#alternative-locally-installed-swiftformat). Just add a new ["Run Script Phase"](https://stackoverflow.com/questions/39632301/where-is-the-run-script-and-build-phase-in-xcode)
 
 ## How to configure SwiftFormat
 
