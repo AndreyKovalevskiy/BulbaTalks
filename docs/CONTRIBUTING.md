@@ -98,8 +98,8 @@ Before you contribute your PR, do some tests:
 
 #### Reviewing process
 
-1. Try at the beginning of your workday make some reviews.
-1. Review one PR a day at least, if you have one.
+1. Try to do a code review at the beginning of your workday.
+1. Do a code review no later than the second day after receipt of the request.
 1. If you need a review as soon as possible, notify and ask about review explicitly, don't wait.
 1. Check this [approach to offering feedback and responding](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#offering-feedback), try to follow it. Also check our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
 1. Only the person, who opened a conversation can resolve it. 
