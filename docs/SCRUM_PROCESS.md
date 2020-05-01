@@ -28,7 +28,7 @@ More information about Scrum you can find here: [Scrum Guide](https://www.scrumg
  * Daily Scrum: each workday 8:00 - 8:15 p.m.
  * Sprint Review: each Friday 8:15 - 9:00 p.m.
  * Sprint Retrospective: each Friday 9:05 - 10:05 p.m.
- * Sprint Planning: each Monday 8:15 - 10:15 p.m.
+ * Sprint Planning: each Monday 8:15 - 10:15 p.m. (break 9:15 - 9:20 p.m)
 
 #### Scrum Artifacts
 
@@ -43,7 +43,7 @@ Agile board consists of several columns that describe every step of the process:
  - Done - issues have been completed.
 
 When a developer drags an issue on the Agile board, the issue changes its status.
- 1. When a developer assignees issue he dragging it into the **In Progress** column, it means he starts to work. 
+ 1. When a developer assignees issue he dragging it into the **In Progress** column, it means he starts to work on it. 
  1. After the work is done he opens a new PR and requests review from collaborators, at the same time the issue should be dragged into the **PR** column. Automatically PRs card adds into the **PR** column. 
  1. If all reviewers approve the task and it is merged, the issue must be dragged into the **Done** column.
  1. If someone doesn't approve the task, the issue must be dragged into the **In Progress** column. 
@@ -75,7 +75,17 @@ See [Notes about retrospective](https://docs.google.com/spreadsheets/d/17-9C6O2Z
 #### Sprint Planning
 
 Sprint Planning is time-boxed to a maximum of two hours for a one-week Sprint.
+ * During the Sprint Planning our team make Estimation of the tasks.
+   - You should write Estimation in the issue. More details about the issues you can find in the [CONTRIBUTING.md](CONTRIBUTING.md#issues)
+   - Estimation defines in hours.
+   - We are using a three-points technique for exposure of Estimation. More information about the three-points technique you can find here: [Three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation). 
+   - Do not forget to add extra time (reading documentation, etc.) if necessary when estimating tasks.
+ * Also, each member of the team must notify about the number of hours that he can spend on the project daily during the Sprint.
+ * During the Sprint Planning we calculate our Capacity and then we define amount of tasks that we can take in the Sprint. 
+ * Also during Sprint Planning we make Acceptance Criteria.
+   - Don't assign an issue if the issue doesn't have Acceptance Criteria.
+   - If you don't understand Acceptance Criteria, don't be afraid to clarify it.
 
-See [Sprint notes](https://docs.google.com/document/d/1PxbVa85ZyZQN0tlnibdIgxR1PC301dWRXumpPnWi33w/edit) document to find the Sprint Goal and sprint notes for the current and past sprints.
+See [Sprint notes](https://docs.google.com/document/d/1PxbVa85ZyZQN0tlnibdIgxR1PC301dWRXumpPnWi33w/edit) document to find the Sprint Goal, Capacity and Sprint Notes for the current and past sprints.
 
 See the current sprint backlog at [project's Agile board](#scrum-artifacts) 
