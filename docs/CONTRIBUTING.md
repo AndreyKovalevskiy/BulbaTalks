@@ -93,7 +93,6 @@ Before you contribute your PR, do some tests:
 1. If a PR solves some issue, then in the "Linked issues" section select the issue to be solved.
 1. In the "Projects" section select the project board where you want to add the issue.
 1. Add yourself in the "Assignees" section.
-1. Assign reviewers... TBD
 
 #### Reviewing process
 
