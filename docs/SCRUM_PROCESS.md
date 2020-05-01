@@ -43,7 +43,7 @@ Agile board consists of several columns that describe every step of the process:
  - Done - issues have been completed.
 
 When a developer drags an issue on the Agile board, the issue changes its status.
- 1. When a developer assignees issue he dragging it into the **In Progress** column, it means he starts to work. 
+ 1. When a developer assignees issue he dragging it into the **In Progress** column, it means he starts to work on it. 
  1. After the work is done he opens a new PR and requests review from collaborators, at the same time the issue should be dragged into the **PR** column. Automatically PRs card adds into the **PR** column. 
  1. If all reviewers approve the task and it is merged, the issue must be dragged into the **Done** column.
  1. If someone doesn't approve the task, the issue must be dragged into the **In Progress** column. 
