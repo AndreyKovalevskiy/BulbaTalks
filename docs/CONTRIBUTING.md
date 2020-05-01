@@ -39,10 +39,10 @@ Example: `hotfix-1.0.2`.
 ### Commit Message
 
 1. Write in English.
-1. Use the present tense in the title.
+1. Use the present tense in the title(the text up to the first blank line in a commit message is treated as the commit title, and that title is used throughout Git).
 1. Use the imperative in the title. For example, you can start the title with these words: Refactor, Update, Remove, Release, Fix, Merge, Rename, etc.
 1. Separate the title from the description with a blank line.
-1. Write description if you think this is necessary.
+1. Write description to explain what changed and why.
 1. Start your title and description with an uppercase letter.
 
 **Recommendation for creating commits**
@@ -58,14 +58,17 @@ We use [SemVer](https://semver.org/) for versioning.
 
 Before you contribute your PR, do some tests:
 1. Try to test your changes using the [template](https://www.guru99.com/positive-and-negative-testing.html).
-1. If your changes are related to the UI, check that your UI at least correctly displayed both on devices with the smallest screen and with the largest; which supports our minimum version of iOS in the project(Do not forget to check the UI when rotating the device). 
-1. Try to test your changes on the real device, not simulator. If you can not, write it in PR.
+1. If your changes are UI changes, do tests to check the layout:
+	- on devices that support our project with the smallest screen and the largest. For example, for 12 iOS version and higher, we are testing our UI layout application on iphone 5 and iPhone XS Max.
+	- using the device with the minimum and maximum version of iOS that support our project.
+	- while you're rotating the device. 
+1. Try to test your changes on the real device, not simulator. If you can not, leave an explicit note in the PR.
 
 ## Work with issues and pull requests
 
 ### Issues 
 
-1. Before creating an issue, please check this [list](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/issues) as you might find out that you don't need to create one. If you created a duplicate issue, leave the comment below duplicate like this: "Closed as a duplication for #[issue-number]" (where issue-number is your original issue number, example: "Closed as a duplication for #23"), then close the duplicate issue.
+1. Before creating an issue, please check this [list](https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project/issues) as you might find out that you don't need to create one. If you created a duplicate issue, leave the commentin the duplicate: "Closed as a duplicate for #[issue-number]" (where "issue-number" is the number of the original issue, example: "Closed as a duplicate for #23"), then close the duplicate issue.
 
 1. [How to create an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue):
    - Keep your titles short and descriptive.
@@ -87,10 +90,9 @@ Before you contribute your PR, do some tests:
 
    - Check this [approach to write a Pull Request](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#approach-to-writing-a-pull-request) and follow it.
    - The pull request’s title should tell the changes itself generally, to give an overview idea of what the pull request is about.
-   - If PR solves some issue, then in the "Linked issues" section select the issue to be solved.
+   - If a PR solves some issue, then in the "Linked issues" section select the issue to be solved.
    - In the "Projects" section select the project board where you want to add the issue.
    - Add yourself in the "Assignees" section.
-   - Assign reviewers... TBD
 
 1. Notify the team explicitly if you have blockers(or notify assignee for this blocker).
 
@@ -104,6 +106,6 @@ Before you contribute your PR, do some tests:
 1. Check this [approach to offering feedback and responding](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/#offering-feedback), try to follow it. Also check our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
 1. Only the person, who opened a conversation can resolve it. 
 1. Approve PR if all your conversations are resolved and you have no questions, otherwise request changes or leave a comment.
-1. Merge pull request can only a person, who created a pull request. If the author of PR is absent or can't work now for some reason, merge should be made by new assignee on this issue. 
+1. Only the person, who created PR can merge it. If the PR has all approvals and you need changes in this PR, notify the assignee explicitly.
 
 We use the Scrum framework for developing the product. Read more about when and how we can drag the issue between the columns on Agile board in [SCRUM_PROCESS.md file](SCRUM_PROCESS.md)
