@@ -4,7 +4,7 @@ This file describes how to set up and integrate SwiftFormat into our project.
 
 ## How to set up the environment
 
-- Install SwiftFormat via Homebrew
+- Install SwiftFormat (version 0.44.7) via Homebrew
 
 ```bash
 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/5b81b0915660fd159c0bb3e98783a28b258bf7fb/Formula/swiftformat.rb
