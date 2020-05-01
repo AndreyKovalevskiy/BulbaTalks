@@ -79,7 +79,7 @@ Sprint Planning is time-boxed to a maximum of two hours for a one-week Sprint.
    - You should write Estimation in the issue. More details about the issues you can find in the [CONTRIBUTING.md](CONTRIBUTING.md#issues)
    - Estimation defines in hours.
    - We are using a three-points technique for exposure of Estimation. More information about the three-points technique you can find here: [Three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation). 
-   - Don't forget to add unimportant tasks when counting time for Estimation.
+   - Do not forget to add extra time (reading documentation, etc.) if necessary when estimating tasks.
  * Also, each member of the team must notify about the number of hours that he can spend on the project daily during the Sprint.
  * During the Sprint Planning we calculate our Capacity and then we define amount of tasks that we can take in the Sprint. 
  * Also during Sprint Planning we make Acceptance Criteria.
