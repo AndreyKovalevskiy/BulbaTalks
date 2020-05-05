@@ -23,7 +23,7 @@ The application can do a basic set of operations like fetching tweets, searching
 3. Install [Homebrew](https://brew.sh).
 4. Install [Git](https://git-scm.com/download/mac) via Homebrew.
 5. Read the [SwiftFormat.md](docs/SwiftFormat.md) file and set up SwiftFormat according to the instructions.
-6. Install [SwiftLint](https://github.com/realm/SwiftLint#installation) via Homebrew.
+6. Read the [SwiftLint.md](docs/SwiftLint.md) file and set up SwiftLint according to the instructions.
 
 #### How to build the app
 
