@@ -1,3 +1,3 @@
 enum Operation {
-    case getUserTimeline
+    case getHomeTimeline
 }
