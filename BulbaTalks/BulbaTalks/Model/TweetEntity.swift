@@ -1,2 +1,1 @@
-struct TweetEntity: Codable {
-}
+struct TweetEntity: Codable {}

@@ -1,3 +1,5 @@
+import Foundation
+
 struct User: Codable {
     let id: Int
     let idString: String
@@ -6,10 +8,10 @@ struct User: Codable {
     let userDescription: String
     let followersCount: Int
     let friendsCount: Int
-    let createdAt: String
+    let createdAt: Date
     let profileImageURL: String
-    let defaultProfile: Bool
-    let defaultProfileImage: Bool
+    let isBackgroundProfileChanged: Bool
+    let isProfileImageUploaded: Bool
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -21,7 +23,7 @@ struct User: Codable {
         case friendsCount = "friends_count"
         case createdAt = "created_at"
         case profileImageURL = "profile_image_url_https"
-        case defaultProfile = "default_profile"
-        case defaultProfileImage = "default_profile_image"
+        case isBackgroundProfileChanged = "default_profile"
+        case isProfileImageUploaded = "default_profile_image"
     }
 }

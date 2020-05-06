@@ -1,7 +1,9 @@
+import Foundation
+
 struct Tweet: Codable {
     let id: Int
     let idString: String
-    let createdAt: String
+    let createdAt: Date
     let text: String
     let user: User
     let entities: [TweetEntity]
