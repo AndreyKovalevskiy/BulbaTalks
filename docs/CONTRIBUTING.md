@@ -93,9 +93,12 @@ Before you contribute your PR, do some tests:
    - If a PR solves some issue, then in the "Linked issues" section select the issue to be solved.
    - In the "Projects" section select the project board where you want to add the issue.
    - Add yourself in the "Assignees" section.
+
 1. Notify the team explicitly if you have blockers(or notify assignee for this blocker).
+
 1. If you have a controversial approach to solve the issue, discuss it with the team/team lead.
-1. If you made changes after someone aproved your PR and these changes are not the correction of comments on the review or correction of typos, then request a review again, since the person who aproved your work may not agree with the new changes.
+
+1. If you made changes after someone approved your PR and these changes are not the correction of comments on the review or correction of typos, then request a review again, since the person who approved your work may not agree with the new changes.
 
 #### Reviewing process
 
