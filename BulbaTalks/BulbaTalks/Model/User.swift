@@ -10,8 +10,8 @@ struct User: Codable {
     let friendsCount: Int
     let createdAt: Date
     let profileImageURL: String
-    let isBackgroundProfileChanged: Bool
-    let isProfileImageUploaded: Bool
+    let isProfileContainsDefaultBackground:Bool
+    let isProfileContainsDefaultImage: Bool
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -23,7 +23,7 @@ struct User: Codable {
         case friendsCount = "friends_count"
         case createdAt = "created_at"
         case profileImageURL = "profile_image_url_https"
-        case isBackgroundProfileChanged = "default_profile"
-        case isProfileImageUploaded = "default_profile_image"
+        case isProfileContainsDefaultBackground = "default_profile"
+        case isProfileContainsDefaultImage = "default_profile_image"
     }
 }
