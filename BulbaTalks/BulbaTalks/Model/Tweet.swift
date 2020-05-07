@@ -7,8 +7,8 @@ struct Tweet: Codable {
     let text: String
     let user: User
     let entities: [TweetEntity]
-    let retweetCount: String
-    let likeCount: String
+    let retweetCount: Int
+    let likeCount: Int
     let isTweetLiked: Bool
     let isTweetRetweeted: Bool
 
