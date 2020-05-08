@@ -1,3 +1,3 @@
 protocol Repository {
-    func getHomeTimeline() -> [Tweet]
+    func getHomeTimeline() -> [Tweet]?
 }
