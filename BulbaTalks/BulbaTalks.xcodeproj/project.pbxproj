@@ -18,7 +18,7 @@
 		953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */; };
 		953CD2812465465400334E81 /* JSONEncoder+TwitterObjectEncoding in Sources */ = {isa = PBXBuildFile; fileRef = 953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding */; };
 		95DD4AA22462D37E0004300D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD4AA12462D37E0004300D /* User.swift */; };
-		95E49B592462F57300A6C2EF /* TweetEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E49B582462F57300A6C2EF /* TweetEntity.swift */; };
+		95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E49B582462F57300A6C2EF /* TweetEntities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+TwitterResponseDecoding.swift"; sourceTree = "<group>"; };
 		953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding */ = {isa = PBXFileReference; lastKnownFileType = text; path = "JSONEncoder+TwitterObjectEncoding"; sourceTree = "<group>"; };
 		95DD4AA12462D37E0004300D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = BulbaTalks/Model/User.swift; sourceTree = SOURCE_ROOT; };
-		95E49B582462F57300A6C2EF /* TweetEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetEntity.swift; sourceTree = "<group>"; };
+		95E49B582462F57300A6C2EF /* TweetEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetEntities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				951ECB422462B92B009367A8 /* Tweet.swift */,
-				95E49B582462F57300A6C2EF /* TweetEntity.swift */,
+				95E49B582462F57300A6C2EF /* TweetEntities.swift */,
 				95DD4AA12462D37E0004300D /* User.swift */,
 			);
 			path = Model;
@@ -213,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F6B5A12455866800B77247 /* ViewController.swift in Sources */,
-				95E49B592462F57300A6C2EF /* TweetEntity.swift in Sources */,
+				95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */,
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
 				953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */,
 				953CD2812465465400334E81 /* JSONEncoder+TwitterObjectEncoding in Sources */,

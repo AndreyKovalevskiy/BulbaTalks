@@ -9,7 +9,7 @@ struct User: Codable {
     let followersCount: Int
     let friendsCount: Int
     let createdAt: Date
-    let profileImageURL: String
+    let profileImageURLString: String
     let isProfileContainsDefaultBackground: Bool
     let isProfileContainsDefaultImage: Bool
 
@@ -22,7 +22,7 @@ struct User: Codable {
         case followersCount = "followers_count"
         case friendsCount = "friends_count"
         case createdAt = "created_at"
-        case profileImageURL = "profile_image_url_https"
+        case profileImageURLString = "profile_image_url_https"
         case isProfileContainsDefaultBackground = "default_profile"
         case isProfileContainsDefaultImage = "default_profile_image"
     }

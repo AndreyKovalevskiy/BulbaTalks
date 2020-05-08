@@ -6,11 +6,11 @@ struct Tweet: Codable {
     let createdAt: Date
     let text: String
     let user: User
-    let entity: TweetEntity
+    let entities: TweetEntities
     let retweetCount: Int
-    let likeCount: Int
-    let isTweetLiked: Bool
+    let favoriteCount: Int
     let isTweetRetweeted: Bool
+    let isTweetFavorited: Bool
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -18,10 +18,10 @@ struct Tweet: Codable {
         case createdAt = "created_at"
         case text
         case user
-        case entity
+        case entities
         case retweetCount = "retweet_count"
-        case likeCount = "favorite_count"
-        case isTweetLiked = "favorited"
+        case favoriteCount = "favorite_count"
         case isTweetRetweeted = "retweeted"
+        case isTweetFavorited = "favorited"
     }
 }
