@@ -10,7 +10,7 @@ struct User: Codable {
     let friendsCount: Int
     let createdAt: Date
     let profileImageURL: String
-    let isProfileContainsDefaultBackground:Bool
+    let isProfileContainsDefaultBackground: Bool
     let isProfileContainsDefaultImage: Bool
 
     enum CodingKeys: String, CodingKey {
