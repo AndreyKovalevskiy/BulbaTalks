@@ -6,7 +6,7 @@ struct Tweet: Codable {
     let createdAt: Date
     let text: String
     let user: User
-    let entities: TweetEntity
+    let entity: TweetEntity
     let retweetCount: Int
     let likeCount: Int
     let isTweetLiked: Bool
@@ -18,7 +18,7 @@ struct Tweet: Codable {
         case createdAt = "created_at"
         case text
         case user
-        case entities
+        case entity
         case retweetCount = "retweet_count"
         case likeCount = "favorite_count"
         case isTweetLiked = "favorited"
