@@ -1,6 +1,6 @@
 import Foundation
 
-class LocalRepository {
+class LocalRepository: Repository {
     func getHomeTimeline() -> [Tweet]? {
         let filenameWithJSON = "home_timeline"
         guard let data = FileReader.readLocalJSONFile(from: filenameWithJSON) else { return nil }
