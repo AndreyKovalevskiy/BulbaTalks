@@ -18,7 +18,7 @@ struct User: Codable {
         case idString = "id_str"
         case name
         case screenName = "screen_name"
-        case description = "description"
+        case description
         case followersCount = "followers_count"
         case friendsCount = "friends_count"
         case createdAt = "created_at"
