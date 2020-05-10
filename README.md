@@ -31,7 +31,12 @@ The application can do a basic set of operations like fetching tweets, searching
 ```bash
 git clone https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project.git
 ```
-2. TBD
+2. Open the `BulbaTalks.xcodeproj` file from the `BulbaTalks` folder
+3. [Run the app in the Simulator or on a Device](https://developer.apple.com/documentation/xcode/running_your_app_in_the_simulator_or_on_a_device)
+- Choose a Scheme - BulbaTalks
+- Select a simulated iOS device: iPhone only. For example iPhone 11. You can also select a real device
+- Run the App. Click the `Run` button
+4. Enjoy it.
 
 # Contributing
 
