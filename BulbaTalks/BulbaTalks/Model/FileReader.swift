@@ -1,8 +1,8 @@
 import Foundation
 
-class FileReader {
-    static func readLocalJSONFile(from filename: String) -> Data? {
-        guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
+struct FileReader {
+    static func read(at filePath: URL) -> Data? {
+        guard let url = Bundle.main.url(forResource: filePath.lastPathComponent, withExtension: nil) else {
             return nil
         }
         return try? Data(contentsOf: url)

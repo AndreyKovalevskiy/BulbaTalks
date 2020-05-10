@@ -79,8 +79,8 @@
 		55DCA32E24558F2600871DD1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				69ADB1F92462EBB1002F65F2 /* Operation.swift */,
 				42EF67C92465A45700329DE5 /* FileReader.swift */,
+				69ADB1F92462EBB1002F65F2 /* Operation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
