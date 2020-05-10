@@ -9,8 +9,8 @@ struct Tweet: Codable {
     let entities: TweetEntities
     let retweetCount: Int
     let favoriteCount: Int
-    let isTweetRetweeted: Bool
-    let isTweetFavorited: Bool
+    let isRetweeted: Bool
+    let isFavorited: Bool
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -21,7 +21,7 @@ struct Tweet: Codable {
         case entities
         case retweetCount = "retweet_count"
         case favoriteCount = "favorite_count"
-        case isTweetRetweeted = "retweeted"
-        case isTweetFavorited = "favorited"
+        case isRetweeted = "retweeted"
+        case isFavorited = "favorited"
     }
 }

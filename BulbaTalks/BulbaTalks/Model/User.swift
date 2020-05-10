@@ -5,7 +5,7 @@ struct User: Codable {
     let idString: String
     let name: String
     let screenName: String
-    let userDescription: String
+    let description: String
     let followersCount: Int
     let friendsCount: Int
     let createdAt: Date
@@ -18,7 +18,7 @@ struct User: Codable {
         case idString = "id_str"
         case name
         case screenName = "screen_name"
-        case userDescription = "description"
+        case description
         case followersCount = "followers_count"
         case friendsCount = "friends_count"
         case createdAt = "created_at"
