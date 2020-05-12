@@ -240,10 +240,19 @@
 				55DCA32F24558F3E00871DD1 /* View */,
 				55DCA33024558F5400871DD1 /* Controller */,
 				953CD27D246487DD00334E81 /* Extensions */,
+				69042FB0246AC09D00B651D3 /* Network */,
 				55DCA33124558F8300871DD1 /* Resources */,
 				55DCA33224558F9A00871DD1 /* SupportingFiles */,
 			);
 			path = BulbaTalks;
+			sourceTree = "<group>";
+		};
+		69042FB0246AC09D00B651D3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				69042FB1246AC0BB00B651D3 /* NetworkClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		953CD27D246487DD00334E81 /* Extensions */ = {
