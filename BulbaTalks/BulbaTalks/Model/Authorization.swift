@@ -1,12 +1,16 @@
 import Foundation
 
 struct Authorization {
-    static var isSignedIn: Bool {
+    static private(set) var isSignedIn: Bool {
         get {
             return UserDefaults.standard.bool(forKey: "isSignedIn")
         }
         set {
             UserDefaults.standard.set(newValue, forKey: "isSignedIn")
         }
+    }
+    
+    static func makeAuth() {
+        isSignedIn = true
     }
 }
