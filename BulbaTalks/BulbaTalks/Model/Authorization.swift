@@ -10,7 +10,8 @@ struct Authorization {
         }
     }
     
-    static func makeAuth() {
+    static func makeAuth() -> Bool {
         isSignedIn = true
+        return true
     }
 }
