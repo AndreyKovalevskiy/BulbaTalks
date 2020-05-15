@@ -15,6 +15,7 @@
 		55F6B5A62455866900B77247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A52455866900B77247 /* Assets.xcassets */; };
 		55F6B5A92455866900B77247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A72455866900B77247 /* LaunchScreen.storyboard */; };
 		55FEB9C8246AF2890081717C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEB9C7246AF2890081717C /* Authentication.swift */; };
+		690FD64E246EFE8F00728925 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64D246EFE8F00728925 /* NetworkError.swift */; };
 		69ADB1FA2462EBB1002F65F2 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ADB1F92462EBB1002F65F2 /* Operation.swift */; };
 		951ECB432462B92B009367A8 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951ECB422462B92B009367A8 /* Tweet.swift */; };
 		953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */; };
@@ -41,6 +42,7 @@
 		55F6B5A82455866900B77247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55F6B5AA2455866900B77247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55FEB9C7246AF2890081717C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		690FD64D246EFE8F00728925 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		69ADB1F92462EBB1002F65F2 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = BulbaTalks/Model/Operation.swift; sourceTree = SOURCE_ROOT; };
 		951ECB422462B92B009367A8 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = BulbaTalks/Model/Tweet.swift; sourceTree = SOURCE_ROOT; };
 		953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Twitter.swift"; sourceTree = "<group>"; };
@@ -171,10 +173,19 @@
 				55DCA32F24558F3E00871DD1 /* View */,
 				55DCA33024558F5400871DD1 /* Controller */,
 				953CD27D246487DD00334E81 /* Extensions */,
+				690FD64C246EFE5800728925 /* Network */,
 				55DCA33124558F8300871DD1 /* Resources */,
 				55DCA33224558F9A00871DD1 /* SupportingFiles */,
 			);
 			path = BulbaTalks;
+			sourceTree = "<group>";
+		};
+		690FD64C246EFE5800728925 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				690FD64D246EFE8F00728925 /* NetworkError.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		953CD27D246487DD00334E81 /* Extensions */ = {
@@ -336,6 +347,7 @@
 				69ADB1FA2462EBB1002F65F2 /* Operation.swift in Sources */,
 				951ECB432462B92B009367A8 /* Tweet.swift in Sources */,
 				95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */,
+				690FD64E246EFE8F00728925 /* NetworkError.swift in Sources */,
 				95DD4AA22462D37E0004300D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
