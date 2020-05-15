@@ -89,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		426CEDC8246ECBCA0051E8D7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				426CEDBC246DEAF50051E8D7 /* APIEndpoints.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		55029D19246310C600FAAA06 /* MockedTwitterResponses */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +208,7 @@
 				55DCA32F24558F3E00871DD1 /* View */,
 				55DCA33024558F5400871DD1 /* Controller */,
 				953CD27D246487DD00334E81 /* Extensions */,
+				426CEDC8246ECBCA0051E8D7 /* Network */,
 				55DCA33124558F8300871DD1 /* Resources */,
 				55DCA33224558F9A00871DD1 /* SupportingFiles */,
 			);
