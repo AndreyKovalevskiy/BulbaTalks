@@ -11,7 +11,6 @@
 		55029D1D2463121400FAAA06 /* home_timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 55029D1C2463121400FAAA06 /* home_timeline.json */; };
 		55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59C2455866800B77247 /* AppDelegate.swift */; };
 		55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59E2455866800B77247 /* SceneDelegate.swift */; };
-		55F6B5A12455866800B77247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B5A02455866800B77247 /* ViewController.swift */; };
 		55F6B5A42455866800B77247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A22455866800B77247 /* Main.storyboard */; };
 		55F6B5A62455866900B77247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A52455866900B77247 /* Assets.xcassets */; };
 		55F6B5A92455866900B77247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A72455866900B77247 /* LaunchScreen.storyboard */; };
@@ -268,11 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F6B5A12455866800B77247 /* ViewController.swift in Sources */,
 				42105FCC246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift in Sources */,
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,
-				55F6B5A12455866800B77247 /* ViewController.swift in Sources */,
 				953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */,
 				953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */,
 				953CD2812465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift in Sources */,
