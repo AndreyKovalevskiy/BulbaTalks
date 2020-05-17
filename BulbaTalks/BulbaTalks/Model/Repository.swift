@@ -1,8 +1,11 @@
+/// A type that describes methods for retrieving data provided by the Twitter API.
 protocol Repository {
-    /// Returns a collection of tweets and retweets posted by the authenticating user and the users he follows.
-    /// - Parameters:
-    ///   - firstTweet: The tweet to get more recent tweets.
-    ///   - lastTweet: The tweet to get more older tweets.
-    ///   - completion: A closure that accepts an array of received tweets.
+    /**
+     Returns a collection of tweets and retweets posted by the authenticating user and the users he follows.
+     - Parameters:
+       - firstTweet: The tweet object. If the parameter is not nil, tweets with an identifier greater than the identifier of this tweet will be received.
+       - lastTweet: The tweet object. If the parameter is not nil, tweets with an identifier less than the identifier of this tweet will be received.
+       - completion: The completion handler to call when the receipt of tweets is completed. This completion handler takes an array of tweets as a parameter.
+     */
     func getHomeTimeline(since firstTweet: Tweet?, until lastTweet: Tweet?, completion: ([Tweet]) -> Void)
 }
