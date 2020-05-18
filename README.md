@@ -14,7 +14,7 @@ The application can do a basic set of operations like fetching tweets, searching
 
 - macOS 10.15.4 or later
 - Xcode 11.4 or later
-- iOS 12.0 or later
+- iOS 12.0 or later. iPad devices are not supported
 
 #### How to set up the environment
 
@@ -31,7 +31,12 @@ The application can do a basic set of operations like fetching tweets, searching
 ```bash
 git clone https://github.com/dersim-davaod/CocoaHeads-iOS-School-Twitter-project.git
 ```
-2. TBD
+2. Open the `BulbaTalks.xcodeproj` file from the `BulbaTalks` folder
+3. [Run the app in the Simulator or on a Device](https://developer.apple.com/documentation/xcode/running_your_app_in_the_simulator_or_on_a_device)
+- Choose a Scheme - `BulbaTalks`
+- Select a simulated or real iOS device
+- Run the App by clicking the `Run` button
+4. Enjoy it.
 
 # Contributing
 
@@ -43,7 +48,6 @@ Also read the [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md) file for details on 
 
 - [Tatsiana Gouteeva](https://github.com/TatsianaGouteeva)
 - [Tatsiana Khizhniak](https://github.com/badpanda13)
-- [Evgeniya Razvadovskaya](https://github.com/Iweinrazvadovskaya)
 - [Hanna Bolotova](https://github.com/Hannabolotova)
 - [Andrey Kovalevskiy](https://github.com/AndreyKovalevskiy)
 - [Andrey Pogosskiy](https://github.com/BongDiDong)
