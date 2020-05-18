@@ -21,6 +21,7 @@
 		953CD2812465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */; };
 		95DD4AA22462D37E0004300D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD4AA12462D37E0004300D /* User.swift */; };
 		95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E49B582462F57300A6C2EF /* TweetEntities.swift */; };
+		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+TwitterObjectEncoding.swift"; sourceTree = "<group>"; };
 		95DD4AA12462D37E0004300D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = BulbaTalks/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		95E49B582462F57300A6C2EF /* TweetEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetEntities.swift; sourceTree = "<group>"; };
+		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		55029D1A246310F600FAAA06 /* 1.1 */ = {
 			isa = PBXGroup;
 			children = (
+				AAA8A8AE2472C41900244F0A /* account */,
 				55029D1B2463110C00FAAA06 /* Statuses */,
 			);
 			path = 1.1;
@@ -171,6 +174,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AAA8A8AE2472C41900244F0A /* account */ = {
+			isa = PBXGroup;
+			children = (
+				AAA8A8AF2472C41900244F0A /* verify_credentials.json */,
+			);
+			name = account;
+			path = BulbaTalks/Resources/MockedTwitterResponses/1.1/account;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,6 +246,7 @@
 				55029D1D2463121400FAAA06 /* home_timeline.json in Resources */,
 				55F6B5A62455866900B77247 /* Assets.xcassets in Resources */,
 				55F6B5A42455866800B77247 /* Main.storyboard in Resources */,
+				AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
