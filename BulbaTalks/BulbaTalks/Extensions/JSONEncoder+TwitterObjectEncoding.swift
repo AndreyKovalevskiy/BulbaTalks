@@ -6,7 +6,7 @@ protocol TwitterObjectEncoding {
 
 extension JSONEncoder: TwitterObjectEncoding {
     func encodeTwitterObject<T>(_ value: T) throws -> Data where T: Encodable {
-        let oldDateDecodingStrategy = dateEncodingStrategy
+        let oldDateDecodingStrategy = self.dateEncodingStrategy
         defer { self.dateEncodingStrategy = oldDateDecodingStrategy }
 
         do {
