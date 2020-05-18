@@ -10,8 +10,6 @@ class MockRepository: Repository {
         let jsonURL = URL(fileURLWithPath: path)
         if let data =  Bundle.main.contentsOfFile(at: jsonURL) {
             completion(try? JSONDecoder().decodeTwitterResponse([Tweet].self, from: data) ?? [])
-            return
-        }
-        completion([])
+        } else { completion([]) }
     }
 }
