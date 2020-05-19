@@ -6,7 +6,7 @@ class NetworkService {
     typealias CompletionHandler = (Result<Data?, Error>) -> Void
 /**
      The function creates a task that retrieves the contents of the specified URL, then calls a handler upon completion.
-     - Parameter elements: URL, Completion Handler.
+     - Parameter elements: URLRequest, Completion Handler.
      - Returns: The new session data task.
 */
     private func networkRequest(request: URLRequest,
