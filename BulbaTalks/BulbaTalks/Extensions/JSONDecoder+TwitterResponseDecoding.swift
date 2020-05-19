@@ -8,12 +8,12 @@ protocol TwitterResponseDecoding {
 extension JSONDecoder: TwitterResponseDecoding {
     func decodeTwitterResponse<T>(_ type: T.Type,
                                   from data: Data) throws -> T where T: Decodable {
-        let oldDateDecodingStrategy = self.dateDecodingStrategy
+        let oldDateDecodingStrategy = dateDecodingStrategy
         defer { self.dateDecodingStrategy = oldDateDecodingStrategy }
 
         do {
-            self.dateDecodingStrategy = .formatted(.twitter)
-            return try self.decode(type, from: data)
+            dateDecodingStrategy = .formatted(.twitter)
+            return try decode(type, from: data)
         } catch {
             throw error
         }
