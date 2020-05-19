@@ -15,7 +15,7 @@ struct Authorization {
     
     /**
      Performs user authorization process.
-     - Returns: `True` if the user was authorized, otherwise `false`.
+     - Returns: `true` if the user was authorized, otherwise `false`.
      */
     static func authorize() -> Bool {
         isSignedIn = true
@@ -24,7 +24,7 @@ struct Authorization {
     
     /**
      Performs user deauthorization process.
-     - Returns: `True` if the user was deauthorized, otherwise `false`.
+     - Returns: `true` if the user was deauthorized, otherwise `false`.
      */
     static func singOut() -> Bool {
         isSignedIn = false
