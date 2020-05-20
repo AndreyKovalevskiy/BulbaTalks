@@ -30,6 +30,7 @@
 		A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A1C247FB8C00089FD8D /* LoginButton.swift */; };
 		A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */; };
 		A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */; };
+		A8A9E68924753DDE00596F01 /* UIImage+getImageFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9E68824753DDE00596F01 /* UIImage+getImageFromUrl.swift */; };
 		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		A8A54A1C247FB8C00089FD8D /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardID.swift"; sourceTree = "<group>"; };
+		A8A9E68824753DDE00596F01 /* UIImage+getImageFromUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+getImageFromUrl.swift"; sourceTree = "<group>"; };
 		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +192,7 @@
 			children = (
 				A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */,
 				42105FCB246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift */,
+				A8A9E68824753DDE00596F01 /* UIImage+getImageFromUrl.swift */,
 				953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */,
 				953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */,
 				953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */,
@@ -353,6 +356,7 @@
 				95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */,
 				95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */,
 				42105FCC246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift in Sources */,
+				A8A9E68924753DDE00596F01 /* UIImage+getImageFromUrl.swift in Sources */,
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
 				95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */,
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,
