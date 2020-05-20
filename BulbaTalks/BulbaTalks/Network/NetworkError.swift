@@ -1,5 +1,6 @@
 import Foundation
 
+// The enum contains cases of network errors
 enum NetworkError: Error {
     
     case error(statusCode: Int)
