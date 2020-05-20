@@ -10,7 +10,7 @@ extension JSONDecoder: TwitterResponseDecoding {
                                   from data: Data) throws -> T where T: Decodable {
         let oldDateDecodingStrategy = dateDecodingStrategy
         defer { self.dateDecodingStrategy = oldDateDecodingStrategy }
-
+        
         do {
             dateDecodingStrategy = .formatted(.twitter)
             return try decode(type, from: data)

@@ -8,7 +8,7 @@ struct APIEndpoints {
         - queryParameters: These parameters will be included in the query string.
         - bodyParameters: These parameters will be included in the request body.
      - Returns: The structure contains all the necessary properties
-     for generating an HTTP request to get home timeline.
+     for generating an HTTP request to get home_timeline.
      */
     static func getHomeTimeline(with headersParameters: HTTPHeaderParameters,
                                 queryParameters: HTTPQueryParameters,
