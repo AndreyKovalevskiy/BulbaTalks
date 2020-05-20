@@ -1,13 +1,13 @@
-/// The structure that contains methods for generating requests.
+/// The object that contains methods for generating requests.
 struct APIEndpoints {
     /**
-     Returns the structure contains all the necessary properties
-     for generating an HTTP request to get home timeline.
+     Returns the object contains all the necessary properties
+     for generating an HTTP request to get home_timeline.
      - Parameters:
         - headersParameters: These parameters will be included in the request header.
         - queryParameters: These parameters will be included in the query string.
         - bodyParameters: These parameters will be included in the request body.
-     - Returns: The structure contains all the necessary properties
+     - Returns: The object contains all the necessary properties
      for generating an HTTP request to get home_timeline.
      */
     static func getHomeTimeline(with headersParameters: HTTPHeaderParameters,
