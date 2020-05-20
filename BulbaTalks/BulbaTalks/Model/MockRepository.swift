@@ -7,8 +7,8 @@ import Foundation
 class MockRepository: Repository {
     func getHomeTimeline(since firstTweet: Tweet?, until lastTweet: Tweet?, completion: ([Tweet]) -> Void) {
         let path = APIEndpoints.getHomeTimeLine(with: [:], queryParameters: [:], bodyParameters: [:]).path
-        let jsonURL = URL(fileURLWithPath: path)
-        if let data =  Bundle.main.contentsOfFile(at: jsonURL),
+        let fileURL = URL(fileURLWithPath: path)
+        if let data =  Bundle.main.contentsOfFile(at: fileURL),
            let tweetsArray = try? JSONDecoder().decodeTwitterResponse([Tweet].self, from: data)
         {
             completion(tweetsArray)
@@ -19,8 +19,8 @@ class MockRepository: Repository {
     
     func getAuthenticatedUser(completion: (User?) -> Void) {
         let path = APIEndpoints.getAuthenticatedUser(with: [:], queryParameters: [:], bodyParameters: [:]).path
-        let jsonURL = URL(fileURLWithPath: path)
-        if let data =  Bundle.main.contentsOfFile(at: jsonURL),
+        let fileURL = URL(fileURLWithPath: path)
+        if let data =  Bundle.main.contentsOfFile(at: fileURL),
            let userArray = try? JSONDecoder().decodeTwitterResponse([User].self, from: data),
            !userArray.isEmpty
         {
