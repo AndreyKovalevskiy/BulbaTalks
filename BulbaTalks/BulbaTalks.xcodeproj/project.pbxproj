@@ -22,6 +22,7 @@
 		95DD4AA22462D37E0004300D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD4AA12462D37E0004300D /* User.swift */; };
 		95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DDCC122472CBD1008209DB /* HTTPParameters.swift */; };
 		95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E49B582462F57300A6C2EF /* TweetEntities.swift */; };
+		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		95DD4AA12462D37E0004300D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = BulbaTalks/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		95DDCC122472CBD1008209DB /* HTTPParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameters.swift; sourceTree = "<group>"; };
 		95E49B582462F57300A6C2EF /* TweetEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetEntities.swift; sourceTree = "<group>"; };
+		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		55029D1A246310F600FAAA06 /* 1.1 */ = {
 			isa = PBXGroup;
 			children = (
+				AAA8A8AE2472C41900244F0A /* account */,
 				55029D1B2463110C00FAAA06 /* Statuses */,
 			);
 			path = 1.1;
@@ -182,6 +185,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		AAA8A8AE2472C41900244F0A /* account */ = {
+			isa = PBXGroup;
+			children = (
+				AAA8A8AF2472C41900244F0A /* verify_credentials.json */,
+			);
+			name = account;
+			path = BulbaTalks/Resources/MockedTwitterResponses/1.1/account;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,6 +205,7 @@
 				55F6B5962455866800B77247 /* Frameworks */,
 				55F6B5972455866800B77247 /* Resources */,
 				55BBFFE5245ABE56002AF078 /* SwiftLint */,
+				4244FB142463032A00C07ABD /* SwiftFormat */,
 			);
 			buildRules = (
 			);
@@ -245,12 +258,31 @@
 				55029D1D2463121400FAAA06 /* home_timeline.json in Resources */,
 				55F6B5A62455866900B77247 /* Assets.xcassets in Resources */,
 				55F6B5A42455866800B77247 /* Main.storyboard in Resources */,
+				AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4244FB142463032A00C07ABD /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat --config \"../.swiftformat\" .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
 		55BBFFE5245ABE56002AF078 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
