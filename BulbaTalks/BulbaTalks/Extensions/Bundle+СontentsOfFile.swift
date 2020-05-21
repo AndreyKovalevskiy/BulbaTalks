@@ -6,7 +6,7 @@ extension Bundle {
      - Parameter fileURL: The path to the file.
      - Returns: The `Data` object with the contents of the file.
             
-        If a wrong URL was provided or the file could not be located
+        If an invalid URL was provided or the file could not be located
         at the given URL or it is impossible to construct a `Data` object,
         the method returns `nil`.
      */
