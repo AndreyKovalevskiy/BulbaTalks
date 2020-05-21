@@ -1,13 +1,26 @@
 import UIKit
 
 extension UIImage {
-    static func getImage(fromUrl url: String, completion: @escaping (UIImage?) -> Void) {
+    /**
+      Function to getting UIImage from url
+      - parameter url: Image url.
+      - parameter completion:Escaping closure.
+     */
+    static func getImage(from url: String, completion: @escaping (UIImage?) -> Void) {
         if let url = URL(string: url) {
-            if let data = try? Data(contentsOf: url) {
-                let image = UIImage(data: data)
-                completion(image)
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                if error == nil,
+                    let httpResponse = response as? HTTPURLResponse,
+                    (200 ... 299).contains(httpResponse.statusCode),
+                    let mimeType = httpResponse.mimeType, mimeType.hasPrefix("image/"),
+                    let data = data,
+                    let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        completion(image)
+                    }
+                }
             }
+            task.resume()
         }
-        completion(nil)        
     }
 }
