@@ -1,7 +1,15 @@
 import Foundation
 
-/// A structure that coordinates a group of tasks related to authorization on Twitter.
+/**
+ A structure that coordinates a group of tasks related to
+ authorization on Twitter.
+ */
 struct Authorization {
+    /// An enumeration of possible user authorization states.
+    enum AuthorizationStatus {
+        case authorized
+        case deauthorized
+    }
     
     /// A boolean value indicating whether the user is authorized.
     static private(set) var isSignedIn: Bool {
@@ -12,22 +20,24 @@ struct Authorization {
             UserDefaults.standard.set(newValue, forKey: "isSignedIn")
         }
     }
-    
+
     /**
      Performs user authorization process.
-     - Returns: `true` if the user was authorized, otherwise `false`.
+     - Parameter completion: A closure that takes
+     `true` as a parameter if the user is successfully authorized,
+     otherwise `false`.
      */
-    static func authorize() -> Bool {
+    static func authorize(completion: (Bool) -> Void) {
         isSignedIn = true
-        return true
+        completion(true)
     }
-    
+
     /**
-     Performs user deauthorization process.
-     - Returns: `true` if the user was deauthorized, otherwise `false`.
-     */
-    static func singOut() -> Bool {
-        isSignedIn = false
-        return true
+    Performs a change in user authorization status.
+    - Parameter newStatus: A new authorization status
+     that will be set for the user.
+    */
+    static func changeAuthorizationStatus(newStatus: Authorization.AuthorizationStatus) {
+        isSignedIn = (newStatus == .authorized)
     }
 }
