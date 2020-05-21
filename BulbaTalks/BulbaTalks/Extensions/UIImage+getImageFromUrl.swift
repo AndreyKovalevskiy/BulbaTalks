@@ -3,7 +3,7 @@ import UIKit
 extension UIImage {
     /**
       Function to getting UIImage from url.
-      - parameter url: Image url.
+      - parameter from: Image url.
       - parameter completion: Escaping closure.
      */
     static func getImage(from url: String, completion: @escaping (UIImage?) -> Void) {
