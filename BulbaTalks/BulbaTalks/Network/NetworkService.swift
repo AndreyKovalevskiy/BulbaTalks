@@ -1,12 +1,20 @@
 import Foundation
 /**
- The class making networking calls.
+ An object which makmaking network calls.
  */
 class NetworkService {
     typealias CompletionHandler = (Result<Data?, Error>) -> Void
 /**
-     The function creates a task that retrieves the contents of the specified URL, then calls a handler upon completion.
-     - Parameters: URLRequest, Completion Handler.
+     Creates a task that retrieves the contents of the specified URL,
+     then calls a handler upon completion.
+     - Parameters:
+     URLRequest - the URL to be retrieved.
+     Completion Handler - the completion handler to call when the load request is complete.
+     This completion handler takes the following parameters: 
+            data: the data returned by the server, or nil if the request was fail.
+            response: an object that provides HTTP headers and status code.
+            error: an error object that indicates why the request failed,
+            or nil if the request was successful.
      - Returns: The new session data task.
 */
     private func networkRequest(request: URLRequest,
