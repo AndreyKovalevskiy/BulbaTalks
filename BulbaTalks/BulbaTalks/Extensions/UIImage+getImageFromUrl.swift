@@ -2,7 +2,7 @@ import UIKit
 
 extension UIImage {
     /**
-      Function to getting UIImage from url
+      Function to getting UIImage from url.
       - parameter url: Image url.
       - parameter completion:Escaping closure.
      */
