@@ -49,7 +49,6 @@
 		AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA84616F247EB20300BC950C /* HTTPRequestable.swift */; };
 		AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA846170247EB20400BC950C /* HTTPMethodType.swift */; };
 		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
-		AA5938DA2465875700EAFA74 /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5938D92465875700EAFA74 /* LocalRepository.swift */; };
 		AA5938DA2465875700EAFA74 /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5938D92465875700EAFA74 /* MockRepository.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,7 +109,6 @@
 		AA84616F247EB20300BC950C /* HTTPRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestable.swift; sourceTree = "<group>"; };
 		AA846170247EB20400BC950C /* HTTPMethodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethodType.swift; sourceTree = "<group>"; };
 		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
-		AA5938D92465875700EAFA74 /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
 		AA5938D92465875700EAFA74 /* MockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
