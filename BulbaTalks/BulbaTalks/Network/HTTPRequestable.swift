@@ -1,47 +1,60 @@
 import Foundation
 
-typealias HTTPHeaders = [String: String]
-typealias HTTPQueryParameters = [String: String]
-typealias HTTPHeaderParameters = [String: String]
-typealias HTTPBodyParameters = [String: Any]
-
+/**
+ A type that contains properties to create a valid URLRequest,
+ and can make a URLRequest using general configuration.
+ */
 protocol HTTPRequestable {
     var method: HTTPMethodType { get }
     var path: String { get }
     var headerParamaters: HTTPHeaderParameters { get }
     var queryParameters: HTTPQueryParameters { get }
     var bodyParamaters: HTTPBodyParameters { get }
-
-    func urlRequest(using networkConfig: GeneralDataSourceConfiguration) throws -> URLRequest
+    
+    /**
+     Returns the URLRequest, initialized with the general configuration
+     and then configured with the current properties of the instance.
+     
+     - Parameter config: Basic configuration for request.
+     - Returns: Valid URLRequest, or `nil` if URLRequest is not valid .
+     */
+    func urlRequest(using config: GeneralHTTPEndpointConfiguration) -> URLRequest?
 }
 
 extension HTTPRequestable {
-    public func urlRequest(using config: GeneralDataSourceConfiguration) throws -> URLRequest {
-        guard let url = self.url(using: config) else {
-            throw fatalError()
+    public func urlRequest(using config: GeneralHTTPEndpointConfiguration) -> URLRequest? {
+        guard let url = url(using: config) else {
+            return nil
         }
 
         var urlRequest = URLRequest(url: url)
 
+        urlRequest.httpMethod = method.rawValue
+
         var allHeaders: HTTPHeaders = config.commonHeaders
         headerParamaters.forEach { allHeaders.updateValue($1, forKey: $0) }
+        urlRequest.allHTTPHeaderFields = allHeaders
 
-        if method == .post && !self.bodyParamaters.isEmpty {
-            let fullQueryString = self.bodyParamaters
+        if !bodyParamaters.isEmpty {
+            let bodyString = bodyParamaters
                                     .map { "\($0.key)=\($0.value)" }
                                     .joined(separator: "&")
                                     .addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? ""
 
-            urlRequest.httpBody = fullQueryString.data(using: String.Encoding.ascii, allowLossyConversion: true)
+            urlRequest.httpBody = bodyString.data(using: String.Encoding.ascii, allowLossyConversion: true)
         }
-
-        urlRequest.httpMethod = method.rawValue
-        urlRequest.allHTTPHeaderFields = allHeaders
 
         return urlRequest
     }
 
-    private func url(using config: GeneralDataSourceConfiguration) -> URL? {
+    /**
+     Returns the URL, based on general configuration and then configured
+     with the current `path` of the instance
+     
+     - Parameter config: Basic configuration for URL.
+     - Returns: Valid URL, or `nil` if URL is not valid.
+     */
+    private func url(using config: GeneralHTTPEndpointConfiguration) -> URL? {
         let endpointURLString = config.baseURL.absoluteString.appending(path)
 
         guard var urlComponents = URLComponents(string: endpointURLString) else {
@@ -49,11 +62,7 @@ extension HTTPRequestable {
         }
 
         var allURLQueryItems = [URLQueryItem]()
-        config.commonQueryParameters.forEach {
-            let queryItem = URLQueryItem(name: $0.key, value: $0.value)
-            allURLQueryItems.append(queryItem)
-        }
-        self.queryParameters.forEach {
+        queryParameters.forEach {
             let queryItem = URLQueryItem(name: $0.key, value: $0.value)
             allURLQueryItems.append(queryItem)
         }
