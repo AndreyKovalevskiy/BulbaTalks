@@ -1,17 +1,18 @@
 import Foundation
 
-// The enum contains cases of network errors
+// An object which describe network error.
 enum NetworkError: Error {
-    
+    // Describes server error which contains Integer value.
     case error(statusCode: Int)
-    case serverError(message: String)
+    // Describes other error which contains String value.
+    case otherError(message: String)
     
     var description: String {
         switch self {
         case .error(let statusCode):
             return "The call failed with HTTP code \(statusCode)."
-        case .serverError(let message):
-            return "The server responded with message \(message)"
+        case .otherError(let message):
+            return "The call failed with message \(message)"
         }
     }
 }
