@@ -1,5 +1,5 @@
 /**
- A value that represents HTTP methods used in the request.
+ A value that represents HTTP method used in the request.
  */
 enum HTTPMethodType: String {
     case get = "GET"
