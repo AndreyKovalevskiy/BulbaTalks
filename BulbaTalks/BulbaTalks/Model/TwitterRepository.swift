@@ -16,7 +16,7 @@ protocol TwitterRepository {
        older than the lastTweet will be received, otherwise,
        the parameter will not affect the receipt of tweets.
        - completion: A completion handler that takes an
-       array of `Tweet` objects as a parameter if  tweets
+       array of `Tweet` objects as a parameter if tweets
        was received; otherwise, an empty array.
      */
     func getHomeTimeline(since firstTweet: Tweet?, until lastTweet: Tweet?, completion: ([Tweet]) -> Void)
