@@ -306,7 +306,6 @@
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,
 				55DE2C7B2463FC26007235A8 /* TwitterRepository.swift in Sources */,
-				55F6B5A12455866800B77247 /* ViewController.swift in Sources */,
 				953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */,
 				953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */,
 				953CD2812465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift in Sources */,
@@ -314,7 +313,6 @@
 				951ECB432462B92B009367A8 /* Tweet.swift in Sources */,
 				95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */,
 				95DD4AA22462D37E0004300D /* User.swift in Sources */,
-				55DE2C7B2463FC26007235A8 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
