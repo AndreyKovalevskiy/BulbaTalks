@@ -1,4 +1,4 @@
-/// The object that contains methods to make requests.
+/// The API Endpoints.
 struct APIEndpoints {
     /**
      Returns the object contains properties to make
