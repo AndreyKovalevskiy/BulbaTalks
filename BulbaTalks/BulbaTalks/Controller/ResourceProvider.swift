@@ -1,6 +1,6 @@
 import UIKit
 
-class ImageProvider {
+class ResourceProvider {
     /**
      Function to getting UIImage from assets
      - parameter by: Image name in assets.
