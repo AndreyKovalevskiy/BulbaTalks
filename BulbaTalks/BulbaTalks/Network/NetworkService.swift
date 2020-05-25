@@ -3,13 +3,14 @@ import Foundation
  An object that makes network calls.
  */
 class NetworkService {
-    typealias CompletionHandler = (Result<Data?, Error>) -> Void
+    typealias CompletionHandler = (Result<Data, Error>) -> Void
 /**
      Creates a task that retrieves the contents of the specified URL,
      then calls a handler upon completion.
      - Parameters:
         - request: The URLRequest to be retrived.
-        - completion: The Completion Handler to call when the load request is complete. This completion handler takes the following parameters:
+        - completion: The Completion Handler to call when the load request is complete.
+     This completion handler takes the following parameters:
             - data: the data returned by the server, or nil if the request was fail.
             - response: an object that provides HTTP headers and status code.
             - error: an error object that indicates why the request failed,
@@ -28,7 +29,9 @@ class NetworkService {
                 (200...299).contains(httpResponse.statusCode) else {
                     return
             }
-            completion(.success(data))
+            if let data = data {
+                completion(.success(data))
+            }
         }
         networkTask.resume()
         
