@@ -1,10 +1,8 @@
-import Foundation
-
-// An object which describe network error.
+/// An object which describe network error.
 enum NetworkError: Error {
-    // Describes server error which contains Integer value.
+    /// Describes a specific network error status code.
     case error(statusCode: Int)
-    // Describes other error which contains String value.
+    /// Describes a custom network error message.
     case otherError(message: String)
     
     var description: String {
