@@ -1,7 +1,8 @@
 import Foundation
 
 /**
- General configuration for the requests that are used in the TwitterRepository methods.
+ General configuration for the requests that are used
+ in the TwitterRepository methods.
  */
 struct GeneralHTTPEndpointConfiguration {
     let baseURL: URL

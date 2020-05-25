@@ -1,8 +1,8 @@
 import Foundation
 
 /**
- A type that contains properties to create a valid URLRequest,
- and can make a URLRequest using general configuration.
+ A type that contains properties to create a valid `URLRequest`,
+ and can make a `URLRequest` using general configuration.
  */
 protocol HTTPRequestable {
     var method: HTTPMethodType { get }
@@ -12,11 +12,12 @@ protocol HTTPRequestable {
     var bodyParamaters: HTTPBodyParameters { get }
     
     /**
-     Returns the URLRequest, initialized with the general configuration
-     and then configured with the current properties of the instance.
+     Returns the `URLRequest`, initialized with the general
+     configuration and then configured with the current properties
+     of the `HTTPRequestable` instance.
      
      - Parameter config: Basic configuration for request.
-     - Returns: Valid URLRequest, or `nil` if URLRequest is not valid .
+     - Returns: Valid `URLRequest`, or `nil` if `URLRequest` is not valid.
      */
     func urlRequest(using config: GeneralHTTPEndpointConfiguration) -> URLRequest?
 }
@@ -48,11 +49,12 @@ extension HTTPRequestable {
     }
 
     /**
-     Returns the URL, based on general configuration and then configured
-     with the current `path` of the instance
+     Returns the `URL`, based on general configuration and then
+     configured with the current `path` of the `HTTPRequestable`
+     instance.
      
-     - Parameter config: Basic configuration for URL.
-     - Returns: Valid URL, or `nil` if URL is not valid.
+     - Parameter config: Basic configuration for `URL`.
+     - Returns: Valid URL, or `nil` if `URL` is not valid.
      */
     private func url(using config: GeneralHTTPEndpointConfiguration) -> URL? {
         let endpointURLString = config.baseURL.absoluteString.appending(path)
