@@ -5,11 +5,11 @@ import Foundation
  It uses prepared files stored in the project and works without access to the internet.
  */
 class MockRepository: TwitterRepository {
-    private let baseURL = GeneralHTTPEndpontConfiguration(activeRepo: .mock)
+    private let mockConfig = GeneralHTTPEndpontConfiguration(activeRepo: .mock)
     
     func getHomeTimeline(since firstTweet: Tweet?, until lastTweet: Tweet?, completion: ([Tweet]) -> Void) {
         let path = APIEndpoints.getHomeTimeLine(with: [:], queryParameters: [:], bodyParameters: [:]).path
-        let fileURL = baseURL.appendPathComponent(path)
+        let fileURL = mockConfig.baseURL.appendPathComponent(path)
         if let data =  Bundle.main.contentsOfFile(at: fileURL),
            let tweetsArray = try? JSONDecoder().decodeTwitterResponse([Tweet].self, from: data)
         {
@@ -21,7 +21,7 @@ class MockRepository: TwitterRepository {
     
     func getAuthenticatedUser(completion: (User?) -> Void) {
         let path = APIEndpoints.getAuthenticatedUser(with: [:], queryParameters: [:], bodyParameters: [:]).path
-        let fileURL = baseURL.appendPathComponent(path)
+        let fileURL = mockConfig.baseURL.appendPathComponent(path)
         if let data =  Bundle.main.contentsOfFile(at: fileURL),
            let userArray = try? JSONDecoder().decodeTwitterResponse([User].self, from: data),
            !userArray.isEmpty
