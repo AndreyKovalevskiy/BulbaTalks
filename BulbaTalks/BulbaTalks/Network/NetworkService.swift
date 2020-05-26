@@ -9,11 +9,11 @@ class NetworkService {
      then calls a handler upon completion.
      - Parameters:
         - request: The URLRequest to be retrived.
-        - completion: The Completion Handler to call when the load request is complete.
-     This completion handler takes the following parameters:
-            - data: the data returned by the server, or nil if the request was fail.
-            - response: an object that provides HTTP headers and status code.
-            - error: an error object that indicates why the request failed,
+        - completion: The completion handler to call when the load request
+     is complete. This completion handler takes the following parameters:
+            - data: The data returned by the server, or nil if the request was fail.
+            - response:  An object that provides HTTP headers and status code.
+            - error:  An error object that indicates why the request failed,
             or nil if the request was successful.
      
      - Returns: The new session data task.
