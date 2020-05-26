@@ -1,7 +1,7 @@
 import Foundation
 
 /**
- The repository that responsible for working with mock data
+ The repository responsible for working with mock data
  from Twitter APIs. It uses prepared files stored in the project
  and works without access to the internet.
  */
