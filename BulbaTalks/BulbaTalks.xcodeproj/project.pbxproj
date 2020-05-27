@@ -21,6 +21,7 @@
 		953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */; };
 		953CD2812465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */; };
 		95DD4AA22462D37E0004300D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD4AA12462D37E0004300D /* User.swift */; };
+		95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DDCC122472CBD1008209DB /* HTTPParameters.swift */; };
 		95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E49B582462F57300A6C2EF /* TweetEntities.swift */; };
 		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+TwitterResponseDecoding.swift"; sourceTree = "<group>"; };
 		953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+TwitterObjectEncoding.swift"; sourceTree = "<group>"; };
 		95DD4AA12462D37E0004300D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = BulbaTalks/Model/User.swift; sourceTree = SOURCE_ROOT; };
+		95DDCC122472CBD1008209DB /* HTTPParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameters.swift; sourceTree = "<group>"; };
 		95E49B582462F57300A6C2EF /* TweetEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetEntities.swift; sourceTree = "<group>"; };
 		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 		55F6B59B2455866800B77247 /* BulbaTalks */ = {
 			isa = PBXGroup;
 			children = (
+				95DDCC112472CB57008209DB /* Network */,
 				55DCA32C24558EDC00871DD1 /* Application */,
 				55DCA32E24558F2600871DD1 /* Model */,
 				55DCA32F24558F3E00871DD1 /* View */,
@@ -177,6 +180,14 @@
 				953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		95DDCC112472CB57008209DB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				95DDCC122472CBD1008209DB /* HTTPParameters.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		AAA8A8AE2472C41900244F0A /* account */ = {
@@ -302,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */,
 				42105FCC246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift in Sources */,
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,
