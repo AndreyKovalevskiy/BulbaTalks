@@ -5,12 +5,6 @@ import Foundation
  on Twitter.
  */
 struct Authorization {
-    /// A list of possible user authorization states.
-    enum AuthorizationStatus {
-        case authorized
-        case deauthorized
-    }
-    
     /// Indicates whether the user is authorized.
     static private(set) var isSignedIn: Bool {
         get {
@@ -29,15 +23,17 @@ struct Authorization {
      */
     static func authorize(completion: (Bool) -> Void) {
         isSignedIn = true
-        completion(true)
+        completion(isSignedIn)
     }
 
     /**
-    Performs a change in user authorization status.
-    - Parameter newStatus: A new authorization status
-    that will be set for the user.
-    */
-    static func changeAuthorizationStatus(newStatus: Authorization.AuthorizationStatus) {
-        isSignedIn = (newStatus == .authorized)
+     Performs user deauthorization process.
+     - Parameter completion: A completion handler that
+     takes `true` as a parameter if the user was deauthorized,
+     otherwise `false`.
+     */
+    static func singOut(completion: (Bool) -> Void) {
+        isSignedIn = false
+        completion(!isSignedIn)
     }
 }
