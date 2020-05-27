@@ -6,7 +6,7 @@ import Foundation
  */
 struct Authorization {
     /// Indicates whether the user is authorized.
-    static private(set) var isSignedIn: Bool {
+    private(set) static var isSignedIn: Bool {
         get {
             return UserDefaults.standard.bool(forKey: "isSignedIn")
         }
