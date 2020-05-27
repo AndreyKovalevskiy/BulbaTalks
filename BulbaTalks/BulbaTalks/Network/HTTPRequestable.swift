@@ -1,8 +1,8 @@
 import Foundation
 
 /**
- A type that contains properties to create a valid `URLRequest`,
- and can make a `URLRequest` using general configuration.
+ A type that describes the properties and methods for
+ creating a valid `URLRequest`.
  */
 protocol HTTPRequestable {
     var method: HTTPMethodType { get }
@@ -10,20 +10,19 @@ protocol HTTPRequestable {
     var headerParamaters: HTTPHeaderParameters { get }
     var queryParameters: HTTPQueryParameters { get }
     var bodyParamaters: HTTPBodyParameters { get }
-    
+
     /**
-     Returns the `URLRequest`, initialized with the general
-     configuration and then configured with the current properties
-     of the `HTTPRequestable` instance.
+     Returns the `URLRequest`, configured by the general
+     configuration and current properties of the `HTTPRequestable` instance.
      
      - Parameter config: Basic configuration for request.
      - Returns: Valid `URLRequest`, or `nil` if `URLRequest` is not valid.
      */
-    func urlRequest(using config: GeneralHTTPEndpointConfiguration) -> URLRequest?
+    func urlRequest(using config: NetworkConfiguration) -> URLRequest?
 }
 
 extension HTTPRequestable {
-    public func urlRequest(using config: GeneralHTTPEndpointConfiguration) -> URLRequest? {
+    public func urlRequest(using config: NetworkConfiguration) -> URLRequest? {
         guard let url = url(using: config) else {
             return nil
         }
@@ -49,14 +48,13 @@ extension HTTPRequestable {
     }
 
     /**
-     Returns the `URL`, based on general configuration and then
-     configured with the current `path` of the `HTTPRequestable`
-     instance.
+     Returns the `URL`, configured by the general configuration and
+     current property `path` of the `HTTPRequestable` instance.
      
      - Parameter config: Basic configuration for `URL`.
      - Returns: Valid URL, or `nil` if `URL` is not valid.
      */
-    private func url(using config: GeneralHTTPEndpointConfiguration) -> URL? {
+    private func url(using config: NetworkConfiguration) -> URL? {
         let endpointURLString = config.baseURL.absoluteString.appending(path)
 
         guard var urlComponents = URLComponents(string: endpointURLString) else {
