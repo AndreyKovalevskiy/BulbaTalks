@@ -1,8 +1,9 @@
 import Foundation
 
 /**
- Describes authentication related methods on Twitter
- (sign in, sign out) and the current status of user authentication.
+ Describes the methods associated with authentication on
+ Twitter (sign in, sign out) and the current status of user
+ authentication (authenticated or not).
  */
 struct Authentication {
     /**
