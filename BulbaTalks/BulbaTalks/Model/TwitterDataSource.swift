@@ -3,7 +3,7 @@ import Foundation
 /**
  Describes the methods for receiving data using Twitter API.
  */
-class TwitterDataSource {
+struct TwitterDataSource {
     private let networkService: NetworkService = NetworkService(generalConfiguration: Settings.shared.currentConfiguration)
 
     /**
