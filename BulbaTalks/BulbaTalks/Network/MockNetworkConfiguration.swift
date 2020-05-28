@@ -1,7 +1,7 @@
 import Foundation
 
 /**
- Contains the necessary properties  to create a valid `URLRequest`
+ Contains the necessary properties to create a valid `URLRequest`
  that are used to get mocking data.
  */
 struct MockNetworkConfiguration: NetworkConfiguration {
