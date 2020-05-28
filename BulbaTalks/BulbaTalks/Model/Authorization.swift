@@ -1,39 +1,50 @@
 import Foundation
 
 /**
- Coordinates a group of tasks related to authorization
- on Twitter.
+ Describes authorization related methods
+ on Twitter (sign in, sign out) and the current status of user
+ authorization.
  */
 struct Authorization {
-    /// Indicates whether the user is authorized.
+    /**
+     The key to get the current user authorization status
+     from `UserDefaults`.
+     */
+    private static let signInStatusKey = "isSignedIn"
+
+    /// A boolean flag indicating whether the user is authorized.
     private(set) static var isSignedIn: Bool {
         get {
-            return UserDefaults.standard.bool(forKey: "isSignedIn")
+            return UserDefaults.standard.bool(forKey: signInStatusKey)
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "isSignedIn")
+            UserDefaults.standard.set(newValue, forKey: signInStatusKey)
         }
     }
 
     /**
      Performs user authorization process.
      - Parameter completion: A completion handler that
-     takes `true` as a parameter if the user was authorized,
-     otherwise `false`.
+     takes a boolean flag as a parameter. It is `true` when
+     the user was authorized and `false` otherwise.
      */
-    static func authorize(completion: (Bool) -> Void) {
-        isSignedIn = true
+    static func singIn(completion: (Bool) -> Void) {
+        if !isSignedIn {
+            isSignedIn = true
+        }
         completion(isSignedIn)
     }
 
     /**
      Performs user deauthorization process.
      - Parameter completion: A completion handler that
-     takes `true` as a parameter if the user was deauthorized,
-     otherwise `false`.
+     takes a boolean flag as a parameter. It is `true` when
+     the user was deauthorized and `false` otherwise.
      */
     static func singOut(completion: (Bool) -> Void) {
-        isSignedIn = false
+        if isSignedIn {
+            isSignedIn = false
+        }
         completion(!isSignedIn)
     }
 }
