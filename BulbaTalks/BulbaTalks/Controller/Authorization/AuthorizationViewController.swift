@@ -5,7 +5,7 @@ class AuthorizationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.backgroundColor = UIColor.Twitter.primaryBlue
+        loginButton.backgroundColor = TwitterColor.primaryBlue
     }
 
     @IBAction func redirectToTwitterLoginPage(_: Any) {}

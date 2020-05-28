@@ -16,7 +16,7 @@ class LoginButton: UIButton {
 
     override var isHighlighted: Bool {
         didSet {
-            backgroundColor = isHighlighted ? UIColor.Twitter.secondaryDarkGray : UIColor.Twitter.primaryBlue
+            backgroundColor = isHighlighted ? TwitterColor.secondaryDarkGray : TwitterColor.primaryBlue
         }
     }
 }
