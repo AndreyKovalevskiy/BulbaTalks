@@ -1,7 +1,7 @@
 import Foundation
 
 /**
- A protocol contains properties required to create a valid `URLRequest`.
+ Contains properties required to create a valid `URLRequest`.
  */
 protocol NetworkConfiguration {
     /// A value that contains the consistent component of the URL.
