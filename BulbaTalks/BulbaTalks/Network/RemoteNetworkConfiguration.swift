@@ -1,8 +1,8 @@
 import Foundation
 
 /**
- Contains properties required to create a valid `URLRequest`
- for receiving data using Twitter API.
+ Contains the necessary properties to create a valid `URLRequest`
+ that are used to receive data using Twitter API.
  */
 struct RemoteNetworkConfiguration: NetworkConfiguration {
     var baseURL: URL = URL(string: "https://api.twitter.com/")!

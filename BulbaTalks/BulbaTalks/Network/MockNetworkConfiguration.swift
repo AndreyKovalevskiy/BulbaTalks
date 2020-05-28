@@ -1,8 +1,8 @@
 import Foundation
 
 /**
- Contains properties required to create a valid `URLRequest`
- for receiving mocking data.
+ Contains the necessary properties  to create a valid `URLRequest`
+ that are used to get mocking data.
  */
 struct MockNetworkConfiguration: NetworkConfiguration {
     var baseURL: URL = Bundle.main.bundleURL
