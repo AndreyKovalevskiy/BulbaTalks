@@ -48,8 +48,8 @@
 		A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */; };
 		AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA84616F247EB20300BC950C /* HTTPRequestable.swift */; };
 		AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA846170247EB20400BC950C /* HTTPMethodType.swift */; };
+		AA5938DA2465875700EAFA74 /* TwitterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5938D92465875700EAFA74 /* TwitterDataSource.swift */; };
 		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
-		AA5938DA2465875700EAFA74 /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5938D92465875700EAFA74 /* MockRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +108,8 @@
 		A8A57CD4248E52A10033EE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA84616F247EB20300BC950C /* HTTPRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestable.swift; sourceTree = "<group>"; };
 		AA846170247EB20400BC950C /* HTTPMethodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethodType.swift; sourceTree = "<group>"; };
+		AA5938D92465875700EAFA74 /* TwitterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDataSource.swift; sourceTree = "<group>"; };
 		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
-		AA5938D92465875700EAFA74 /* MockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +171,7 @@
 				55FEB9C7246AF2890081717C /* Authentication.swift */,
 				4263ED7A248001D800365513 /* NetworkConfigurationType.swift */,
 				4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */,
-				AA5938D92465875700EAFA74 /* MockRepository.swift */,
+				AA5938D92465875700EAFA74 /* TwitterDataSource.swift */,
 				69ADB1F92462EBB1002F65F2 /* Operation.swift */,
 				4263ED7C2480020800365513 /* Settings.swift */,
 				951ECB422462B92B009367A8 /* Tweet.swift */,
@@ -520,6 +520,7 @@
 				426CEDBD246DEAF50051E8D7 /* APIEndpoints.swift in Sources */,
 				958050C724863A7800031A1C /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				AA5938DA2465875700EAFA74 /* MockRepository.swift in Sources */,
+				AA5938DA2465875700EAFA74 /* TwitterDataSource.swift in Sources */,
 				953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */,
 				55FEB9C8246AF2890081717C /* Authentication.swift in Sources */,
 				4247D6A5246DE69100DE6629 /* HTTPEndpoint.swift in Sources */,
