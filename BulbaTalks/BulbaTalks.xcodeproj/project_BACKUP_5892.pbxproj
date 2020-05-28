@@ -22,15 +22,18 @@
 		95DD4AA22462D37E0004300D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD4AA12462D37E0004300D /* User.swift */; };
 		95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DDCC122472CBD1008209DB /* HTTPParameters.swift */; };
 		95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E49B582462F57300A6C2EF /* TweetEntities.swift */; };
+<<<<<<< HEAD
 		95E69BF3247E8CA000BE585A /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF2247E8CA000BE585A /* NetworkConfiguration.swift */; };
 		95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */; };
 		95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF6247E8D0400BE585A /* MockNetworkConfiguration.swift */; };
+=======
 		A8A54A19247FB8760089FD8D /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A18247FB8760089FD8D /* Storyboard.swift */; };
 		A8A54A1D247FB8C10089FD8D /* AutorizationUserStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A54A1B247FB8C00089FD8D /* AutorizationUserStory.storyboard */; };
 		A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A1C247FB8C00089FD8D /* LoginButton.swift */; };
 		A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */; };
 		A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */; };
 		A8A54A25247FB92E0089FD8D /* UIColor+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A23247FB92E0089FD8D /* UIColor+Twitter.swift */; };
+>>>>>>> Implementation of Authorization screen
 		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
 /* End PBXBuildFile section */
 
@@ -52,15 +55,18 @@
 		95DD4AA12462D37E0004300D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = BulbaTalks/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		95DDCC122472CBD1008209DB /* HTTPParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameters.swift; sourceTree = "<group>"; };
 		95E49B582462F57300A6C2EF /* TweetEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetEntities.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		95E69BF2247E8CA000BE585A /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
 		95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNetworkConfiguration.swift; sourceTree = "<group>"; };
 		95E69BF6247E8D0400BE585A /* MockNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkConfiguration.swift; sourceTree = "<group>"; };
+=======
 		A8A54A18247FB8760089FD8D /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		A8A54A1B247FB8C00089FD8D /* AutorizationUserStory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AutorizationUserStory.storyboard; sourceTree = "<group>"; };
 		A8A54A1C247FB8C00089FD8D /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardID.swift"; sourceTree = "<group>"; };
 		A8A54A23247FB92E0089FD8D /* UIColor+Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Twitter.swift"; sourceTree = "<group>"; };
+>>>>>>> Implementation of Authorization screen
 		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -351,11 +357,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				95E69BF3247E8CA000BE585A /* NetworkConfiguration.swift in Sources */,
-				A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */,
 				95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */,
 				95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */,
 				42105FCC246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift in Sources */,
+=======
+				A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */,
+				95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */,
+				42105FCC246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift in Sources */,
+>>>>>>> Implementation of Authorization screen
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
 				95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */,
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,

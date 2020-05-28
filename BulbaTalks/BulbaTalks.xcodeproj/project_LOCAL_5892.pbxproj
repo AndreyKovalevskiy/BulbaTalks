@@ -11,6 +11,7 @@
 		55029D1D2463121400FAAA06 /* home_timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 55029D1C2463121400FAAA06 /* home_timeline.json */; };
 		55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59C2455866800B77247 /* AppDelegate.swift */; };
 		55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59E2455866800B77247 /* SceneDelegate.swift */; };
+		55F6B5A42455866800B77247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A22455866800B77247 /* Main.storyboard */; };
 		55F6B5A62455866900B77247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A52455866900B77247 /* Assets.xcassets */; };
 		55F6B5A92455866900B77247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A72455866900B77247 /* LaunchScreen.storyboard */; };
 		55FEB9C8246AF2890081717C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEB9C7246AF2890081717C /* Authentication.swift */; };
@@ -25,12 +26,6 @@
 		95E69BF3247E8CA000BE585A /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF2247E8CA000BE585A /* NetworkConfiguration.swift */; };
 		95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */; };
 		95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF6247E8D0400BE585A /* MockNetworkConfiguration.swift */; };
-		A8A54A19247FB8760089FD8D /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A18247FB8760089FD8D /* Storyboard.swift */; };
-		A8A54A1D247FB8C10089FD8D /* AutorizationUserStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A54A1B247FB8C00089FD8D /* AutorizationUserStory.storyboard */; };
-		A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A1C247FB8C00089FD8D /* LoginButton.swift */; };
-		A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */; };
-		A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */; };
-		A8A54A25247FB92E0089FD8D /* UIColor+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A23247FB92E0089FD8D /* UIColor+Twitter.swift */; };
 		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +35,8 @@
 		55F6B5992455866800B77247 /* BulbaTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulbaTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F6B59C2455866800B77247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F6B59E2455866800B77247 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		55F6B5A02455866800B77247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55F6B5A32455866800B77247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55F6B5A52455866900B77247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55F6B5A82455866900B77247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55F6B5AA2455866900B77247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,12 +52,6 @@
 		95E69BF2247E8CA000BE585A /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
 		95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNetworkConfiguration.swift; sourceTree = "<group>"; };
 		95E69BF6247E8D0400BE585A /* MockNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkConfiguration.swift; sourceTree = "<group>"; };
-		A8A54A18247FB8760089FD8D /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
-		A8A54A1B247FB8C00089FD8D /* AutorizationUserStory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AutorizationUserStory.storyboard; sourceTree = "<group>"; };
-		A8A54A1C247FB8C00089FD8D /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
-		A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
-		A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardID.swift"; sourceTree = "<group>"; };
-		A8A54A23247FB92E0089FD8D /* UIColor+Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Twitter.swift"; sourceTree = "<group>"; };
 		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,9 +115,8 @@
 		55DCA32F24558F3E00871DD1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A8A54A1A247FB8C00089FD8D /* Authorization */,
 				55F6B5A72455866900B77247 /* LaunchScreen.storyboard */,
-				A8A54A18247FB8760089FD8D /* Storyboard.swift */,
+				55F6B5A22455866800B77247 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,7 +124,7 @@
 		55DCA33024558F5400871DD1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A8A54A1F247FB9250089FD8D /* Authorization */,
+				55F6B5A02455866800B77247 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,8 +180,6 @@
 		953CD27D246487DD00334E81 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A8A54A23247FB92E0089FD8D /* UIColor+Twitter.swift */,
-				A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */,
 				42105FCB246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift */,
 				953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */,
 				953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */,
@@ -209,23 +197,6 @@
 				95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		A8A54A1A247FB8C00089FD8D /* Authorization */ = {
-			isa = PBXGroup;
-			children = (
-				A8A54A1B247FB8C00089FD8D /* AutorizationUserStory.storyboard */,
-				A8A54A1C247FB8C00089FD8D /* LoginButton.swift */,
-			);
-			path = Authorization;
-			sourceTree = "<group>";
-		};
-		A8A54A1F247FB9250089FD8D /* Authorization */ = {
-			isa = PBXGroup;
-			children = (
-				A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */,
-			);
-			path = Authorization;
 			sourceTree = "<group>";
 		};
 		AAA8A8AE2472C41900244F0A /* account */ = {
@@ -297,10 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8A54A1D247FB8C10089FD8D /* AutorizationUserStory.storyboard in Resources */,
 				55F6B5A92455866900B77247 /* LaunchScreen.storyboard in Resources */,
 				55029D1D2463121400FAAA06 /* home_timeline.json in Resources */,
 				55F6B5A62455866900B77247 /* Assets.xcassets in Resources */,
+				55F6B5A42455866800B77247 /* Main.storyboard in Resources */,
 				AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,31 +323,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				95E69BF3247E8CA000BE585A /* NetworkConfiguration.swift in Sources */,
-				A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */,
 				95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */,
 				95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */,
 				42105FCC246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift in Sources */,
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
 				95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */,
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,
-				A8A54A19247FB8760089FD8D /* Storyboard.swift in Sources */,
 				953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */,
 				55FEB9C8246AF2890081717C /* Authentication.swift in Sources */,
 				953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */,
 				953CD2812465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift in Sources */,
 				69ADB1FA2462EBB1002F65F2 /* Operation.swift in Sources */,
 				951ECB432462B92B009367A8 /* Tweet.swift in Sources */,
-				A8A54A25247FB92E0089FD8D /* UIColor+Twitter.swift in Sources */,
-				A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */,
 				95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */,
 				95DD4AA22462D37E0004300D /* User.swift in Sources */,
-				A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		55F6B5A22455866800B77247 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55F6B5A32455866800B77247 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		55F6B5A72455866900B77247 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
