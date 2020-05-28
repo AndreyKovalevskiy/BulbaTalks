@@ -4,8 +4,9 @@ import Foundation
  Contains properties required to create a valid `URLRequest`.
  */
 protocol NetworkConfiguration {
-    /// A value that contains the consistent component of the URL.
+    /// The primary part of the URL.
+    /// After it follows a variable part of the URL, defined by `HTTPEndpoint`.
     var baseURL: URL { get }
-    /// A value that contains HTTP headers.
+    /// Headers that are used in all URLRequest.
     var commonHeaders: HTTPHeaders { get }
 }
