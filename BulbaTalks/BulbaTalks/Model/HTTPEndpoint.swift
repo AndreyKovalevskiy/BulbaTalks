@@ -1,4 +1,4 @@
-/// The structure contains properties to make an HTTP request.
+/// The object defines the API of `HTTPEndpoint`.
 struct HTTPEndpoint: HTTPRequestable {
     var method: HTTPMethodType
     var path: String
