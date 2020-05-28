@@ -1,8 +1,8 @@
 /// An object which describes network error.
 enum NetworkError: Error {
-    /// Describes a specific network error status code.
+    /// Describes a network error with a specific status code.
     case error(statusCode: Int)
-    /// Describes a custom network error message.
+    /// Describes a network error with a custom description.
     case otherError(message: String)
     
     var description: String {
