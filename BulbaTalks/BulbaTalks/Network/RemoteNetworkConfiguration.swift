@@ -1,7 +1,7 @@
 import Foundation
 
 /**
-The structure contains properties required to create a valid `URLRequest` for  receiving data using
+The structure contains properties required to create a valid `URLRequest` for receiving data using
 Twitter API.
 */
 struct RemoteNetworkConfiguration: NetworkConfiguration {
