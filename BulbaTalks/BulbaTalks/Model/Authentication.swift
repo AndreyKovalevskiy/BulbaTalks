@@ -1,18 +1,17 @@
 import Foundation
 
 /**
- Describes authorization related methods
- on Twitter (sign in, sign out) and the current status of user
- authorization.
+ Describes authentication related methods on Twitter
+ (sign in, sign out) and the current status of user authentication.
  */
-struct Authorization {
+struct Authentication {
     /**
-     The key to get the current user authorization status
+     The key to get the current user authentication status
      from `UserDefaults`.
      */
     private static let signInStatusKey = "isSignedIn"
 
-    /// A boolean flag indicating whether the user is authorized.
+    /// A boolean flag indicating whether the user is authenticated.
     private(set) static var isSignedIn: Bool {
         get {
             return UserDefaults.standard.bool(forKey: signInStatusKey)
@@ -23,10 +22,10 @@ struct Authorization {
     }
 
     /**
-     Performs user authorization process.
+     Performs user authentication process.
      - Parameter completion: A completion handler that
      takes a boolean flag as a parameter. It is `true` when
-     the user was authorized and `false` otherwise.
+     the user was authenticated and `false` otherwise.
      */
     static func singIn(completion: (Bool) -> Void) {
         if !isSignedIn {
@@ -36,10 +35,10 @@ struct Authorization {
     }
 
     /**
-     Performs user deauthorization process.
+     Performs user sign out process.
      - Parameter completion: A completion handler that
      takes a boolean flag as a parameter. It is `true` when
-     the user was deauthorized and `false` otherwise.
+     the user signed out and `false` otherwise.
      */
     static func singOut(completion: (Bool) -> Void) {
         if isSignedIn {
