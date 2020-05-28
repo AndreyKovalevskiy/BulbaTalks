@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42105FCC246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42105FCB246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift */; };
+		42105FCC246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42105FCB246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift */; };
 		55029D1D2463121400FAAA06 /* home_timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 55029D1C2463121400FAAA06 /* home_timeline.json */; };
 		55DE2C7B2463FC26007235A8 /* TwitterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE2C7A2463FC26007235A8 /* TwitterRepository.swift */; };
 		55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59C2455866800B77247 /* AppDelegate.swift */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		42105FCB246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+СontentsOfFile.swift"; sourceTree = "<group>"; };
+		42105FCB246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+ContentsOfFile.swift"; sourceTree = "<group>"; };
 		55029D1C2463121400FAAA06 /* home_timeline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = home_timeline.json; path = BulbaTalks/Resources/MockedTwitterResponses/1.1/statuses/home_timeline.json; sourceTree = SOURCE_ROOT; };
 		55DE2C7A2463FC26007235A8 /* TwitterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterRepository.swift; sourceTree = "<group>"; };
 		55F6B5992455866800B77247 /* BulbaTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulbaTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,7 +174,7 @@
 		953CD27D246487DD00334E81 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				42105FCB246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift */,
+				42105FCB246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift */,
 				953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */,
 				953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */,
 				953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */,
