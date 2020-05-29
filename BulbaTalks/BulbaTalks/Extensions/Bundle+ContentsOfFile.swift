@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 extension Bundle {
     /**
@@ -16,5 +17,18 @@ extension Bundle {
             return nil
         }
         return try? Data(contentsOf: url)
+    }
+
+    /**
+     Function to get UIImage from resources
+     - parameter name: Image name to find the image.
+     - parameter completion: A completion handler.
+     */
+    func getImage(by name: String, completion: (UIImage?) -> Void) {
+        let fileURL = URL(fileURLWithPath: name)
+        if let data = contentsOfFile(at: fileURL),
+            let image = UIImage(data: data) {
+            completion(image)
+        }
     }
 }
