@@ -7,18 +7,20 @@ import Foundation
  */
 struct Authentication {
     /**
-     The key to get the current user authentication status
-     from `UserDefaults`.
+     Stores the key used to obtain the current authentication
+     status of the user from `UserDefaults`.
      */
-    private static let signInStatusKey = "isSignedIn"
+    private enum UserDefaultsKey {
+        static let isSignedIn = "isSignedIn"
+    }
 
-    /// A boolean flag indicating whether the user is authenticated.
+    /// A boolean flag indicating whether the user is signed in.
     private(set) static var isSignedIn: Bool {
         get {
-            return UserDefaults.standard.bool(forKey: signInStatusKey)
+            return UserDefaults.standard.bool(forKey: UserDefaultsKey.isSignedIn)
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: signInStatusKey)
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.isSignedIn)
         }
     }
 
@@ -26,7 +28,8 @@ struct Authentication {
      Performs user authentication process.
      - Parameter completion: A completion handler that
      takes a boolean flag as a parameter. It is `true` when
-     the user was authenticated and `false` otherwise.
+     the authentication is successfully completed  or the user
+     is already authenticated; otherwise - `false`.
      */
     static func singIn(completion: (Bool) -> Void) {
         if !isSignedIn {
@@ -39,7 +42,8 @@ struct Authentication {
      Performs user sign out process.
      - Parameter completion: A completion handler that
      takes a boolean flag as a parameter. It is `true` when
-     the user signed out and `false` otherwise.
+     the sign out is successfully completed or the user already
+     signed out; otherwise - `false`.
      */
     static func singOut(completion: (Bool) -> Void) {
         if isSignedIn {
