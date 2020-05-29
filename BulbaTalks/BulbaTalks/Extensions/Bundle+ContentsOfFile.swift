@@ -25,8 +25,8 @@ extension Bundle {
      - Parameter completion: A completion handler which takes
      `UIImage`object from url  or `nil` .
      */
-    func getImage(by path: String, completion: (UIImage?) -> Void) {
-        let fileURL = URL(fileURLWithPath: path)
+    func getImage(by url: String, completion: (UIImage?) -> Void) {
+        let fileURL = URL(fileURLWithPath: url)
         if let data = contentsOfFile(at: fileURL),
             let image = UIImage(data: data) {
             completion(image)
