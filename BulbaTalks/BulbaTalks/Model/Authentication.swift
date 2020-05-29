@@ -1,9 +1,8 @@
 import Foundation
 
 /**
- Describes the methods associated with authentication on
- Twitter (sign in, sign out) and the current status of user
- authentication (authenticated or not).
+ Manages authentication process (sign in/sign out) and stores
+ the current authentication status.
  */
 struct Authentication {
     /**
@@ -27,28 +26,28 @@ struct Authentication {
     /**
      Performs user authentication process.
      - Parameter completion: A completion handler that
-     takes a boolean flag as a parameter. It is `true` when
-     the authentication is successfully completed  or the user
-     is already authenticated; otherwise - `false`.
+     takes `true` as a parameter. A value of `true` means that
+     the authentication is successfully completed or the user
+     is already authenticated.
      */
-    static func singIn(completion: (Bool) -> Void) {
+    static func signIn(completion: (Bool) -> Void) {
         if !isSignedIn {
             isSignedIn = true
         }
-        completion(isSignedIn)
+        completion(true)
     }
 
     /**
      Performs user sign out process.
      - Parameter completion: A completion handler that
-     takes a boolean flag as a parameter. It is `true` when
+     takes `true` as a parameter. A value of `true` means that
      the sign out is successfully completed or the user already
-     signed out; otherwise - `false`.
+     signed out.
      */
-    static func singOut(completion: (Bool) -> Void) {
+    static func signOut(completion: (Bool) -> Void) {
         if isSignedIn {
             isSignedIn = false
         }
-        completion(!isSignedIn)
+        completion(true)
     }
 }
