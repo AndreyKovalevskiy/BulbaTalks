@@ -21,11 +21,12 @@ extension Bundle {
 
     /**
      Function to get UIImage from resources
-     - parameter name: Image name to find the image.
-     - parameter completion: A completion handler.
+     - Parameter url: Url of necessary image.
+     - Parameter completion: A completion handler which takes
+     `UIImage`object from url  or `nil` .
      */
-    func getImage(by name: String, completion: (UIImage?) -> Void) {
-        let fileURL = URL(fileURLWithPath: name)
+    func getImage(by path: String, completion: (UIImage?) -> Void) {
+        let fileURL = URL(fileURLWithPath: path)
         if let data = contentsOfFile(at: fileURL),
             let image = UIImage(data: data) {
             completion(image)
