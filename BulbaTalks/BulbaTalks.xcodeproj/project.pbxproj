@@ -26,7 +26,7 @@
 		95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */; };
 		95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF6247E8D0400BE585A /* MockNetworkConfiguration.swift */; };
 		A8A54A19247FB8760089FD8D /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A18247FB8760089FD8D /* Storyboard.swift */; };
-		A8A54A1D247FB8C10089FD8D /* AutorizationUserStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A54A1B247FB8C00089FD8D /* AutorizationUserStory.storyboard */; };
+		A8A54A1D247FB8C10089FD8D /* Autorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A54A1B247FB8C00089FD8D /* Autorization.storyboard */; };
 		A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A1C247FB8C00089FD8D /* LoginButton.swift */; };
 		A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */; };
 		A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */; };
@@ -56,7 +56,7 @@
 		95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNetworkConfiguration.swift; sourceTree = "<group>"; };
 		95E69BF6247E8D0400BE585A /* MockNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkConfiguration.swift; sourceTree = "<group>"; };
 		A8A54A18247FB8760089FD8D /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
-		A8A54A1B247FB8C00089FD8D /* AutorizationUserStory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AutorizationUserStory.storyboard; sourceTree = "<group>"; };
+		A8A54A1B247FB8C00089FD8D /* Autorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Autorization.storyboard; sourceTree = "<group>"; };
 		A8A54A1C247FB8C00089FD8D /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardID.swift"; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		A8A54A1A247FB8C00089FD8D /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				A8A54A1B247FB8C00089FD8D /* AutorizationUserStory.storyboard */,
+				A8A54A1B247FB8C00089FD8D /* Autorization.storyboard */,
 				A8A54A1C247FB8C00089FD8D /* LoginButton.swift */,
 			);
 			path = Authorization;
@@ -297,7 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8A54A1D247FB8C10089FD8D /* AutorizationUserStory.storyboard in Resources */,
+				A8A54A1D247FB8C10089FD8D /* Autorization.storyboard in Resources */,
 				55F6B5A92455866900B77247 /* LaunchScreen.storyboard in Resources */,
 				55029D1D2463121400FAAA06 /* home_timeline.json in Resources */,
 				55F6B5A62455866900B77247 /* Assets.xcassets in Resources */,

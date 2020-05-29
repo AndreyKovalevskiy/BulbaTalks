@@ -7,7 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication,
                      didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil)
         -> Bool {
-        guard let viewController = Storyboard.authorizationUserStory.viewController(
+        guard let viewController = Storyboard.authorization.viewController(
             of: AuthorizationViewController.self) else {
             return true
         }
