@@ -171,11 +171,11 @@
 				55FEB9C7246AF2890081717C /* Authentication.swift */,
 				4263ED7A248001D800365513 /* NetworkConfigurationType.swift */,
 				4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */,
-				AA5938D92465875700EAFA74 /* TwitterDataSource.swift */,
 				69ADB1F92462EBB1002F65F2 /* Operation.swift */,
 				4263ED7C2480020800365513 /* Settings.swift */,
 				951ECB422462B92B009367A8 /* Tweet.swift */,
 				95E49B582462F57300A6C2EF /* TweetEntities.swift */,
+				AA5938D92465875700EAFA74 /* TwitterDataSource.swift */,
 				95DD4AA12462D37E0004300D /* User.swift */,
 			);
 			path = Model;
