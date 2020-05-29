@@ -1,6 +1,6 @@
 import UIKit
 
-/// Storyboard contains names of application storyboards.
+/// Enum contains names of application storyboards and provide ability to instantiate appropriate view controller.
 enum Storyboard: String {
     case authorization = "Autorization"
 
