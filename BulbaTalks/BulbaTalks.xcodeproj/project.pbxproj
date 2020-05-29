@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		42105FCC246C2CCE00EFBDCD /* Bundle+LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42105FCB246C2CCE00EFBDCD /* Bundle+LocalData.swift */; };
 		42105FCC246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42105FCB246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift */; };
-		4263ED7B248001D800365513 /* ConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7A248001D800365513 /* ConfigurationType.swift */; };
+		4263ED7B248001D800365513 /* NetworkConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7A248001D800365513 /* NetworkConfigurationType.swift */; };
 		4263ED7D2480020800365513 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7C2480020800365513 /* Settings.swift */; };
 		55029D1D2463121400FAAA06 /* home_timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 55029D1C2463121400FAAA06 /* home_timeline.json */; };
 		55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59C2455866800B77247 /* AppDelegate.swift */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		42105FCB246C2CCE00EFBDCD /* Bundle+LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+LocalData.swift"; sourceTree = "<group>"; };
 		42105FCB246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+ContentsOfFile.swift"; sourceTree = "<group>"; };
-		4263ED7A248001D800365513 /* ConfigurationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationType.swift; sourceTree = "<group>"; };
+		4263ED7A248001D800365513 /* NetworkConfigurationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurationType.swift; sourceTree = "<group>"; };
 		4263ED7C2480020800365513 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		55029D1C2463121400FAAA06 /* home_timeline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = home_timeline.json; path = BulbaTalks/Resources/MockedTwitterResponses/1.1/statuses/home_timeline.json; sourceTree = SOURCE_ROOT; };
 		55F6B5992455866800B77247 /* BulbaTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulbaTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				55FEB9C7246AF2890081717C /* Authentication.swift */,
+				4263ED7A248001D800365513 /* NetworkConfigurationType.swift */,
 				69ADB1F92462EBB1002F65F2 /* Operation.swift */,
 				4263ED7C2480020800365513 /* Settings.swift */,
 				951ECB422462B92B009367A8 /* Tweet.swift */,
@@ -380,6 +381,7 @@
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,
 				A8A54A19247FB8760089FD8D /* AppStoryboard.swift in Sources */,
 				4263ED7B248001D800365513 /* ConfigurationType.swift in Sources */,
+				4263ED7B248001D800365513 /* NetworkConfigurationType.swift in Sources */,
 				953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */,
 				55FEB9C8246AF2890081717C /* Authentication.swift in Sources */,
 				953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */,
