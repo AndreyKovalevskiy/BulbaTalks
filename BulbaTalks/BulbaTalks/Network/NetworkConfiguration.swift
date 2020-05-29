@@ -1,14 +1,18 @@
 import Foundation
 
 /**
- Contains the necessary properties to create a valid `URLRequest`.
+ Сonfiguration is used to post and receive data using Twitter API.
+ Contains properties which are used to make the absolute URL from the given relative URL
+ and to make headers for `URLRequest`.
  */
 protocol NetworkConfiguration {
     /**
-     The primary part of the URL.
-     After it follows a variable part of the URL, defined by `HTTPEndpoint`.
+     The part of the absolute URL which is followed by the relative endpoint URL.
      */
     var baseURL: URL { get }
-    /// Headers that are used in all `URLRequest`.
+    /**
+     Specifies common headers that are added to all tasks
+     within URL sessions based on the active configuration.
+     */
     var commonHeaders: HTTPHeaders { get }
 }
