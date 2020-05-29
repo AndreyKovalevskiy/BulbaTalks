@@ -1,22 +1,46 @@
 import Foundation
 
 /**
- A type that describes the properties and methods for
- creating a valid `URLRequest`.
+ Describes the properties and methods for creating the HTTP request.
  */
 protocol HTTPRequestable {
+    /**
+     HTTP method to indicate the desired action to be performed
+     on the specified resource.
+     */
     var method: HTTPMethodType { get }
+
+    /**
+     The path to the required information on the specified resource.
+     */
     var path: String { get }
+
+    /**
+     Dictionary of HTTP headers that are used when creating
+     the HTTP request.
+     */
     var headerParamaters: HTTPHeaderParameters { get }
+
+    /**
+     List of parameters that are used in the URL to perform some
+     actions in the HTTP request.
+     */
     var queryParameters: HTTPQueryParameters { get }
+
+    /**
+     List of parameters that are used in the body of HTTP request
+     to perform some actions in the HTTP request.
+     */
     var bodyParamaters: HTTPBodyParameters { get }
 
     /**
-     Returns the `URLRequest`, configured by the general
-     configuration and current properties of the `HTTPRequestable` instance.
+     Creates the URLRequest, configured with the specific
+     configuration and current properties of the instance that
+     conform to the `HTTPRequestable` protocol.
      
-     - Parameter config: Basic configuration for request.
-     - Returns: Valid `URLRequest`, or `nil` if `URLRequest` is not valid.
+     - Parameter config: specific configuration for the request.
+     - Returns: A valid URLRequest, or `nil` if it's impossible
+     to make a valid request.
      */
     func urlRequest(using config: NetworkConfiguration) -> URLRequest?
 }
@@ -47,12 +71,26 @@ extension HTTPRequestable {
         return urlRequest
     }
 
+    
     /**
-     Returns the `URL`, configured by the general configuration and
-     current property `path` of the `HTTPRequestable` instance.
+     Creates the URLRequest, configured with the specific
+     configuration and current properties of the instance that
+     conform to the `HTTPRequestable` protocol.
      
-     - Parameter config: Basic configuration for `URL`.
-     - Returns: Valid URL, or `nil` if `URL` is not valid.
+     - Parameter config: specific configuration for the request.
+     - Returns: A valid URLRequest, or `nil` if it's impossible
+     to make a valid request.
+     */
+    
+    
+    /**
+     Creates the URL, configured with the specific configuration
+     and current property `path` of the instance that conform
+     to the `HTTPRequestable` protocol.
+     
+     - Parameter config: Specific configuration for the URL.
+     - Returns: A valid URL, or `nil` if it's impossible
+     to make a valid URL.
      */
     private func url(using config: NetworkConfiguration) -> URL? {
         let endpointURLString = config.baseURL.absoluteString.appending(path)
