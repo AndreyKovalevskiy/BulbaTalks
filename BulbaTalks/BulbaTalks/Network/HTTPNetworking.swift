@@ -10,15 +10,17 @@ protocol HTTPNetworking {
      or a `failure`:
      - `Success` with the value of the result.
      - `Failure` with the type that implements
-     `NetworlError`.
+     enum `NetworlError`.
      */
     typealias CompletionHandler = (Result<Data, NetworkError>) -> Void
     /**
      Makes request based on the specified  `URLRequest`
      object, and calls a handler upon completion.
      - Parameters:
-        - apiEndpoint: A valid `URLRequest`.
-        - completion: The `CompletionHandler` to call when the load request is completed.
+        - apiEndpoint: A URL that enables the API to
+        gain access to resources on a server.
+        - completion: The `CompletionHandler`
+        to call when the load request is completed.
      - Returns: URLSessionTask.
      */
     func httpRequest(apiEndpoint: HTTPRequestable, completion: @escaping CompletionHandler) -> URLSessionTask
