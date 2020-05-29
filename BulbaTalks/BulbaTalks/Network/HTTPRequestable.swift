@@ -1,7 +1,8 @@
 import Foundation
 
 /**
- Describes the properties and methods for creating the HTTP request.
+ Describes the properties and methods for creating an HTTP endpoint
+ that we can use when generating the HTTP request.
  */
 protocol HTTPRequestable {
     /**
@@ -16,20 +17,20 @@ protocol HTTPRequestable {
     var path: String { get }
 
     /**
-     Dictionary of HTTP headers that are used when creating
+     HTTP headers that are used when creating
      the HTTP request.
      */
     var headerParamaters: HTTPHeaderParameters { get }
 
     /**
-     List of parameters that are used in the URL to perform some
-     actions in the HTTP request.
+     Parameters that are used in the URL to provide some
+     additional information in the HTTP request.
      */
     var queryParameters: HTTPQueryParameters { get }
 
     /**
-     List of parameters that are used in the body of HTTP request
-     to perform some actions in the HTTP request.
+     Parameters that are used in the body of HTTP request to
+     provide some additional information in the HTTP request.
      */
     var bodyParamaters: HTTPBodyParameters { get }
 
@@ -71,18 +72,6 @@ extension HTTPRequestable {
         return urlRequest
     }
 
-    
-    /**
-     Creates the URLRequest, configured with the specific
-     configuration and current properties of the instance that
-     conform to the `HTTPRequestable` protocol.
-     
-     - Parameter config: specific configuration for the request.
-     - Returns: A valid URLRequest, or `nil` if it's impossible
-     to make a valid request.
-     */
-    
-    
     /**
      Creates the URL, configured with the specific configuration
      and current property `path` of the instance that conform
