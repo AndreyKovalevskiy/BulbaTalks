@@ -20,9 +20,9 @@ extension Bundle {
     }
 
     /**
-     Function to get UIImage from resources
+     Function to get UIImage from resources.
      - Parameter url: Url of necessary image.
-     - Parameter completion: A completion handler which takes
+     - Parameter completion: A completion handler which takes.
      `UIImage`object from url  or `nil` .
      */
     func getImage(by url: String, completion: (UIImage?) -> Void) {
