@@ -1,10 +1,10 @@
 import Foundation
 
 /**
- Configuration is used to split the work with data into scenarios,
- such as Remote and Mock Network.
- Contains properties which are used to make the absolute URL from the given relative URL
- and to make headers for `URLRequest`.
+ Settings common to the current network configuration.
+ For example, the network configuration can force using the mock network API.
+ Contains properties which are used to make the absolute URL
+ from the given relative URL and to make headers for `URLRequest`.
  */
 protocol NetworkConfiguration {
     /**
