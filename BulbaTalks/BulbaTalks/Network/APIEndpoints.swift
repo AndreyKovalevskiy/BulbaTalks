@@ -1,8 +1,6 @@
 /**
  Defines the API Endpoints.
-
-    Contains methods
-    for the HTTP request.
+ Contains methods for the HTTP request.
  */
 struct APIEndpoints {
     /**
