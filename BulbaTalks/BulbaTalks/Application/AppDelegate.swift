@@ -4,11 +4,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-    func application(_: UIApplication,
-                     didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil)
+    func application(_: UIApplication, didFinishLaunchingWithOptions _:
+        [UIApplication.LaunchOptionsKey: Any]? = nil)
         -> Bool {
-        guard let viewController = Storyboard.authorization.viewController(
-            of: AuthorizationViewController.self) else {
+        guard let viewController =
+            AppStoryboard.authorization.viewController(
+                of: AuthorizationViewController.self) else {
             return true
         }
         window = UIWindow(frame: UIScreen.main.bounds)

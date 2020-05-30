@@ -23,11 +23,13 @@
 		95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DDCC122472CBD1008209DB /* HTTPParameters.swift */; };
 		95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E49B582462F57300A6C2EF /* TweetEntities.swift */; };
 <<<<<<< HEAD
-=======
-		A84CE3E0247FE24600AADFC3 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84CE3DF247FE24600AADFC3 /* Tweet.swift */; };
-		A84CE3F324810CC200AADFC3 /* UIColor+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84CE3F224810CC200AADFC3 /* UIColor+Twitter.swift */; };
->>>>>>> Replaced TwitterColor with UIColor extension, changed doc comments
+		95E69BF3247E8CA000BE585A /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF2247E8CA000BE585A /* NetworkConfiguration.swift */; };
+		95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */; };
+		95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E69BF6247E8D0400BE585A /* MockNetworkConfiguration.swift */; };
 		A8A54A19247FB8760089FD8D /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A18247FB8760089FD8D /* Storyboard.swift */; };
+=======
+		A8A54A19247FB8760089FD8D /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A18247FB8760089FD8D /* AppStoryboard.swift */; };
+>>>>>>> Changed doc comments and code
 		A8A54A1D247FB8C10089FD8D /* Autorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A54A1B247FB8C00089FD8D /* Autorization.storyboard */; };
 		A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A1C247FB8C00089FD8D /* LoginButton.swift */; };
 		A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */; };
@@ -55,11 +57,13 @@
 		95DDCC122472CBD1008209DB /* HTTPParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameters.swift; sourceTree = "<group>"; };
 		95E49B582462F57300A6C2EF /* TweetEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetEntities.swift; sourceTree = "<group>"; };
 <<<<<<< HEAD
-=======
-		A84CE3DF247FE24600AADFC3 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
-		A84CE3F224810CC200AADFC3 /* UIColor+Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Twitter.swift"; sourceTree = "<group>"; };
->>>>>>> Replaced TwitterColor with UIColor extension, changed doc comments
+		95E69BF2247E8CA000BE585A /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNetworkConfiguration.swift; sourceTree = "<group>"; };
+		95E69BF6247E8D0400BE585A /* MockNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkConfiguration.swift; sourceTree = "<group>"; };
 		A8A54A18247FB8760089FD8D /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+=======
+		A8A54A18247FB8760089FD8D /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+>>>>>>> Changed doc comments and code
 		A8A54A1B247FB8C00089FD8D /* Autorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Autorization.storyboard; sourceTree = "<group>"; };
 		A8A54A1C247FB8C00089FD8D /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +134,7 @@
 			children = (
 				A8A54A1A247FB8C00089FD8D /* Authorization */,
 				55F6B5A72455866900B77247 /* LaunchScreen.storyboard */,
-				A8A54A18247FB8760089FD8D /* Storyboard.swift */,
+				A8A54A18247FB8760089FD8D /* AppStoryboard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,7 +204,6 @@
 				953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */,
 				953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */,
 				953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */,
-				A84CE3F224810CC200AADFC3 /* UIColor+Twitter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,6 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				95DDCC122472CBD1008209DB /* HTTPParameters.swift */,
+				95E69BF6247E8D0400BE585A /* MockNetworkConfiguration.swift */,
+				95E69BF2247E8CA000BE585A /* NetworkConfiguration.swift */,
+				95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -353,13 +359,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E69BF3247E8CA000BE585A /* NetworkConfiguration.swift in Sources */,
 				A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */,
 				95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */,
-				A84CE3F324810CC200AADFC3 /* UIColor+Twitter.swift in Sources */,
-				42105FCC246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift in Sources */,
+				95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */,
+				42105FCC246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift in Sources */,
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
+				95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */,
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,
-				A8A54A19247FB8760089FD8D /* Storyboard.swift in Sources */,
+				A8A54A19247FB8760089FD8D /* AppStoryboard.swift in Sources */,
 				953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */,
 				55FEB9C8246AF2890081717C /* Authentication.swift in Sources */,
 				953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */,
