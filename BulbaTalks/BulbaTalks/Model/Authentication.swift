@@ -6,20 +6,24 @@ import Foundation
  */
 struct Authentication {
     /**
-     Stores the key used to obtain the current authentication
-     status of the user from `UserDefaults`.
+     Keys associated with values in the current user‘s defaults
+     database.
      */
     private enum UserDefaultsKey {
         static let isSignedIn = "isSignedIn"
     }
 
-    /// A boolean flag indicating whether the user is signed in.
+    /**
+     A boolean flag indicating whether the user is signed in.
+     */
     private(set) static var isSignedIn: Bool {
         get {
             return UserDefaults.standard.bool(forKey: UserDefaultsKey.isSignedIn)
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.isSignedIn)
+            if newValue != isSignedIn {
+                UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.isSignedIn)
+            }
         }
     }
 
@@ -31,9 +35,7 @@ struct Authentication {
      is already authenticated.
      */
     static func signIn(completion: (Bool) -> Void) {
-        if !isSignedIn {
-            isSignedIn = true
-        }
+        isSignedIn = true
         completion(true)
     }
 
@@ -45,9 +47,7 @@ struct Authentication {
      signed out.
      */
     static func signOut(completion: (Bool) -> Void) {
-        if isSignedIn {
-            isSignedIn = false
-        }
+        isSignedIn = false
         completion(true)
     }
 }
