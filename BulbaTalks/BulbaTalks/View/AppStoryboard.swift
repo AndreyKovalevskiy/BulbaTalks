@@ -12,7 +12,7 @@ enum AppStoryboard: String {
      current storyboard.
      - Parameter viewController: Concrete type of the view controller
      to instantiate.
-     - Returns: View controller with type of input parameter
+     - Returns: View controller with the type of input parameter
      `viewController` or `nil` if the view controller of the specified type
      didn't create.
      */
