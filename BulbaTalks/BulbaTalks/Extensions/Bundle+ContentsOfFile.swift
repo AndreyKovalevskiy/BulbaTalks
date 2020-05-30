@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 
 extension Bundle {
@@ -20,10 +19,10 @@ extension Bundle {
     }
 
     /**
-     Function to get UIImage from resources.
+     Uses to get `UIImage` from the current bundle.
      - Parameter url: Url of necessary image.
      - Parameter completion: A completion handler which takes.
-     `UIImage`object from url  or `nil` .
+     `UIImage`object from url  or `nil` if the image isn't found.
      */
     func getImage(by url: String, completion: (UIImage?) -> Void) {
         let fileURL = URL(fileURLWithPath: url)
