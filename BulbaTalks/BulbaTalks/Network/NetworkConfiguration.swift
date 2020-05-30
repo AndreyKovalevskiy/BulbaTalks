@@ -1,7 +1,8 @@
 import Foundation
 
 /**
- Сonfiguration is used to post and receive data using Twitter API.
+ Configuration is used to split the work with data into scenarios,
+ such as Remote and Mock Network.
  Contains properties which are used to make the absolute URL from the given relative URL
  and to make headers for `URLRequest`.
  */
