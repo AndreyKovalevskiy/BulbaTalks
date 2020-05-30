@@ -8,7 +8,8 @@ import Foundation
  */
 protocol NetworkConfiguration {
     /**
-     The part of the absolute URL which is followed by the relative endpoint URL.
+     The part of the absolute URL which is followed by
+     the relative endpoint URL.
      */
     var baseURL: URL { get }
     /**
