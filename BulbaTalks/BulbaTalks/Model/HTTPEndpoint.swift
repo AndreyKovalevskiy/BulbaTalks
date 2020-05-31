@@ -1,12 +1,10 @@
 /**
- Defines an HTTP Endpoint.
- Contains the properties and methods
- for the HTTP request.
+ Defines an HTTP endpoint.
  */
 struct HTTPEndpoint: HTTPRequestable {
-    var method: HTTPMethodType
-    var path: String
-    var headerParameters: HTTPHeaderParameters
-    var queryParameters: HTTPQueryParameters
-    var bodyParameters: HTTPBodyParameters
+    let method: HTTPMethodType
+    let path: String
+    let headerParameters: HTTPHeaderParameters
+    let queryParameters: HTTPQueryParameters
+    let bodyParameters: HTTPBodyParameters
 }
