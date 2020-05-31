@@ -2,7 +2,7 @@ import UIKit
 
 /**
  Contains names of application storyboards and
- provide ability to instantiate an appropriate view
+ provide the ability to instantiate an appropriate view
  controller.
  */
 enum AppStoryboard: String {
