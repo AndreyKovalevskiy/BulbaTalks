@@ -14,10 +14,9 @@ enum AppStoryboard: String {
      - Parameter viewController: Concrete
      type of the view controller to instantiate.
      - Returns: View controller with the type of
-     input parameter
-     `viewController` or `nil` if the view
-     controller of the specified type couldn't be
-     instantiated.
+     input parameter `viewController` or `nil`
+     if the view controller of the specified type couldn't
+     be instantiated.
      */
     func viewController<T: UIViewController>(of viewController: T.Type) -> T? {
         let storyboard = UIStoryboard(name: rawValue, bundle: nil)
