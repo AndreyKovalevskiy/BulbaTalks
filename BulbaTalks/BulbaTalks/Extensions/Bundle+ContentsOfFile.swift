@@ -20,9 +20,12 @@ extension Bundle {
 
     /**
      Gets`UIImage` from the current bundle.
-     - Parameter url: URL of the image within the bundle.
-     - Parameter completion: A completion handler which takes
-     Image from the given URL or `nil` if the image couldn't be found in the bundle.
+     - Parameter url: URL of the image within
+     the bundle.
+     - Parameter completion: A completion
+     handler which takes
+     Image from the given URL or `nil` if the image
+     couldn't be found in the bundle.
      */
     func getImage(at url: URL, completion: (UIImage?) -> Void) {
         if let data = contentsOfFile(at: url),
