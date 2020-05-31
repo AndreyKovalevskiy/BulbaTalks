@@ -3,9 +3,8 @@ import Foundation
 /**
  Stores the application settings.
 
- Allows to toggle between network configurations
- and persistently stores the configuration
- which is currently active.
+ Allows to toggle between network configurations and persistently
+ stores the configuration which is currently active.
  */
 class Settings {
     /**
@@ -23,8 +22,7 @@ class Settings {
      */
     private enum Keys {
         /**
-         The key associated with the active
-         network configuration.
+         The key associated with the active network configuration.
          */
         static let activeConfiguration = "ActiveNetworkConfiguration"
     }
@@ -47,8 +45,7 @@ class Settings {
 
     /**
      Activates the network configuration with a given type.
-        - Parameter type: Type of the network
-     configuration to use.
+        - Parameter type: Type of the network configuration to use.
      */
     func activateNewtorkConfiguration(of type: NetworkConfigurationType) {
         UserDefaults.standard.set(type.rawValue, forKey: Keys.activeConfiguration)
@@ -56,12 +53,9 @@ class Settings {
     }
 
     /**
-     Gets the network configuration
-     of the given type.
-     - Parameter type: The value
-     of the type network configuration.
-     - Returns: The network configuration
-     after type association.
+     Gets the network configuration of the given type.
+     - Parameter type: The value of the type network configuration to get.
+     - Returns: The network configuration after type association.
      */
     private func networkConfiguration(of type: NetworkConfigurationType) -> NetworkConfiguration {
         switch type {
