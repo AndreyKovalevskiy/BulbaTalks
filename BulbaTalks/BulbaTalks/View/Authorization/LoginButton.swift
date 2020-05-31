@@ -10,13 +10,7 @@ class LoginButton: UIButton {
 
     @IBInspectable var masksToBounds: Bool = false {
         didSet {
-            self.layer.masksToBounds = masksToBounds
-        }
-    }
-
-    override var isHighlighted: Bool {
-        didSet {
-            backgroundColor = isHighlighted ? UIColor.Twitter.secondaryDarkGray : UIColor.Twitter.primaryBlue
+            layer.masksToBounds = masksToBounds
         }
     }
 }
