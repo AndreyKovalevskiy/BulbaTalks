@@ -38,7 +38,7 @@ protocol HTTPRequestable {
      Creates the `URLRequest`, configured with the specific
      configuration and current instance protocol properties that
      conform to the `HTTPRequestable` protocol.
-     
+
      - Parameter config: A network configuration to use to
      make the request.
      - Returns: A valid URLRequest, or `nil` if it's impossible
@@ -63,9 +63,9 @@ extension HTTPRequestable {
 
         if !bodyParameters.isEmpty {
             let bodyString = bodyParameters
-                                    .map { "\($0.key)=\($0.value)" }
-                                    .joined(separator: "&")
-                                    .addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? ""
+                .map { "\($0.key)=\($0.value)" }
+                .joined(separator: "&")
+                .addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? ""
 
             urlRequest.httpBody = bodyString.data(using: String.Encoding.ascii, allowLossyConversion: true)
         }
@@ -77,7 +77,7 @@ extension HTTPRequestable {
      Creates the `URL`, configured with the specific configuration
      and current property `path` of the instance that conform to
      the `HTTPRequestable` protocol.
-     
+
      - Parameter config: A network configuration to use to
      make the URL.
      - Returns: A valid URL, or `nil` if it's impossible to make
