@@ -2,8 +2,7 @@ import UIKit
 
 extension UIViewController {
     /**
-     Gets the view controller identifier which is used in
-     the storyboard configuration at the interface builder.
+     identifies the view controller in the storyboard file.
      */
     static var storyboardID: String {
         return "\(self)ID"
