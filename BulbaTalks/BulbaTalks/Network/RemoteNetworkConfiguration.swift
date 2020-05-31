@@ -1,7 +1,7 @@
 import Foundation
 
 /**
- Сonfiguration allows to make network requests.
+ The configuration allows to make network requests.
  */
 struct RemoteNetworkConfiguration: NetworkConfiguration {
     var baseURL: URL = URL(string: "https://api.twitter.com/")!
