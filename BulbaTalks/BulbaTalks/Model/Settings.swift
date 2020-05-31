@@ -3,7 +3,7 @@ import Foundation
 /**
  Stores the application settings.
 
- Allows to toggle between network configuration
+ Allows to toggle between network configurations
  and persistently stores the configuration
  which is currently active.
  */
@@ -38,7 +38,10 @@ class Settings {
         if let configuration = UserDefaults.standard.string(forKey:
             Keys.activeConfiguration),
             let configurationType = NetworkConfigurationType(rawValue: configuration) {
-            activeNetworkConfiguration = get(configurationType)
+            activeNetworkConfiguration = networkConfiguration(of: configurationType)
+        } else {
+            UserDefaults.standard.set(NetworkConfigurationType.mock.rawValue,
+                                      forKey: Keys.activeConfiguration)
         }
     }
 
@@ -47,20 +50,20 @@ class Settings {
         - Parameter type: Type of the network
      configuration to use.
      */
-    func toggleNewtorkConfiguration(to type: NetworkConfigurationType) {
+    func activateNewtorkConfiguration(of type: NetworkConfigurationType) {
         UserDefaults.standard.set(type.rawValue, forKey: Keys.activeConfiguration)
-        activeNetworkConfiguration = get(type)
+        activeNetworkConfiguration = networkConfiguration(of: type)
     }
 
     /**
-     Gets the given network configuration
-     from the network configuration type.
+     Gets the network configuration
+     of the given type.
      - Parameter type: The value
      of the type network configuration.
-     - Returns: The active network configuration
+     - Returns: The network configuration
      after type association.
      */
-    private func get(_ type: NetworkConfigurationType) -> NetworkConfiguration {
+    private func networkConfiguration(of type: NetworkConfigurationType) -> NetworkConfiguration {
         switch type {
         case .mock:
             return MockNetworkConfiguration()
