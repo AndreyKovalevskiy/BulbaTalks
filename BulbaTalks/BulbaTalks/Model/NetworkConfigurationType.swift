@@ -1,7 +1,7 @@
-/// Describes the types of network configurations.
+/// Contains the types of network configurations.
 enum NetworkConfigurationType: String {
-    /// Describes `RemoteNetworkConfiguration` type.
+    /// The configuration that allows to make network requests.
     case remote
-    /// Describes `MockNetworkConfiguration` type.
+    /// The configuration that allows to make mock network requests.
     case mock
 }

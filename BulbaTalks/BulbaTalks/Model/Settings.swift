@@ -1,15 +1,17 @@
 import Foundation
 
 /**
- Contains a method for toggle between
- `Remote`/`Mock` network configuration and property
- to get the active configuration.
+ Stores the application settings.
+
+ Allows to toggle between network configuration
+ and persistently stores the configuration
+ which is currently active.
  */
 class Settings {
     /**
-     A value that contains the active network configuration.
+     The active network configuration.
      */
-    private(set) var activeConfiguration: NetworkConfiguration
+    private(set) var activeNetworkConfiguration: NetworkConfiguration
 
     /**
      A shared singleton settings object.
@@ -21,40 +23,49 @@ class Settings {
      */
     private enum Keys {
         /**
-         A value that contains the key with which to associate
-         the active network configuration.
+         The key associated with the active
+         network configuration.
          */
-        static let activeConfigurationKey = "ActiveConfiguration"
+        static let activeConfiguration = "ActiveNetworkConfiguration"
     }
 
     /**
-     Initialization of the active configuration from `UserDefaults`.
+     Initializes `Settings` object from the persistent storage.
      */
     private init() {
-        activeConfiguration = MockNetworkConfiguration()
+        activeNetworkConfiguration = MockNetworkConfiguration()
 
         if let configuration = UserDefaults.standard.string(forKey:
-            Keys.activeConfigurationKey) {
-            activeConfiguration = sets(configuration)
+            Keys.activeConfiguration),
+            let configurationType = NetworkConfigurationType(rawValue: configuration) {
+            activeNetworkConfiguration = get(configurationType)
         }
     }
 
     /**
-     Toggle between the network configuration.
-        - Parameter type: Type of network configuration.
+     Activates the network configuration with a given type.
+        - Parameter type: Type of the network
+     configuration to use.
      */
     func toggleNewtorkConfiguration(to type: NetworkConfigurationType) {
-        UserDefaults.standard.set(type.rawValue, forKey: Keys.activeConfigurationKey)
-        activeConfiguration = sets(type.rawValue)
+        UserDefaults.standard.set(type.rawValue, forKey: Keys.activeConfiguration)
+        activeNetworkConfiguration = get(type)
     }
 
     /**
-     Sets the active network configuration.
-     - Parameter networkConfiguration: The value of the type active configuration.
-     - Returns: The active network configuration after type association.
+     Gets the given network configuration
+     from the network configuration type.
+     - Parameter type: The value
+     of the type network configuration.
+     - Returns: The active network configuration
+     after type association.
      */
-    private func sets(_ networkConfiguration: String) -> NetworkConfiguration {
-        return (networkConfiguration == NetworkConfigurationType.mock.rawValue) ?
-            MockNetworkConfiguration() : RemoteNetworkConfiguration()
+    private func get(_ type: NetworkConfigurationType) -> NetworkConfiguration {
+        switch type {
+        case .mock:
+            return MockNetworkConfiguration()
+        case .remote:
+            return RemoteNetworkConfiguration()
+        }
     }
 }
