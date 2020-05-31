@@ -12,37 +12,33 @@ protocol HTTPRequestable {
     var method: HTTPMethodType { get }
 
     /**
-     The path to the required information on the specified baseURL
-     of the resource.
+     Relative part of the absolute resource URL.
      */
     var path: String { get }
 
     /**
-     HTTP headers that are used when creating the HTTP request.
+     Parameters that forms a headers in the HTTP Request.
      */
     var headerParameters: HTTPHeaderParameters { get }
 
     /**
-     Parameters that are used in the URL to provide some
-     additional information in the HTTP request.
+     Parameters that forms a query string in the URL.
      */
     var queryParameters: HTTPQueryParameters { get }
 
     /**
-     Parameters that are used in the body of HTTP request to
-     provide some additional information in the HTTP request.
+     Parameters that forms a body string in the HTTP Request.
      */
     var bodyParameters: HTTPBodyParameters { get }
 
     /**
-     Creates the `URLRequest`, configured with the specific
-     configuration and current instance protocol properties that
-     conform to the `HTTPRequestable` protocol.
+     Creates the `URLRequest`, using the specific network
+     configuration.
 
      - Parameter config: A network configuration to use to
      make the request.
-     - Returns: A valid URLRequest, or `nil` if it's impossible
-     to make a valid request.
+     - Returns: A URLRequest, or `nil` if it's impossible to
+     make a  request.
      */
     func urlRequest(using config: NetworkConfiguration) -> URLRequest?
 }
@@ -74,14 +70,13 @@ extension HTTPRequestable {
     }
 
     /**
-     Creates the `URL`, configured with the specific configuration
-     and current property `path` of the instance that conform to
+     Creates URL, using the specific network configuration and
+     current property `path` of the instance that conform to
      the `HTTPRequestable` protocol.
 
      - Parameter config: A network configuration to use to
      make the URL.
-     - Returns: A valid URL, or `nil` if it's impossible to make
-     a valid URL.
+     - Returns: A URL, or `nil` if it's impossible to make a URL.
      */
     private func url(using config: NetworkConfiguration) -> URL? {
         let endpointURLString = config.baseURL.absoluteString.appending(path)
