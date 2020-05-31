@@ -383,7 +383,6 @@
 				95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */,
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
 				95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */,
-				953AC511246DA88C0008307C /* GeneralHTTPEndpointConfiguration.swift in Sources */,
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,
 				A8A54A19247FB8760089FD8D /* AppStoryboard.swift in Sources */,
 				AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */,
