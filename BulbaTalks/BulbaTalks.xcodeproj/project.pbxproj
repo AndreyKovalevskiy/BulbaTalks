@@ -197,20 +197,11 @@
 				55DCA32E24558F2600871DD1 /* Model */,
 				55DCA32F24558F3E00871DD1 /* View */,
 				55DCA33024558F5400871DD1 /* Controller */,
-				690FD649246EE81400728925 /* Network */,
 				953CD27D246487DD00334E81 /* Extensions */,
 				55DCA33124558F8300871DD1 /* Resources */,
 				55DCA33224558F9A00871DD1 /* SupportingFiles */,
 			);
 			path = BulbaTalks;
-			sourceTree = "<group>";
-		};
-		690FD649246EE81400728925 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				690FD64A246EE87200728925 /* HTTPNetworking.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		953CD27D246487DD00334E81 /* Extensions */ = {
@@ -235,6 +226,7 @@
 				95E69BF2247E8CA000BE585A /* NetworkConfiguration.swift */,
 				95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */,
 				690FD64D246EFE8F00728925 /* NetworkError.swift */,
+				690FD64A246EE87200728925 /* HTTPNetworking.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -394,6 +386,9 @@
 				A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */,
 				95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */,
 				95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */,
+				42105FCC246C2CCE00EFBDCD /* Bundle+LocalData.swift in Sources */,
+				42105FCC246C2CCE00EFBDCD /* Bundle+СontentsOfFile.swift in Sources */,
+				42105FCC246C2CCE00EFBDCD /* Bundle+ContentsOfFile.swift in Sources */,
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
 				95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */,
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,

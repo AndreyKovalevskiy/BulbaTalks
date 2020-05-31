@@ -1,16 +1,11 @@
 import Foundation
 /**
- Describes additional functionality for
- the `NetworkServise` class.
+ Describes the foundation of data communication
+ for the `NetworkServise` class.
  */
 protocol HTTPNetworking {
     /**
-     Provides a new name for an existing data type which
-     describes value that represents either a `success`
-     or a `failure`:
-     - `Success` with the value of the result.
-     - `Failure` with the type that implements
-     enum `NetworkError`.
+     Provides a new name for an existing data type.
      */
     typealias CompletionHandler = (Result<Data, NetworkError>) -> Void
     /**
