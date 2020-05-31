@@ -10,7 +10,7 @@ protocol HTTPNetworking {
      or a `failure`:
      - `Success` with the value of the result.
      - `Failure` with the type that implements
-     enum `NetworlError`.
+     enum `NetworkError`.
      */
     typealias CompletionHandler = (Result<Data, NetworkError>) -> Void
     /**
