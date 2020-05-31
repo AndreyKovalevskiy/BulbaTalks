@@ -1,4 +1,4 @@
-/// An object which describes network error.
+/// Describes network error.
 enum NetworkError: Error {
     /// Describes a network error with a specific status code.
     case error(statusCode: Int)
