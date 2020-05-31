@@ -25,7 +25,7 @@ extension Bundle {
      Image from the given URL or `nil` if the image couldn't be found in the bundle.
      */
     func getImage(at _: URL, completion: (UIImage?) -> Void) {
-        if let data = contentsOfFile(at: URL(fileURLWithPath: "url")),
+        if let data = contentsOfFile(at: url),
             let image = UIImage(data: data) {
             completion(image)
         } else {
