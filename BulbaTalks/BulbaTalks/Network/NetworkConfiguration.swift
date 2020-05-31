@@ -2,7 +2,8 @@ import Foundation
 
 /**
  Settings common to the network configuration.
- For example, the network configuration can force using the mock network API.
+ For example, the network configuration can force using
+ the mock network API.
  Contains properties which are used to make the absolute URL
  from the given relative URL and specify common headers.
  */
