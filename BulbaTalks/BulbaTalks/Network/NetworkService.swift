@@ -1,9 +1,14 @@
 import Foundation
 /**
- The class that makes network calls.
+ Makes network and mock calls.
  */
+enum NetworkError: Error {
+    case error(statusCode: Int)
+    case otherError
+}
 class NetworkService {
-    typealias CompletionHandler = (Result<Data, Error>) -> Void
+typealias CompletionHandler = (Result<Data, NetworkError>) -> Void
+
     /**
      Creates a task that retrieves the contents of the
     `URLRequest`, then calls a handler upon completion.
@@ -18,17 +23,18 @@ class NetworkService {
      to a request and provides response headers.
             - error: An error object that indicates why
      the request failed, or nil if the request was successful.
-     - Returns: The new session data task.
+     - Returns: Instance of `URLSessionTask`.
      */
     private func networkRequest(request: URLRequest,
                                 completion: @escaping CompletionHandler) -> URLSessionTask {
         let networkTask = URLSession.shared.dataTask(with: request) { (data, response, requestError) in
             if let requestError = requestError {
-                completion(.failure(requestError))
+                completion(.failure(.error(statusCode: 400)))
                 return
             }
             guard let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode) else {
+                    completion(.failure(.error(statusCode: 505)))
                     return
             }
             if let data = data {
@@ -38,5 +44,22 @@ class NetworkService {
         networkTask.resume()
         
         return networkTask
+    }
+    
+    private func mockRequest(request: URLRequest, completion: @escaping CompletionHandler) -> URLSessionTask {
+        let localURL = URL(string: "1.1/statuses/home_timeline.json")
+        let mockTask = URLSession.shared.dataTask(with: localURL!) { (data, _, error) in
+            if error != nil {
+                completion(.failure(.error(statusCode: 400)))
+                return
+            }
+            if let data = data {
+                completion(.success(data))
+                return
+            }
+        }
+        mockTask.resume()
+        
+        return mockTask
     }
 }
