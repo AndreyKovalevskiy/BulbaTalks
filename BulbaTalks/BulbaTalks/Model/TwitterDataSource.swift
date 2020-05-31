@@ -4,6 +4,9 @@ import Foundation
  Describes the methods for receiving data using Twitter API.
  */
 struct TwitterDataSource {
+    /**
+     Network service that we use to make requests to the Twitter API.
+     */
     private let networkService: NetworkService = NetworkService(generalConfiguration: Settings.shared.currentConfiguration)
 
     /**
@@ -45,10 +48,10 @@ struct TwitterDataSource {
 
     /**
      Receives an authenticated user.
-     - Parameter completion: A completion handler
-     that takes `User` object corresponding to the current
-     authenticated user as a parameter, or `nil` if the
-     authenticated user was not received.
+     - Parameter completion: A completion handler that
+     takes `User` object corresponding to the current authenticated
+     user as a parameter, or `nil` if the authenticated user was
+     not received.
      */
     public func getAuthenticatedUser(completion: @escaping (User?) -> Void) {
         let apiEndpoint = APIEndpoints.getAuthenticatedUser(with: [:], queryParameters: [:], bodyParameters: [:])
