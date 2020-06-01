@@ -4,12 +4,15 @@ class ListOfTweetsTableViewCell: UITableViewCell {
     // MARK: Properties
 
     @IBOutlet var userImage: UserImage!
-    @IBOutlet var userName: UILabel!
-    @IBOutlet var userIdenticalName: UILabel!
-    @IBOutlet var tweetCreatedAt: UILabel!
-    @IBOutlet var tweetContent: UILabel!
-    @IBOutlet var tweetURL: UILabel!
-    @IBOutlet var tweetMedia: TweetMediaImageView!
+    @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var userIdenticalNameLabel: UILabel!
+    @IBOutlet var tweetCreatedAtLabel: UILabel!
+    @IBOutlet var tweetContentLabel: UILabel!
+    @IBOutlet var tweetURLLabel: UILabel!
+    @IBOutlet var tweetMediaImageView: TweetMediaImageView!
+    @IBOutlet var numberOfCommentsLabel: UILabel!
+    @IBOutlet var numberOfRetweetsLabel: UILabel!
+    @IBOutlet var numberOfFavouritesLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

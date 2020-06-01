@@ -289,13 +289,16 @@
                 <constraint firstAttribute="trailing" secondItem="mtA-g7-dkt" secondAttribute="trailing" id="w9T-F1-TO8"/>
             </constraints>
             <connections>
-                <outlet property="tweetContent" destination="bC6-my-myU" id="5CX-Kn-4Gq"/>
-                <outlet property="tweetCreatedAt" destination="grL-Or-VMa" id="X6H-tT-6Ye"/>
-                <outlet property="tweetMedia" destination="Vq3-rO-NRU" id="ZqZ-Hx-wWm"/>
-                <outlet property="tweetURL" destination="jey-Zh-wSP" id="Jfy-W0-eS2"/>
-                <outlet property="userIdenticalName" destination="JIJ-Dx-MZw" id="a8R-cA-MjT"/>
+                <outlet property="numberOfCommentsLabel" destination="bmr-O2-DZT" id="0rI-8e-08Z"/>
+                <outlet property="numberOfFavouritesLabel" destination="gR6-mL-b0c" id="ghH-YP-w89"/>
+                <outlet property="numberOfRetweetsLabel" destination="dkU-wC-2j1" id="4qD-6w-rG4"/>
+                <outlet property="tweetContentLabel" destination="bC6-my-myU" id="H8u-tp-ttS"/>
+                <outlet property="tweetCreatedAtLabel" destination="grL-Or-VMa" id="Fep-Ts-nyl"/>
+                <outlet property="tweetMediaImageView" destination="Vq3-rO-NRU" id="vqo-2d-fgz"/>
+                <outlet property="tweetURLLabel" destination="jey-Zh-wSP" id="qRa-cK-2oK"/>
+                <outlet property="userIdenticalNameLabel" destination="JIJ-Dx-MZw" id="0rQ-yE-JhC"/>
                 <outlet property="userImage" destination="5lC-eI-U4F" id="HoQ-bX-8TQ"/>
-                <outlet property="userName" destination="4C7-dC-4kg" id="qA4-aJ-XOv"/>
+                <outlet property="userNameLabel" destination="4C7-dC-4kg" id="GCv-tH-epl"/>
             </connections>
             <point key="canvasLocation" x="165.21739130434784" y="151.00446428571428"/>
         </tableViewCell>
