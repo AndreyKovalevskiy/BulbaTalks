@@ -262,6 +262,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		958050C52485309B00031A1C /* TweetCell */ = {
+			isa = PBXGroup;
+			children = (
+				95A1B83024814EA7005F29DA /* TweetMediaImageView.swift */,
+			);
+			path = TweetCell;
+			sourceTree = "<group>";
+		};
 		95A1B82324814E6A005F29DA /* ListOfTweets */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,7 +290,7 @@
 		95A1B82F24814EA7005F29DA /* ReusableControls */ = {
 			isa = PBXGroup;
 			children = (
-				95A1B83024814EA7005F29DA /* TweetMediaImageView.swift */,
+				958050C52485309B00031A1C /* TweetCell */,
 				95A1B83124814EA7005F29DA /* UserImage.swift */,
 			);
 			path = ReusableControls;
