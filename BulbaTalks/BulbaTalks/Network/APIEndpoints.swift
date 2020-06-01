@@ -9,10 +9,10 @@ struct APIEndpoints {
      - Parameters:
         - headerParameters: Parameters that form
         headers in the HTTP request.
-        - queryParameters: Parameters that forms
+        - queryParameters: Parameters that form
         a query string in the URL.
-        - bodyParameters: Parameters that forms
-        a body string in the HTTP request.
+        - bodyParameters: Parameters included in
+        the body in the HTTP request.
      - Returns: The object describing API HTTP
      Endpoint to get timeline of tweets.
      */
@@ -32,10 +32,10 @@ struct APIEndpoints {
      - Parameters:
         - headerParameters: Parameters that form
         headers in the HTTP request.
-        - queryParameters: Parameters that forms
+        - queryParameters: Parameters that form
         a query string in the URL.
-        - bodyParameters: Parameters that forms
-        a body string in the HTTP request.
+        - bodyParameters: Parameters included in
+        the body in the HTTP request.
      - Returns: The object describing API HTTP
      Endpoint to get user authentication information.
      */
