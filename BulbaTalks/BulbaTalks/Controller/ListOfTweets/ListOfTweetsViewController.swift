@@ -26,8 +26,8 @@ class ListOfTweetsViewController: UIViewController {
     // MARK: Private func
 
     private func configureViewController() {
-        let nibTweetCell = getNib()
-        tableView.register(nibTweetCell, forCellReuseIdentifier: ListOfTweetsTableViewCell.cellID)
+        let nibFileWithCell = getNib()
+        tableView.register(nibFileWithCell, forCellReuseIdentifier: ListOfTweetsTableViewCell.cellID)
         tabBar.barTintColor = .white
 
         if let logoOfTwitter = UIImage(named: "logoOfTwitter") {
