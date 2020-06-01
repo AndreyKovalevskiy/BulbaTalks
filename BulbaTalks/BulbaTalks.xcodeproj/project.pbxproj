@@ -510,6 +510,7 @@
 				95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */,
 				95A1B82824814E7A005F29DA /* UITableView+ReusableCell.swift in Sources */,
 				95A1B82524814E6A005F29DA /* ListOfTweetsViewController.swift in Sources */,
+                42105FCC246C2CCE00EFBDCD /* Bundle+LocalData.swift in Sources */,
 				55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */,
 				95E69BF5247E8CE000BE585A /* RemoteNetworkConfiguration.swift in Sources */,
 				95A1B82D24814E98005F29DA /* ListOfTweetsTableViewCell.swift in Sources */,
