@@ -1,8 +1,8 @@
 import Foundation
 
 /**
- Describes the properties and methods for creating an HTTP endpoint
- that we can use when generating the HTTP request.
+ Represents a request that depends on HTTP protocol and can be
+ asynchronously executed.
  */
 protocol HTTPRequestable {
     /**
@@ -17,17 +17,17 @@ protocol HTTPRequestable {
     var path: String { get }
 
     /**
-     Parameters that forms headers in the HTTP request.
+     Parameters that form headers in the HTTP request.
      */
     var headerParameters: HTTPHeaderParameters { get }
 
     /**
-     Parameters that forms a query string in the URL.
+     Parameters that form a query string in the URL.
      */
     var queryParameters: HTTPQueryParameters { get }
 
     /**
-     Parameters that forms body in the HTTP request.
+     Parameters that form a body in the HTTP request.
      */
     var bodyParameters: HTTPBodyParameters { get }
 
@@ -36,8 +36,8 @@ protocol HTTPRequestable {
      configuration.
      - Parameter config: A network configuration to use to
      construct the request.
-     - Returns: A URLRequest, or `nil` if it's impossible to
-     construct a request.
+     - Returns: A new 'URLRequest', or `nil` if it's impossible
+     to construct a request.
      */
     func urlRequest(using config: NetworkConfiguration) -> URLRequest?
 }
@@ -73,8 +73,8 @@ extension HTTPRequestable {
      the `path`.
      - Parameter config: A network configuration to use to
      construct the URL.
-     - Returns: A URL, or `nil` if it's impossible to construct
-     a URL.
+     - Returns: A new 'URL', or `nil` if it's impossible to
+     construct a URL.
      */
     private func url(using config: NetworkConfiguration) -> URL? {
         let endpointURLString = config.baseURL.absoluteString.appending(path)
