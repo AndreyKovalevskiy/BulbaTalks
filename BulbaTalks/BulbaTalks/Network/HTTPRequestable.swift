@@ -27,7 +27,7 @@ protocol HTTPRequestable {
     var queryParameters: HTTPQueryParameters { get }
 
     /**
-     Parameters that forms body in the HTTP Request.
+     Parameters that forms body in the HTTP request.
      */
     var bodyParameters: HTTPBodyParameters { get }
 
