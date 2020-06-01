@@ -36,7 +36,7 @@ protocol HTTPRequestable {
      configuration.
 
      - Parameter config: A network configuration to use to
-     make the request.
+     construct the request.
      - Returns: A URLRequest, or `nil` if it's impossible to
      construct a request.
      */
@@ -74,7 +74,7 @@ extension HTTPRequestable {
      the `path`.
 
      - Parameter config: A network configuration to use to
-     make the URL.
+     construct the URL.
      - Returns: A URL, or `nil` if it's impossible to construct
      a URL.
      */
