@@ -8,7 +8,7 @@ class ListOfTweetsViewController: UIViewController {
     @IBOutlet var tabBar: UITabBar!
 
     private enum HeightOfTabBar {
-        static let compactHeightOfTabBar: CGFloat = 50
+        static let compact: CGFloat = 50
     }
 
     private let navigationBarItem = UINavigationItem()
@@ -21,8 +21,8 @@ class ListOfTweetsViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if UIDevice.current.orientation.isLandscape {
-            tabBar.frame.size.height = HeightOfTabBar.compactHeightOfTabBar
-            tabBar.frame.origin.y = view.frame.height - HeightOfTabBar.compactHeightOfTabBar
+            tabBar.frame.size.height = HeightOfTabBar.compact
+            tabBar.frame.origin.y = view.frame.height - HeightOfTabBar.compact
         }
     }
 
