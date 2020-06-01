@@ -17,7 +17,7 @@ protocol HTTPRequestable {
     var path: String { get }
 
     /**
-     Parameters that forms a headers in the HTTP Request.
+     Parameters that forms headers in the HTTP request.
      */
     var headerParameters: HTTPHeaderParameters { get }
 
@@ -38,7 +38,7 @@ protocol HTTPRequestable {
      - Parameter config: A network configuration to use to
      make the request.
      - Returns: A URLRequest, or `nil` if it's impossible to
-     make a  request.
+     construct a request.
      */
     func urlRequest(using config: NetworkConfiguration) -> URLRequest?
 }
@@ -76,7 +76,8 @@ extension HTTPRequestable {
 
      - Parameter config: A network configuration to use to
      make the URL.
-     - Returns: A URL, or `nil` if it's impossible to make a URL.
+     - Returns: A URL, or `nil` if it's impossible to construct
+     a URL.
      */
     private func url(using config: NetworkConfiguration) -> URL? {
         let endpointURLString = config.baseURL.absoluteString.appending(path)
