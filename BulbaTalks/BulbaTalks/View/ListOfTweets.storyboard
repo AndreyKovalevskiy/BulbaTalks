@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List of Tweets-->
+        <!--ListOfTweetsViewController-->
         <scene sceneID="eSR-cI-Zgi">
             <objects>
-                <viewController storyboardIdentifier="ListOfTweetsViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="EWa-dL-D8m" userLabel="List of Tweets" customClass="ListOfTweetsViewController" customModule="BulbaTalks" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CYD-Ef-yqJ" userLabel="ListOfTweets">
+                <viewController storyboardIdentifier="ListOfTweetsViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="EWa-dL-D8m" userLabel="ListOfTweetsViewController" customClass="ListOfTweetsViewController" customModule="BulbaTalks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CYD-Ef-yqJ" userLabel="ListOfTweetsViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -45,7 +45,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LBl-J5-vYH" firstAttribute="top" secondItem="1xc-5p-cvT" secondAttribute="top" id="NyS-JI-pfW"/>
-                            <constraint firstItem="cun-Us-pU2" firstAttribute="leading" secondItem="1xc-5p-cvT" secondAttribute="leading" id="Ot0-hU-oQm"/>
+                            <constraint firstItem="cun-Us-pU2" firstAttribute="leading" secondItem="CYD-Ef-yqJ" secondAttribute="leading" id="Ot0-hU-oQm"/>
                             <constraint firstItem="gsR-n8-swJ" firstAttribute="leading" secondItem="CYD-Ef-yqJ" secondAttribute="leading" id="Sb8-7X-InX"/>
                             <constraint firstItem="1xc-5p-cvT" firstAttribute="trailing" secondItem="7ZJ-QH-y9t" secondAttribute="trailing" constant="10" id="SxH-FF-lEO"/>
                             <constraint firstItem="gsR-n8-swJ" firstAttribute="trailing" secondItem="CYD-Ef-yqJ" secondAttribute="trailing" id="ToL-ON-ZXd"/>
@@ -55,7 +55,7 @@
                             <constraint firstItem="LBl-J5-vYH" firstAttribute="leading" secondItem="CYD-Ef-yqJ" secondAttribute="leading" id="ll4-ar-zmE"/>
                             <constraint firstItem="cun-Us-pU2" firstAttribute="top" secondItem="LBl-J5-vYH" secondAttribute="bottom" id="q5A-gN-G87"/>
                             <constraint firstAttribute="bottom" secondItem="gsR-n8-swJ" secondAttribute="bottom" id="v3m-Fa-OvQ"/>
-                            <constraint firstItem="cun-Us-pU2" firstAttribute="trailing" secondItem="1xc-5p-cvT" secondAttribute="trailing" id="zY5-KW-acp"/>
+                            <constraint firstItem="cun-Us-pU2" firstAttribute="trailing" secondItem="CYD-Ef-yqJ" secondAttribute="trailing" id="zY5-KW-acp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1xc-5p-cvT"/>
                     </view>
