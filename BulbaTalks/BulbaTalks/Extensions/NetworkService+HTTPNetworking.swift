@@ -7,11 +7,11 @@ extension NetworkService: HTTPNetworking {
             return nil
         }
         if generalConfiguration is RemoteNetworkConfiguration {
-            generalConfiguration = MockNetworkConfiguration()
-            return mockRequest(request: URLRequest, completion: @escaping CompletionHandler)
+            return networkRequest(request: URLRequest,
+                               completion: @escaping CompletionHandler)
         } else {
-            generalConfiguration = RemoteNetworkConfiguration()
-            return networkRequest(request: URLRequest, completion: @escaping CompletionHandler)
+            return mockRequest(request: URLRequest,
+                                  completion: @escaping CompletionHandler)
         }
     }
 }
