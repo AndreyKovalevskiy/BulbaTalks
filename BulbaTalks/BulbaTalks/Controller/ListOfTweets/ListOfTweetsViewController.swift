@@ -26,8 +26,7 @@ class ListOfTweetsViewController: UIViewController {
     // MARK: Private func
 
     private func configureViewController() {
-        let nibFileWithCell = getNib()
-        tableView.register(nibFileWithCell, forCellReuseIdentifier: ListOfTweetsTableViewCell.cellID)
+        tableView.registerCell(of: ListOfTweetsTableViewCell.self)
         tabBar.barTintColor = .white
 
         if let logoOfTwitter = UIImage(named: "logoOfTwitter") {
@@ -62,9 +61,8 @@ extension ListOfTweetsViewController: UITableViewDataSource {
         return 1
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListOfTweetsTableViewCell.cellID,
-                                                       for: indexPath) as? ListOfTweetsTableViewCell else {
+    func tableView(_ tableView: UITableView, cellForRowAt _: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueCell(of: ListOfTweetsTableViewCell.self) else {
             return UITableViewCell()
         }
 
