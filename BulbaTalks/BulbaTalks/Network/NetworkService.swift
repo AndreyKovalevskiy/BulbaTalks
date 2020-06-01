@@ -1,6 +1,6 @@
 import Foundation
 /**
- Makes network and mock calls.
+ Performs network requests.
  */
 class NetworkService {
     private var generalConfiguration: NetworkConfiguration
