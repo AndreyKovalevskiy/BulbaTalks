@@ -5,8 +5,8 @@ import Foundation
 class NetworkService {
     private var generalConfiguration: NetworkConfiguration
 
-    init(generalConfiguration: NetworkConfiguration) {
-        self.generalConfiguration = generalConfiguration
+    init(networkConfiguration: NetworkConfiguration) {
+        self.generalConfiguration = networkConfiguration
     }
     /**
      Creates a task that retrieves the contents of the
