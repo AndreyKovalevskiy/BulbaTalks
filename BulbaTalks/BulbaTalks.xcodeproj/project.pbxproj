@@ -386,7 +386,7 @@
 				55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */,
 				A8A54A19247FB8760089FD8D /* AppStoryboard.swift in Sources */,
 				AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */,
-                AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */,
+				AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */,
 				953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */,
 				55FEB9C8246AF2890081717C /* Authentication.swift in Sources */,
 				953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */,
