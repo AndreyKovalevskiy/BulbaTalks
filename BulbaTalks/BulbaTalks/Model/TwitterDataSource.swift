@@ -27,8 +27,7 @@ struct TwitterDataSource {
      */
     public func getHomeTimeline(since firstTweet: Tweet?,
                                 until lastTweet: Tweet?,
-                                completion: @escaping ([Tweet]) -> Void)
-    {
+                                completion: @escaping ([Tweet]) -> Void) {
         var queryParameters = HTTPQueryParameters()
         queryParameters["since_id"] = firstTweet?.idString
         queryParameters["max_id"] = lastTweet?.idString
@@ -67,9 +66,8 @@ struct TwitterDataSource {
                 completion(nil)
             case let .success(data):
                 if let userArray = try? JSONDecoder().decodeTwitterResponse([User].self, from: data),
-                       !userArray.isEmpty
-                {
-                    completion(userArray.first!)
+                    let user = userArray.first {
+                    completion(user)
                 } else {
                     completion(nil)
                 }
