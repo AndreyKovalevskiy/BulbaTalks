@@ -45,7 +45,7 @@ class Settings {
 
     /**
      Activates the network configuration with a given type.
-        - Parameter type: Type of the network configuration to use.
+    - Parameter type: Type of the network configuration to use.
      */
     func activateNewtorkConfiguration(of type: NetworkConfigurationType) {
         UserDefaults.standard.set(type.rawValue, forKey: Keys.activeConfiguration)
