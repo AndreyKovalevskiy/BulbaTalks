@@ -15,15 +15,18 @@ struct TwitterDataSource {
      - Parameters:
        - firstTweet: Controls the amount of tweets to
        receive. If the parameter is not `nil`, then only tweets
-       that are more recent than the firstTweet will be received,
-       otherwise, the parameter will not affect the receipt of tweets.
+       that are newer than the given tweet will be received.
+       If `nil` is passed the parameter will not affect on the
+       receipt of tweets that are newer than the given tweet.
        - lastTweet: Controls the amount of tweets to receive.
        If the parameter is not `nil`, then only tweets that are
-       older than the lastTweet will be received, otherwise,
-       the parameter will not affect the receipt of tweets.
+       older than the given tweet will be received.
+       If `nil` is passed, the parameter will not affect on the
+       receipt of tweets that are older than the given tweet.
        - completion: A completion handler that takes an
        array of `Tweet` objects as a parameter if tweets
-       was received; otherwise, an empty array.
+       was received; otherwise, an empty array of `Tweet`
+       objects.
      */
     public func getHomeTimeline(since firstTweet: Tweet?,
                                 until lastTweet: Tweet?,
