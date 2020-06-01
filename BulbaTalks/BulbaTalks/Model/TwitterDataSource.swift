@@ -13,16 +13,14 @@ struct TwitterDataSource {
      Receives a collection of tweets posted by the authenticated
      user and the users he is following.
      - Parameters:
-       - firstTweet: Controls the amount of tweets to
-       receive. If the parameter is not `nil`, then only tweets
-       that are newer than the given tweet will be received.
-       If `nil` is passed the parameter will not affect on the
-       receipt of tweets that are newer than the given tweet.
+       - firstTweet: Controls the amount of tweets to receive.
+       Only tweets that are newer than the given tweet will be
+       received. If `nil` is passed, the parameter does not affect
+       the process of receiving tweets.
        - lastTweet: Controls the amount of tweets to receive.
-       If the parameter is not `nil`, then only tweets that are
-       older than the given tweet will be received.
-       If `nil` is passed, the parameter will not affect on the
-       receipt of tweets that are older than the given tweet.
+       Only tweets that are older than the given tweet will be
+       received. If `nil` is passed, the parameter does not affect
+       the process of receiving tweets.
        - completion: A completion handler that takes an
        array of `Tweet` objects as a parameter if tweets
        was received; otherwise, an empty array of `Tweet`
@@ -54,7 +52,7 @@ struct TwitterDataSource {
     }
 
     /**
-     Receives an authenticated user.
+     Gets an authenticated user.
      - Parameter completion: A completion handler that
      takes `User` object corresponding to the current authenticated
      user as a parameter, or `nil` if the authenticated user was
