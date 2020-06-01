@@ -3,8 +3,11 @@ import Foundation
  Makes network and mock calls.
  */
 class NetworkService {
-typealias CompletionHandler = (Result<Data, NetworkError>) -> Void
+    private var generalConfiguration: NetworkConfiguration
 
+    init(generalConfiguration: NetworkConfiguration) {
+        self.generalConfiguration = generalConfiguration
+    }
     /**
      Creates a task that retrieves the contents of the
     `URLRequest`, then calls a handler upon completion.
@@ -43,8 +46,7 @@ typealias CompletionHandler = (Result<Data, NetworkError>) -> Void
     }
     
     private func mockRequest(request: URLRequest, completion: @escaping CompletionHandler) -> URLSessionTask {
-        let localURL = URL(string: "1.1/statuses/home_timeline.json")
-        let mockTask = URLSession.shared.dataTask(with: localURL!) { (data, _, error) in
+        let mockTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
             if error != nil {
                 completion(.failure(.error(statusCode: 400)))
                 return
