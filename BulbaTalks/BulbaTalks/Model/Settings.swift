@@ -54,8 +54,9 @@ class Settings {
 
     /**
      Gets the network configuration of the given type.
-     - Parameter type: The value of the type network configuration to get.
-     - Returns: The network configuration after type association.
+     - Parameter type: The value of the type network
+     configuration to get.
+     - Returns: The network configuration.
      */
     private func networkConfiguration(of type: NetworkConfigurationType) -> NetworkConfiguration {
         switch type {
