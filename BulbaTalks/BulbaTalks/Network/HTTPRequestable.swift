@@ -34,7 +34,6 @@ protocol HTTPRequestable {
     /**
      Creates the `URLRequest`, using the specific network
      configuration.
-
      - Parameter config: A network configuration to use to
      construct the request.
      - Returns: A URLRequest, or `nil` if it's impossible to
@@ -72,7 +71,6 @@ extension HTTPRequestable {
     /**
      Creates URL, using the specific network configuration and
      the `path`.
-
      - Parameter config: A network configuration to use to
      construct the URL.
      - Returns: A URL, or `nil` if it's impossible to construct
