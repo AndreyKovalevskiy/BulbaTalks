@@ -2,10 +2,6 @@ import Foundation
 /**
  Makes network and mock calls.
  */
-enum NetworkError: Error {
-    case error(statusCode: Int)
-    case otherError
-}
 class NetworkService {
 typealias CompletionHandler = (Result<Data, NetworkError>) -> Void
 
