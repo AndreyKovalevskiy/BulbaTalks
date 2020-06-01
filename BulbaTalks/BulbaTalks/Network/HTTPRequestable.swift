@@ -27,7 +27,7 @@ protocol HTTPRequestable {
     var queryParameters: HTTPQueryParameters { get }
 
     /**
-     Parameters that forms a body string in the HTTP Request.
+     Parameters that forms body in the HTTP Request.
      */
     var bodyParameters: HTTPBodyParameters { get }
 
@@ -71,8 +71,7 @@ extension HTTPRequestable {
 
     /**
      Creates URL, using the specific network configuration and
-     current property `path` of the instance that conform to
-     the `HTTPRequestable` protocol.
+     the `path`.
 
      - Parameter config: A network configuration to use to
      make the URL.
