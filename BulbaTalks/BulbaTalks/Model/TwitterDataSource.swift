@@ -25,12 +25,17 @@ struct TwitterDataSource {
        array of `Tweet` objects as a parameter if tweets
        was received; otherwise, an empty array.
      */
-    public func getHomeTimeline(since firstTweet: Tweet?, until lastTweet: Tweet?, completion: @escaping ([Tweet]) -> Void) {
+    public func getHomeTimeline(since firstTweet: Tweet?,
+                                until lastTweet: Tweet?,
+                                completion: @escaping ([Tweet]) -> Void)
+    {
         var queryParameters = HTTPQueryParameters()
         queryParameters["since_id"] = firstTweet?.idString
         queryParameters["max_id"] = lastTweet?.idString
 
-        let apiEndpoint = APIEndpoints.getHomeTimeline(with: [:], queryParameters: queryParameters, bodyParameters: [:])
+        let apiEndpoint = APIEndpoints.getHomeTimeline(with: [:],
+                                                       queryParameters: queryParameters,
+                                                       bodyParameters: [:])
 
         networkService.httpRequest(apiEndpoint: apiEndpoint) { result in
             switch result {
