@@ -7,7 +7,7 @@ struct TwitterDataSource {
     /**
      Network service that we use to make requests to the Twitter API.
      */
-    private let networkService: NetworkService = NetworkService(generalConfiguration: Settings.shared.currentConfiguration)
+    private let networkService: NetworkService = NetworkService(networkConfiguration: Settings.shared.currentConfiguration)
 
     /**
      Receives a collection of tweets posted by the authenticated
