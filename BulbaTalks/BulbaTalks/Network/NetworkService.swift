@@ -14,7 +14,7 @@ class NetworkService {
      - Parameters:
         - request: The `URLRequest` to be retrived.
         - completion: The completion handler to call
-     when the load request is complete.
+     when the request is complete.
      This completion handler takes the following parameters:
             - data: The data returned by the server,
      or nil if the request was failed.
@@ -47,7 +47,7 @@ class NetworkService {
     
     private func mockRequest(request: URLRequest, completion: @escaping CompletionHandler) -> URLSessionTask {
         let mockTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
-            if error != nil {
+            if error != nil  {
                 completion(.failure(.error(statusCode: 400)))
                 return
             }
