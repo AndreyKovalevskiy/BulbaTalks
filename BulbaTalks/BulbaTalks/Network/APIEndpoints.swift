@@ -1,21 +1,20 @@
 /**
  Defines the API Endpoints.
- Contains methods for the HTTP request.
+ Contains methods for getting information from Twitter API.
  */
 struct APIEndpoints {
     /**
-     Returns the `HTTPEndpoint` object
-     for the HTTP request to get a collection
-     of the most recent tweets.
-
+     Constructs the HTTP endpoint to get a collection
+     a timeline of tweets.
      - Parameters:
-        - headerParameters: These parameters will be
-        included in the HTTP request header.
-        - queryParameters: These parameters will be
-        included in the end of the URL.
-        - bodyParameters: These parameters will be
-        included in the HTTP request body.
-     - Returns: The `HTTPEndpoint` object.
+        - headerParameters: Parameters that form
+        headers in the HTTP request.
+        - queryParameters: Parameters that forms
+        a query string in the URL.
+        - bodyParameters: Parameters that forms
+        a body string in the HTTP request.
+     - Returns: The object describing API HTTP
+     Endpoint to get timeline of tweets.
      */
     static func getHomeTimeline(with headerParameters: HTTPHeaderParameters,
                                 queryParameters: HTTPQueryParameters,
@@ -28,18 +27,17 @@ struct APIEndpoints {
     }
 
     /**
-     Returns the `HTTPEndpoint` object
-     for the HTTP request to get a representation
-     of the requesting user.
-
+     Constructs the HTTP endpoint to get user
+     authentication information.
      - Parameters:
-        - headerParameters: These parameters will be
-        included in the HTTP request header.
-        - queryParameters: These parameters will be
-        included in the end of the URL.
-        - bodyParameters: These parameters will be
-        included in the HTTP request body.
-     - Returns: The `HTTPEndpoint` object.
+        - headerParameters: Parameters that form
+        headers in the HTTP request.
+        - queryParameters: Parameters that forms
+        a query string in the URL.
+        - bodyParameters: Parameters that forms
+        a body string in the HTTP request.
+     - Returns: The object describing API HTTP
+     Endpoint to get user authentication information.
      */
     static func getAuthenticatedUser(with headerParameters: HTTPHeaderParameters,
                                      queryParameters: HTTPQueryParameters,
