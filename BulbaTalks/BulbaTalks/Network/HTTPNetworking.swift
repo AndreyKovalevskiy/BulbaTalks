@@ -1,16 +1,18 @@
 import Foundation
 /**
- Responsible for data communications and
+ Performs HTTP request and
  provides interaction with the network.
  */
 protocol HTTPNetworking {
     /**
-     Defines an alternative name for
-     an existing closure type so as not to repeat the code.
+     Introduce this in order not to repeat our code
+     and to make the code more clean and readable.
      */
     typealias CompletionHandler = (Result<Data, NetworkError>) -> Void
     /**
-     Makes async request to the given HTTP endpoint.
+     Makes asynchronous request
+     to the given HTTP endpoint and
+     returns the new session task.
      - Parameters:
         - apiEndpoint: API HTTP endpoint.
         - completion: The `CompletionHandler`
