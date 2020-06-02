@@ -12,7 +12,7 @@ struct TwitterDataSource {
     /**
      Receives a collection of tweets posted by the authenticated
      user and the users he is following.
-     
+
      This method uses the argument `firstTweet` or
      `lastTweet` to get 20 specific tweets relative to the some
      tweet, if both arguments are `nil`, then this method will return
