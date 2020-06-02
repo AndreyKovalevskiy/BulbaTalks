@@ -38,7 +38,7 @@ class ListOfTweetsViewController: UIViewController {
             navigationBarItem.titleView = titleViewWithImage
         }
 
-        let imageFromUserProfile = UIImage(named: "logoOfTwitter")
+        let imageFromUserProfile = UIImage()
         let barButtonItem = UIButton(type: .system)
         barButtonItem.layer.masksToBounds = true
         barButtonItem.layer.cornerRadius = navigationBar.frame.height / 2
