@@ -11,8 +11,6 @@ class ListOfTweetsViewController: UIViewController {
         static let heightInLandscapeOrientation: CGFloat = 50
     }
 
-    private let navigationBarItem = UINavigationItem()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -29,6 +27,8 @@ class ListOfTweetsViewController: UIViewController {
     // MARK: Private func
 
     private func configureViewController() {
+        let navigationBarItem = UINavigationItem()
+
         tableView.registerCell(of: ListOfTweetsTableViewCell.self)
         tabBar.barTintColor = .white
 
@@ -38,11 +38,10 @@ class ListOfTweetsViewController: UIViewController {
             navigationBarItem.titleView = titleViewWithImage
         }
 
-        let imageFromUserProfile = UIImage()
+        let imageFromUserProfile = UIImage(named: "logoOfTwitter")
         let barButtonItem = UIButton(type: .system)
         barButtonItem.layer.masksToBounds = true
         barButtonItem.layer.cornerRadius = navigationBar.frame.height / 2
-        barButtonItem.backgroundColor = .black
         barButtonItem.setImage(imageFromUserProfile, for: .normal)
         barButtonItem.addTarget(self, action: #selector(openProfile), for: .touchUpInside)
         navigationBarItem.leftBarButtonItem = UIBarButtonItem(customView: barButtonItem)

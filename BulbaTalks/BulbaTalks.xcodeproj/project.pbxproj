@@ -179,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				A8A54A1A247FB8C00089FD8D /* Authorization */,
-				95A1B83424814EB2005F29DA /* ListOfTweets.storyboard */,
 				55F6B5A72455866900B77247 /* LaunchScreen.storyboard */,
 				A8A54A18247FB8760089FD8D /* AppStoryboard.swift */,
 				95A1B82A24814E98005F29DA /* ListOfTweets */,
@@ -281,6 +280,7 @@
 		95A1B82A24814E98005F29DA /* ListOfTweets */ = {
 			isa = PBXGroup;
 			children = (
+				95A1B83424814EB2005F29DA /* ListOfTweets.storyboard */,
 				95A1B82B24814E98005F29DA /* ListOfTweetsTableViewCell.swift */,
 				95A1B82C24814E98005F29DA /* ListOfTweetsTableViewCell.xib */,
 			);
