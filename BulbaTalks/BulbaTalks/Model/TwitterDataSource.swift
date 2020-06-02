@@ -44,9 +44,7 @@ struct TwitterDataSource {
         queryParameters["since_id"] = firstTweet?.idString
         queryParameters["max_id"] = lastTweet?.idString
 
-        let apiEndpoint = APIEndpoints.getHomeTimeline(with: [:],
-                                                       queryParameters: queryParameters,
-                                                       bodyParameters: [:])
+        let apiEndpoint = APIEndpoints.getHomeTimeline(with: [:], queryParameters: queryParameters)
 
         networkService.httpRequest(apiEndpoint: apiEndpoint) { result in
             switch result {
@@ -70,7 +68,7 @@ struct TwitterDataSource {
      not received.
      */
     public func getAuthenticatedUser(completion: @escaping (User?) -> Void) {
-        let apiEndpoint = APIEndpoints.getAuthenticatedUser(with: [:], queryParameters: [:], bodyParameters: [:])
+        let apiEndpoint = APIEndpoints.getAuthenticatedUser(with: [:])
 
         networkService.httpRequest(apiEndpoint: apiEndpoint) { result in
             switch result {
