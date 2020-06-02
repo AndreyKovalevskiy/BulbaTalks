@@ -1,5 +1,8 @@
 import UIKit
 
+/**
+Provides the ability to create and dequeue the cell.
+*/
 extension UITableView {
     /**
      Loads the cell from the xib resource file and
