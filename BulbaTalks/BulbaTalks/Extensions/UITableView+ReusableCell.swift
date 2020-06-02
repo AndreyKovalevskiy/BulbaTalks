@@ -13,7 +13,8 @@ extension UITableView {
     }
 
     /**
-     Dequeues the cell that has been registered use with the table view.
+     Dequeues an existing cell if one is available or creates
+     a new one using the class or nib file you previously registered.
      - Parameter type: The class type of the cell to dequeue.
      - Returns: The reusable cell or `nil` if no cell is available
      for reuse and you did not register a class or nib file.
