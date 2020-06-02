@@ -17,11 +17,11 @@ class NetworkService {
      when the request is complete.
      This completion handler takes the following parameters:
             - data: The data returned by the server,
-     or nil if the request was failed.
+     or `nil` if the request was failed.
             - response: An object represents a response
      to a request and provides response headers.
             - error: An error object that indicates why
-     the request failed, or nil if the request was successful.
+     the request failed, or `nil` if the request was successful.
      - Returns: Instance of `URLSessionTask`.
      */
     private func networkRequest(request: URLRequest,
