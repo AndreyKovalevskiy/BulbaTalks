@@ -1,51 +1,41 @@
 /**
- Defines the API Endpoints.
- Contains methods for getting information from Twitter API.
+ API endpoints for interacting with the Twitter API.
  */
 struct APIEndpoints {
     /**
-     Constructs the HTTP Endpoint to get a collection
+     Constructs the HTTP endpoint to get a collection
      a timeline of tweets.
      - Parameters:
         - headerParameters: Parameters that form
         headers in the HTTP request.
         - queryParameters: Parameters that form
         a query string in the URL.
-        - bodyParameters: Parameters are included in
-        the body in the HTTP request.
      - Returns: The object describing API HTTP
-     Endpoint to get a timeline of tweets.
+     endpoint to get a timeline of tweets.
      */
     static func getHomeTimeline(with headerParameters: HTTPHeaderParameters,
-                                queryParameters: HTTPQueryParameters,
-                                bodyParameters: HTTPBodyParameters) -> HTTPRequestable {
+                                queryParameters: HTTPQueryParameters) -> HTTPRequestable {
         return HTTPEndpoint(method: .get,
                             path: "1.1/statuses/home_timeline.json",
                             headerParameters: headerParameters,
                             queryParameters: queryParameters,
-                            bodyParameters: bodyParameters)
+                            bodyParameters: [:])
     }
 
     /**
-     Constructs the HTTP Endpoint to get user
+     Constructs the HTTP endpoint to get user
      authentication information.
      - Parameters:
         - headerParameters: Parameters that form
         headers in the HTTP request.
-        - queryParameters: Parameters that form
-        a query string in the URL.
-        - bodyParameters: Parameters are included in
-        the body in the HTTP request.
      - Returns: The object describing API HTTP
-     Endpoint to get user authentication information.
+     endpoint to get information about an authenticated user.
      */
-    static func getAuthenticatedUser(with headerParameters: HTTPHeaderParameters,
-                                     queryParameters: HTTPQueryParameters,
-                                     bodyParameters: HTTPBodyParameters) -> HTTPRequestable {
+    static func getAuthenticatedUser(with headerParameters: HTTPHeaderParameters) -> HTTPRequestable {
         return HTTPEndpoint(method: .get,
                             path: "1.1/account/verify_credentials.json",
                             headerParameters: headerParameters,
-                            queryParameters: queryParameters,
-                            bodyParameters: bodyParameters)
+                            queryParameters: [:],
+                            bodyParameters: [:])
     }
 }
