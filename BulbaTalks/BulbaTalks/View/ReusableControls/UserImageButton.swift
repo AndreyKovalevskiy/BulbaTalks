@@ -1,7 +1,7 @@
 import UIKit
 
 @IBDesignable
-class ButtonWithUserImage: UIButton {
+class UserImageButton: UIButton {
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {
             self.layer.cornerRadius = cornerRadius

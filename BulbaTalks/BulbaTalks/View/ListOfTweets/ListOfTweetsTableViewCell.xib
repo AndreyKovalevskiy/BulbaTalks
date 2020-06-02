@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="452" height="259"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lC-eI-U4F" userLabel="userImage" customClass="ButtonWithUserImage" customModule="BulbaTalks" customModuleProvider="target">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lC-eI-U4F" userLabel="userImage" customClass="UserImageButton" customModule="BulbaTalks" customModuleProvider="target">
                         <rect key="frame" x="20" y="10" width="60" height="60"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                         <constraints>
@@ -30,7 +30,7 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="openAccount:" destination="hiR-sq-tKW" eventType="touchUpInside" id="jdb-0Q-9kN"/>
+                            <action selector="openAccount:" destination="hiR-sq-tKW" eventType="touchUpInside" id="xFk-n1-OML"/>
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nj-8I-DVd" userLabel="contentOfTweet">
@@ -112,7 +112,7 @@
                                     <constraint firstAttribute="trailing" secondItem="jey-Zh-wSP" secondAttribute="trailing" id="xHr-Qh-Opq"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vq3-rO-NRU" userLabel="tweetMedia" customClass="TweetMediaImageView" customModule="BulbaTalks" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vq3-rO-NRU" userLabel="tweetMedia" customClass="RoundedImageView" customModule="BulbaTalks" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="84" width="342" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="140" id="M9G-kI-gQr"/>
@@ -297,7 +297,7 @@
                 <outlet property="numberOfRetweetsLabel" destination="dkU-wC-2j1" id="4qD-6w-rG4"/>
                 <outlet property="tweetContentLabel" destination="bC6-my-myU" id="H8u-tp-ttS"/>
                 <outlet property="tweetCreatedAtLabel" destination="grL-Or-VMa" id="Fep-Ts-nyl"/>
-                <outlet property="tweetMediaImageView" destination="Vq3-rO-NRU" id="vqo-2d-fgz"/>
+                <outlet property="tweetMediaImageView" destination="Vq3-rO-NRU" id="y74-eu-eb5"/>
                 <outlet property="tweetURLLabel" destination="jey-Zh-wSP" id="qRa-cK-2oK"/>
                 <outlet property="userIdenticalNameLabel" destination="JIJ-Dx-MZw" id="0rQ-yE-JhC"/>
                 <outlet property="userNameLabel" destination="4C7-dC-4kg" id="GCv-tH-epl"/>

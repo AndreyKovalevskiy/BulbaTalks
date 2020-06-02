@@ -8,7 +8,7 @@ class ListOfTweetsTableViewCell: UITableViewCell {
     @IBOutlet var tweetCreatedAtLabel: UILabel!
     @IBOutlet var tweetContentLabel: UILabel!
     @IBOutlet var tweetURLLabel: UILabel!
-    @IBOutlet var tweetMediaImageView: TweetMediaImageView!
+    @IBOutlet var tweetMediaImageView: RoundedImageView!
     @IBOutlet var numberOfCommentsLabel: UILabel!
     @IBOutlet var numberOfRetweetsLabel: UILabel!
     @IBOutlet var numberOfFavouritesLabel: UILabel!
