@@ -4,17 +4,17 @@
  */
 struct APIEndpoints {
     /**
-     Constructs the HTTP endpoint to get a collection
+     Constructs the HTTP Endpoint to get a collection
      a timeline of tweets.
      - Parameters:
         - headerParameters: Parameters that form
         headers in the HTTP request.
         - queryParameters: Parameters that form
         a query string in the URL.
-        - bodyParameters: Parameters included in
+        - bodyParameters: Parameters are included in
         the body in the HTTP request.
      - Returns: The object describing API HTTP
-     Endpoint to get timeline of tweets.
+     Endpoint to get a timeline of tweets.
      */
     static func getHomeTimeline(with headerParameters: HTTPHeaderParameters,
                                 queryParameters: HTTPQueryParameters,
@@ -27,14 +27,14 @@ struct APIEndpoints {
     }
 
     /**
-     Constructs the HTTP endpoint to get user
+     Constructs the HTTP Endpoint to get user
      authentication information.
      - Parameters:
         - headerParameters: Parameters that form
         headers in the HTTP request.
         - queryParameters: Parameters that form
         a query string in the URL.
-        - bodyParameters: Parameters included in
+        - bodyParameters: Parameters are included in
         the body in the HTTP request.
      - Returns: The object describing API HTTP
      Endpoint to get user authentication information.
