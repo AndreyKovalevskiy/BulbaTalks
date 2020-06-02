@@ -1,7 +1,7 @@
 import UIKit
 
 /**
- Provides the ability to create and dequeue the cell.
+ Provides the ability to create and dequeues the cell.
  */
 extension UITableView {
     /**
