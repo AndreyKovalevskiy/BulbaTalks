@@ -53,7 +53,7 @@ class ListOfTweetsViewController: UIViewController {
 
     @objc func openProfile(_: UIBarButtonItem) {}
 
-    @IBAction func addTweet(_: UIButton) {}
+    @IBAction func composeTweet(_: UIButton) {}
 }
 
 // MARK: Extensions

@@ -31,7 +31,7 @@
                                 <rect key="frame" x="314" y="713" width="90" height="90"/>
                                 <state key="normal" image="tweetButton"/>
                                 <connections>
-                                    <action selector="addTweet:" destination="EWa-dL-D8m" eventType="touchUpInside" id="NOH-ff-CUa"/>
+                                    <action selector="composeTweet:" destination="EWa-dL-D8m" eventType="touchUpInside" id="mYC-gh-wBf"/>
                                 </connections>
                             </button>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsR-n8-swJ">
