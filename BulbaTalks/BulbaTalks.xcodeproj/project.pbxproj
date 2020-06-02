@@ -24,7 +24,7 @@
 		953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */; };
 		953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */; };
 		953CD2812465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */; };
-		958050C724863A7800031A1C /* UITableViewCell+CellID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958050C624863A7800031A1C /* UITableViewCell+CellID.swift */; };
+		958050C724863A7800031A1C /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958050C624863A7800031A1C /* UITableViewCell+ReuseIdentifier.swift */; };
 		95A1B82524814E6A005F29DA /* ListOfTweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1B82424814E6A005F29DA /* ListOfTweetsViewController.swift */; };
 		95A1B82824814E7A005F29DA /* UITableView+ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1B82624814E7A005F29DA /* UITableView+ReusableCell.swift */; };
 		95A1B82D24814E98005F29DA /* ListOfTweetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1B82B24814E98005F29DA /* ListOfTweetsTableViewCell.swift */; };
@@ -80,7 +80,7 @@
 		953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Twitter.swift"; sourceTree = "<group>"; };
 		953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+TwitterResponseDecoding.swift"; sourceTree = "<group>"; };
 		953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+TwitterObjectEncoding.swift"; sourceTree = "<group>"; };
-		958050C624863A7800031A1C /* UITableViewCell+CellID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellID.swift"; sourceTree = "<group>"; };
+		958050C624863A7800031A1C /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		95A1B82424814E6A005F29DA /* ListOfTweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfTweetsViewController.swift; sourceTree = "<group>"; };
 		95A1B82624814E7A005F29DA /* UITableView+ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+ReusableCell.swift"; path = "BulbaTalks/Extensions/UITableView+ReusableCell.swift"; sourceTree = SOURCE_ROOT; };
 		95A1B82B24814E98005F29DA /* ListOfTweetsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfTweetsTableViewCell.swift; sourceTree = "<group>"; };
@@ -256,7 +256,7 @@
 				953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */,
 				953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */,
 				95A1B82624814E7A005F29DA /* UITableView+ReusableCell.swift */,
-				958050C624863A7800031A1C /* UITableViewCell+CellID.swift */,
+				958050C624863A7800031A1C /* UITableViewCell+ReuseIdentifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -510,7 +510,7 @@
 				AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */,
 				AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */,
 				426CEDBD246DEAF50051E8D7 /* APIEndpoints.swift in Sources */,
-				958050C724863A7800031A1C /* UITableViewCell+CellID.swift in Sources */,
+				958050C724863A7800031A1C /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */,
 				55FEB9C8246AF2890081717C /* Authentication.swift in Sources */,
 				4247D6A5246DE69100DE6629 /* HTTPEndpoint.swift in Sources */,

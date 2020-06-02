@@ -1,8 +1,8 @@
 import UIKit
 
 /**
-Provides the ability to create and dequeue the cell.
-*/
+ Provides the ability to create and dequeue the cell.
+ */
 extension UITableView {
     /**
      Loads the cell from the xib resource file and
@@ -11,8 +11,8 @@ extension UITableView {
      - Parameter _: The class type of the cell to register.
      */
     func registerCell<T: UITableViewCell>(of _: T.Type) {
-        let nibFileWithCell = UINib(nibName: T.cellID, bundle: nil)
-        register(nibFileWithCell, forCellReuseIdentifier: T.cellID)
+        let nibFileWithCell = UINib(nibName: T.reuseIdentifier, bundle: nil)
+        register(nibFileWithCell, forCellReuseIdentifier: T.reuseIdentifier)
     }
 
     /**
@@ -23,6 +23,6 @@ extension UITableView {
      for reuse and you did not register a class or nib file.
      */
     func dequeueCell<T: UITableViewCell>(of _: T.Type) -> T? {
-        return dequeueReusableCell(withIdentifier: T.cellID) as? T
+        return dequeueReusableCell(withIdentifier: T.reuseIdentifier) as? T
     }
 }
