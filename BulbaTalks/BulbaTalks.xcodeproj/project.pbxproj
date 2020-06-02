@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		42105EF424853B0E00792E0A /* NetworkConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7A248001D800365513 /* NetworkConfigurationType.swift */; };
 		42105EF624853C4700792E0A /* Bundle+LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42105EF524853C4700792E0A /* Bundle+LocalData.swift */; };
-		42105EFB2485AB7100792E0A /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42105EFA2485AB7100792E0A /* APIEndpoints.swift */; };
-		4299B68124851E35009B9567 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7C2480020800365513 /* Settings.swift */; };
 		4247D6A5246DE69100DE6629 /* HTTPEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */; };
 		426CEDBD246DEAF50051E8D7 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426CEDBC246DEAF50051E8D7 /* APIEndpoints.swift */; };
+		4299B68124851E35009B9567 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7C2480020800365513 /* Settings.swift */; };
 		55029D1D2463121400FAAA06 /* home_timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 55029D1C2463121400FAAA06 /* home_timeline.json */; };
 		55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59C2455866800B77247 /* AppDelegate.swift */; };
 		55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59E2455866800B77247 /* SceneDelegate.swift */; };
@@ -44,10 +43,9 @@
 
 /* Begin PBXFileReference section */
 		42105EF524853C4700792E0A /* Bundle+LocalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+LocalData.swift"; sourceTree = "<group>"; };
-		42105EFA2485AB7100792E0A /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEndpoint.swift; sourceTree = "<group>"; };
 		4263ED7A248001D800365513 /* NetworkConfigurationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurationType.swift; sourceTree = "<group>"; };
 		4263ED7C2480020800365513 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEndpoint.swift; sourceTree = "<group>"; };
 		426CEDBC246DEAF50051E8D7 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		55029D1C2463121400FAAA06 /* home_timeline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = home_timeline.json; path = BulbaTalks/Resources/MockedTwitterResponses/1.1/statuses/home_timeline.json; sourceTree = SOURCE_ROOT; };
 		55F6B5992455866800B77247 /* BulbaTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulbaTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -385,7 +383,6 @@
 			files = (
 				42105EF424853B0E00792E0A /* NetworkConfigurationType.swift in Sources */,
 				4299B68124851E35009B9567 /* Settings.swift in Sources */,
-				42105EFB2485AB7100792E0A /* APIEndpoints.swift in Sources */,
 				95E69BF3247E8CA000BE585A /* NetworkConfiguration.swift in Sources */,
 				A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */,
 				95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */,
@@ -396,8 +393,6 @@
 				A8A54A19247FB8760089FD8D /* AppStoryboard.swift in Sources */,
 				AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */,
 				AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */,
-				55DE2C7B2463FC26007235A8 /* TwitterRepository.swift in Sources */,
-				55F6B5A12455866800B77247 /* ViewController.swift in Sources */,
 				426CEDBD246DEAF50051E8D7 /* APIEndpoints.swift in Sources */,
 				953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */,
 				55FEB9C8246AF2890081717C /* Authentication.swift in Sources */,
