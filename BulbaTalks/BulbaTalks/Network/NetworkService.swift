@@ -31,10 +31,11 @@ class NetworkService {
                 completion(.failure(.error(statusCode: 400)))
                 return
             }
-            guard let httpResponse = response as? HTTPURLResponse,
-                (200...299).contains(httpResponse.statusCode) else {
-                    completion(.failure(.error(statusCode: 505)))
-                    return
+            guard let httpResponse = response as? HTTPURLResponse else {
+                    completion(.failure(.error(statusCode: 500)))
+            }
+            guard (200...299).contains(httpResponse.statusCode) else {
+                completion(.failure(.error(statusCode: httpResponse.statusCode)))
             }
             completion(.success(data))
         }
