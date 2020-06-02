@@ -8,19 +8,17 @@ extension UITableView {
      - Parameter type: The class type of the cell to register.
      */
     func registerCell<T: UITableViewCell>(of _: T.Type) {
-        let cellName = String(describing: T.self)
-        let nibFileWithCell = UINib(nibName: cellName, bundle: nil)
-        register(nibFileWithCell, forCellReuseIdentifier: cellName)
+        let nibFileWithCell = UINib(nibName: T.cellID, bundle: nil)
+        register(nibFileWithCell, forCellReuseIdentifier: T.cellID)
     }
 
     /**
      Dequeues the cell that has been registered use with the table view.
      - Parameter type: The class type of the cell to dequeue.
-     - Returns: The reusable cell of the `UITableView` object.
+     - Returns: The reusable cell or `nil` if no cell is available
+     for reuse and you did not register a class or nib file.
      */
     func dequeueCell<T: UITableViewCell>(of _: T.Type) -> T? {
-        let cellName = String(describing: T.self)
-
-        return dequeueReusableCell(withIdentifier: cellName) as? T
+        return dequeueReusableCell(withIdentifier: T.cellID) as? T
     }
 }

@@ -292,7 +292,6 @@
                 <constraint firstAttribute="trailing" secondItem="mtA-g7-dkt" secondAttribute="trailing" id="w9T-F1-TO8"/>
             </constraints>
             <connections>
-                <outlet property="buttonWithUserImage" destination="5lC-eI-U4F" id="6fp-w6-CWX"/>
                 <outlet property="numberOfCommentsLabel" destination="bmr-O2-DZT" id="0rI-8e-08Z"/>
                 <outlet property="numberOfFavouritesLabel" destination="gR6-mL-b0c" id="ghH-YP-w89"/>
                 <outlet property="numberOfRetweetsLabel" destination="dkU-wC-2j1" id="4qD-6w-rG4"/>
