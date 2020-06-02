@@ -12,17 +12,26 @@ struct TwitterDataSource {
     /**
      Receives a collection of tweets posted by the authenticated
      user and the users he is following.
+     
+     This method uses the argument `firstTweet` or
+     `lastTweet` to get 20 specific tweets relative to the some
+     tweet, if both arguments are `nil`, then this method will return
+     20 newest tweets in the user’s home timeline.
      - Parameters:
-       - firstTweet: Only 20 tweets that are newer than the
-       given tweet will be received. If `nil` is passed, and
-       `lastTweet` parameter is also `nil`, we will get the 20
-       most recent tweets; otherwise this parameter does not affect
-       on which tweets we will get.
-       - lastTweet: Only 20 tweets that are older than the
-       given tweet will be received. If `nil` is passed, and
-       `firstTweet` parameter is also `nil`, we will get the 20
-       most recent tweets; otherwise this parameter does not affect
-       on which tweets we will get.
+       - firstTweet: Сontains a tweet, starting from which
+       (not including this tweet) we will get the next 20 tweets that
+       were made immediately after this tweet (it is possible to get
+       less than 20 tweets, because so many new tweets might not
+       appear); if the parameter is `nil`, then it will not affect the
+       receipt of tweets, with the exception described in the
+       discussion section.
+       - lastTweet: Contains a tweet starting from which (not
+       including this tweet) we will get the next 20 tweets that were
+       made right before this tweet (it is possible to get less than 20
+       tweets, because theoretically you can get to the oldest
+       tweets on the Twitter platform); if the parameter is `nil`,
+       then it will not affect the receipt of tweets, with the exception
+       described in the discussion section.
        - completion: A completion handler that takes an
        array of `Tweet` objects as a parameter if tweets
        was received; otherwise, an empty array of `Tweet`
