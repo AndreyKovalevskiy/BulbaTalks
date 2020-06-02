@@ -25,9 +25,8 @@ struct APIEndpoints {
     /**
      Constructs the HTTP endpoint to get user
      authentication information.
-     - Parameters:
-        - headerParameters: Parameters that form
-        headers in the HTTP request.
+     - Parameter headerParameters: Parameters that form
+     headers in the HTTP request.
      - Returns: The object describing API HTTP
      endpoint to get information about an authenticated user.
      */
