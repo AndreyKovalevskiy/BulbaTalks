@@ -3,7 +3,6 @@ import UIKit
 class ListOfTweetsTableViewCell: UITableViewCell {
     // MARK: Properties
 
-    @IBOutlet var userImage: UserImage!
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var userIdenticalNameLabel: UILabel!
     @IBOutlet var tweetCreatedAtLabel: UILabel!
@@ -19,6 +18,8 @@ class ListOfTweetsTableViewCell: UITableViewCell {
     }
 
     // MARK: Actions
+
+    @IBAction func openAccount(_: UIButton) {}
 
     @IBAction func commentTweet(_: UIButton) {}
 

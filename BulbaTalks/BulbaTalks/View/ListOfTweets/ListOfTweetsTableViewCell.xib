@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="452" height="259"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lC-eI-U4F" userLabel="userImage" customClass="UserImage" customModule="BulbaTalks" customModuleProvider="target">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lC-eI-U4F" userLabel="userImage" customClass="ButtonWithUserImage" customModule="BulbaTalks" customModuleProvider="target">
                         <rect key="frame" x="20" y="10" width="60" height="60"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                         <constraints>
@@ -29,6 +29,9 @@
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="openAccount:" destination="hiR-sq-tKW" eventType="touchUpInside" id="jdb-0Q-9kN"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nj-8I-DVd" userLabel="contentOfTweet">
                         <rect key="frame" x="100" y="10" width="342" height="249"/>
@@ -289,6 +292,7 @@
                 <constraint firstAttribute="trailing" secondItem="mtA-g7-dkt" secondAttribute="trailing" id="w9T-F1-TO8"/>
             </constraints>
             <connections>
+                <outlet property="buttonWithUserImage" destination="5lC-eI-U4F" id="6fp-w6-CWX"/>
                 <outlet property="numberOfCommentsLabel" destination="bmr-O2-DZT" id="0rI-8e-08Z"/>
                 <outlet property="numberOfFavouritesLabel" destination="gR6-mL-b0c" id="ghH-YP-w89"/>
                 <outlet property="numberOfRetweetsLabel" destination="dkU-wC-2j1" id="4qD-6w-rG4"/>
@@ -297,7 +301,6 @@
                 <outlet property="tweetMediaImageView" destination="Vq3-rO-NRU" id="vqo-2d-fgz"/>
                 <outlet property="tweetURLLabel" destination="jey-Zh-wSP" id="qRa-cK-2oK"/>
                 <outlet property="userIdenticalNameLabel" destination="JIJ-Dx-MZw" id="0rQ-yE-JhC"/>
-                <outlet property="userImage" destination="5lC-eI-U4F" id="HoQ-bX-8TQ"/>
                 <outlet property="userNameLabel" destination="4C7-dC-4kg" id="GCv-tH-epl"/>
             </connections>
             <point key="canvasLocation" x="165.21739130434784" y="151.00446428571428"/>
