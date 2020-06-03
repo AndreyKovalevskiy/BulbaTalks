@@ -1,6 +1,7 @@
 import Foundation
 /**
- Performs network requests.
+ Performs network and mock requests and
+ provides interaction with the network
  */
 class NetworkService {
     private var generalConfiguration: NetworkConfiguration
@@ -9,8 +10,8 @@ class NetworkService {
         self.generalConfiguration = networkConfiguration
     }
     /**
-     Creates a task that retrieves the contents of the
-    `URLRequest`, then calls a handler upon completion.
+     Makes network request and then calls a handler upon
+     completion.
      - Parameters:
         - request: The `URLRequest` to be retrived.
         - completion: The completion handler to call
@@ -43,7 +44,10 @@ class NetworkService {
         
         return networkTask
     }
-    
+    /**
+     Makes mock request and then calls a handler upon
+     completion.
+     */
     private func mockRequest(request: URLRequest, completion: @escaping CompletionHandler) -> URLSessionTask {
         let mockTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
             if let error = error, data == nil {
