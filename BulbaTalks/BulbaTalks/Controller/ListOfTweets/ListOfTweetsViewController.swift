@@ -12,7 +12,7 @@ class ListOfTweetsViewController: UIViewController {
         static let heightInLandscapeOrientation: CGFloat = 50
     }
 
-    /// Contains the size of  the custom `UIButton`.
+    /// Contains the size of the custom `UIButton`.
     private enum CustomButtonSize {
         static let width: CGFloat = 30
         static let height: CGFloat = 30
