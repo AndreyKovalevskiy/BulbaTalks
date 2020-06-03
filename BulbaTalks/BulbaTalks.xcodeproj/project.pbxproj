@@ -18,10 +18,9 @@
 		55F6B5A62455866900B77247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A52455866900B77247 /* Assets.xcassets */; };
 		55F6B5A92455866900B77247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A72455866900B77247 /* LaunchScreen.storyboard */; };
 		55FEB9C8246AF2890081717C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEB9C7246AF2890081717C /* Authentication.swift */; };
-		690FD64E246EFE8F00728925 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64D246EFE8F00728925 /* NetworkError.swift */; };
 		690FD64B246EE87200728925 /* HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64A246EE87200728925 /* HTTPNetworking.swift */; };
 		69042FB2246AC0BB00B651D3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69042FB1246AC0BB00B651D3 /* NetworkService.swift */; };
-		698DE45E248505090093A43B /* NetworkService+HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698DE45D248505090093A43B /* NetworkService+HTTPNetworking.swift */; };
+		690FD64E246EFE8F00728925 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64D246EFE8F00728925 /* NetworkError.swift */; };
 		69ADB1FA2462EBB1002F65F2 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ADB1F92462EBB1002F65F2 /* Operation.swift */; };
 		951ECB432462B92B009367A8 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951ECB422462B92B009367A8 /* Tweet.swift */; };
 		953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */; };
@@ -77,10 +76,9 @@
 		55F6B5A82455866900B77247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55F6B5AA2455866900B77247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55FEB9C7246AF2890081717C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
-		690FD64D246EFE8F00728925 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		690FD64A246EE87200728925 /* HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworking.swift; sourceTree = "<group>"; };
 		69042FB1246AC0BB00B651D3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		698DE45D248505090093A43B /* NetworkService+HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+HTTPNetworking.swift"; sourceTree = "<group>"; };
+		690FD64D246EFE8F00728925 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		69ADB1F92462EBB1002F65F2 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = BulbaTalks/Model/Operation.swift; sourceTree = SOURCE_ROOT; };
 		951ECB422462B92B009367A8 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = BulbaTalks/Model/Tweet.swift; sourceTree = SOURCE_ROOT; };
 		953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Twitter.swift"; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 				953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */,
 				95A1B82624814E7A005F29DA /* UITableView+ReusableCell.swift */,
 				958050C624863A7800031A1C /* UITableViewCell+ReuseIdentifier.swift */,
-				698DE45D248505090093A43B /* NetworkService+HTTPNetworking .swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -508,7 +505,6 @@
 				95E69BF3247E8CA000BE585A /* NetworkConfiguration.swift in Sources */,
 				A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */,
 				95DDCC132472CBD1008209DB /* HTTPParameters.swift in Sources */,
-				698DE45E248505090093A43B /* NetworkService+HTTPNetworking.swift in Sources */,
 				95E69BF7247E8D0400BE585A /* MockNetworkConfiguration.swift in Sources */,
 				95A1B82824814E7A005F29DA /* UITableView+ReusableCell.swift in Sources */,
 				95A1B82524814E6A005F29DA /* ListOfTweetsViewController.swift in Sources */,

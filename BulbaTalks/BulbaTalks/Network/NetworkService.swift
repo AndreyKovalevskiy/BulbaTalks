@@ -34,9 +34,15 @@ class NetworkService {
             }
             guard let httpResponse = response as? HTTPURLResponse else {
                     completion(.failure(.error(statusCode: 500)))
+                return
             }
             guard (200...299).contains(httpResponse.statusCode) else {
                 completion(.failure(.error(statusCode: httpResponse.statusCode)))
+                return
+            }
+            guard let data = data else {
+                completion(.failure(.error(statusCode: 500)))
+                return
             }
             completion(.success(data))
         }
@@ -54,10 +60,30 @@ class NetworkService {
                 completion(.failure(.error(statusCode: 400)))
                 return
             }
+            guard let data = data else {
+                completion(.failure(.error(statusCode: 500)))
+                return
+            }
             completion(.success(data))
         }
         mockTask.resume()
         
         return mockTask
+    }
+}
+
+extension NetworkService: HTTPNetworking {
+    public func httpRequest(apiEndpoint:HTTPRequestable, completion: @escaping CompletionHandler) -> URLSessionTask? {
+        guard let urlRequest = apiEndpoint.urlRequest(using: generalConfiguration) else {
+            completion(.failure(.error(statusCode: 502)))
+            return nil
+        }
+        if generalConfiguration is RemoteNetworkConfiguration {
+            return networkRequest(request: urlRequest,
+                               completion: completion)
+        } else {
+            return mockRequest(request: urlRequest,
+                                  completion: completion)
+        }
     }
 }
