@@ -3,8 +3,8 @@
  */
 struct APIEndpoints {
     /**
-     Constructs the HTTP endpoint to get a collection
-     a timeline of tweets.
+     Constructs the HTTP endpoint to get
+     a collection of tweets from the timeline.
      - Parameters:
         - headerParameters: Parameters that form
         headers in the HTTP request.
