@@ -18,9 +18,8 @@
 		55F6B5A62455866900B77247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A52455866900B77247 /* Assets.xcassets */; };
 		55F6B5A92455866900B77247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A72455866900B77247 /* LaunchScreen.storyboard */; };
 		55FEB9C8246AF2890081717C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEB9C7246AF2890081717C /* Authentication.swift */; };
-		690FD64B246EE87200728925 /* HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64A246EE87200728925 /* HTTPNetworking.swift */; };
 		690FD64E246EFE8F00728925 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64D246EFE8F00728925 /* NetworkError.swift */; };
-		69042FB2246AC0BB00B651D3 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69042FB1246AC0BB00B651D3 /* NetworkClient.swift */; };
+		690FD64B246EE87200728925 /* HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64A246EE87200728925 /* HTTPNetworking.swift */; };
 		69042FB2246AC0BB00B651D3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69042FB1246AC0BB00B651D3 /* NetworkService.swift */; };
 		698DE45E248505090093A43B /* NetworkService+HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698DE45D248505090093A43B /* NetworkService+HTTPNetworking.swift */; };
 		69ADB1FA2462EBB1002F65F2 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ADB1F92462EBB1002F65F2 /* Operation.swift */; };
@@ -78,9 +77,8 @@
 		55F6B5A82455866900B77247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55F6B5AA2455866900B77247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55FEB9C7246AF2890081717C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
-		690FD64A246EE87200728925 /* HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworking.swift; sourceTree = "<group>"; };
 		690FD64D246EFE8F00728925 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		69042FB1246AC0BB00B651D3 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		690FD64A246EE87200728925 /* HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworking.swift; sourceTree = "<group>"; };
 		69042FB1246AC0BB00B651D3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		698DE45D248505090093A43B /* NetworkService+HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+HTTPNetworking.swift"; sourceTree = "<group>"; };
 		69ADB1F92462EBB1002F65F2 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = BulbaTalks/Model/Operation.swift; sourceTree = SOURCE_ROOT; };
@@ -536,7 +534,6 @@
 				95E49B592462F57300A6C2EF /* TweetEntities.swift in Sources */,
 				690FD64E246EFE8F00728925 /* NetworkError.swift in Sources */,
 				95A1B83324814EA7005F29DA /* ImageButton.swift in Sources */,
-				69042FB2246AC0BB00B651D3 /* NetworkClient.swift in Sources */,
 				69042FB2246AC0BB00B651D3 /* NetworkService.swift in Sources */,
 				95DD4AA22462D37E0004300D /* User.swift in Sources */,
 				A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */,
