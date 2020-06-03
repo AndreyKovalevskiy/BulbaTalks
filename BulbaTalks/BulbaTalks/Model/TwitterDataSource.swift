@@ -28,10 +28,10 @@ struct TwitterDataSource {
        - lastTweet: Contains a tweet starting from which (not
        including this tweet) we will get the next 20 tweets that were
        made right before this tweet (it is possible to get less than 20
-       tweets, because theoretically you can get to the oldest
-       tweets on the Twitter platform); if the parameter is `nil`,
-       then it will not affect the receipt of tweets, with the exception
-       described in the discussion section.
+       tweets, because theoretically older tweets will be missing at
+       some point); if the parameter is `nil`, then it will not affect
+       the receipt of tweets, with the exception described in the
+       discussion section.
        - completion: A completion handler that takes an
        array of `Tweet` objects as a parameter if tweets
        was received; otherwise, an empty array of `Tweet`
