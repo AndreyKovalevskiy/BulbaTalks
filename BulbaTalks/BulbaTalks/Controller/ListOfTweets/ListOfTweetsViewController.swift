@@ -7,8 +7,21 @@ class ListOfTweetsViewController: UIViewController {
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var tabBar: UITabBar!
 
+    /// Contains the height of tab bar.
     private enum TabBar {
         static let heightInLandscapeOrientation: CGFloat = 50
+    }
+
+    /// Contains the size of  the custom `UIButton`.
+    private enum CustomButtonSize {
+        static let width: CGFloat = 30
+        static let height: CGFloat = 30
+    }
+
+    /// Contains a constant size for the anchor’s size attribute.
+    private enum ConstantSize {
+        static let width: CGFloat = 30
+        static let height: CGFloat = 30
     }
 
     override func viewDidLoad() {
@@ -39,10 +52,16 @@ class ListOfTweetsViewController: UIViewController {
         }
 
         let imageFromUserProfile = UIImage()
-        let barButtonItem = UIButton(type: .system)
+        let barButtonItem = UIButton(frame: CGRect(x: 0, y: 0,
+                                                   width: CustomButtonSize.width,
+                                                   height: CustomButtonSize.height))
         barButtonItem.layer.masksToBounds = true
-        barButtonItem.layer.cornerRadius = navigationBar.frame.height / 2
+        barButtonItem.layer.cornerRadius = barButtonItem.frame.height / 2
         barButtonItem.setImage(imageFromUserProfile, for: .normal)
+        barButtonItem.widthAnchor.constraint(equalToConstant:
+            ConstantSize.width).isActive = true
+        barButtonItem.heightAnchor.constraint(equalToConstant:
+            ConstantSize.height).isActive = true
         barButtonItem.addTarget(self, action: #selector(openProfile), for: .touchUpInside)
         navigationBarItem.leftBarButtonItem = UIBarButtonItem(customView: barButtonItem)
 
