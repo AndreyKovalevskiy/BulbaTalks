@@ -37,8 +37,6 @@ class ListOfTweetsViewController: UIViewController {
     // MARK: Private func
 
     private func configureViewController() {
-        let navigationItem = UINavigationItem()
-
         tableView.registerCell(of: ListOfTweetsTableViewCell.self)
         tabBar.barTintColor = .white
 
