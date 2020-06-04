@@ -12,13 +12,10 @@ class ListOfTweetsViewController: UIViewController {
         static let heightInLandscapeOrientation: CGFloat = 50
     }
 
-    /// Contains the size of the custom `UIButton`.
-    private enum CustomButtonSize {
-        static let width: CGFloat = 30
-        static let height: CGFloat = 30
-    }
-
-    /// Contains a constant size for the anchor’s size attribute.
+    /**
+     Contains the size for the custom `UIButton` and
+     for the anchor’s size attribute.
+     */
     private enum ConstantSize {
         static let width: CGFloat = 30
         static let height: CGFloat = 30
@@ -53,8 +50,8 @@ class ListOfTweetsViewController: UIViewController {
 
         let imageFromUserProfile = UIImage()
         let barButtonItem = UIButton(frame: CGRect(x: 0, y: 0,
-                                                   width: CustomButtonSize.width,
-                                                   height: CustomButtonSize.height))
+                                                   width: ConstantSize.width,
+                                                   height: ConstantSize.height))
         barButtonItem.layer.masksToBounds = true
         barButtonItem.layer.cornerRadius = barButtonItem.frame.height / 2
         barButtonItem.setImage(imageFromUserProfile, for: .normal)
