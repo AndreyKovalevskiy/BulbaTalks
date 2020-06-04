@@ -4,6 +4,7 @@ import Foundation
  provides interaction with the network
  */
 class NetworkService {
+    
     private var generalConfiguration: NetworkConfiguration
 
     init(networkConfiguration: NetworkConfiguration) {
@@ -28,7 +29,8 @@ class NetworkService {
     private func networkRequest(request: URLRequest,
                                 completion: @escaping CompletionHandler) -> URLSessionTask {
         let networkTask = URLSession.shared.dataTask(with: request) { (data, response, requestError) in
-            if let requestError = requestError, data == nil {
+            
+            if let requestError = requestError {
                 completion(.failure(.error(statusCode: 400)))
                 return
             }
@@ -54,9 +56,10 @@ class NetworkService {
      Makes mock request and then calls a handler upon
      completion.
      */
-    private func mockRequest(request: URLRequest, completion: @escaping CompletionHandler) -> URLSessionTask {
+    private func mockRequest(request: URLRequest,
+                             completion: @escaping CompletionHandler) -> URLSessionTask {
         let mockTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
-            if let error = error, data == nil {
+            if let error = error {
                 completion(.failure(.error(statusCode: 400)))
                 return
             }
@@ -75,7 +78,7 @@ class NetworkService {
 extension NetworkService: HTTPNetworking {
     public func httpRequest(apiEndpoint:HTTPRequestable, completion: @escaping CompletionHandler) -> URLSessionTask? {
         guard let urlRequest = apiEndpoint.urlRequest(using: generalConfiguration) else {
-            completion(.failure(.error(statusCode: 502)))
+            completion(.failure(.error(statusCode: 500)))
             return nil
         }
         if generalConfiguration is RemoteNetworkConfiguration {
