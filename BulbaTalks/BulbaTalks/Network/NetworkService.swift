@@ -30,7 +30,7 @@ class NetworkService {
                                 completion: @escaping CompletionHandler) -> URLSessionTask {
         let networkTask = URLSession.shared.dataTask(with: request) { (data, response, requestError) in
             
-            if let requestError = requestError {
+            if requestError != nil {
                 completion(.failure(.error(statusCode: 400)))
                 return
             }
@@ -59,7 +59,7 @@ class NetworkService {
     private func mockRequest(request: URLRequest,
                              completion: @escaping CompletionHandler) -> URLSessionTask {
         let mockTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
-            if let error = error {
+            if error != nil {
                 completion(.failure(.error(statusCode: 400)))
                 return
             }
