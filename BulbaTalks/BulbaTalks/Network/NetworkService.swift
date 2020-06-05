@@ -4,7 +4,6 @@ import Foundation
  provides interaction with the network
  */
 class NetworkService {
-    
     private var generalConfiguration: NetworkConfiguration
 
     init(networkConfiguration: NetworkConfiguration) {
@@ -73,7 +72,7 @@ extension NetworkService: HTTPNetworking {
         }
         if generalConfiguration is RemoteNetworkConfiguration {
             return networkRequest(request: urlRequest,
-                               completion: completion)
+                                  completion: completion)
         } else {
             return mockRequest(request: urlRequest,
                                   completion: completion)
