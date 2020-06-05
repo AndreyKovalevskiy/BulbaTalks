@@ -56,7 +56,7 @@ class NetworkService {
      Makes mock request.
      */
     private func mockRequest(request: URLRequest,
-                             completion: @escaping CompletionHandler) -> URLSessionTask? {
+                             completion: CompletionHandler) -> URLSessionTask? {
         guard let urlMock = request.url else { return nil }
         if let data = Bundle.main.contentsOfFile(at: urlMock) {
             completion(.success(data))
