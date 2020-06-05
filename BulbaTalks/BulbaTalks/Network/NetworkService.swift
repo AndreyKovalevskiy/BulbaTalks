@@ -53,25 +53,15 @@ class NetworkService {
         return networkTask
     }
     /**
-     Makes mock request and then calls a handler upon
-     completion.
+     Makes mock request.
      */
     private func mockRequest(request: URLRequest,
-                             completion: @escaping CompletionHandler) -> URLSessionTask {
-        let mockTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
-            if error != nil {
-                completion(.failure(.error(statusCode: 400)))
-                return
-            }
-            guard let data = data else {
-                completion(.failure(.error(statusCode: 500)))
-                return
-            }
+                             completion: @escaping CompletionHandler) -> URLSessionTask? {
+        guard let urlMock = request.url else { return nil }
+        if let data = Bundle.main.contentsOfFile(at: urlMock) {
             completion(.success(data))
         }
-        mockTask.resume()
-        
-        return mockTask
+        return nil
     }
 }
 
