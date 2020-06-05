@@ -13,29 +13,24 @@ struct TwitterDataSource {
      Receives a collection of tweets posted by the authenticated
      user and the users he is following.
 
-     This method uses the argument `firstTweet` or
-     `lastTweet` to get 20 specific tweets relative to the some
-     tweet, if both arguments are `nil`, then this method will return
-     20 newest tweets in the user’s home timeline.
+     We get tweets(up to 20 tweets) from the home timeline using
+     the interval formed by the `firstTweet` and/or
+     `lastTweet` parameters.
+     If we have both parameters are `nil`, then we will get the 20
+     newest tweets from the home timeline.
      - Parameters:
-       - firstTweet: Сontains a tweet, starting from which
-       (not including this tweet) we will get the next 20 tweets that
-       were made immediately after this tweet (it is possible to get
-       less than 20 tweets, because so many new tweets might not
-       appear); if the parameter is `nil`, then it will not affect the
-       receipt of tweets, with the exception described in the
-       discussion section.
-       - lastTweet: Contains a tweet starting from which (not
-       including this tweet) we will get the next 20 tweets that were
-       made right before this tweet (it is possible to get less than 20
-       tweets, because theoretically older tweets will be missing at
-       some point); if the parameter is `nil`, then it will not affect
-       the receipt of tweets, with the exception described in the
-       discussion section.
-       - completion: A completion handler that takes an
-       array of `Tweet` objects as a parameter if tweets
-       was received; otherwise, an empty array of `Tweet`
-       objects.
+       - firstTweet: Contains a tweet, starting from which
+       (not including this tweet) we get the home timeline interval
+       with the newest tweets.
+       - lastTweet: Contains a tweet, starting from which
+       (including this tweet) we get the home timeline interval with
+       the tweets older than that.
+       - completion: A completion handler that takes an array
+       of `Tweet` objects, this array may contain tweets when
+       successfully recieved the home timeline and may be empty,
+       in case of an error while receiving tweets ,or for example
+       requesting new tweets, when there are no new tweets in the
+       home timeline.
      */
     public func getHomeTimeline(since firstTweet: Tweet?,
                                 until lastTweet: Tweet?,
