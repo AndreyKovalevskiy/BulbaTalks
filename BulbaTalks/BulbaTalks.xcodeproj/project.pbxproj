@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		42105EF424853B0E00792E0A /* NetworkConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7A248001D800365513 /* NetworkConfigurationType.swift */; };
 		42105EF624853C4700792E0A /* Bundle+LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42105EF524853C4700792E0A /* Bundle+LocalData.swift */; };
-		4299B68124851E35009B9567 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7C2480020800365513 /* Settings.swift */; };
 		4247D6A5246DE69100DE6629 /* HTTPEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */; };
 		426CEDBD246DEAF50051E8D7 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426CEDBC246DEAF50051E8D7 /* APIEndpoints.swift */; };
+		4299B68124851E35009B9567 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7C2480020800365513 /* Settings.swift */; };
 		55029D1D2463121400FAAA06 /* home_timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 55029D1C2463121400FAAA06 /* home_timeline.json */; };
 		55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59C2455866800B77247 /* AppDelegate.swift */; };
 		55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59E2455866800B77247 /* SceneDelegate.swift */; };
@@ -36,16 +36,27 @@
 		A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A1C247FB8C00089FD8D /* LoginButton.swift */; };
 		A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */; };
 		A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */; };
+		A8A57CCB248A40DE0033EE2C /* BundleGetImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A57CCA248A40DE0033EE2C /* BundleGetImageTest.swift */; };
 		AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA84616F247EB20300BC950C /* HTTPRequestable.swift */; };
 		AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA846170247EB20400BC950C /* HTTPMethodType.swift */; };
 		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A8A57CC5248A40CB0033EE2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55F6B5912455866800B77247 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55F6B5982455866800B77247;
+			remoteInfo = BulbaTalks;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		42105EF524853C4700792E0A /* Bundle+LocalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+LocalData.swift"; sourceTree = "<group>"; };
+		4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEndpoint.swift; sourceTree = "<group>"; };
 		4263ED7A248001D800365513 /* NetworkConfigurationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurationType.swift; sourceTree = "<group>"; };
 		4263ED7C2480020800365513 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEndpoint.swift; sourceTree = "<group>"; };
 		426CEDBC246DEAF50051E8D7 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		55029D1C2463121400FAAA06 /* home_timeline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = home_timeline.json; path = BulbaTalks/Resources/MockedTwitterResponses/1.1/statuses/home_timeline.json; sourceTree = SOURCE_ROOT; };
 		55F6B5992455866800B77247 /* BulbaTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulbaTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +84,9 @@
 		A8A54A1C247FB8C00089FD8D /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardID.swift"; sourceTree = "<group>"; };
+		A8A57CC0248A40CB0033EE2C /* BulbaTalksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BulbaTalksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8A57CC4248A40CB0033EE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8A57CCA248A40DE0033EE2C /* BundleGetImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleGetImageTest.swift; sourceTree = "<group>"; };
 		AA84616F247EB20300BC950C /* HTTPRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestable.swift; sourceTree = "<group>"; };
 		AA846170247EB20400BC950C /* HTTPMethodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethodType.swift; sourceTree = "<group>"; };
 		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
@@ -80,6 +94,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		55F6B5962455866800B77247 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8A57CBD248A40CB0033EE2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -178,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				55F6B59B2455866800B77247 /* BulbaTalks */,
+				A8A57CC1248A40CB0033EE2C /* BulbaTalksTests */,
 				55F6B59A2455866800B77247 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -186,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				55F6B5992455866800B77247 /* BulbaTalks.app */,
+				A8A57CC0248A40CB0033EE2C /* BulbaTalksTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,6 +280,15 @@
 			path = Authorization;
 			sourceTree = "<group>";
 		};
+		A8A57CC1248A40CB0033EE2C /* BulbaTalksTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8A57CCA248A40DE0033EE2C /* BundleGetImageTest.swift */,
+				A8A57CC4248A40CB0033EE2C /* Info.plist */,
+			);
+			path = BulbaTalksTests;
+			sourceTree = "<group>";
+		};
 		AAA8A8AE2472C41900244F0A /* account */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +320,24 @@
 			productReference = 55F6B5992455866800B77247 /* BulbaTalks.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A8A57CBF248A40CB0033EE2C /* BulbaTalksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8A57CC9248A40CB0033EE2C /* Build configuration list for PBXNativeTarget "BulbaTalksTests" */;
+			buildPhases = (
+				A8A57CBC248A40CB0033EE2C /* Sources */,
+				A8A57CBD248A40CB0033EE2C /* Frameworks */,
+				A8A57CBE248A40CB0033EE2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8A57CC6248A40CB0033EE2C /* PBXTargetDependency */,
+			);
+			name = BulbaTalksTests;
+			productName = BulbaTalksTests;
+			productReference = A8A57CC0248A40CB0033EE2C /* BulbaTalksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -300,6 +350,10 @@
 				TargetAttributes = {
 					55F6B5982455866800B77247 = {
 						CreatedOnToolsVersion = 11.4;
+					};
+					A8A57CBF248A40CB0033EE2C = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 55F6B5982455866800B77247;
 					};
 				};
 			};
@@ -317,6 +371,7 @@
 			projectRoot = "";
 			targets = (
 				55F6B5982455866800B77247 /* BulbaTalks */,
+				A8A57CBF248A40CB0033EE2C /* BulbaTalksTests */,
 			);
 		};
 /* End PBXProject section */
@@ -332,6 +387,13 @@
 				55F6B5A62455866900B77247 /* Assets.xcassets in Resources */,
 				A84CE3F12480F4D300AADFC3 /* twitterProfileImage.jpg in Resources */,
 				AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8A57CBE248A40CB0033EE2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +472,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8A57CBC248A40CB0033EE2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8A57CCB248A40DE0033EE2C /* BundleGetImageTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8A57CC6248A40CB0033EE2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55F6B5982455866800B77247 /* BulbaTalks */;
+			targetProxy = A8A57CC5248A40CB0033EE2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		55F6B5A72455866900B77247 /* LaunchScreen.storyboard */ = {
@@ -578,6 +656,48 @@
 			};
 			name = Release;
 		};
+		A8A57CC7248A40CB0033EE2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8987RK9SNJ;
+				INFOPLIST_FILE = BulbaTalksTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tanya.BulbaTalksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BulbaTalks.app/BulbaTalks";
+			};
+			name = Debug;
+		};
+		A8A57CC8248A40CB0033EE2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8987RK9SNJ;
+				INFOPLIST_FILE = BulbaTalksTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tanya.BulbaTalksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BulbaTalks.app/BulbaTalks";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -595,6 +715,15 @@
 			buildConfigurations = (
 				55F6B5AE2455866900B77247 /* Debug */,
 				55F6B5AF2455866900B77247 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8A57CC9248A40CB0033EE2C /* Build configuration list for PBXNativeTarget "BulbaTalksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8A57CC7248A40CB0033EE2C /* Debug */,
+				A8A57CC8248A40CB0033EE2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
