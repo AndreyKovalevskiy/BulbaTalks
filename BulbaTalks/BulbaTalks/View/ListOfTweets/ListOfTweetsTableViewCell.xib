@@ -16,13 +16,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="452" height="259"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lC-eI-U4F" userLabel="userImage" customClass="UserImageButton" customModule="BulbaTalks" customModuleProvider="target">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lC-eI-U4F" userLabel="userImage" customClass="ImageButton" customModule="BulbaTalks" customModuleProvider="target">
                         <rect key="frame" x="20" y="10" width="60" height="60"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="ICu-mT-NUI"/>
                             <constraint firstAttribute="height" constant="60" id="hVj-H5-nol"/>
                         </constraints>
+                        <state key="normal" image="mockedUserImage"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <integer key="value" value="30"/>
@@ -34,7 +35,7 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nj-8I-DVd" userLabel="contentOfTweet">
-                        <rect key="frame" x="100" y="10" width="342" height="249"/>
+                        <rect key="frame" x="100" y="10" width="342" height="239"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sr1-eX-ZkR" userLabel="userOfTweet">
                                 <rect key="frame" x="0.0" y="0.0" width="342" height="17"/>
@@ -87,7 +88,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5G-hP-kSc" userLabel="tweet">
-                                <rect key="frame" x="0.0" y="17" width="342" height="62"/>
+                                <rect key="frame" x="0.0" y="17" width="342" height="52"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Twitter is built on the conversations happening around the world via Tweets. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC6-my-myU" userLabel="tweetContent">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="33.5"/>
@@ -96,7 +97,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="https://developer.twitter.com/en/products/tweets" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jey-Zh-wSP" userLabel="tweetURL">
-                                        <rect key="frame" x="0.0" y="33.5" width="342" height="28.5"/>
+                                        <rect key="frame" x="0.0" y="33.5" width="342" height="18.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
                                         <color key="textColor" red="0.20379871129999999" green="0.58600115779999995" blue="0.87902551890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -112,10 +113,10 @@
                                     <constraint firstAttribute="trailing" secondItem="jey-Zh-wSP" secondAttribute="trailing" id="xHr-Qh-Opq"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vq3-rO-NRU" userLabel="tweetMedia" customClass="RoundedImageView" customModule="BulbaTalks" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="84" width="342" height="140"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="mockedTweetMedia" translatesAutoresizingMaskIntoConstraints="NO" id="Vq3-rO-NRU" userLabel="tweetMedia" customClass="RoundedImageView" customModule="BulbaTalks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="74" width="342" height="140"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="140" id="M9G-kI-gQr"/>
+                                    <constraint firstAttribute="height" constant="140" id="M9G-kI-gQr"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -124,7 +125,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zy7-U4-iUh" userLabel="actionOfTweet">
-                                <rect key="frame" x="0.0" y="229" width="342" height="20"/>
+                                <rect key="frame" x="0.0" y="219" width="342" height="20"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmp-3g-abn" userLabel="comment">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="20"/>
@@ -141,7 +142,7 @@
                                                     <constraint firstAttribute="width" constant="20" id="cwt-uF-K79"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Num. cliks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmr-O2-DZT" userLabel="numberOfCliks">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="12" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmr-O2-DZT" userLabel="numberOfCliks">
                                                 <rect key="frame" x="25" y="1.5" width="85" height="17"/>
                                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
                                                 <color key="textColor" red="0.396078431372549" green="0.46666666666666667" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -178,7 +179,7 @@
                                                     <constraint firstAttribute="width" constant="20" id="uJQ-tv-eDO"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Num. cliks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkU-wC-2j1" userLabel="numberOfCliks">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkU-wC-2j1" userLabel="numberOfCliks">
                                                 <rect key="frame" x="25" y="1.5" width="82.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
                                                 <color key="textColor" red="0.396078431372549" green="0.46666666666666667" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,7 +216,7 @@
                                                     <constraint firstAttribute="width" constant="20" id="KHb-4M-N0v"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Num. cliks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR6-mL-b0c" userLabel="numberOfCliks">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR6-mL-b0c" userLabel="numberOfCliks">
                                                 <rect key="frame" x="25" y="1.5" width="99.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
                                                 <color key="textColor" red="0.396078431372549" green="0.46666666666666667" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -281,7 +282,7 @@
                     <constraint firstItem="5lC-eI-U4F" firstAttribute="top" secondItem="mtA-g7-dkt" secondAttribute="firstBaseline" constant="10" id="6nm-PN-Uq8"/>
                     <constraint firstAttribute="trailing" secondItem="1Nj-8I-DVd" secondAttribute="trailing" constant="10" id="J1c-1m-bTT"/>
                     <constraint firstItem="5lC-eI-U4F" firstAttribute="leading" secondItem="mtA-g7-dkt" secondAttribute="leadingMargin" id="W6v-vZ-z7N"/>
-                    <constraint firstAttribute="bottom" secondItem="1Nj-8I-DVd" secondAttribute="bottom" id="j8o-xR-AlY"/>
+                    <constraint firstAttribute="bottom" secondItem="1Nj-8I-DVd" secondAttribute="bottom" constant="10" id="j8o-xR-AlY"/>
                     <constraint firstItem="1Nj-8I-DVd" firstAttribute="leading" secondItem="5lC-eI-U4F" secondAttribute="trailing" constant="20" id="u8U-9c-AUZ"/>
                 </constraints>
             </tableViewCellContentView>
@@ -307,6 +308,8 @@
     </objects>
     <resources>
         <image name="comment" width="13.5" height="13.5"/>
+        <image name="mockedTweetMedia" width="72" height="48"/>
+        <image name="mockedUserImage" width="43.5" height="43.5"/>
         <image name="unfavourite" width="14" height="13"/>
         <image name="unretweet" width="17.5" height="12"/>
     </resources>
