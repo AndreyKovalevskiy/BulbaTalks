@@ -1,7 +1,7 @@
 import UIKit
 
 class ListOfTweetsTableViewCell: UITableViewCell {
-    // MARK: Properties
+    // MARK: IBOutlet
 
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var userIdenticalNameLabel: UILabel!
@@ -13,11 +13,7 @@ class ListOfTweetsTableViewCell: UITableViewCell {
     @IBOutlet var numberOfRetweetsLabel: UILabel!
     @IBOutlet var numberOfFavouritesLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    // MARK: Actions
+    // MARK: IBAction
 
     @IBAction func openAccount(_: UIButton) {}
 
