@@ -5,11 +5,6 @@ import Foundation
  */
 protocol HTTPNetworking {
     /**
-     Introduce this in order not to repeat our code
-     and to make the code more clean and readable.
-     */
-    typealias CompletionHandler = (Result<Data, NetworkError>) -> Void
-    /**
      Makes asynchronous request
      to the given HTTP endpoint and
      returns the new session task.
@@ -19,5 +14,6 @@ protocol HTTPNetworking {
         to call when the request is completed.
      - Returns: `URLSessionTask`.
      */
-    func httpRequest(apiEndpoint: HTTPRequestable, completion: @escaping CompletionHandler) -> URLSessionTask?
+    func httpRequest(apiEndpoint: HTTPRequestable,
+                     completion: @escaping (Result<Data, NetworkError>) -> Void) -> URLSessionTask?
 }
