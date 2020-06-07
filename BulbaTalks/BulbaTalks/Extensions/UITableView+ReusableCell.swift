@@ -10,9 +10,9 @@ extension UITableView {
      The xib file should be in the main bundle.
      - Parameter typeCell: The class type of the cell to register.
      */
-    func registerCell<T: UITableViewCell>(of _: T.Type) {
-        let nibFileWithCell = UINib(nibName: T.reuseIdentifier, bundle: nil)
-        register(nibFileWithCell, forCellReuseIdentifier: T.reuseIdentifier)
+    func registerCell<T: UITableViewCell>(of typeCell: T.Type) {
+        let nibFileWithCell = UINib(nibName: typeCell.reuseIdentifier, bundle: nil)
+        register(nibFileWithCell, forCellReuseIdentifier: typeCell.reuseIdentifier)
     }
 
     /**
@@ -22,7 +22,7 @@ extension UITableView {
      - Returns: The reusable cell or `nil` if no cell is available
      for reuse and you did not register a class or nib file.
      */
-    func dequeueCell<T: UITableViewCell>(of _: T.Type) -> T? {
-        return dequeueReusableCell(withIdentifier: T.reuseIdentifier) as? T
+    func dequeueCell<T: UITableViewCell>(of typeCell: T.Type) -> T? {
+        return dequeueReusableCell(withIdentifier: typeCell.reuseIdentifier) as? T
     }
 }
