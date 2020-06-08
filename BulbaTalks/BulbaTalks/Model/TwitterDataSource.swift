@@ -19,8 +19,8 @@ struct TwitterDataSource {
      If we have both parameters are `nil`, then we will get the 20
      newest tweets from the home timeline.
      - Parameters:
-       - firstTweet: A tweet, starting from which (not including t
-       his tweet) we get the home timeline array with the newest
+       - firstTweet: A tweet, starting from which (not including
+       this tweet) we get the home timeline array with the newest
        tweets.
        - lastTweet: A tweet, starting from which (including this
        tweet) we get the home timeline array with the tweets older
