@@ -4,10 +4,10 @@ import Foundation
  provides interaction with the network
  */
 class NetworkService {
-    private var generalConfiguration: NetworkConfiguration
+    private var activeNetworkConfiguration: NetworkConfiguration
 
     init(networkConfiguration: NetworkConfiguration) {
-        self.generalConfiguration = networkConfiguration
+        self.activeNetworkConfiguration = networkConfiguration
     }
     /**
      Makes network request and then calls a handler upon
@@ -70,11 +70,11 @@ class NetworkService {
 
 extension NetworkService: HTTPNetworking {
     public func httpRequest(apiEndpoint:HTTPRequestable, completion: @escaping (Result<Data, NetworkError>) -> Void) -> URLSessionTask? {
-        guard let urlRequest = apiEndpoint.urlRequest(using: generalConfiguration) else {
+        guard let urlRequest = apiEndpoint.urlRequest(using: activeNetworkConfiguration) else {
             completion(.failure(.error(statusCode: 500)))
             return nil
         }
-        if generalConfiguration is RemoteNetworkConfiguration {
+        if activeNetworkConfiguration is RemoteNetworkConfiguration {
             return networkRequest(request: urlRequest,
                                   completion: completion)
         } else {
