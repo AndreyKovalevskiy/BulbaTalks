@@ -80,7 +80,7 @@ class NetworkService {
 extension NetworkService: HTTPNetworking {
     public func httpRequest(apiEndpoint:HTTPRequestable, completion: @escaping (Result<Data, NetworkError>) -> Void) -> URLSessionTask? {
         guard let urlRequest = apiEndpoint.urlRequest(using: activeNetworkConfiguration) else {
-            completion(.failure(.error(statusCode: 500)))
+            completion(.failure(.invalidURLRequest))
             return nil
         }
         if activeNetworkConfiguration is RemoteNetworkConfiguration {
