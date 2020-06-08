@@ -13,24 +13,24 @@ struct TwitterDataSource {
      Receives a collection of tweets posted by the authenticated
      user and the users he is following.
 
-     We get tweets(up to 20 tweets) from the home timeline using
-     the interval formed by the `firstTweet` and/or
+     Method returns up to 20 tweet items from the Twitter home
+     timeline using the interval formed by the `firstTweet` and/or
      `lastTweet` parameters.
      If we have both parameters are `nil`, then we will get the 20
      newest tweets from the home timeline.
      - Parameters:
-       - firstTweet: Contains a tweet, starting from which
-       (not including this tweet) we get the home timeline interval
-       with the newest tweets.
-       - lastTweet: Contains a tweet, starting from which
-       (including this tweet) we get the home timeline interval with
-       the tweets older than that.
+       - firstTweet: A tweet, starting from which (not including t
+       his tweet) we get the home timeline array with the newest
+       tweets.
+       - lastTweet: A tweet, starting from which (including this
+       tweet) we get the home timeline array with the tweets older
+       than that.
        - completion: A completion handler that takes an array
        of `Tweet` objects, this array may contain tweets when
        successfully recieved the home timeline and may be empty,
-       in case of an error while receiving tweets ,or for example
-       requesting new tweets, when there are no new tweets in the
-       home timeline.
+       in case of an error while receiving tweets, or requesting new
+       tweets, when there are no new tweets in the Twitter home
+       timeline.
      */
     public func getHomeTimeline(since firstTweet: Tweet?,
                                 until lastTweet: Tweet?,
