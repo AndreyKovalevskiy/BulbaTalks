@@ -1,18 +1,17 @@
 import Foundation
 /**
- Performs HTTP request and
- provides interaction with the network.
+ Describes a method for performing HTTP request.
  */
 protocol HTTPNetworking {
     /**
-     Makes asynchronous request
-     to the given HTTP endpoint and
-     returns the new session task.
+     Performs network request to receive data using the API.
      - Parameters:
         - apiEndpoint: API HTTP endpoint.
-        - completion: The `CompletionHandler`
-        to call when the request is completed.
-     - Returns: `URLSessionTask`.
+        - completion: A completion handler (with a `Result`
+        enumeration as a parameter) used in network requests.
+        In case of success, the received data will be stored.
+        In case of failure, there will be a certain `NetworkError`.
+     - Returns: Instance of `URLSessionTask`.
      */
     func httpRequest(apiEndpoint: HTTPRequestable,
                      completion: @escaping (Result<Data, NetworkError>) -> Void) -> URLSessionTask?
