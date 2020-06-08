@@ -1,28 +1,25 @@
 import Foundation
 /**
- Performs network and mock requests and
- provides interaction with the network
+ Provides interaction with the network.
  */
 class NetworkService {
+    /**
+    The active network configuration.
+    */
     private var activeNetworkConfiguration: NetworkConfiguration
 
     init(networkConfiguration: NetworkConfiguration) {
         self.activeNetworkConfiguration = networkConfiguration
     }
     /**
-     Makes network request and then calls a handler upon
-     completion.
+     Makes a network request and calls the handler after it finishes.
      - Parameters:
-        - request: The `URLRequest` to be retrived.
-        - completion: The completion handler to call
-     when the request is complete.
-     This completion handler takes the following parameters:
-            - data: The data returned by the server,
-     or `nil` if the request was failed.
-            - response: An object represents a response
-     to a request and provides response headers.
-            - error: An error object that indicates why
-     the request failed, or `nil` if the request was successful.
+        - request: The `URLRequest` that provides the URL,
+        request type, HTTP header fields, and so on.
+        - completion: The completion handler that accepts
+        `Result` as a parameter, where the success case
+        will store a received data and the failure case will be
+        some `NetworkError`.
      - Returns: Instance of `URLSessionTask`.
      */
     private func networkRequest(request: URLRequest,
@@ -38,7 +35,7 @@ class NetworkService {
                 return
             }
             guard (200...299).contains(httpResponse.statusCode) else {
-                switch response.statusCode {
+                switch httpResponse.statusCode {
                 case 401 ... 500:
                     completion(.failure(.clientError))
                 case 501 ... 599:
@@ -59,8 +56,17 @@ class NetworkService {
         return networkTask
     }
     /**
-     Makes mock request.
-     */
+    Makes a mock request and calls the handler after it finishes.
+    - Parameters:
+       - request: The `URLRequest` that provides the URL,
+       request type, HTTP header fields, and so on.
+       - completion: The completion handler that accepts
+       `Result` as a parameter, where the success case
+       will store a received data and the failure case will be
+       some `NetworkError`.
+    - Returns: `nil`. This means that a new session data
+    task is not being created.
+    */
     private func mockRequest(request: URLRequest,
                              completion: @escaping (Result<Data, NetworkError>) -> Void) -> URLSessionTask? {
         guard let urlMock = request.url else {
@@ -81,7 +87,20 @@ class NetworkService {
 }
 
 extension NetworkService: HTTPNetworking {
-    public func httpRequest(apiEndpoint:HTTPRequestable, completion: @escaping (Result<Data, NetworkError>) -> Void) -> URLSessionTask? {
+    /**
+    Performs network or mock requests depending
+    on the active network configuration.
+    - Parameters:
+       - apiEndpoint: API endpoint for interacting with
+       the Twitter API.
+       - completion: The completion handler that accepts
+       `Result` as a parameter, where the success case
+       will store a received data and the failure case will be
+       some `NetworkError`.
+    - Returns: Instance of `URLSessionTask`.
+    */
+    public func httpRequest(apiEndpoint:HTTPRequestable,
+                            completion: @escaping (Result<Data, NetworkError>) -> Void) -> URLSessionTask? {
         guard let urlRequest = apiEndpoint.urlRequest(using: activeNetworkConfiguration) else {
             completion(.failure(.invalidURLRequest))
             return nil
