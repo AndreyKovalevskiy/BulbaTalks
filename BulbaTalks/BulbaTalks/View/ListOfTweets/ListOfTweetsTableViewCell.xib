@@ -23,7 +23,7 @@
                             <constraint firstAttribute="width" constant="60" id="ICu-mT-NUI"/>
                             <constraint firstAttribute="height" constant="60" id="hVj-H5-nol"/>
                         </constraints>
-                        <state key="normal" image="mockedUserImage"/>
+                        <state key="normal" backgroundImage="mockedUserImage"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <integer key="value" value="30"/>
@@ -61,8 +61,8 @@
                                         <color key="textColor" red="0.42745098040000001" green="0.45882352939999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time of creating Tweet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grL-Or-VMa" userLabel="tweetCreatedAt">
-                                        <rect key="frame" x="182" y="0.0" width="139.5" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6h" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grL-Or-VMa" userLabel="tweetCreatedAt">
+                                        <rect key="frame" x="182" y="0.0" width="15" height="17"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                         </accessibility>
@@ -90,13 +90,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5G-hP-kSc" userLabel="tweet">
                                 <rect key="frame" x="0.0" y="17" width="342" height="52"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Twitter is built on the conversations happening around the world via Tweets. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC6-my-myU" userLabel="tweetContent">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Twitter is built on the conversations happening around the world via Tweets. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC6-my-myU" userLabel="tweetContent">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="33.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="https://developer.twitter.com/en/products/tweets" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jey-Zh-wSP" userLabel="tweetURL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="https://developer.twitter.com/en/products/tweets" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jey-Zh-wSP" userLabel="tweetURL">
                                         <rect key="frame" x="0.0" y="33.5" width="342" height="18.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
                                         <color key="textColor" red="0.20379871129999999" green="0.58600115779999995" blue="0.87902551890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -280,10 +280,10 @@
                 <constraints>
                     <constraint firstItem="1Nj-8I-DVd" firstAttribute="top" secondItem="mtA-g7-dkt" secondAttribute="top" constant="10" id="5nh-1h-0ET"/>
                     <constraint firstItem="5lC-eI-U4F" firstAttribute="top" secondItem="mtA-g7-dkt" secondAttribute="firstBaseline" constant="10" id="6nm-PN-Uq8"/>
+                    <constraint firstItem="1Nj-8I-DVd" firstAttribute="leading" secondItem="5lC-eI-U4F" secondAttribute="trailing" constant="20" id="9jH-vS-vTX"/>
                     <constraint firstAttribute="trailing" secondItem="1Nj-8I-DVd" secondAttribute="trailing" constant="10" id="J1c-1m-bTT"/>
                     <constraint firstItem="5lC-eI-U4F" firstAttribute="leading" secondItem="mtA-g7-dkt" secondAttribute="leadingMargin" id="W6v-vZ-z7N"/>
                     <constraint firstAttribute="bottom" secondItem="1Nj-8I-DVd" secondAttribute="bottom" constant="10" id="j8o-xR-AlY"/>
-                    <constraint firstItem="1Nj-8I-DVd" firstAttribute="leading" secondItem="5lC-eI-U4F" secondAttribute="trailing" constant="20" id="u8U-9c-AUZ"/>
                 </constraints>
             </tableViewCellContentView>
             <constraints>

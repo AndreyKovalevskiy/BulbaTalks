@@ -76,7 +76,7 @@ class ListOfTweetsViewController: UIViewController {
      of the authenticated user.
      */
     private func configureLeftBarButtonItem() {
-        let imageFromUserProfile = UIImage()
+        let imageFromUserProfile = UIImage(named: "mockedUserImage")
         let barButtonItem = UIButton(frame: CGRect(x: 0, y: 0,
                                                    width: CustomButton.barButtonItemWidth,
                                                    height: CustomButton.barButtonItemHeight))
