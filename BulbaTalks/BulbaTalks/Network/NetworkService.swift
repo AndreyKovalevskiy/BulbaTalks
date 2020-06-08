@@ -26,10 +26,10 @@ class NetworkService {
      - Returns: Instance of `URLSessionTask`.
      */
     private func networkRequest(request: URLRequest,
-                                completion: @escaping CompletionHandler) -> URLSessionTask {
-        let networkTask = URLSession.shared.dataTask(with: request) { (data, response, requestError) in
+                                completion: @escaping (Result<Data, NetworkError>) -> Void) -> URLSessionTask {
+        let networkTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            if requestError != nil {
+            if error != nil {
                 completion(.failure(.error(statusCode: 400)))
                 return
             }
@@ -55,8 +55,12 @@ class NetworkService {
      Makes mock request.
      */
     private func mockRequest(request: URLRequest,
-                             completion: CompletionHandler) -> URLSessionTask? {
-        guard let urlMock = request.url else { return nil }
+                             completion: (Result<Data, NetworkError>) -> Void) -> URLSessionTask? {
+        guard let urlMock = request.url else {
+            completion(.failure())
+            return nil
+            
+        }
         if let data = Bundle.main.contentsOfFile(at: urlMock) {
             completion(.success(data))
         }
@@ -65,7 +69,7 @@ class NetworkService {
 }
 
 extension NetworkService: HTTPNetworking {
-    public func httpRequest(apiEndpoint:HTTPRequestable, completion: @escaping CompletionHandler) -> URLSessionTask? {
+    public func httpRequest(apiEndpoint:HTTPRequestable, completion: @escaping (Result<Data, NetworkError>) -> Void) -> URLSessionTask? {
         guard let urlRequest = apiEndpoint.urlRequest(using: generalConfiguration) else {
             completion(.failure(.error(statusCode: 500)))
             return nil
