@@ -30,19 +30,26 @@ class NetworkService {
         let networkTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             if error != nil {
-                completion(.failure(.error(statusCode: 400)))
+                completion(.failure(.badNetworkConection))
                 return
             }
             guard let httpResponse = response as? HTTPURLResponse else {
-                    completion(.failure(.error(statusCode: 500)))
+                    completion(.failure(.invalidResponse))
                 return
             }
             guard (200...299).contains(httpResponse.statusCode) else {
-                completion(.failure(.error(statusCode: httpResponse.statusCode)))
+                switch response.statusCode {
+                case 401 ... 500:
+                    completion(.failure(.clientError))
+                case 501 ... 599:
+                    completion(.failure(.serverError))
+                default:
+                    completion(.failure(.failedRequest))
+                }
                 return
             }
             guard let data = data else {
-                completion(.failure(.error(statusCode: 500)))
+                completion(.failure(.noData))
                 return
             }
             completion(.success(data))
@@ -57,12 +64,14 @@ class NetworkService {
     private func mockRequest(request: URLRequest,
                              completion: (Result<Data, NetworkError>) -> Void) -> URLSessionTask? {
         guard let urlMock = request.url else {
-            completion(.failure())
+            completion(.failure(.invalidURL))
             return nil
             
         }
         if let data = Bundle.main.contentsOfFile(at: urlMock) {
             completion(.success(data))
+        } else {
+            completion(.failure(.noData))
         }
         return nil
     }
