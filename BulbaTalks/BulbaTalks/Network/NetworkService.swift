@@ -62,17 +62,20 @@ class NetworkService {
      Makes mock request.
      */
     private func mockRequest(request: URLRequest,
-                             completion: (Result<Data, NetworkError>) -> Void) -> URLSessionTask? {
+                             completion: @escaping (Result<Data, NetworkError>) -> Void) -> URLSessionTask? {
         guard let urlMock = request.url else {
             completion(.failure(.invalidURL))
             return nil
-            
         }
-        if let data = Bundle.main.contentsOfFile(at: urlMock) {
-            completion(.success(data))
-        } else {
-            completion(.failure(.noData))
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            if let data = Bundle.main.contentsOfFile(at: urlMock) {
+                completion(.success(data))
+            } else {
+                completion(.failure(.noData))
+            }
         }
+       
         return nil
     }
 }
