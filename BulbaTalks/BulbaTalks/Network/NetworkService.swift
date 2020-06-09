@@ -84,16 +84,15 @@ extension NetworkService: HTTPNetworking {
      Performs network or mock requests depending
      on the active network configuration.
      - Parameters:
-       - twitterAPIEndpoint: API endpoint for interacting with
-       the Twitter API.
+       - apiEndpoint: API HTTP endpoint.
        - completion: The completion handler that accepts
        `Result` as a parameter, where the success case
        will get requested data and the failure case will get
        some `NetworkError`.
      */
-    public func httpRequest(twitterAPIEndpoint: HTTPRequestable,
+    public func httpRequest(apiEndpoint: HTTPRequestable,
                             completion: @escaping (Result<Data, NetworkError>) -> Void) {
-        guard let urlRequest = twitterAPIEndpoint.urlRequest(using: activeNetworkConfiguration) else {
+        guard let urlRequest = apiEndpoint.urlRequest(using: activeNetworkConfiguration) else {
             completion(.failure(.invalidURLRequest))
             return
         }
