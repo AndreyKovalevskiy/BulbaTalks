@@ -19,6 +19,7 @@
 		55F6B5A92455866900B77247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F6B5A72455866900B77247 /* LaunchScreen.storyboard */; };
 		55FEB9C8246AF2890081717C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEB9C7246AF2890081717C /* Authentication.swift */; };
 		690FD64E246EFE8F00728925 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64D246EFE8F00728925 /* NetworkError.swift */; };
+		690FD64B246EE87200728925 /* HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64A246EE87200728925 /* HTTPNetworking.swift */; };
 		69ADB1FA2462EBB1002F65F2 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ADB1F92462EBB1002F65F2 /* Operation.swift */; };
 		951ECB432462B92B009367A8 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951ECB422462B92B009367A8 /* Tweet.swift */; };
 		953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */; };
@@ -67,6 +68,7 @@
 		55F6B5AA2455866900B77247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55FEB9C7246AF2890081717C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		690FD64D246EFE8F00728925 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		690FD64A246EE87200728925 /* HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworking.swift; sourceTree = "<group>"; };
 		69ADB1F92462EBB1002F65F2 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = BulbaTalks/Model/Operation.swift; sourceTree = SOURCE_ROOT; };
 		951ECB422462B92B009367A8 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = BulbaTalks/Model/Tweet.swift; sourceTree = SOURCE_ROOT; };
 		953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Twitter.swift"; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				95E69BF2247E8CA000BE585A /* NetworkConfiguration.swift */,
 				95E69BF4247E8CE000BE585A /* RemoteNetworkConfiguration.swift */,
 				690FD64D246EFE8F00728925 /* NetworkError.swift */,
+				690FD64A246EE87200728925 /* HTTPNetworking.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */,
 				42105EF624853C4700792E0A /* Bundle+LocalData.swift in Sources */,
 				953CD2812465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift in Sources */,
+				690FD64B246EE87200728925 /* HTTPNetworking.swift in Sources */,
 				69ADB1FA2462EBB1002F65F2 /* Operation.swift in Sources */,
 				951ECB432462B92B009367A8 /* Tweet.swift in Sources */,
 				A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */,
