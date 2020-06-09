@@ -26,7 +26,10 @@ class ListOfTweetsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViewController()
+        configureTableView()
+        configureTabBar()
+        configureTitleViewOfNavigationBar()
+        configureLeftBarButtonItem()
     }
 
     override func viewDidLayoutSubviews() {
@@ -39,13 +42,6 @@ class ListOfTweetsViewController: UIViewController {
 
     // MARK: Private functions
 
-    /// Uses to customize `UIViewController`.
-    private func configureViewController() {
-        configureTableView()
-        configureTabBar()
-        configureNavigationBar()
-    }
-
     /// Uses to customize `UITableView`.
     private func configureTableView() {
         tableView.registerCell(of: ListOfTweetsTableViewCell.self)
@@ -54,12 +50,6 @@ class ListOfTweetsViewController: UIViewController {
     /// Uses to customize `UITabBar`.
     private func configureTabBar() {
         tabBar.barTintColor = .white
-    }
-
-    /// Uses to customize `UINavigationBar`.
-    private func configureNavigationBar() {
-        configureTitleViewOfNavigationBar()
-        configureLeftBarButtonItem()
     }
 
     /// Adds `UIImage` in the title of navigation bar.
