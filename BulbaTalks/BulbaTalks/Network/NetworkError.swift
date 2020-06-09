@@ -19,7 +19,7 @@ enum NetworkError: Error {
      */
     case invalidURL
     /**
-     The error related to a malformed URLRequest.
+     The error related to a malformed `URLRequest`.
      */
     case invalidURLRequest
     /**
