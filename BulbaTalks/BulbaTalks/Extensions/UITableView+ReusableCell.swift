@@ -1,7 +1,9 @@
 import UIKit
 
 /**
- Provides the ability to register and dequeue the cell.
+ Provides the ability to register and dequeue the cell
+ available to be reused, placed into a queue
+ when the cell scrolls off the screen.
  */
 extension UITableView {
     /**
@@ -16,7 +18,8 @@ extension UITableView {
     }
 
     /**
-     Dequeues an existing cell if one is available or creates
+     Dequeues an existing available cell, placed into a queue
+     when the cell scrolls off the screen, or creates
      a new one using the class or nib file you previously registered.
      - Parameter typeCell: The class type of the cell to dequeue.
      - Returns: The reusable cell or `nil` if no cell is available
