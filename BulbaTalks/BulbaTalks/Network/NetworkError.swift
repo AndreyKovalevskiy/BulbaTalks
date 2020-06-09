@@ -3,10 +3,6 @@
  */
 enum NetworkError: Error {
     /**
-     The error related to bad network connection.
-     */
-    case badNetworkConection
-    /**
      A client-side error while executing the request.
      */
     case clientError
@@ -34,14 +30,16 @@ enum NetworkError: Error {
      The server failed to fulfill a request.
      */
     case serverError
+    /**
+     The server returned an unexpected status code.
+     */
+    case unexpectedStatusCode
 
     /**
      A more detailed description of the network error.
      */
     var description: String {
         switch self {
-        case .badNetworkConection:
-            return "Bad network conection."
         case .clientError:
             return "A client-side error occurred while executing the request."
         case .failedRequest:
@@ -56,6 +54,8 @@ enum NetworkError: Error {
             return "Response returned with no data."
         case .serverError:
             return "The server failed to fulfill a request."
+        case .unexpectedStatusCode:
+            return "The server returned an unexpected status code."
         }
     }
 }
