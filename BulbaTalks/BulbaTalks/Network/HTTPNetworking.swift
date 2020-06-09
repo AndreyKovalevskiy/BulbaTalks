@@ -9,8 +9,8 @@ protocol HTTPNetworking {
      - Parameters:
         - apiEndpoint: API HTTP endpoint.
         - completion: The completion handler where the success
-     case will get some data returned by the server and
-     the failure case will get some `NetworkError`.
+     case will get requested data and the failure case will
+     get some `NetworkError`.
      */
     func httpRequest(apiEndpoint: HTTPRequestable,
                      completion: @escaping (Result<Data, NetworkError>) -> Void)
