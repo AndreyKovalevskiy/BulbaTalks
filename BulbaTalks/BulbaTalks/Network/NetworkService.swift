@@ -9,26 +9,28 @@ class NetworkService {
     private var activeNetworkConfiguration: NetworkConfiguration
 
     /**
-     Creates a `NetworkService` object with the specified network configuration.
+     Creates a `NetworkService` object with the specified
+     network configuration.
      */
     init(networkConfiguration: NetworkConfiguration) {
         self.activeNetworkConfiguration = networkConfiguration
     }
 
     /**
-     Makes a network request and calls the handler after it completes.
+     Makes a network request and calls the handler upon
+     request's completion.
      - Parameters:
        - request: The `URLRequest` that represents
        information about the request.
        - completion: The completion handler that accepts
        `Result` as a parameter, where the success case
        will get requested data and the failure case will get
-       some `NetworkError`.
+       the details about the network error.
      */
     private func networkRequest(request: URLRequest,
                                 completion: @escaping (Result<Data, NetworkError>) -> Void) {
         let networkTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if error != nil {
+            guard error == nil, let data = data else {
                 completion(.failure(.failedRequest))
                 return
             }
@@ -36,31 +38,31 @@ class NetworkService {
                 completion(.failure(.invalidResponse))
                 return
             }
-            guard (200...299).contains(httpResponse.statusCode) else {
-                switch httpResponse.statusCode {
-                case 400...499:
-                    completion(.failure(.clientError))
-                case 500...599:
-                    completion(.failure(.serverError))
-                default:
-                    completion(.failure(.unexpectedStatusCode))
-                }
-                return
+            switch httpResponse.statusCode {
+            case 200...299:
+                completion(.success(data))
+            case 400...499:
+                completion(.failure(.clientError))
+            case 500...599:
+                completion(.failure(.serverError))
+            default:
+                completion(.failure(.unexpectedStatusCode))
             }
-            completion(.success(data!))
+            completion(.success(data))
         }
         networkTask.resume()
     }
 
     /**
-     Makes a mock request and calls the handler after it completes.
+     Makes a mock request and calls the handler upon
+     request's completion.
      - Parameters:
        - request: The `URLRequest` that represents
        information about the request.
        - completion: The completion handler that accepts
        `Result` as a parameter, where the success case
        will get requested data and the failure case will get
-       some `NetworkError`.
+       the details about the network error.
      */
     private func mockRequest(request: URLRequest,
                              completion: @escaping (Result<Data, NetworkError>) -> Void) {
@@ -88,7 +90,7 @@ extension NetworkService: HTTPNetworking {
        - completion: The completion handler that accepts
        `Result` as a parameter, where the success case
        will get requested data and the failure case will get
-       some `NetworkError`.
+       the details about the network error.
      */
     public func httpRequest(apiEndpoint: HTTPRequestable,
                             completion: @escaping (Result<Data, NetworkError>) -> Void) {
