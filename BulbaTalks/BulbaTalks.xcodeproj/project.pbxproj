@@ -36,7 +36,6 @@
 		A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A1C247FB8C00089FD8D /* LoginButton.swift */; };
 		A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */; };
 		A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */; };
-		A8A57CDB248E9ADD0033EE2C /* testesr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A57CDA248E9ADD0033EE2C /* testesr.swift */; };
 		AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA84616F247EB20300BC950C /* HTTPRequestable.swift */; };
 		AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA846170247EB20400BC950C /* HTTPMethodType.swift */; };
 		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
@@ -86,7 +85,6 @@
 		A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardID.swift"; sourceTree = "<group>"; };
 		A8A57CD0248E52A10033EE2C /* BulbaTalksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BulbaTalksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A57CD4248E52A10033EE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8A57CDA248E9ADD0033EE2C /* testesr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testesr.swift; sourceTree = "<group>"; };
 		AA84616F247EB20300BC950C /* HTTPRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestable.swift; sourceTree = "<group>"; };
 		AA846170247EB20400BC950C /* HTTPMethodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethodType.swift; sourceTree = "<group>"; };
 		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 		55F6B5902455866800B77247 = {
 			isa = PBXGroup;
 			children = (
-				A8A57CDA248E9ADD0033EE2C /* testesr.swift */,
 				55F6B59B2455866800B77247 /* BulbaTalks */,
 				A8A57CD1248E52A10033EE2C /* BulbaTalksTests */,
 				55F6B59A2455866800B77247 /* Products */,
@@ -477,7 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8A57CDB248E9ADD0033EE2C /* testesr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
