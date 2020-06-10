@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		42105EF424853B0E00792E0A /* NetworkConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7A248001D800365513 /* NetworkConfigurationType.swift */; };
 		42105EF624853C4700792E0A /* Bundle+LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42105EF524853C4700792E0A /* Bundle+LocalData.swift */; };
+		4299B68124851E35009B9567 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7C2480020800365513 /* Settings.swift */; };
 		4247D6A5246DE69100DE6629 /* HTTPEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */; };
 		426CEDBD246DEAF50051E8D7 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426CEDBC246DEAF50051E8D7 /* APIEndpoints.swift */; };
-		4299B68124851E35009B9567 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263ED7C2480020800365513 /* Settings.swift */; };
 		55029D1D2463121400FAAA06 /* home_timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 55029D1C2463121400FAAA06 /* home_timeline.json */; };
 		55F6B59D2455866800B77247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59C2455866800B77247 /* AppDelegate.swift */; };
 		55F6B59F2455866800B77247 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6B59E2455866800B77247 /* SceneDelegate.swift */; };
@@ -49,7 +49,6 @@
 		AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA84616F247EB20300BC950C /* HTTPRequestable.swift */; };
 		AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA846170247EB20400BC950C /* HTTPMethodType.swift */; };
 		AA5938DA2465875700EAFA74 /* TwitterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5938D92465875700EAFA74 /* TwitterDataSource.swift */; };
-		AA98F7B9248E707900851D1A /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F7B8248E707900851D1A /* SettingsTests.swift */; };
 		AAA8A8B02472C41900244F0A /* verify_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AAA8A8AF2472C41900244F0A /* verify_credentials.json */; };
 /* End PBXBuildFile section */
 
@@ -65,9 +64,9 @@
 
 /* Begin PBXFileReference section */
 		42105EF524853C4700792E0A /* Bundle+LocalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+LocalData.swift"; sourceTree = "<group>"; };
-		4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEndpoint.swift; sourceTree = "<group>"; };
 		4263ED7A248001D800365513 /* NetworkConfigurationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurationType.swift; sourceTree = "<group>"; };
 		4263ED7C2480020800365513 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4247D6A4246DE69100DE6629 /* HTTPEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEndpoint.swift; sourceTree = "<group>"; };
 		426CEDBC246DEAF50051E8D7 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		55029D1C2463121400FAAA06 /* home_timeline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = home_timeline.json; path = BulbaTalks/Resources/MockedTwitterResponses/1.1/statuses/home_timeline.json; sourceTree = SOURCE_ROOT; };
 		55F6B5992455866800B77247 /* BulbaTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulbaTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,9 +109,6 @@
 		AA84616F247EB20300BC950C /* HTTPRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestable.swift; sourceTree = "<group>"; };
 		AA846170247EB20400BC950C /* HTTPMethodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethodType.swift; sourceTree = "<group>"; };
 		AA5938D92465875700EAFA74 /* TwitterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDataSource.swift; sourceTree = "<group>"; };
-		AA98F7AE248E705400851D1A /* BulbaTalksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BulbaTalksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA98F7B2248E705400851D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA98F7B8248E707900851D1A /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		AAA8A8AF2472C41900244F0A /* verify_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verify_credentials.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
