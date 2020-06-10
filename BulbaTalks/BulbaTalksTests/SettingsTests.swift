@@ -1,10 +1,3 @@
-//
-//  SettingsTests.swift
-//  BulbaTalksTests
-//
-//  Created by Андрей Погосский on 6/10/20.
-//  Copyright © 2020 CocoaHeadsBY. All rights reserved.
-//
 @testable import BulbaTalks
 import XCTest
 
