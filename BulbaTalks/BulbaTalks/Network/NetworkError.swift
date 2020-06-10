@@ -3,7 +3,7 @@
  */
 enum NetworkError: Error {
     /**
-     A client-side error while executing the request.
+     Error caused by the client.
      */
     case clientError
     /**
@@ -11,23 +11,23 @@ enum NetworkError: Error {
      */
     case failedRequest
     /**
-     The error related to the invalid response received.
+     Invalid response received.
      */
     case invalidResponse
     /**
-     The error related to a malformed URL.
+     Error caused by an invalid URL.
      */
     case invalidURL
     /**
-     The error related to a malformed `URLRequest`.
+     Error caused by an invalid `URLRequest`.
      */
     case invalidURLRequest
     /**
-     The error related to the response returned with no data.
+     The response returned with no data.
      */
     case noData
     /**
-     The server failed to fulfill a request.
+     Error caused by the server.
      */
     case serverError
     /**
@@ -41,19 +41,19 @@ enum NetworkError: Error {
     var description: String {
         switch self {
         case .clientError:
-            return "A client-side error occurred while executing the request."
+            return "Error caused by the client."
         case .failedRequest:
             return "Network request failed."
         case .invalidResponse:
             return "Invalid response received."
         case .invalidURL:
-            return "The connection failed due to a malformed URL."
+            return "The request failed due to an invalid URL."
         case .invalidURLRequest:
-            return "The connection failed due to a malformed URLRequest."
+            return "The request failed due to an invalid URLRequest."
         case .noData:
             return "Response returned with no data."
         case .serverError:
-            return "The server failed to fulfill a request."
+            return "Error caused by the server."
         case .unexpectedStatusCode:
             return "The server returned an unexpected status code."
         }
