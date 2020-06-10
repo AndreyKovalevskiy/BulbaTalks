@@ -46,7 +46,7 @@ class Settings {
     /**
      Reinitialize a singletone instance.
      */
-    static func reset() {
+    public static func reset() {
         shared = Settings()
     }
 

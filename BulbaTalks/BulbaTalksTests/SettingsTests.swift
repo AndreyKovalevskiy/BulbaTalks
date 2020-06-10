@@ -2,64 +2,81 @@
 import XCTest
 
 class SettingsTests: XCTestCase {
-    
-    /**
-     Contains keys used to access data in UserDefaults.
-     */
-    private enum UserDefaultsKeys {
-        static let activeConfiguration = "ActiveNetworkConfiguration"
-    }
+    let userDefaultsActiveConfigurationKey = "ActiveNetworkConfiguration"
 
-    func testResetMethodReinitializesSingleton() {
+    func testResetMethodReinitializeSingleton() {
         // Given
         let oldSingleton = Settings.shared
 
         // When
         Settings.reset()
+        let newSingleton = Settings.shared
 
         // Then
-        let newSingleton = Settings.shared
         XCTAssert(oldSingleton !== newSingleton)
     }
 
-    func testSettingsInitialzedWithMockConfigurationWhenUserDefaultsHasInvalidActiveConfigurationKey() {
+    func testActivateNetworkConfigurationVariableInitializedWithMockConfigurationWhenInUserDefaultsInvalidValue() {
         // Given
-        UserDefaults.standard.set("InvalidValue", forKey: UserDefaultsKeys.activeConfiguration)
+        UserDefaults.standard.set("InvalidValue", forKey: userDefaultsActiveConfigurationKey)
         Settings.reset()
 
         // When
-        let activeNC = Settings.shared.activeNetworkConfiguration
+        let currentNC = Settings.shared.activeNetworkConfiguration
 
         // Then
-        XCTAssert(activeNC is MockNetworkConfiguration)
+        XCTAssert(currentNC is MockNetworkConfiguration)
     }
-    
-    func testSettingsInitialzedWithMockConfigurationWhenUserDefaultsHasEmptyActiveConfigurationKey() {
+
+    func testActivateNetworkConfigurationVariableInitializedWithMockConfigurationWhenUserDefaultsIsEmpty() {
         // Given
-        UserDefaults.standard.removeObject(forKey: UserDefaultsKeys.activeConfiguration)
+        UserDefaults.standard.removeObject(forKey: userDefaultsActiveConfigurationKey)
         Settings.reset()
 
         // When
-        let activeNC = Settings.shared.activeNetworkConfiguration
+        let currentNC = Settings.shared.activeNetworkConfiguration
 
         // Then
-        XCTAssert(activeNC is MockNetworkConfiguration)
+        XCTAssert(currentNC is MockNetworkConfiguration)
     }
 
-    func testSettingsInitialzedWithRemoteConfigurationWhenUserDefaultsHasRemoteActiveConfigurationKey() {
+    func testActivateNetworkConfigurationVariableInitializedWithRemoteConfigurationWhenInUserDefaultsStoresRemote() {
         // Given
-        UserDefaults.standard.set(NetworkConfigurationType.remote.rawValue,
-                                  forKey: UserDefaultsKeys.activeConfiguration)
+        UserDefaults.standard.set(NetworkConfigurationType.remote.rawValue, forKey: userDefaultsActiveConfigurationKey)
         Settings.reset()
 
         // When
-        let activeNC = Settings.shared.activeNetworkConfiguration
+        let currentNC = Settings.shared.activeNetworkConfiguration
 
         // Then
-        XCTAssert(activeNC is RemoteNetworkConfiguration)
+        XCTAssert(currentNC is RemoteNetworkConfiguration)
     }
 
-    func testActivateNetworkConfigurationMethodChangesActiveNetworkConfigurationFromMockToRemote() {
+    func testActivateNetworkConfigurationMethodSuccessfullyChangedCurrentNetworkConfigurationFromMockToRemote() {
+        // Given
+        Settings.shared.activateNewtorkConfiguration(of: .mock)
+
+        // When
+        Settings.shared.activateNewtorkConfiguration(of: .remote)
+        let currentNC = Settings.shared.activeNetworkConfiguration
+
+        // Then
+        XCTAssert(currentNC is RemoteNetworkConfiguration)
+    }
+
+    func testActivateNetworkConfigurationMethodSuccessfullyChangedCurrentNetworkConfigurationFromRemoteToMock() {
+        // Given
+        Settings.shared.activateNewtorkConfiguration(of: .remote)
+
+        // When
+        Settings.shared.activateNewtorkConfiguration(of: .mock)
+        let currentNC = Settings.shared.activeNetworkConfiguration
+
+        // Then
+        XCTAssert(currentNC is MockNetworkConfiguration)
+    }
+
+    func testActivateNetworkConfigurationMethodChangedUserDefaultsWhenSwitchNetworkConfigurationFromMockToRemote() {
         // Given
         Settings.shared.activateNewtorkConfiguration(of: .mock)
 
@@ -67,35 +84,11 @@ class SettingsTests: XCTestCase {
         Settings.shared.activateNewtorkConfiguration(of: .remote)
 
         // Then
-        let activeNC = Settings.shared.activeNetworkConfiguration
-        XCTAssert(activeNC is RemoteNetworkConfiguration)
-    }
-
-    func testActivateNetworkConfigurationMethodChangesActiveNetworkConfigurationFromRemoteToMock() {
-        // Given
-        Settings.shared.activateNewtorkConfiguration(of: .remote)
-
-        // When
-        Settings.shared.activateNewtorkConfiguration(of: .mock)
-
-        // Then
-        let activeNC = Settings.shared.activeNetworkConfiguration
-        XCTAssert(activeNC is MockNetworkConfiguration)
-    }
-
-    func testActivateNetworkConfigurationMethodStoresUpdatedActiveConfigurationFromMockToRemoteInUserDefaults() {
-        // Given
-        Settings.shared.activateNewtorkConfiguration(of: .mock)
-
-        // When
-        Settings.shared.activateNewtorkConfiguration(of: .remote)
-
-        // Then
-        XCTAssertEqual(UserDefaults.standard.string(forKey: UserDefaultsKeys.activeConfiguration),
+        XCTAssertEqual(UserDefaults.standard.string(forKey: userDefaultsActiveConfigurationKey),
                        NetworkConfigurationType.remote.rawValue)
     }
 
-    func testActivateNetworkConfigurationMethodStoresUpdatedActiveConfigurationFromRemoteToMockInUserDefaults() {
+    func testActivateNetworkConfigurationMethodChangedUserDefaultsWhenSwitchNetworkConfigurationFromRemoteToMock() {
         // Given
         Settings.shared.activateNewtorkConfiguration(of: .remote)
 
@@ -103,7 +96,7 @@ class SettingsTests: XCTestCase {
         Settings.shared.activateNewtorkConfiguration(of: .mock)
 
         // Then
-        XCTAssertEqual(UserDefaults.standard.string(forKey: UserDefaultsKeys.activeConfiguration),
+        XCTAssertEqual(UserDefaults.standard.string(forKey: userDefaultsActiveConfigurationKey),
                        NetworkConfigurationType.mock.rawValue)
     }
 }
