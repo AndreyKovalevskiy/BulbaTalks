@@ -1,7 +1,7 @@
 import UIKit
 
 class ListOfTweetsViewController: UIViewController {
-    // MARK: IBOutlet
+    // MARK: - IBOutlet
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var navigationBar: UINavigationBar!
@@ -40,7 +40,7 @@ class ListOfTweetsViewController: UIViewController {
         }
     }
 
-    // MARK: Private functions
+    // MARK: - Private functions
 
     /// Uses to customize `UITableView`.
     private func configureTableView() {
@@ -83,14 +83,14 @@ class ListOfTweetsViewController: UIViewController {
         navigationBar.items = [navigationItem]
     }
 
-    // MARK: IBAction
+    // MARK: - IBAction
 
     @objc func openProfile(_: UIBarButtonItem) {}
 
     @IBAction func composeTweet(_: UIButton) {}
 }
 
-// MARK: Extensions
+// MARK: - Extensions
 
 extension ListOfTweetsViewController: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
