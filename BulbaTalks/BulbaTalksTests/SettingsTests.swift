@@ -34,7 +34,7 @@ class SettingsTests: XCTestCase {
         XCTAssert(activeNC is MockNetworkConfiguration)
     }
 
-    func testSettingsInitializedWithMockConfigurationWhenUserDefaultsHasEmptyActiveConfigurationKey() {
+    func testSettingsIsInitializedWithMockConfigurationWhenUserDefaultsHasEmptyActiveConfigurationKey() {
         // Given
         UserDefaults.standard.removeObject(forKey: UserDefaultsKeys.activeConfiguration)
         Settings.reset()
@@ -46,7 +46,7 @@ class SettingsTests: XCTestCase {
         XCTAssert(activeNC is MockNetworkConfiguration)
     }
 
-    func testSettingsInitializedWithRemoteConfigurationWhenUserDefaultsHasRemoteActiveConfigurationKey() {
+    func testSettingsIsInitializedWithRemoteConfigurationWhenUserDefaultsHasRemoteActiveConfigurationKey() {
         // Given
         UserDefaults.standard.set(NetworkConfigurationType.remote.rawValue,
                                   forKey: UserDefaultsKeys.activeConfiguration)
