@@ -64,7 +64,7 @@ class NetworkService {
             return
         }
         
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.global(qos: .default).async {
             if let data = Bundle.main.contentsOfFile(at: mockedURL) {
                 completion(.success(data))
             } else {
