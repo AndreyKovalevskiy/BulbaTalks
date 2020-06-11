@@ -17,8 +17,8 @@ class ImageButton: UIButton {
     }
 
     /**
-     A boolean indicating whether sublayers are clipped to the layer’s bounds.
-     When the value of this property is `true`, sublayers of the layer
+     A boolean indicating whether sublayers of the view are clipped to the bounds.
+     When the value of this property is `true`, any sublayers of the view
      that extend outside its boundaries will be clipped to those boundaries.
      When the value of this property is `false`, no clipping occurs.
      */
