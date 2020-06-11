@@ -10,27 +10,22 @@ struct TwitterDataSource {
     private let networkService: NetworkService = NetworkService(networkConfiguration: Settings.shared.activeNetworkConfiguration)
 
     /**
-     Receives a collection of tweets posted by the authenticated
-     user and the users he is following.
-
-     Method returns up to 20 tweet items from the Twitter home
-     timeline using the interval formed by the `firstTweet` and/or
-     `lastTweet` parameters.
-     If we have both parameters are `nil`, then we will get the 20
-     newest tweets from the home timeline.
+     Receives a collection of tweets posted by the authenticated user
+     and the users he is following. Tweet collection is based on the
+     interval formed by the`firstTweet` and/or `lastTweet`
+     parameters. If the interval is implicit (both `firstTweet` and
+     `lastTweet` parameters are `nil`), then only latest tweets
+     from the timeline are included.
      - Parameters:
-       - firstTweet: A tweet, starting from which (not including
-       this tweet) we get the home timeline array with the newest
-       tweets.
-       - lastTweet: A tweet, starting from which (including this
-       tweet) we get the home timeline array with the tweets older
-       than that.
-       - completion: A completion handler that takes an array
-       of `Tweet` objects, this array may contain tweets when
-       successfully recieved the home timeline and may be empty,
-       in case of an error while receiving tweets, or requesting new
-       tweets, when there are no new tweets in the Twitter home
-       timeline.
+       - firstTweet: A tweet that defines the start of the
+       interval in the timeline. The result collection contains tweets
+       starting this one (but not including).
+       - lastTweet: A tweet that defines the end of the interval
+       in the timeline. The result collection contains tweets ending
+       this one (including).
+       - completion: A completion handler that is called upon
+       getting the tweets. Takes the array of `Tweet` objects.If an
+       error occurred while receiving tweets, the array is empty.
      */
     public func getHomeTimeline(since firstTweet: Tweet?,
                                 until lastTweet: Tweet?,
