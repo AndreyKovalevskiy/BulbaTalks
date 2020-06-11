@@ -39,7 +39,7 @@ class NetworkService {
                 return
             }
             guard (200...299).contains(httpResponse.statusCode) else {
-                completion(.failure(.error(statusCode: httpResponse.statusCode)))
+                completion(.failure(.badResponse(statusCode: httpResponse.statusCode)))
             }
             completion(.success(data))
         }
@@ -64,7 +64,7 @@ class NetworkService {
             return
         }
         
-        DispatchQueue.global(qos: .default).async {
+        DispatchQueue.global().async {
             if let data = Bundle.main.contentsOfFile(at: mockedURL) {
                 completion(.success(data))
             } else {
