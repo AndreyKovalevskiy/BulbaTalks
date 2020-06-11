@@ -38,15 +38,8 @@ class NetworkService {
                 completion(.failure(.invalidResponse))
                 return
             }
-            switch httpResponse.statusCode {
-            case 200...299:
-                completion(.success(data))
-            case 400...499:
-                completion(.failure(.clientError))
-            case 500...599:
-                completion(.failure(.serverError))
-            default:
-                completion(.failure(.unexpectedStatusCode))
+            guard (200...299).contains(httpResponse.statusCode) else {
+                completion(.failure(.error(statusCode: httpResponse.statusCode)))
             }
             completion(.success(data))
         }
