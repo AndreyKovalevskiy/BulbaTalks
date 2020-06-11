@@ -7,39 +7,6 @@ class ListOfTweetsViewController: UIViewController {
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var tabBar: UITabBar!
 
-    // swiftlint:disable nesting
-    /// Describes constants used to configure `UIViewController`.
-    private enum Constants {
-        /// Constants related to the tab bar.
-        enum TabBar {
-            /**
-             Represents the height of the tab bar
-             in landscape orientation.
-             */
-            static let heightInLandscapeOrientation: CGFloat = 50
-        }
-
-        /// Constants related to the `UIBarButtonItem`.
-        enum BarButtonItem {
-            /// Represents the width of the `UIBarButtonItem`.
-            static let width: CGFloat = 30
-            /// Represents the height of the `UIBarButtonItem`.
-            static let height: CGFloat = 30
-
-            /**
-             Constants used to position the view
-             of `UIBarButtonItem` relative to others views
-             by adding constraints.
-             */
-            enum Position {
-                /// Used to add width constraints.
-                static let width: CGFloat = 30
-                /// Used to add height constraints.
-                static let height: CGFloat = 30
-            }
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -51,8 +18,8 @@ class ListOfTweetsViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if UIDevice.current.orientation.isLandscape {
-            tabBar.frame.size.height = Constants.TabBar.heightInLandscapeOrientation
-            tabBar.frame.origin.y = view.frame.height - Constants.TabBar.heightInLandscapeOrientation
+            tabBar.frame.size.height = ViewControllerConstants.TabBar.heightInLandscapeOrientation
+            tabBar.frame.origin.y = view.frame.height - ViewControllerConstants.TabBar.heightInLandscapeOrientation
         }
     }
 
@@ -83,16 +50,17 @@ class ListOfTweetsViewController: UIViewController {
      */
     private func configureLeftBarButtonItem() {
         let imageFromUserProfile = UIImage(named: "mockedUserImage")
-        let barButtonItem = UIButton(frame: CGRect(x: 0, y: 0,
-                                                   width: Constants.BarButtonItem.width,
-                                                   height: Constants.BarButtonItem.height))
+        let barButtonItem = UIButton(frame:
+            CGRect(x: 0, y: 0,
+                   width: ViewControllerConstants.BarButtonItem.width,
+                   height: ViewControllerConstants.BarButtonItem.height))
         barButtonItem.layer.masksToBounds = true
         barButtonItem.layer.cornerRadius = barButtonItem.frame.height / 2
         barButtonItem.setImage(imageFromUserProfile, for: .normal)
         barButtonItem.widthAnchor.constraint(equalToConstant:
-            Constants.BarButtonItem.Position.width).isActive = true
+            ViewControllerConstants.BarButtonItem.Position.width).isActive = true
         barButtonItem.heightAnchor.constraint(equalToConstant:
-            Constants.BarButtonItem.Position.height).isActive = true
+            ViewControllerConstants.BarButtonItem.Position.height).isActive = true
         barButtonItem.addTarget(self, action: #selector(openProfile), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: barButtonItem)
 
