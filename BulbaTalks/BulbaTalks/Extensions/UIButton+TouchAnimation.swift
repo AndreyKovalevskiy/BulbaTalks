@@ -30,9 +30,10 @@ extension UIButton {
                                                                 y: ButtonAnimationParameter.scaleTransformation)
                          },
                          completion: { _ in
-                             UIButton.animate(withDuration: ButtonAnimationParameter.animationScaleChangingDuration, animations: {
-                                 self.transform = CGAffineTransform.identity
-                           })
+                             UIButton.animate(withDuration: ButtonAnimationParameter.animationScaleChangingDuration,
+                                              animations: {
+                                                  self.transform = CGAffineTransform.identity
+                             })
                          })
     }
 }
