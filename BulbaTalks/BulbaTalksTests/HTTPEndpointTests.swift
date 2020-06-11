@@ -2,127 +2,87 @@
 import XCTest
 
 class HTTPEndpointTests: XCTestCase {
-    let endpoint = HTTPEndpoint(method: .get,
-                                path: "1.1/statuses/home_timeline.json",
-                                headerParameters: [:],
-                                queryParameters: [:],
-                                bodyParameters: [:])
+    var timelineEndpoint: HTTPEndpoint!
 
-    func testPropertyMethodWhenIsGet() {
-        // Given
-        let expectedMethod = HTTPMethodType.get
-
-        // When
-        let method = endpoint.method
-
-        // Then
-        XCTAssertEqual(method, expectedMethod)
+    override func setUp() {
+        super.setUp()
+        timelineEndpoint = HTTPEndpoint(method: .get,
+                                        path: "1.1/statuses/home_timeline.json",
+                                        headerParameters: [:],
+                                        queryParameters: [:],
+                                        bodyParameters: ["body": "Body"])
     }
 
-    func testMethodPropertyWhenIsNotGet() {
+    func testPropertyMethodReturnsGetMethodTypeWhenIsInitializedWithGetMethod() {
         // Given
-        let expectedMethod = HTTPMethodType.post
+        let initializedMethod = HTTPMethodType.get
 
         // When
-        let method = endpoint.method
+        let timelineEnpointMethod = timelineEndpoint.method
 
         // Then
-        XCTAssertNotEqual(method, expectedMethod)
+        XCTAssertEqual(timelineEnpointMethod, initializedMethod)
     }
 
-    func testPropertyPathWhenIsValidString() {
+    func testPropertyMethodDoesNotReturnPostMethodTypeWhenIsInitializedWithGetMethod() {
         // Given
-        let expectedPath = "1.1/statuses/home_timeline.json"
+        let initializedMethod = HTTPMethodType.post
 
         // When
-        let path = endpoint.path
+        let timelineEnpointMethod = timelineEndpoint.method
 
         // Then
-        XCTAssertEqual(path, expectedPath)
+        XCTAssertNotEqual(timelineEnpointMethod, initializedMethod)
     }
 
-    func testPropertyPathWhenIsInvalidString() {
+    func testPropertyPathReturnsPathAsStringWhenIsInitializedWithStringPath() {
         // Given
-        let expectedPath = "1.1/statuses/home_timeline.jso"
+        let initializedPath = "1.1/statuses/home_timeline.json"
 
         // When
-        let path = endpoint.path
+        let timelineEnpointPath = timelineEndpoint.path
 
         // Then
-        XCTAssertNotEqual(path, expectedPath)
+        XCTAssertEqual(timelineEnpointPath, initializedPath)
     }
 
-    func testPropertyHeaderParametersWhenIsValidDictionary() {
+    func testPropertyHeaderParametersReturnsEmptyDictionaryWhenIsInitializedWithEmptyDictionary() {
         // Given
-        let expectedHeaderParameters = [String: String]()
+        let initializedHeaderParameters = [String: String]()
 
         // When
-        let headerParameters = endpoint.headerParameters
+        let timelineEnpointHeaderParameters = timelineEndpoint.headerParameters
 
         // Then
-        XCTAssertEqual(headerParameters, expectedHeaderParameters)
+        XCTAssertEqual(timelineEnpointHeaderParameters, initializedHeaderParameters)
     }
 
-    func testPropertyHeaderParametersWhenIsInvalidDictionary() {
+    func testPropertyQueryParametersReturnsEmptyDictionaryWhenIsInitializedWithEmptyDictionary() {
         // Given
-        let expectedHeaderParameters = ["header": "Header"]
+        let initializedQueryParameters = [String: String]()
 
         // When
-        let headerParameters = endpoint.headerParameters
+        let timelineEnpointQueryParameters = timelineEndpoint.queryParameters
 
         // Then
-        XCTAssertNotEqual(headerParameters, expectedHeaderParameters)
+        XCTAssertEqual(timelineEnpointQueryParameters, initializedQueryParameters)
     }
 
-    func testPropertyQueryParametersWhenIsValidDictionary() {
+    func testPropertyBodyParametersReturnsValueAsStringFromDictionaryWhenIsInitializedWithValueAsString() {
         // Given
-        let expectedQueryParameters = [String: String]()
+        let initializedBodyParameters = ["body": "Body"]
+        let initializedValue = initializedBodyParameters["body"]
 
         // When
-        let queryParameters = endpoint.queryParameters
+        let timelineEnpointBodyParameters = timelineEndpoint.bodyParameters
+        let value = timelineEnpointBodyParameters["body"] as? String
 
         // Then
-        XCTAssertEqual(queryParameters, expectedQueryParameters)
+        XCTAssertEqual(value, initializedValue)
     }
 
-    func testPropertyQueryParametersWhenIsInvalidDictionary() {
-        // Given
-        let expectedQueryParameters = ["query": "Query"]
-
-        // When
-        let queryParameters = endpoint.queryParameters
-
-        // Then
-        XCTAssertNotEqual(queryParameters, expectedQueryParameters)
-    }
-
-    func testPropertyBodyParametersWhenIsValidValue() {
-        // Given
-        var expectedBodyParameters = [String: Any]()
-        expectedBodyParameters = ["body": "Body"]
-        let expectedValue = expectedBodyParameters["body"] as? String
-
-        // When
-        var bodyParameters = endpoint.bodyParameters
-        bodyParameters = ["body": "Body"]
-        let value = bodyParameters["body"] as? String
-
-        // Then
-        XCTAssertEqual(value, expectedValue)
-    }
-
-    func testPropertyBodyParametersWhenIsInvalidValue() {
-        // Given
-        var expectedBodyParameters = [String: Any]()
-        expectedBodyParameters = ["body": "Bodies"]
-        let expectedValue = expectedBodyParameters["body"] as? String
-
-        // When
-        var bodyParameters = endpoint.bodyParameters
-        bodyParameters = ["body": "Body"]
-        let value = bodyParameters["body"] as? String
-
-        // Then
-        XCTAssertNotEqual(value, expectedValue)
+    override func tearDown() {
+        timelineEndpoint = nil
+        super.tearDown()
     }
 }
