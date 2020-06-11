@@ -6,9 +6,10 @@ extension UIButton {
      */
     private enum ButtonAnimationParameter {
         /**
-         Shows how long every animation after touch will be last.
+         Shows how long every scale changing animation
+         after touch will be last.
          */
-        static let animationDuration = 0.1
+        static let animationScaleChangingDuration = 0.1
 
         /**
          Shows how to change the scale (x and y)
@@ -23,13 +24,13 @@ extension UIButton {
      then return original scale back.
      */
     func touchAnimation() {
-        UIButton.animate(withDuration: ButtonAnimationParameter.animationDuration,
+        UIButton.animate(withDuration: ButtonAnimationParameter.animationScaleChangingDuration,
                          animations: {
                              self.transform = CGAffineTransform(scaleX: ButtonAnimationParameter.scaleTransformation,
                                                                 y: ButtonAnimationParameter.scaleTransformation)
                          },
                          completion: { _ in
-                             UIButton.animate(withDuration: ButtonAnimationParameter.animationDuration, animations: {
+                             UIButton.animate(withDuration: ButtonAnimationParameter.animationScaleChangingDuration, animations: {
                                  self.transform = CGAffineTransform.identity
                            })
                          })
