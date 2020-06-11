@@ -5,7 +5,7 @@ enum NetworkError: Error {
     /**
      Error with a specific HTTP status code.
      */
-    case error(statusCode: Int)
+    case badResponse(statusCode: Int)
     /**
      Network request failure.
      */
@@ -15,7 +15,7 @@ enum NetworkError: Error {
      */
     case invalidResponse
     /**
-     Error caused by an invalid URL.
+     Invalid URL.
      */
     case invalidURL
     /**
@@ -32,7 +32,7 @@ enum NetworkError: Error {
      */
     var description: String {
         switch self {
-        case let .error(statusCode):
+        case let .badResponse(statusCode):
             return "The call failed with HTTP code \(statusCode)."
         case .failedRequest:
             return "Network request failed."
