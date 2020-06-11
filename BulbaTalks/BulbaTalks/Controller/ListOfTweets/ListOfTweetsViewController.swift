@@ -7,6 +7,7 @@ class ListOfTweetsViewController: UIViewController {
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var tabBar: UITabBar!
 
+    // swiftlint:disable nesting
     /// Describes constants used to configure `UIViewController`.
     private enum Constants {
         /// Constants related to the tab bar.
