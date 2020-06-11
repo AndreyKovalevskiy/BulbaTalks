@@ -474,7 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8A57CDB248E9ADD0033EE2C /* testesr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
