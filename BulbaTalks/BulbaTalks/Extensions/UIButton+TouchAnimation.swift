@@ -20,7 +20,7 @@ extension UIButton {
     /**
      The animation after touch of the button which changes
      a scale (x and y) of the button for some duration and
-     then return originals scale back.
+     then return original scale back.
      */
     func touchAnimation() {
         UIButton.animate(withDuration: ButtonAnimationParameter.animationDuration,
