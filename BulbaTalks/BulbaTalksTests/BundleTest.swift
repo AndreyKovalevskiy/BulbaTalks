@@ -3,8 +3,8 @@ import XCTest
 
 class BundleTest: XCTestCase {
     // Uses to wait for a function completion.
-    var timeoutOfFunctionCompltion: Double
-    var getImageExpectationDescriptionText: String
+    var timeoutOfFunctionCompltion: Double = 0.0
+    var getImageExpectationDescriptionText: String = ""
 
     override func setUp() {
         timeoutOfFunctionCompltion = 5.0
@@ -37,7 +37,7 @@ class BundleTest: XCTestCase {
         var image: UIImage?
         Bundle.main.getImage(at: nonexistentURL) { returnedImage in
             image = returnedImage
-            getImageCompletionHandlerIsCalledExpectation.fulfill()
+            getImageCompletionExpectation.fulfill()
         }
 
         // Then
