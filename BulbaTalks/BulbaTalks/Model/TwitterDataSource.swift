@@ -11,11 +11,16 @@ struct TwitterDataSource {
 
     /**
      Receives a collection of tweets posted by the authenticated user
-     and the users he is following. Tweet collection is based on the
-     interval formed by the`firstTweet` and/or `lastTweet`
-     parameters. If the interval is implicit (both `firstTweet` and
-     `lastTweet` parameters are `nil`), then only latest tweets
-     from the timeline are included.
+     and the users he is following.
+
+     Tweet collection is based on the interval formed by the
+     `firstTweet` and/or `lastTweet` parameters. If the
+     interval is implicit (both `firstTweet` and `lastTweet`
+     parameters are `nil`), then only the latest tweets from the
+     timeline are received.
+
+     Up to 20 tweets can be received in each case.
+
      - Parameters:
        - firstTweet: A tweet that defines the start of the
        interval in the timeline. The result collection contains tweets
@@ -24,7 +29,7 @@ struct TwitterDataSource {
        in the timeline. The result collection contains tweets ending
        this one (including).
        - completion: A completion handler that is called upon
-       getting the tweets. Takes the array of `Tweet` objects.If an
+       getting the tweets. Takes the array of `Tweet` objects. If an
        error occurred while receiving tweets, the array is empty.
      */
     public func getHomeTimeline(since firstTweet: Tweet?,
