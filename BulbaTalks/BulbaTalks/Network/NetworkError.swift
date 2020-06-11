@@ -3,9 +3,9 @@
  */
 enum NetworkError: Error {
     /**
-     Error caused by the client.
+     Error with a specific HTTP status code.
      */
-    case clientError
+    case error(statusCode: Int)
     /**
      Network request failure.
      */
@@ -26,22 +26,14 @@ enum NetworkError: Error {
      The response returned with no data.
      */
     case noData
-    /**
-     Error caused by the server.
-     */
-    case serverError
-    /**
-     The server returned an unexpected status code.
-     */
-    case unexpectedStatusCode
 
     /**
      A more detailed description of the network error.
      */
     var description: String {
         switch self {
-        case .clientError:
-            return "Error caused by the client."
+        case let .error(statusCode):
+            return "The call failed with HTTP code \(statusCode)."
         case .failedRequest:
             return "Network request failed."
         case .invalidResponse:
@@ -52,10 +44,6 @@ enum NetworkError: Error {
             return "The request failed due to an invalid URLRequest."
         case .noData:
             return "Response returned with no data."
-        case .serverError:
-            return "Error caused by the server."
-        case .unexpectedStatusCode:
-            return "The server returned an unexpected status code."
         }
     }
 }
