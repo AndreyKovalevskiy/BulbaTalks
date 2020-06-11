@@ -6,43 +6,46 @@ class SettingsTests: XCTestCase {
      Contains keys used to access data in UserDefaults.
      */
     private enum UserDefaultsKeys {
+        /**
+         Key to access the value of active network configuration.
+         */
         static let activeConfiguration = "ActiveNetworkConfiguration"
     }
 
     func testResetMethodReinitializesSingleton() {
         // Given
-        let oldSingleton = Settings.shared
+        let legacySettings = Settings.shared
 
         // When
-        Settings.reset()
+        Settings.shared.reset()
 
         // Then
-        let newSingleton = Settings.shared
-        XCTAssert(oldSingleton !== newSingleton)
+        let newSettings = Settings.shared
+        XCTAssert(legacySettings !== newSettings)
     }
 
     func testSettingsIsInitializedWithMockConfigurationWhenUserDefaultsHasInvalidActiveConfigurationKey() {
         // Given
         let invalidValue = "InvalidValue"
         UserDefaults.standard.set(invalidValue, forKey: UserDefaultsKeys.activeConfiguration)
-        Settings.reset()
 
         // When
-        let activeNC = Settings.shared.activeNetworkConfiguration
+        Settings.shared.reset()
 
         // Then
+        let activeNC = Settings.shared.activeNetworkConfiguration
         XCTAssert(activeNC is MockNetworkConfiguration)
     }
 
     func testSettingsIsInitializedWithMockConfigurationWhenUserDefaultsHasEmptyActiveConfigurationKey() {
         // Given
         UserDefaults.standard.removeObject(forKey: UserDefaultsKeys.activeConfiguration)
-        Settings.reset()
 
         // When
-        let activeNC = Settings.shared.activeNetworkConfiguration
+        Settings.shared.reset()
 
         // Then
+        let activeNC = Settings.shared.activeNetworkConfiguration
         XCTAssert(activeNC is MockNetworkConfiguration)
     }
 
@@ -50,12 +53,12 @@ class SettingsTests: XCTestCase {
         // Given
         UserDefaults.standard.set(NetworkConfigurationType.remote.rawValue,
                                   forKey: UserDefaultsKeys.activeConfiguration)
-        Settings.reset()
 
         // When
-        let activeNC = Settings.shared.activeNetworkConfiguration
+        Settings.shared.reset()
 
         // Then
+        let activeNC = Settings.shared.activeNetworkConfiguration
         XCTAssert(activeNC is RemoteNetworkConfiguration)
     }
 
