@@ -46,7 +46,7 @@
 		A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A1C247FB8C00089FD8D /* LoginButton.swift */; };
 		A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */; };
 		A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */; };
-		A8AF761E24924F3E005C6D94 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF761D24924F3E005C6D94 /* UIButton.swift */; };
+		A8AF761E24924F3E005C6D94 /* UIButton+TouchAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF761D24924F3E005C6D94 /* UIButton+TouchAnimation.swift */; };
 		AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA84616F247EB20300BC950C /* HTTPRequestable.swift */; };
 		AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA846170247EB20400BC950C /* HTTPMethodType.swift */; };
 		AA5938DA2465875700EAFA74 /* TwitterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5938D92465875700EAFA74 /* TwitterDataSource.swift */; };
@@ -108,7 +108,7 @@
 		A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardID.swift"; sourceTree = "<group>"; };
 		A8A57CD0248E52A10033EE2C /* BulbaTalksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BulbaTalksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A57CD4248E52A10033EE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8AF761D24924F3E005C6D94 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		A8AF761D24924F3E005C6D94 /* UIButton+TouchAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TouchAnimation.swift"; sourceTree = "<group>"; };
 		AA84616F247EB20300BC950C /* HTTPRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestable.swift; sourceTree = "<group>"; };
 		AA846170247EB20400BC950C /* HTTPMethodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethodType.swift; sourceTree = "<group>"; };
 		AA5938D92465875700EAFA74 /* TwitterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDataSource.swift; sourceTree = "<group>"; };
@@ -265,7 +265,7 @@
 				953CD2802465465400334E81 /* JSONEncoder+TwitterObjectEncoding.swift */,
 				95A1B82624814E7A005F29DA /* UITableView+ReusableCell.swift */,
 				958050C624863A7800031A1C /* UITableViewCell+ReuseIdentifier.swift */,
-				A8AF761D24924F3E005C6D94 /* UIButton.swift */,
+				A8AF761D24924F3E005C6D94 /* UIButton+TouchAnimation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -541,7 +541,7 @@
 				69042FB2246AC0BB00B651D3 /* NetworkService.swift in Sources */,
 				95DD4AA22462D37E0004300D /* User.swift in Sources */,
 				A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */,
-				A8AF761E24924F3E005C6D94 /* UIButton.swift in Sources */,
+				A8AF761E24924F3E005C6D94 /* UIButton+TouchAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
