@@ -2,16 +2,56 @@
 import XCTest
 
 class AuthenticationTests: XCTestCase {
-    let authentication = Authentication.isSignedIn
+    var authentication: Authentication!
 
-    func testAuthenticationAfterInitialzedWhen() {
+    override func setUp() {
+        super.setUp()
+        authentication = Authentication()
+    }
+
+    override func tearDown() {
+        authentication = nil
+        super.tearDown()
+    }
+
+    /**
+     Keys associated with values in the current user‘s defaults
+     database.
+     */
+    private enum UserDefaultsKey {
+        static let isSignedIn = "isSignedIn"
+    }
+
+    func testAuthenticationIsInitializedWithFalseWhenUserDefaultsHasEmptyIsSignedInKey() {
         // Given
-        let expectedAuth = false
+        UserDefaults.standard.removeObject(forKey: UserDefaultsKey.isSignedIn)
+        let authentication = Authentication.isSignedIn
 
         // When
-        let auth = Authentication.isSignedIn
+        UserDefaults.standard.removeObject(forKey: UserDefaultsKey.isSignedIn)
 
         // Then
-        XCTAssertEqual(auth, expectedAuth)
+        XCTAssert(authentication == false)
+    }
+
+    func testAuthenticationIsInitializedWithTrueWhenUserDefaultsHasTrueIsSignedInKey() {
+        // Given
+        UserDefaults.standard.set(true, forKey: UserDefaultsKey.isSignedIn)
+        let authentication = Authentication.isSignedIn
+
+        // When
+        UserDefaults.standard.set(true, forKey: UserDefaultsKey.isSignedIn)
+
+        // Then
+        XCTAssert(authentication == true)
+    }
+
+    func testAuthenticationChanges() {
+        // Given
+        Authentication.signIn { _ in true }
+
+        // When
+
+        // Then
     }
 }
