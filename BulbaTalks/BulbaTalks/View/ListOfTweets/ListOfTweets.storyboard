@@ -38,7 +38,6 @@
                                 <rect key="frame" x="0.0" y="813" width="414" height="83"/>
                                 <items>
                                     <tabBarItem image="home" id="myE-Nh-PnW" userLabel="Home"/>
-                                    <tabBarItem image="search" id="4Cf-zN-xdf" userLabel="Search"/>
                                 </items>
                             </tabBar>
                         </subviews>
@@ -72,7 +71,6 @@
     </scenes>
     <resources>
         <image name="home" width="25" height="25"/>
-        <image name="search" width="24" height="24"/>
         <image name="tweetButton" width="90" height="90"/>
     </resources>
 </document>
