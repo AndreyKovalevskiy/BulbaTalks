@@ -7,21 +7,36 @@ class ListOfTweetsViewController: UIViewController {
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var tabBar: UITabBar!
 
-    /// Constants related to the tab bar.
-    private enum TabBar {
-        static let heightInLandscapeOrientation: CGFloat = 50
-    }
+    /// Describes constants used to configure `UIViewController`.
+    private enum Constants {
+        /// Constants related to the tab bar.
+        enum TabBar {
+            /**
+             Represents the height of the tab bar
+             in landscape orientation.
+             */
+            static let heightInLandscapeOrientation: CGFloat = 50
+        }
 
-    /// Constants related to the `UIBarButtonItem`.
-    private enum BarButtonItem {
-        static let width: CGFloat = 30
-        static let height: CGFloat = 30
-    }
+        /// Constants related to the `UIBarButtonItem`.
+        enum BarButtonItem {
+            /// Represents the width of the `UIBarButtonItem`.
+            static let width: CGFloat = 30
+            /// Represents the height of the `UIBarButtonItem`.
+            static let height: CGFloat = 30
 
-    /// Constants related to the layout anchor of `UIView`.
-    private enum LayoutAnchor {
-        static let barButtonItemViewWidthAnchor: CGFloat = 30
-        static let barButtonItemViewHeightAnchor: CGFloat = 30
+            /**
+             Constants used to position the view
+             of `UIBarButtonItem` relative to others views
+             by adding constraints.
+             */
+            enum Position {
+                /// Used to add width constraints.
+                static let width: CGFloat = 30
+                /// Used to add height constraints.
+                static let height: CGFloat = 30
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -35,19 +50,19 @@ class ListOfTweetsViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if UIDevice.current.orientation.isLandscape {
-            tabBar.frame.size.height = TabBar.heightInLandscapeOrientation
-            tabBar.frame.origin.y = view.frame.height - TabBar.heightInLandscapeOrientation
+            tabBar.frame.size.height = Constants.TabBar.heightInLandscapeOrientation
+            tabBar.frame.origin.y = view.frame.height - Constants.TabBar.heightInLandscapeOrientation
         }
     }
 
     // MARK: - Private functions
 
-    /// Uses to customize `UITableView`.
+    /// Used to configure `UITableView`.
     private func configureTableView() {
         tableView.registerCell(of: ListOfTweetsTableViewCell.self)
     }
 
-    /// Uses to customize `UITabBar`.
+    /// Used to configure `UITabBar`.
     private func configureTabBar() {
         tabBar.barTintColor = .white
     }
@@ -55,9 +70,9 @@ class ListOfTweetsViewController: UIViewController {
     /// Adds `UIImage` in the title of navigation bar.
     private func configureTitleViewOfNavigationBar() {
         if let logoOfTwitter = UIImage(named: "logoOfTwitter") {
-            let titleViewWithImage = UIImageView(image: logoOfTwitter)
-            titleViewWithImage.contentMode = .scaleAspectFit
-            navigationItem.titleView = titleViewWithImage
+            let twitterLogoImageView = UIImageView(image: logoOfTwitter)
+            twitterLogoImageView.contentMode = .scaleAspectFit
+            navigationItem.titleView = twitterLogoImageView
         }
     }
 
@@ -68,15 +83,15 @@ class ListOfTweetsViewController: UIViewController {
     private func configureLeftBarButtonItem() {
         let imageFromUserProfile = UIImage(named: "mockedUserImage")
         let barButtonItem = UIButton(frame: CGRect(x: 0, y: 0,
-                                                   width: BarButtonItem.width,
-                                                   height: BarButtonItem.height))
+                                                   width: Constants.BarButtonItem.width,
+                                                   height: Constants.BarButtonItem.height))
         barButtonItem.layer.masksToBounds = true
         barButtonItem.layer.cornerRadius = barButtonItem.frame.height / 2
         barButtonItem.setImage(imageFromUserProfile, for: .normal)
         barButtonItem.widthAnchor.constraint(equalToConstant:
-            LayoutAnchor.barButtonItemViewWidthAnchor).isActive = true
+            Constants.BarButtonItem.Position.width).isActive = true
         barButtonItem.heightAnchor.constraint(equalToConstant:
-            LayoutAnchor.barButtonItemViewHeightAnchor).isActive = true
+            Constants.BarButtonItem.Position.height).isActive = true
         barButtonItem.addTarget(self, action: #selector(openProfile), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: barButtonItem)
 
@@ -85,8 +100,10 @@ class ListOfTweetsViewController: UIViewController {
 
     // MARK: - IBAction
 
+    /// Opens the profile of the authenticated user.
     @objc func openProfile(_: UIBarButtonItem) {}
 
+    /// Gets a view controller to create a new Tweet.
     @IBAction func composeTweet(_: UIButton) {}
 }
 
