@@ -3,27 +3,30 @@
  */
 enum NetworkError: Error {
     /**
-     Bad response with a specific HTTP status code.
+     Bad response with a specific HTTP status code that is
+     outside the 200...299 range.
      */
     case badResponse(statusCode: Int)
     /**
-     Network request failure.
+     The request was not completed due to the reason
+     specified in the `description`.
      */
-    case failedRequest
+    case failedRequest(description: String)
     /**
-     Invalid response received.
+     The response has an unexpected type that failed to cast
+     to HTTPURLResponse.
      */
     case invalidResponse
     /**
-     Invalid URL.
+     Failed to get the URL of the request.
      */
     case invalidURL
     /**
-     Invalid `URLRequest`.
+     Failed to get the `URLRequest`.
      */
     case invalidURLRequest
     /**
-     The response returned with no data.
+     No data is in the received response.
      */
     case noData
 }
