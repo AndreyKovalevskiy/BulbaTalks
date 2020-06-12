@@ -64,10 +64,10 @@ class SettingsTests: XCTestCase {
 
     func testActivateNetworkConfigurationMethodChangesActiveNetworkConfigurationFromMockToRemote() {
         // Given
-        Settings.shared.activateNewtorkConfiguration(of: .mock)
+        Settings.shared.activateNetworkConfiguration(of: .mock)
 
         // When
-        Settings.shared.activateNewtorkConfiguration(of: .remote)
+        Settings.shared.activateNetworkConfiguration(of: .remote)
 
         // Then
         let activeNC = Settings.shared.activeNetworkConfiguration
@@ -76,10 +76,10 @@ class SettingsTests: XCTestCase {
 
     func testActivateNetworkConfigurationMethodChangesActiveNetworkConfigurationFromRemoteToMock() {
         // Given
-        Settings.shared.activateNewtorkConfiguration(of: .remote)
+        Settings.shared.activateNetworkConfiguration(of: .remote)
 
         // When
-        Settings.shared.activateNewtorkConfiguration(of: .mock)
+        Settings.shared.activateNetworkConfiguration(of: .mock)
 
         // Then
         let activeNC = Settings.shared.activeNetworkConfiguration
@@ -88,10 +88,10 @@ class SettingsTests: XCTestCase {
 
     func testActivateNetworkConfigurationMethodStoresUpdatedRemoteActiveConfigurationInUserDefaults() {
         // Given
-        Settings.shared.activateNewtorkConfiguration(of: .mock)
+        Settings.shared.activateNetworkConfiguration(of: .mock)
 
         // When
-        Settings.shared.activateNewtorkConfiguration(of: .remote)
+        Settings.shared.activateNetworkConfiguration(of: .remote)
 
         // Then
         XCTAssertEqual(UserDefaults.standard.string(forKey: UserDefaultsKeys.activeConfiguration),
@@ -100,10 +100,10 @@ class SettingsTests: XCTestCase {
 
     func testActivateNetworkConfigurationMethodStoresUpdatedMockActiveConfigurationInUserDefaults() {
         // Given
-        Settings.shared.activateNewtorkConfiguration(of: .remote)
+        Settings.shared.activateNetworkConfiguration(of: .remote)
 
         // When
-        Settings.shared.activateNewtorkConfiguration(of: .mock)
+        Settings.shared.activateNetworkConfiguration(of: .mock)
 
         // Then
         XCTAssertEqual(UserDefaults.standard.string(forKey: UserDefaultsKeys.activeConfiguration),
