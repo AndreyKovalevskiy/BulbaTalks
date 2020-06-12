@@ -58,9 +58,9 @@ class ListOfTweetsViewController: UIViewController {
         barButtonItem.layer.cornerRadius = barButtonItem.frame.height / 2
         barButtonItem.setImage(imageFromUserProfile, for: .normal)
         barButtonItem.widthAnchor.constraint(equalToConstant:
-            ViewControllerConstants.BarButtonItem.Position.width).isActive = true
+            ViewControllerConstants.BarButtonItem.Anchor.width).isActive = true
         barButtonItem.heightAnchor.constraint(equalToConstant:
-            ViewControllerConstants.BarButtonItem.Position.height).isActive = true
+            ViewControllerConstants.BarButtonItem.Anchor.height).isActive = true
         barButtonItem.addTarget(self, action: #selector(openProfile), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: barButtonItem)
 

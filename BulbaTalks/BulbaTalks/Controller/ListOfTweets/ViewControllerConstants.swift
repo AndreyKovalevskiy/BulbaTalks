@@ -1,8 +1,7 @@
 import UIKit
 
-// swiftlint:disable nesting
 /// Describes constants used to configure `UIViewController`.
-struct ViewControllerConstants {
+enum ViewControllerConstants {
     /// Constants related to the tab bar.
     enum TabBar {
         /**
@@ -19,16 +18,19 @@ struct ViewControllerConstants {
         /// Represents the height of the `UIBarButtonItem`.
         static let height: CGFloat = 30
 
+        // swiftlint:disable nesting
         /**
          Constants used to position the view
          of `UIBarButtonItem` relative to others views
          by adding constraints.
          */
-        enum Position {
-            /// Used to add width constraints.
+        enum Anchor {
+            /// Uses to add width constraints.
             static let width: CGFloat = 30
-            /// Used to add height constraints.
+            /// Uses to add height constraints.
             static let height: CGFloat = 30
         }
+
+        // swiftlint:enable nesting
     }
 }
