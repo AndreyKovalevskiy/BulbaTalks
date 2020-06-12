@@ -31,7 +31,7 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="openAccount:" destination="hiR-sq-tKW" eventType="touchUpInside" id="xFk-n1-OML"/>
+                            <action selector="openProfile:" destination="hiR-sq-tKW" eventType="touchUpInside" id="IYN-Lh-lmb"/>
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nj-8I-DVd" userLabel="contentOfTweet">
@@ -201,16 +201,16 @@
                                             <constraint firstAttribute="trailing" secondItem="YCL-d3-w09" secondAttribute="trailing" id="zMq-zs-2rz"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ms-aJ-hRh" userLabel="favourite">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ms-aJ-hRh" userLabel="favorite">
                                         <rect key="frame" x="217.5" y="0.0" width="124.5" height="20"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-Dk-tHM" userLabel="favouriteButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-Dk-tHM" userLabel="favoriteButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="124.5" height="20"/>
                                                 <connections>
-                                                    <action selector="favouriteTweet:" destination="hiR-sq-tKW" eventType="touchUpInside" id="jIe-8L-8ug"/>
+                                                    <action selector="favoriteTweet:" destination="hiR-sq-tKW" eventType="touchUpInside" id="4TY-kY-v4m"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="unfavourite" translatesAutoresizingMaskIntoConstraints="NO" id="WfB-xW-n38" userLabel="iconOfFavouriteButton">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="unfavorite" translatesAutoresizingMaskIntoConstraints="NO" id="WfB-xW-n38" userLabel="iconOfFavoriteButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="KHb-4M-N0v"/>
@@ -310,7 +310,7 @@
         <image name="comment" width="13.5" height="13.5"/>
         <image name="mockedTweetMedia" width="72" height="48"/>
         <image name="mockedUserImage" width="43.5" height="43.5"/>
-        <image name="unfavourite" width="14" height="13"/>
+        <image name="unfavorite" width="14" height="13"/>
         <image name="unretweet" width="17.5" height="12"/>
     </resources>
 </document>
