@@ -3,7 +3,7 @@
  */
 enum NetworkError: Error {
     /**
-     Bad response with a specific HTTP status code that is
+     The response with a specific HTTP status code that is
      outside the 200...299 range.
      */
     case badResponse(statusCode: Int)
