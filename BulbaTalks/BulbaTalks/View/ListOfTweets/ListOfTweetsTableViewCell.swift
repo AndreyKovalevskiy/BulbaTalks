@@ -15,15 +15,18 @@ class ListOfTweetsTableViewCell: UITableViewCell {
 
     // MARK: - IBAction
 
-    /// Opens the profile of the selected user.
-    @IBAction func openAccount(_: UIButton) {}
+    /// Opens the profile of the user.
+    @IBAction func openProfile(_: UIButton) {}
 
-    /// Allows to leave a comment under a selected tweet .
+    /// Leaves a comment under a tweet .
     @IBAction func commentTweet(_: UIButton) {}
 
-    /// Allows to share a selected tweet publicly with user's followers.
+    /**
+     Shares a tweet publicly with followers
+     of the currently authenticated user.
+     */
     @IBAction func retweet(_: UIButton) {}
 
-    /// Allows to like/dislike a selected tweet.
-    @IBAction func favouriteTweet(_: UIButton) {}
+    /// Favorites/unfavorites a tweet.
+    @IBAction func favoriteTweet(_: UIButton) {}
 }

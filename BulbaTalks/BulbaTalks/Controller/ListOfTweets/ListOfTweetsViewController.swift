@@ -25,12 +25,12 @@ class ListOfTweetsViewController: UIViewController {
 
     // MARK: - Private functions
 
-    /// Used to configure `UITableView`.
+    /// Configures `UITableView`.
     private func configureTableView() {
         tableView.registerCell(of: ListOfTweetsTableViewCell.self)
     }
 
-    /// Used to configure `UITabBar`.
+    /// Configures `UITabBar`.
     private func configureTabBar() {
         tabBar.barTintColor = .white
     }
