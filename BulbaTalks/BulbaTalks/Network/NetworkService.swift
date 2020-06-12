@@ -31,7 +31,8 @@ class NetworkService {
                                 completion: @escaping (Result<Data, NetworkError>) -> Void) {
         let networkTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard error == nil, let data = data else {
-                completion(.failure(.failedRequest(description: error?.localizedDescription ?? "")))
+                completion(.failure(.failedRequest(description:
+                    error?.localizedDescription ?? "The request failed with an undefined error.")))
                 return
             }
             guard let httpResponse = response as? HTTPURLResponse else {
