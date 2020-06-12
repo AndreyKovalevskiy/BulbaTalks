@@ -94,9 +94,9 @@ extension NetworkService: HTTPNetworking {
             return
         }
         if activeNetworkConfiguration is RemoteNetworkConfiguration {
-            return networkRequest(request: urlRequest, completion: completion)
+            networkRequest(request: urlRequest, completion: completion)
         } else {
-            return mockRequest(request: urlRequest, completion: completion)
+            mockRequest(request: urlRequest, completion: completion)
         }
     }
 }
