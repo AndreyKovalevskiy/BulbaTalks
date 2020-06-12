@@ -41,6 +41,7 @@ class NetworkService {
             }
             guard (200...299).contains(httpResponse.statusCode) else {
                 completion(.failure(.badResponse(statusCode: httpResponse.statusCode)))
+                return
             }
             completion(.success(data))
         }
