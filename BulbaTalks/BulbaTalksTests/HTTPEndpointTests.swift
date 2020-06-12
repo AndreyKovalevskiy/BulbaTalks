@@ -10,7 +10,7 @@ class HTTPEndpointTests: XCTestCase {
                                         path: "1.1/statuses/home_timeline.json",
                                         headerParameters: [:],
                                         queryParameters: [:],
-                                        bodyParameters: ["body": "Body"])
+                                        bodyParameters: [:])
     }
 
     override func tearDown() {
@@ -18,60 +18,59 @@ class HTTPEndpointTests: XCTestCase {
         super.tearDown()
     }
 
-    func testParameterMethodReturnsGetMethodTypeWhenIsInitializedWithGetMethod() {
-        // Given
+    func testMethodPropertyReturnsGetMethodTypeWhenIsInitializedWithGetMethod() {
+        // Given // When
         let expectedMethod = HTTPMethodType.get
 
-        // When
-        let timelineEnpointMethod = timelineEndpoint.method
-
         // Then
+        let timelineEnpointMethod = timelineEndpoint.method
         XCTAssertEqual(timelineEnpointMethod, expectedMethod)
     }
 
-    func testParameterPathReturnsPathAsSpecificStringWhenIsInitializedWithString() {
-        // Given
+    func testPathPropertyReturnsPathAsSpecificStringWhenIsInitializedWithString() {
+        // Given // When
         let expectedPath = "1.1/statuses/home_timeline.json"
 
-        // When
-        let timelineEnpointPath = timelineEndpoint.path
-
         // Then
+        let timelineEnpointPath = timelineEndpoint.path
         XCTAssertEqual(timelineEnpointPath, expectedPath)
     }
 
-    func testParameterHeaderParametersReturnsEmptyDictionaryWhenIsInitializedWithEmptyDictionary() {
-        // Given
+    func testHeaderParametersPropertyReturnsEmptyDictionaryWhenIsInitializedWithEmptyDictionary() {
+        // Given // When
         let expectedHeaderParameters = [String: String]()
 
-        // When
-        let timelineEnpointHeaderParameters = timelineEndpoint.headerParameters
-
         // Then
+        let timelineEnpointHeaderParameters = timelineEndpoint.headerParameters
         XCTAssertEqual(timelineEnpointHeaderParameters, expectedHeaderParameters)
     }
 
-    func testParameterQueryParametersReturnsEmptyDictionaryWhenIsInitializedWithEmptyDictionary() {
-        // Given
+    func testQueryParametersPropertyReturnsEmptyDictionaryWhenIsInitializedWithEmptyDictionary() {
+        // Given // When
         let expectedQueryParameters = [String: String]()
 
-        // When
-        let timelineEnpointQueryParameters = timelineEndpoint.queryParameters
-
         // Then
+        let timelineEnpointQueryParameters = timelineEndpoint.queryParameters
         XCTAssertEqual(timelineEnpointQueryParameters, expectedQueryParameters)
     }
 
-    func testParameterBodyParametersReturnsExpectedStringValueByKeyWhenIsInitializedWithValueAsString() {
+    func testBodyParametersPropertyContaintsExpectedParameterWhenIsInitializedWithGivenParameter() {
         // Given
-        let expectedBodyParameters = ["body": "Body"]
-        let expectedValue = expectedBodyParameters["body"]
+        let initialBodyParameters = ["body": "Body"]
+        let expectedBodyParameters = initialBodyParameters
+        let expectedParameterValue = expectedBodyParameters["body"]
 
-        // When
-        let timelineEnpointBodyParameters = timelineEndpoint.bodyParameters
-        let value = timelineEnpointBodyParameters["body"] as? String
+        // When // setUp
+        let timelineEndpoint = HTTPEndpoint(method: .get,
+                                            path: "1.1/statuses/home_timeline.json",
+                                            headerParameters: [:],
+                                            queryParameters: [:],
+                                            bodyParameters: initialBodyParameters)
 
         // Then
-        XCTAssertEqual(value, expectedValue)
+        let timelineEnpointBodyParameters = timelineEndpoint.bodyParameters
+        let value = timelineEnpointBodyParameters["body"] as? String
+        XCTAssertNotNil(value)
+        XCTAssertEqual(value, expectedParameterValue)
     }
 }
