@@ -43,12 +43,14 @@ class Settings {
         }
     }
 
-    /**
-     Reinitialize a singletone instance.
-     */
-    func reset() {
-        Settings.shared = Settings()
-    }
+    #if DEBUG
+        /**
+         Reinitialize a singletone instance.
+         */
+        func reset() {
+            Settings.shared = Settings()
+        }
+    #endif
 
     /**
      Activates the network configuration with a given type.
