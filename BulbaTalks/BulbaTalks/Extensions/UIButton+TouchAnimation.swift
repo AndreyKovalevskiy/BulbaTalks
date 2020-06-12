@@ -6,10 +6,10 @@ extension UIButton {
      */
     private enum ButtonAnimationParameter {
         /**
-         Shows how long every scale changing animation
+         Shows how long whole scale changing animation
          after touch will be last.
          */
-        static let animationScaleChangingDuration = 0.1
+        static let animationScaleChangingDuration = 0.2
 
         /**
          Shows how to change the scale (x and y)
@@ -24,16 +24,27 @@ extension UIButton {
      then return original scale back.
      */
     func touchAnimation() {
-        UIButton.animate(withDuration: ButtonAnimationParameter.animationScaleChangingDuration,
+        let halfAnimationDuration = ButtonAnimationParameter.animationScaleChangingDuration / 2
+        UIButton.animate(withDuration: halfAnimationDuration,
+                         animations: scaleTransform,
+                         completion: { [weak self] _ in
+                             if let button = self {
+                                 button.animationTransfornToOriginalScale(halfAnimationDuration)
+                             }
+        })
+    }
+
+    private func scaleTransform() {
+        transform = CGAffineTransform(
+            scaleX: ButtonAnimationParameter.scaleTransformation,
+            y: ButtonAnimationParameter.scaleTransformation
+        )
+    }
+
+    private func animationTransfornToOriginalScale(_ duration: Double) {
+        UIButton.animate(withDuration: duration,
                          animations: {
-                             self.transform = CGAffineTransform(scaleX: ButtonAnimationParameter.scaleTransformation,
-                                                                y: ButtonAnimationParameter.scaleTransformation)
-                         },
-                         completion: { _ in
-                             UIButton.animate(withDuration: ButtonAnimationParameter.animationScaleChangingDuration,
-                                              animations: {
-                                                  self.transform = CGAffineTransform.identity
-                             })
-                         })
+                             self.transform = CGAffineTransform.identity
+         })
     }
 }
