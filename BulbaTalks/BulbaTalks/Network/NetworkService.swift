@@ -30,17 +30,20 @@ class NetworkService {
     private func networkRequest(request: URLRequest,
                                 completion: @escaping (Result<Data, NetworkError>) -> Void) {
         let networkTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard error == nil, let data = data else {
-                completion(.failure(.failedRequest(description:
-                    error?.localizedDescription ?? "The request failed with an undefined error.")))
+            if let error = error {
+                completion(.failure(.failedRequest(description: error.localizedDescription)))
                 return
             }
             guard let httpResponse = response as? HTTPURLResponse else {
-                completion(.failure(.invalidResponse))
+                completion(.failure(.nonHTTPResponse))
                 return
             }
             guard (200...299).contains(httpResponse.statusCode) else {
                 completion(.failure(.badResponse(statusCode: httpResponse.statusCode)))
+                return
+            }
+            guard let data = data else {
+                completion(.failure(.noData))
                 return
             }
             completion(.success(data))
