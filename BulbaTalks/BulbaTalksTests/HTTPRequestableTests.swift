@@ -5,65 +5,88 @@ class HTTPRequestableTests: XCTestCase {
     /**
      Type conforming to the HTTPRequestable protocol for testing.
      */
-    struct TestableStruct: HTTPRequestable {
+    private struct HTTPRequestableStub: HTTPRequestable {
         var method: HTTPMethodType = .post
         var path: String = "validTestPath"
-        var headerParameters: HTTPHeaderParameters = ["firstHeaderParameter": "firstTestValue",
-                                                      "secondHeaderParameter": "secondTestValue"]
+        var headerParameters: HTTPHeaderParameters = ["headerParameter": "headerValue"]
         var queryParameters: HTTPQueryParameters = ["queryKey": "queryValue"]
-        var bodyParameters: HTTPBodyParameters = ["bodyKey": "bodyValue",
-                                                  "anotherBodyKey": "anotherBodyValue"]
+        var bodyParameters: HTTPBodyParameters = ["bodyKey": "bodyValue"]
     }
 
     /**
-     Relative paths used in tests to generate URLs.
+     Base URL of the absolute resource URL. Used in tests to
+     initialize network configurations.
      */
-    private enum RelativePaths {
+    private enum BasePartsOfTheFullURL {
         /**
-         Path used to verify the processing of invalid data.
+         Base URL used to initialize mock network configuration.
          */
-        static let invalidPath = "Invalid path with spaces"
+        static let mockBaseURL = URL(string: "file:///Some/base/URL/to/mock/data/")!
 
         /**
-         Path used to verify the processing of valid data.
+         Base URL used to initialize remote network configuration.
+         */
+        static let remoteBaseURL = URL(string: "https://api.twitter.com/")!
+    }
+
+    /**
+     Relative paths of an absolute resource URL. Used in tests to
+     generate different variants of an absolute resource URL.
+     */
+    private enum RelativePathsOfTheFullURL {
+        /**
+         Relative path of the URL used to form an invalid URL.
+         */
+        static let invalidPathContainingSpaces = "invalidTestPath With Spaces?queryKey=queryValue"
+
+        /**
+         Relative path of the URL used to form a valid URL.
          */
         static let validPath = "validTestPath?queryKey=queryValue"
     }
 
     /**
-     The instance that we are testing.
+     The instance of the type conforming to the HTTPRequestable
+     protocol.
      */
-    var testableStruct: TestableStruct!
+    private var testableStruct: HTTPRequestableStub!
 
     /**
-     Network cofiguration used in `urlRequest(using config:)`
+     Mock network cofiguration used in `urlRequest(:)`
      */
-    var activeConfiguration: NetworkConfiguration!
+    private var mockNetworkConfiguration: MockNetworkConfiguration!
+
+    /**
+     Remote network cofiguration used in `urlRequest(:)`
+     */
+    private var remoteNetworkConfiguration: RemoteNetworkConfiguration!
 
     override func setUp() {
         super.setUp()
-        testableStruct = TestableStruct()
-        activeConfiguration = MockNetworkConfiguration()
+        testableStruct = HTTPRequestableStub()
+        mockNetworkConfiguration = MockNetworkConfiguration(baseURL: BasePartsOfTheFullURL.mockBaseURL,
+                                                            commonHeaders: [:])
+        remoteNetworkConfiguration = RemoteNetworkConfiguration(baseURL: BasePartsOfTheFullURL.remoteBaseURL,
+                                                                commonHeaders: [:])
     }
 
-    func testURLRequestMethodReturnsNilWhenPropertyPathIsInvalidAndConfigurationIsMock() {
+    func testURLRequestMethodReturnsNilWhenPropertyPathContainsSpacesAndNetworkConfigurationIsMock() {
         // Given
+        testableStruct.path = RelativePathsOfTheFullURL.invalidPathContainingSpaces
 
         // When
-        testableStruct.path = RelativePaths.invalidPath
-        let urlRequest = testableStruct.urlRequest(using: activeConfiguration)
+        let urlRequest = testableStruct.urlRequest(using: mockNetworkConfiguration)
 
         // Then
         XCTAssertNil(urlRequest)
     }
 
-    func testURLRequestMethodReturnsNilWhenPropertyPathIsInvalidAndConfigurationIsRemote() {
+    func testURLRequestMethodReturnsNilWhenPropertyPathContainsSpacesAndNetworkConfigurationIsRemote() {
         // Given
-        activeConfiguration = RemoteNetworkConfiguration()
+        testableStruct.path = RelativePathsOfTheFullURL.invalidPathContainingSpaces
 
         // When
-        testableStruct.path = RelativePaths.invalidPath
-        let urlRequest = testableStruct.urlRequest(using: activeConfiguration)
+        let urlRequest = testableStruct.urlRequest(using: remoteNetworkConfiguration)
 
         // Then
         XCTAssertNil(urlRequest)
@@ -71,70 +94,44 @@ class HTTPRequestableTests: XCTestCase {
 
     func testURLRequestMethodReturnsRequestThatContainsExpectedURLForMockConfiguration() {
         // Given
-        let expectedURL = activeConfiguration.baseURL.absoluteString.appending(RelativePaths.validPath)
+        let expectedURL = URL(string: "file:///Some/base/URL/to/mock/data/validTestPath?queryKey=queryValue")
 
         // When
-        let requestURL = testableStruct.urlRequest(using: activeConfiguration)?.url?.absoluteString
+        let requestURL = testableStruct.urlRequest(using: mockNetworkConfiguration)?.url
 
         // Then
+        XCTAssertNotNil(expectedURL)
+        XCTAssertNotNil(requestURL)
         XCTAssertEqual(requestURL, expectedURL)
     }
 
     func testURLRequestMethodReturnsRequestThatContainsExpectedURLForRemoteConfiguration() {
         // Given
-        activeConfiguration = RemoteNetworkConfiguration()
-        let expectedURL = activeConfiguration.baseURL.absoluteString.appending(RelativePaths.validPath)
+        let expectedURL = URL(string: "https://api.twitter.com/validTestPath?queryKey=queryValue")
 
         // When
-        let requestURL = testableStruct.urlRequest(using: activeConfiguration)?.url?.absoluteString
+        let requestURL = testableStruct.urlRequest(using: remoteNetworkConfiguration)?.url
 
         // Then
+        XCTAssertNotNil(expectedURL)
+        XCTAssertNotNil(requestURL)
         XCTAssertEqual(requestURL, expectedURL)
     }
 
-    func testURLRequestMethodReturnsRequestThatContainsExpectedHeaderParametersForMockConfiguration() {
-        // Given
-        let expectedHeaderParameters = testableStruct.headerParameters
-
-        // When
-        let requestHeaderParameters = testableStruct.urlRequest(using: activeConfiguration)?.allHTTPHeaderFields
-
-        // Then
-        XCTAssertEqual(requestHeaderParameters, expectedHeaderParameters)
-    }
-
-    func testURLRequestMethodReturnsRequestThatContainsExpectedHeaderParametersForRemoteConfiguration() {
-        // Given
-        activeConfiguration = RemoteNetworkConfiguration()
-        let expectedHeaderParameters = testableStruct.headerParameters
-
-        // When
-        let requestHeaderParameters = testableStruct.urlRequest(using: activeConfiguration)?.allHTTPHeaderFields
-
-        // Then
-        XCTAssertEqual(requestHeaderParameters, expectedHeaderParameters)
-    }
-
-    func testURLRequestMethodReturnsRequestThatContainsExpectedHTTPMethod() {
+    func testURLRequestMethodReturnsRequestThatContainsExpectedProperties() {
         // Given
         let expectedHTTPMethod = testableStruct.method.rawValue
-
-        // When
-        let requestHTTPMethod = testableStruct.urlRequest(using: activeConfiguration)?.httpMethod
-
-        // Then
-        XCTAssertEqual(requestHTTPMethod, expectedHTTPMethod)
-    }
-
-    func testURLRequestMethodReturnsRequestThatContainsExpectedBody() {
-        // Given
-        let expectedBody = "anotherBodyKey=anotherBodyValue&bodyKey=bodyValue"
+        let expectedHeaderParameters = ["headerParameter": "headerValue"]
+        let expectedBody = "bodyKey=bodyValue"
             .data(using: .ascii, allowLossyConversion: true)
 
         // When
-        let requestBody = testableStruct.urlRequest(using: activeConfiguration)?.httpBody
+        let urlRequest = testableStruct.urlRequest(using: mockNetworkConfiguration)
 
         // Then
-        XCTAssertEqual(requestBody, expectedBody)
+        XCTAssertNotNil(urlRequest)
+        XCTAssertEqual(urlRequest?.httpMethod, expectedHTTPMethod)
+        XCTAssertEqual(urlRequest?.allHTTPHeaderFields, expectedHeaderParameters)
+        XCTAssertEqual(urlRequest?.httpBody, expectedBody)
     }
 }
