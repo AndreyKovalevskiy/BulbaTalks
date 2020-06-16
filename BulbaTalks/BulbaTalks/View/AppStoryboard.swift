@@ -7,6 +7,7 @@ import UIKit
  */
 enum AppStoryboard: String {
     case authorization = "Autorization"
+    case listOfTweets = "ListOfTweets"
 
     /**
      Gets a view controller of the specified type that
