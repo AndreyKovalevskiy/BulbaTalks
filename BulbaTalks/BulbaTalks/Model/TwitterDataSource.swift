@@ -4,10 +4,12 @@ import Foundation
  Describes the methods for receiving data using Twitter API.
  */
 struct TwitterDataSource {
+    // swiftlint:disable line_length
     /**
      Network service that we use to make requests to the Twitter API.
      */
     private let networkService: NetworkService = NetworkService(networkConfiguration: Settings.shared.activeNetworkConfiguration)
+    // swiftlint:enable line_length
 
     /**
      Receives a collection of tweets posted by the authenticated user

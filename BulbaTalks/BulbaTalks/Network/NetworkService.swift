@@ -13,7 +13,7 @@ class NetworkService {
      network configuration.
      */
     init(networkConfiguration: NetworkConfiguration) {
-        self.activeNetworkConfiguration = networkConfiguration
+        activeNetworkConfiguration = networkConfiguration
     }
 
     /**
@@ -29,7 +29,7 @@ class NetworkService {
      */
     private func networkRequest(request: URLRequest,
                                 completion: @escaping (Result<Data, NetworkError>) -> Void) {
-        let networkTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let networkTask = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(.failedRequest(description: error.localizedDescription)))
                 return
@@ -38,7 +38,7 @@ class NetworkService {
                 completion(.failure(.nonHTTPResponse))
                 return
             }
-            guard (200...299).contains(httpResponse.statusCode) else {
+            guard (200 ... 299).contains(httpResponse.statusCode) else {
                 completion(.failure(.badResponse(statusCode: httpResponse.statusCode)))
                 return
             }
@@ -68,7 +68,7 @@ class NetworkService {
             completion(.failure(.invalidURL))
             return
         }
-        
+
         DispatchQueue.global().async {
             if let data = Bundle.main.contentsOfFile(at: mockedURL) {
                 completion(.success(data))
