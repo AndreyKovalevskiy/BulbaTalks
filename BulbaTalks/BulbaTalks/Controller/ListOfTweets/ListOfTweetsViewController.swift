@@ -1,6 +1,18 @@
 import UIKit
 
 class ListOfTweetsViewController: UIViewController {
+    // MARK: - Properties
+
+    /// An authenticated user.
+    var user: User?
+    /// An image of authenticated user.
+    private var imageFromUserProfile: UIImage?
+    /// `UIButton` used to create `UIBarButtonItem`.
+    private let barButtonItem = UIButton(frame:
+        CGRect(x: 0, y: 0,
+               width: ViewControllerConstants.BarButtonItem.width,
+               height: ViewControllerConstants.BarButtonItem.height))
+
     // MARK: - IBOutlet
 
     @IBOutlet var tableView: UITableView!
@@ -9,6 +21,7 @@ class ListOfTweetsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getAuthenticatedUser()
         configureTableView()
         configureTabBar()
         configureTitleViewOfNavigationBar()
@@ -24,6 +37,23 @@ class ListOfTweetsViewController: UIViewController {
     }
 
     // MARK: - Private functions
+
+    /**
+     Gets an authenticated user.
+     */
+    private func getAuthenticatedUser() {
+        TwitterDataSource().getAuthenticatedUser { user in
+            if let user = user {
+                self.user = user
+                Bundle.main.getImage(at: URL(fileURLWithPath: user.profileImageURLString)) { image in
+                    DispatchQueue.main.async {
+                        self.imageFromUserProfile = image
+                        self.barButtonItem.setImage(self.imageFromUserProfile, for: .normal)
+                    }
+                }
+            }
+        }
+    }
 
     /// Configures `UITableView`.
     private func configureTableView() {
@@ -49,11 +79,6 @@ class ListOfTweetsViewController: UIViewController {
      of the authenticated user.
      */
     private func configureLeftBarButtonItem() {
-        let imageFromUserProfile = UIImage(named: "mockedUserImage")
-        let barButtonItem = UIButton(frame:
-            CGRect(x: 0, y: 0,
-                   width: ViewControllerConstants.BarButtonItem.width,
-                   height: ViewControllerConstants.BarButtonItem.height))
         barButtonItem.layer.masksToBounds = true
         barButtonItem.layer.cornerRadius = barButtonItem.frame.height / 2
         barButtonItem.setImage(imageFromUserProfile, for: .normal)
