@@ -1,6 +1,10 @@
 import UIKit
 
 class ListOfTweetsViewController: UIViewController {
+    // MARK: - Property
+
+    var tweets = [Tweet]()
+
     // MARK: - IBOutlet
 
     @IBOutlet var tableView: UITableView!
@@ -13,6 +17,7 @@ class ListOfTweetsViewController: UIViewController {
         configureTabBar()
         configureTitleViewOfNavigationBar()
         configureLeftBarButtonItem()
+        fillTweets()
     }
 
     override func viewDidLayoutSubviews() {
@@ -67,6 +72,18 @@ class ListOfTweetsViewController: UIViewController {
         navigationBar.items = [navigationItem]
     }
 
+    /**
+     Fills `tweets` and reload `tableview`.
+     */
+    private func fillTweets() {
+        TwitterDataSource().getHomeTimeline(since: nil, until: nil) { tweets in
+            self.tweets = tweets
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+
     // MARK: - IBAction
 
     /// Opens the profile of the authenticated user.
@@ -80,14 +97,21 @@ class ListOfTweetsViewController: UIViewController {
 
 extension ListOfTweetsViewController: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 1
+        return tweets.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt _: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueCell(of: ListOfTweetsTableViewCell.self) else {
             return UITableViewCell()
         }
-
+        cell.userNameLabel.text = tweets[indexPath.row].user.name
+        cell.userIdenticalNameLabel.text = "@" + tweets[indexPath.row].user.screenName
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        cell.tweetCreatedAtLabel.text = formatter.string(from: tweets[indexPath.row].createdAt)
+        cell.tweetContentLabel.text = tweets[indexPath.row].text
+        cell.numberOfRetweetsLabel.text = String(tweets[indexPath.row].retweetCount)
+        cell.numberOfFavouritesLabel.text = String(tweets[indexPath.row].favoriteCount)
         return cell
     }
 }
