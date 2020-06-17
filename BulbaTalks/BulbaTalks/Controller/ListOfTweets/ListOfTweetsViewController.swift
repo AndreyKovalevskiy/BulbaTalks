@@ -21,11 +21,11 @@ class ListOfTweetsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAuthenticatedUser()
         configureTableView()
         configureTabBar()
         configureTitleViewOfNavigationBar()
         configureLeftBarButtonItem()
+        getAuthenticatedUser()
     }
 
     override func viewDidLayoutSubviews() {
