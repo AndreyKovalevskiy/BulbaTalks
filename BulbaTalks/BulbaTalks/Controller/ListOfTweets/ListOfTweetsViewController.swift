@@ -39,7 +39,8 @@ class ListOfTweetsViewController: UIViewController {
     // MARK: - Private functions
 
     /**
-     Gets an authenticated user.
+     Gets an authenticated user and his image followed by
+     updating the image in left `UIBarButtonItem`.
      */
     private func getAuthenticatedUser() {
         TwitterDataSource().getAuthenticatedUser { user in
