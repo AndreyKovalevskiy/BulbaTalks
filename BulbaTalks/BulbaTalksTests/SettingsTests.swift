@@ -26,8 +26,7 @@ class SettingsTests: XCTestCase {
 
     func testSettingsIsInitializedWithMockConfigurationWhenUserDefaultsHasInvalidActiveConfigurationKey() {
         // Given
-        let invalidValue = "InvalidValue"
-        UserDefaults.standard.set(invalidValue, forKey: UserDefaultsKeys.activeConfiguration)
+        UserDefaults.standard.set("InvalidValue", forKey: UserDefaultsKeys.activeConfiguration)
 
         // When
         Settings.shared.reset()
@@ -84,6 +83,28 @@ class SettingsTests: XCTestCase {
         // Then
         let activeNC = Settings.shared.activeNetworkConfiguration
         XCTAssert(activeNC is MockNetworkConfiguration)
+    }
+
+    func testActivateNetworkConfigurationMethodChangesActiveNetworkConfigurationToMockAsExpected() {
+        // Given
+
+        // When
+        Settings.shared.activateNetworkConfiguration(of: .mock)
+
+        // Then
+        let activeNC = Settings.shared.activeNetworkConfiguration
+        XCTAssert(activeNC is MockNetworkConfiguration)
+    }
+
+    func testActivateNetworkConfigurationMethodChangesActiveNetworkConfigurationToRemoteAsExpected() {
+        // Given
+
+        // When
+        Settings.shared.activateNetworkConfiguration(of: .remote)
+
+        // Then
+        let activeNC = Settings.shared.activeNetworkConfiguration
+        XCTAssert(activeNC is RemoteNetworkConfiguration)
     }
 
     func testActivateNetworkConfigurationMethodStoresUpdatedRemoteActiveConfigurationInUserDefaults() {
