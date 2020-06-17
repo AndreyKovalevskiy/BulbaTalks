@@ -53,22 +53,13 @@ class TweetTests: XCTestCase {
                           isFavorited: true)
 
         // Then
-        let tweetId = tweet.id
-        let tweetIdString = tweet.idString
-        let tweetCreatedAt = tweet.createdAt
-        let tweetText = tweet.text
-        let tweetRetweetCount = tweet.retweetCount
-        let tweetFavoriteCount = tweet.favoriteCount
-        let tweetIsRetweeted = tweet.isRetweeted
-        let tweetIsFavorited = tweet.isFavorited
-
-        XCTAssertEqual(tweetId, expectedId)
-        XCTAssertEqual(tweetIdString, expectedIdString)
-        XCTAssertEqual(tweetCreatedAt, expectedCreatedAt)
-        XCTAssertEqual(tweetText, expectedText)
-        XCTAssertEqual(tweetRetweetCount, expectedRetweetCount)
-        XCTAssertEqual(tweetFavoriteCount, expectedFavoriteCount)
-        XCTAssertEqual(tweetIsRetweeted, expectedIsRetweeted)
-        XCTAssertEqual(tweetIsFavorited, expectedIsFavorited)
+        XCTAssertEqual(tweet.id, expectedId)
+        XCTAssertEqual(tweet.idString, expectedIdString)
+        XCTAssertEqual(tweet.createdAt, expectedCreatedAt)
+        XCTAssertEqual(tweet.text, expectedText)
+        XCTAssertEqual(tweet.retweetCount, expectedRetweetCount)
+        XCTAssertEqual(tweet.favoriteCount, expectedFavoriteCount)
+        XCTAssertEqual(tweet.isRetweeted, expectedIsRetweeted)
+        XCTAssertEqual(tweet.isFavorited, expectedIsFavorited)
     }
 }
