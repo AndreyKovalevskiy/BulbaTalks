@@ -1,7 +1,7 @@
 import UIKit
 
 class ListOfTweetsViewController: UIViewController {
-    // MARK: - Property
+    // MARK: - Properties
 
     var tweets = [Tweet]()
 
@@ -101,17 +101,18 @@ extension ListOfTweetsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueCell(of: ListOfTweetsTableViewCell.self) else {
+        guard let tweetCell = tableView.dequeueCell(of: ListOfTweetsTableViewCell.self) else {
             return UITableViewCell()
         }
-        cell.userNameLabel.text = tweets[indexPath.row].user.name
-        cell.userIdenticalNameLabel.text = "@" + tweets[indexPath.row].user.screenName
+        let receivedTweet = tweets[indexPath.row]
+        tweetCell.nameLabel.text = receivedTweet.user.name
+        tweetCell.screenNameLabel.text = receivedTweet.user.screenName
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy"
-        cell.tweetCreatedAtLabel.text = formatter.string(from: tweets[indexPath.row].createdAt)
-        cell.tweetContentLabel.text = tweets[indexPath.row].text
-        cell.numberOfRetweetsLabel.text = String(tweets[indexPath.row].retweetCount)
-        cell.numberOfFavouritesLabel.text = String(tweets[indexPath.row].favoriteCount)
-        return cell
+        tweetCell.createdAtLabel.text = formatter.string(from: receivedTweet.createdAt)
+        tweetCell.tweetTextLabel.text = receivedTweet.text
+        tweetCell.retweetCountLabel.text = String(receivedTweet.retweetCount)
+        tweetCell.favoriteCountLabel.text = String(receivedTweet.favoriteCount)
+        return tweetCell
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -49,20 +49,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@Nickame" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIJ-Dx-MZw" userLabel="userIdenticalName">
-                                        <rect key="frame" x="100" y="0.0" width="68" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickame" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIJ-Dx-MZw" userLabel="userIdenticalName">
+                                        <rect key="frame" x="100" y="0.0" width="54.5" height="17"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
                                         <color key="textColor" red="0.396078431372549" green="0.46666666666666667" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wX9-et-SSL" userLabel="point">
-                                        <rect key="frame" x="173" y="-5" width="4" height="17"/>
+                                        <rect key="frame" x="159.5" y="-5" width="4" height="17"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
                                         <color key="textColor" red="0.42745098040000001" green="0.45882352939999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6h" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grL-Or-VMa" userLabel="tweetCreatedAt">
-                                        <rect key="frame" x="182" y="0.0" width="15" height="17"/>
+                                        <rect key="frame" x="168.5" y="0.0" width="15" height="17"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                         </accessibility>
@@ -70,17 +70,24 @@
                                         <color key="textColor" red="0.396078431372549" green="0.46666666666666667" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAv-ys-FiG" userLabel="symbol@">
+                                        <rect key="frame" x="85" y="0.0" width="14" height="17"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
+                                        <color key="textColor" red="0.39607843139999999" green="0.46666666670000001" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4C7-dC-4kg" firstAttribute="top" secondItem="Sr1-eX-ZkR" secondAttribute="top" id="5ug-zl-Pu3"/>
+                                    <constraint firstItem="JIJ-Dx-MZw" firstAttribute="leading" secondItem="sAv-ys-FiG" secondAttribute="trailing" constant="1" id="Epb-gH-c4I"/>
                                     <constraint firstItem="wX9-et-SSL" firstAttribute="leading" secondItem="JIJ-Dx-MZw" secondAttribute="trailing" constant="5" id="Fzg-jG-vYu"/>
                                     <constraint firstAttribute="bottom" secondItem="4C7-dC-4kg" secondAttribute="bottom" id="M9J-mh-0tH"/>
-                                    <constraint firstItem="JIJ-Dx-MZw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4C7-dC-4kg" secondAttribute="trailing" constant="8" symbolic="YES" id="NLj-6n-z6b"/>
+                                    <constraint firstItem="sAv-ys-FiG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4C7-dC-4kg" secondAttribute="trailing" constant="8" symbolic="YES" id="NLj-6n-z6b"/>
                                     <constraint firstAttribute="bottom" secondItem="grL-Or-VMa" secondAttribute="bottom" id="TYH-FG-Sy7"/>
                                     <constraint firstItem="grL-Or-VMa" firstAttribute="top" secondItem="Sr1-eX-ZkR" secondAttribute="top" id="VRg-mC-LN0"/>
                                     <constraint firstItem="4C7-dC-4kg" firstAttribute="leading" secondItem="Sr1-eX-ZkR" secondAttribute="leading" id="acR-Ik-8e0"/>
                                     <constraint firstAttribute="bottom" secondItem="JIJ-Dx-MZw" secondAttribute="bottom" id="arn-8Q-iGT"/>
-                                    <constraint firstItem="JIJ-Dx-MZw" firstAttribute="leading" secondItem="4C7-dC-4kg" secondAttribute="leading" constant="100" id="eNg-4t-knf"/>
+                                    <constraint firstItem="sAv-ys-FiG" firstAttribute="leading" secondItem="4C7-dC-4kg" secondAttribute="leading" constant="85" id="eNg-4t-knf"/>
                                     <constraint firstItem="grL-Or-VMa" firstAttribute="leading" secondItem="wX9-et-SSL" secondAttribute="trailing" constant="5" id="ogA-bR-Ol1"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="grL-Or-VMa" secondAttribute="trailing" constant="20" symbolic="YES" id="rge-ok-KBc"/>
                                     <constraint firstItem="JIJ-Dx-MZw" firstAttribute="top" secondItem="Sr1-eX-ZkR" secondAttribute="top" id="xP2-jb-sxM"/>
@@ -261,7 +268,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="sAv-ys-FiG" firstAttribute="top" secondItem="Sr1-eX-ZkR" secondAttribute="top" id="5Rh-R6-H99"/>
                             <constraint firstItem="Sr1-eX-ZkR" firstAttribute="top" secondItem="1Nj-8I-DVd" secondAttribute="top" id="5iE-dL-9I7"/>
+                            <constraint firstItem="Sr1-eX-ZkR" firstAttribute="bottom" secondItem="sAv-ys-FiG" secondAttribute="bottom" id="7cD-uE-ytL"/>
                             <constraint firstItem="Y5G-hP-kSc" firstAttribute="leading" secondItem="1Nj-8I-DVd" secondAttribute="leading" id="FO6-YY-AKP"/>
                             <constraint firstAttribute="trailing" secondItem="Sr1-eX-ZkR" secondAttribute="trailing" id="Nly-bP-Dzl"/>
                             <constraint firstAttribute="trailing" secondItem="Zy7-U4-iUh" secondAttribute="trailing" id="Ttb-eM-tfV"/>
@@ -293,15 +302,15 @@
                 <constraint firstAttribute="trailing" secondItem="mtA-g7-dkt" secondAttribute="trailing" id="w9T-F1-TO8"/>
             </constraints>
             <connections>
-                <outlet property="numberOfCommentsLabel" destination="bmr-O2-DZT" id="0rI-8e-08Z"/>
-                <outlet property="numberOfFavouritesLabel" destination="gR6-mL-b0c" id="ghH-YP-w89"/>
-                <outlet property="numberOfRetweetsLabel" destination="dkU-wC-2j1" id="4qD-6w-rG4"/>
-                <outlet property="tweetContentLabel" destination="bC6-my-myU" id="H8u-tp-ttS"/>
-                <outlet property="tweetCreatedAtLabel" destination="grL-Or-VMa" id="Fep-Ts-nyl"/>
+                <outlet property="commentCountLabel" destination="bmr-O2-DZT" id="0rI-8e-08Z"/>
+                <outlet property="createdAtLabel" destination="grL-Or-VMa" id="Fep-Ts-nyl"/>
+                <outlet property="favoriteCountLabel" destination="gR6-mL-b0c" id="ghH-YP-w89"/>
+                <outlet property="nameLabel" destination="4C7-dC-4kg" id="GCv-tH-epl"/>
+                <outlet property="retweetCountLabel" destination="dkU-wC-2j1" id="4qD-6w-rG4"/>
+                <outlet property="screenNameLabel" destination="JIJ-Dx-MZw" id="0rQ-yE-JhC"/>
                 <outlet property="tweetMediaImageView" destination="Vq3-rO-NRU" id="y74-eu-eb5"/>
+                <outlet property="tweetTextLabel" destination="bC6-my-myU" id="H8u-tp-ttS"/>
                 <outlet property="tweetURLLabel" destination="jey-Zh-wSP" id="qRa-cK-2oK"/>
-                <outlet property="userIdenticalNameLabel" destination="JIJ-Dx-MZw" id="0rQ-yE-JhC"/>
-                <outlet property="userNameLabel" destination="4C7-dC-4kg" id="GCv-tH-epl"/>
             </connections>
             <point key="canvasLocation" x="165.21739130434784" y="151.00446428571428"/>
         </tableViewCell>

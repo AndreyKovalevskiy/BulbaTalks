@@ -3,15 +3,15 @@ import UIKit
 class ListOfTweetsTableViewCell: UITableViewCell {
     // MARK: - IBOutlet
 
-    @IBOutlet var userNameLabel: UILabel!
-    @IBOutlet var userIdenticalNameLabel: UILabel!
-    @IBOutlet var tweetCreatedAtLabel: UILabel!
-    @IBOutlet var tweetContentLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var screenNameLabel: UILabel!
+    @IBOutlet var createdAtLabel: UILabel!
+    @IBOutlet var tweetTextLabel: UILabel!
     @IBOutlet var tweetURLLabel: UILabel!
     @IBOutlet var tweetMediaImageView: RoundedImageView!
-    @IBOutlet var numberOfCommentsLabel: UILabel!
-    @IBOutlet var numberOfRetweetsLabel: UILabel!
-    @IBOutlet var numberOfFavouritesLabel: UILabel!
+    @IBOutlet var commentCountLabel: UILabel!
+    @IBOutlet var retweetCountLabel: UILabel!
+    @IBOutlet var favoriteCountLabel: UILabel!
 
     // MARK: - IBAction
 
