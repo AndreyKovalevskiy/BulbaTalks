@@ -33,16 +33,11 @@ class HTTPRequestableTests: XCTestCase {
      Relative paths of an absolute resource URL. Used in tests to
      generate different variants of an absolute resource URL.
      */
-    private enum RelativePathsOfTheFullURL {
+    private enum RelativePathsOfTheAbsoluteURL {
         /**
          Relative path of the URL used to form an invalid URL.
          */
         static let invalidPathContainingSpaces = "invalidTestPath With Spaces?queryKey=queryValue"
-
-        /**
-         Relative path of the URL used to form a valid URL.
-         */
-        static let validPath = "validTestPath?queryKey=queryValue"
     }
 
     /**
@@ -72,7 +67,7 @@ class HTTPRequestableTests: XCTestCase {
 
     func testURLRequestMethodReturnsNilWhenPropertyPathContainsSpacesAndNetworkConfigurationIsMock() {
         // Given
-        testableStruct.path = RelativePathsOfTheFullURL.invalidPathContainingSpaces
+        testableStruct.path = RelativePathsOfTheAbsoluteURL.invalidPathContainingSpaces
 
         // When
         let urlRequest = testableStruct.urlRequest(using: mockNetworkConfiguration)
@@ -83,7 +78,7 @@ class HTTPRequestableTests: XCTestCase {
 
     func testURLRequestMethodReturnsNilWhenPropertyPathContainsSpacesAndNetworkConfigurationIsRemote() {
         // Given
-        testableStruct.path = RelativePathsOfTheFullURL.invalidPathContainingSpaces
+        testableStruct.path = RelativePathsOfTheAbsoluteURL.invalidPathContainingSpaces
 
         // When
         let urlRequest = testableStruct.urlRequest(using: remoteNetworkConfiguration)
