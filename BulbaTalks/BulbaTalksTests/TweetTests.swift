@@ -41,16 +41,16 @@ class TweetTests: XCTestCase {
         let expectedIsFavorited = true
 
         // When
-        let tweet = Tweet(id: 2_085_118_657_991_131_728,
-                          idString: "2085118657991131728",
-                          createdAt: Date(),
-                          text: "This is realy Twitter API",
+        let tweet = Tweet(id: expectedId,
+                          idString: expectedIdString,
+                          createdAt: expectedCreatedAt,
+                          text: expectedText,
                           user: user,
                           entities: tweetEntities,
-                          retweetCount: 5,
-                          favoriteCount: 10,
-                          isRetweeted: true,
-                          isFavorited: true)
+                          retweetCount: expectedRetweetCount,
+                          favoriteCount: expectedFavoriteCount,
+                          isRetweeted: expectedIsRetweeted,
+                          isFavorited: expectedIsFavorited)
 
         // Then
         XCTAssertEqual(tweet.id, expectedId)
