@@ -5,8 +5,7 @@ class ListOfTweetsViewController: UIViewController {
 
     /// An authenticated user.
     var user: User?
-    /// An image of authenticated user.
-    private var imageFromUserProfile: UIImage?
+
     /// `UIButton` used to create `UIBarButtonItem`.
     private let barButtonItem = UIButton(frame:
         CGRect(x: 0, y: 0,
@@ -40,7 +39,7 @@ class ListOfTweetsViewController: UIViewController {
 
     /**
      Gets an authenticated user and his image followed by
-     updating the image in left `UIBarButtonItem`.
+     adding the image in the left `UIBarButtonItem`.
      */
     private func getAuthenticatedUser() {
         TwitterDataSource().getAuthenticatedUser { user in
@@ -48,8 +47,7 @@ class ListOfTweetsViewController: UIViewController {
                 self.user = user
                 Bundle.main.getImage(at: URL(fileURLWithPath: user.profileImageURLString)) { image in
                     DispatchQueue.main.async {
-                        self.imageFromUserProfile = image
-                        self.barButtonItem.setImage(self.imageFromUserProfile, for: .normal)
+                        self.barButtonItem.setImage(image, for: .normal)
                     }
                 }
             }
@@ -76,13 +74,11 @@ class ListOfTweetsViewController: UIViewController {
     }
 
     /**
-     Adds a rounded left `UIBarButtonItem` with the image
-     of the authenticated user.
+     Adds a rounded left `UIBarButtonItem`.
      */
     private func configureLeftBarButtonItem() {
         barButtonItem.layer.masksToBounds = true
         barButtonItem.layer.cornerRadius = barButtonItem.frame.height / 2
-        barButtonItem.setImage(imageFromUserProfile, for: .normal)
         barButtonItem.widthAnchor.constraint(equalToConstant:
             ViewControllerConstants.BarButtonItem.Anchor.width).isActive = true
         barButtonItem.heightAnchor.constraint(equalToConstant:
