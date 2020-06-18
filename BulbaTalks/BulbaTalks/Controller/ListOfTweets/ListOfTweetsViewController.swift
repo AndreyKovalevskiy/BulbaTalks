@@ -3,6 +3,7 @@ import UIKit
 class ListOfTweetsViewController: UIViewController {
     // MARK: - Properties
 
+    /// List of tweets to display on the screen.
     var tweets = [Tweet]()
 
     // MARK: - IBOutlet
