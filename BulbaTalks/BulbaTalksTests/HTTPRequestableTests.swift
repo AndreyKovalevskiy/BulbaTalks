@@ -14,10 +14,10 @@ class HTTPRequestableTests: XCTestCase {
     }
 
     /**
-     Base URL of the absolute resource URL. Used in tests to
-     initialize network configurations.
+     Base URL of the absolute resource URL. Contains base URL
+     used in tests to initialize network configurations.
      */
-    private enum BasePartsOfTheFullURL {
+    private enum BasePartsOfTheAbsoluteURL {
         /**
          Base URL used to initialize mock network configuration.
          */
@@ -64,9 +64,9 @@ class HTTPRequestableTests: XCTestCase {
     override func setUp() {
         super.setUp()
         testableStruct = HTTPRequestableStub()
-        mockNetworkConfiguration = MockNetworkConfiguration(baseURL: BasePartsOfTheFullURL.mockBaseURL,
+        mockNetworkConfiguration = MockNetworkConfiguration(baseURL: BasePartsOfTheAbsoluteURL.mockBaseURL,
                                                             commonHeaders: [:])
-        remoteNetworkConfiguration = RemoteNetworkConfiguration(baseURL: BasePartsOfTheFullURL.remoteBaseURL,
+        remoteNetworkConfiguration = RemoteNetworkConfiguration(baseURL: BasePartsOfTheAbsoluteURL.remoteBaseURL,
                                                                 commonHeaders: [:])
     }
 
