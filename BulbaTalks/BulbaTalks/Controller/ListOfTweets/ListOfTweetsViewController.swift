@@ -3,14 +3,20 @@ import UIKit
 class ListOfTweetsViewController: UIViewController {
     // MARK: - Properties
 
-    /// An authenticated user.
+    /**
+     An authenticated user, or `nil` if the authenticated user was
+     not received.
+     */
     var user: User?
 
-    /// `UIButton` used to create `UIBarButtonItem`.
+    /**
+     `UIButton` used to create a left `UIBarButtonItem`
+     of navigation bar.
+     */
     private let barButtonItem = UIButton(frame:
         CGRect(x: 0, y: 0,
-               width: ViewControllerConstants.BarButtonItem.width,
-               height: ViewControllerConstants.BarButtonItem.height))
+               width: Constants.BarButtonItem.width,
+               height: Constants.BarButtonItem.height))
 
     // MARK: - IBOutlet
 
@@ -18,30 +24,35 @@ class ListOfTweetsViewController: UIViewController {
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var tabBar: UITabBar!
 
+    // MARK: - Instance Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
         configureTabBar()
         configureTitleViewOfNavigationBar()
         configureLeftBarButtonItem()
-        getAuthenticatedUser()
+        getAndFillAuthenticatedUserAndSetImageInNavigationBar()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if UIDevice.current.orientation.isLandscape {
-            tabBar.frame.size.height = ViewControllerConstants.TabBar.heightInLandscapeOrientation
-            tabBar.frame.origin.y = view.frame.height - ViewControllerConstants.TabBar.heightInLandscapeOrientation
+            tabBar.frame.size.height = Constants.TabBar.heightInLandscapeOrientation
+            tabBar.frame.origin.y = view.frame.height - Constants.TabBar.heightInLandscapeOrientation
         }
     }
 
     // MARK: - Private functions
 
     /**
-     Gets an authenticated user and his image followed by
-     adding the image in the left `UIBarButtonItem`.
+     Gets an authenticated user, or `nil`
+     if the authenticated user was not received.
+     If user was received, fill received user and
+     set the user's image in the left `UIBarButtonItem`
+     of navigation bar.
      */
-    private func getAuthenticatedUser() {
+    private func getAndFillAuthenticatedUserAndSetImageInNavigationBar() {
         TwitterDataSource().getAuthenticatedUser { user in
             if let user = user {
                 self.user = user
@@ -74,15 +85,15 @@ class ListOfTweetsViewController: UIViewController {
     }
 
     /**
-     Adds a rounded left `UIBarButtonItem`.
+     Adds a rounded left `UIBarButtonItem` of navigation bar.
      */
     private func configureLeftBarButtonItem() {
         barButtonItem.layer.masksToBounds = true
         barButtonItem.layer.cornerRadius = barButtonItem.frame.height / 2
         barButtonItem.widthAnchor.constraint(equalToConstant:
-            ViewControllerConstants.BarButtonItem.Anchor.width).isActive = true
+            Constants.BarButtonItem.Anchor.width).isActive = true
         barButtonItem.heightAnchor.constraint(equalToConstant:
-            ViewControllerConstants.BarButtonItem.Anchor.height).isActive = true
+            Constants.BarButtonItem.Anchor.height).isActive = true
         barButtonItem.addTarget(self, action: #selector(openProfile), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: barButtonItem)
 
