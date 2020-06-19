@@ -19,13 +19,12 @@ class HTTPEndpointTests: XCTestCase {
                                             bodyParameters: expectedBodyParameters)
 
         // Then
-        let value = timelineEndpoint.bodyParameters["bodyParameterName"] as? String
-
         XCTAssertEqual(timelineEndpoint.method, expectedMethod)
         XCTAssertEqual(timelineEndpoint.path, expectedPath)
         XCTAssertEqual(timelineEndpoint.headerParameters, expectedHeaderParameters)
         XCTAssertEqual(timelineEndpoint.queryParameters, expectedQueryParameters)
-        XCTAssertNotNil(value)
-        XCTAssertEqual(value, expectedParameterValue)
+        let bodyParameterValue = timelineEndpoint.bodyParameters["bodyParameterName"] as? String
+        XCTAssertNotNil(bodyParameterValue)
+        XCTAssertEqual(bodyParameterValue, expectedParameterValue)
     }
 }
