@@ -34,7 +34,7 @@ class TweetTests: XCTestCase {
         let expectedId = 2_085_118_657_991_131_728
         let expectedIdString = "2085118657991131728"
         let expectedCreatedAt = Date()
-        let expectedText = "This is realy Twitter API"
+        let expectedText = "This is really Twitter API"
         let expectedRetweetCount = 5
         let expectedFavoriteCount = 10
         let expectedIsRetweeted = true
