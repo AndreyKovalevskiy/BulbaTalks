@@ -34,8 +34,8 @@ struct TwitterDataSource {
        getting the tweets. Takes the array of `Tweet` objects. If an
        error occurred while receiving tweets, the array is empty.
      */
-    public func getHomeTimeline(since firstTweet: Tweet?,
-                                until lastTweet: Tweet?,
+    public func getHomeTimeline(since firstTweet: Tweet? = nil,
+                                until lastTweet: Tweet? = nil,
                                 completion: @escaping ([Tweet]) -> Void) {
         var queryParameters = HTTPQueryParameters()
         queryParameters["since_id"] = firstTweet?.idString
