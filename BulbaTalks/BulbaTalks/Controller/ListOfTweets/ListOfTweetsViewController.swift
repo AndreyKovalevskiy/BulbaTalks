@@ -18,6 +18,8 @@ class ListOfTweetsViewController: UIViewController {
         configureTabBar()
         configureTitleViewOfNavigationBar()
         configureLeftBarButtonItem()
+
+        /// Gets tweets and show them on the screen.
         TwitterDataSource().getHomeTimeline { tweets in
             self.tweets = tweets
             DispatchQueue.main.async {
