@@ -8,7 +8,7 @@ class ListOfTweetsViewController: UIViewController {
 
     // MARK: - IBOutlet
 
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var tableView: UITableView!
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var tabBar: UITabBar!
 
