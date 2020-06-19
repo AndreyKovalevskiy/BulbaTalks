@@ -4,8 +4,10 @@ import XCTest
 class APIEndpointsTests: XCTestCase {
     func testGetHomeTimelineMethodReturnsExpectedHTTPEndpoint() {
         // Given
-        let expectedHeaderParameters = ["firstHeaderKey": "firstHeaderValue",
-                                        "secondHeaderKey": "secondHeaderValue"]
+        let expectedMethodType = HTTPMethodType.get
+        let expectedPath = "1.1/statuses/home_timeline.json"
+        let expectedHeaderParameters = ["firstHeaderName": "firstHeaderValue",
+                                        "secondHeaderName": "secondHeaderValue"]
         let expectedQueryParameters = ["firstQueryKey": "firstQueryValue",
                                        "secondQueryKey": "secondQueryValue"]
 
@@ -14,8 +16,8 @@ class APIEndpointsTests: XCTestCase {
                                                     queryParameters: expectedQueryParameters)
 
         // Then
-        XCTAssertEqual(endpoint.method, HTTPMethodType.get)
-        XCTAssertEqual(endpoint.path, "1.1/statuses/home_timeline.json")
+        XCTAssertEqual(endpoint.method, expectedMethodType)
+        XCTAssertEqual(endpoint.path, expectedPath)
         XCTAssertEqual(endpoint.headerParameters, expectedHeaderParameters)
         XCTAssertEqual(endpoint.queryParameters, expectedQueryParameters)
         XCTAssert(endpoint.bodyParameters.isEmpty)
@@ -23,15 +25,17 @@ class APIEndpointsTests: XCTestCase {
 
     func testGetAuthenticatedUserMethodReturnsExpectedHTTPEndpoint() {
         // Given
-        let expectedHeaderParameters = ["firstHeaderKey": "firstHeaderValue",
-                                        "secondHeaderKey": "secondHeaderValue"]
+        let expectedMethodType = HTTPMethodType.get
+        let expectedPath = "1.1/account/verify_credentials.json"
+        let expectedHeaderParameters = ["firstHeaderName": "firstHeaderValue",
+                                        "secondHeaderName": "secondHeaderValue"]
 
         // When
         let endpoint = APIEndpoints.getAuthenticatedUser(with: expectedHeaderParameters)
 
         // Then
-        XCTAssertEqual(endpoint.method, HTTPMethodType.get)
-        XCTAssertEqual(endpoint.path, "1.1/account/verify_credentials.json")
+        XCTAssertEqual(endpoint.method, expectedMethodType)
+        XCTAssertEqual(endpoint.path, expectedPath)
         XCTAssertEqual(endpoint.headerParameters, expectedHeaderParameters)
         XCTAssert(endpoint.queryParameters.isEmpty)
         XCTAssert(endpoint.bodyParameters.isEmpty)
