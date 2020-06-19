@@ -3,10 +3,9 @@ import XCTest
 
 class AuthenticationTests: XCTestCase {
     /**
-     Keys associated with values in the current user‘s defaults
-     database.
+     Contains keys used to access data in UserDefaults.
      */
-    private enum UserDefaultsKey {
+    private enum UserDefaultsKeys {
         /**
          Key to access the value of the boolean flag
          indicating whether the user is signed in.
@@ -14,77 +13,73 @@ class AuthenticationTests: XCTestCase {
         static let isSignedIn = "isSignedIn"
     }
 
-    func testIsSignedInPropertyIsInitializedWithTrueWhenUserDefaultsHasTrueIsSignedInKey() {
+    func testIsSignedInPropertyReturnsTrueWhenUserDefaultsHasTrueValueForSignedInKey() {
         // Given
-        let expectedIsSignedIn = true
+        let expectedAuthorizationStatus = true
 
         // When
-        UserDefaults.standard.set(true, forKey: UserDefaultsKey.isSignedIn)
+        UserDefaults.standard.set(true, forKey: UserDefaultsKeys.isSignedIn)
 
         // Then
-        let isSignedIn = Authentication.isSignedIn
-        XCTAssertEqual(isSignedIn, expectedIsSignedIn)
+        XCTAssertEqual(Authentication.isSignedIn, expectedAuthorizationStatus)
     }
 
-    func testIsSignedInPropertyIsInitializedWithFalseWhenUserDefaultsHasEmptyIsSignedInKey() {
+    func testIsSignedInPropertyReturnsFalseWhenUserDefaultsHasEmptyValueForSignedInKey() {
         // Given
-        let expectedIsSignedIn = false
+        let expectedAuthorizationStatus = false
 
         // When
-        UserDefaults.standard.removeObject(forKey: UserDefaultsKey.isSignedIn)
+        UserDefaults.standard.removeObject(forKey: UserDefaultsKeys.isSignedIn)
 
         // Then
-        let isSignedIn = Authentication.isSignedIn
-        XCTAssertEqual(isSignedIn, expectedIsSignedIn)
+        XCTAssertEqual(Authentication.isSignedIn, expectedAuthorizationStatus)
     }
 
-    func testSignInMethodСhangesIsSignedInProperty() {
+    func testSignInMethodSetsIsSignedInPropertyToTrue() {
         // Given
-        let expectedIsSignedIn = true
+        let expectedAuthorizationStatus = true
 
         // When
         Authentication.signIn { _ in }
 
         // Then
-        let isSignedIn = Authentication.isSignedIn
-        XCTAssertEqual(isSignedIn, expectedIsSignedIn)
+        XCTAssertEqual(Authentication.isSignedIn, expectedAuthorizationStatus)
     }
 
-    func testSignOutMethodСhangesIsSignedInProperty() {
+    func testSignOutMethodSetsIsSignedInPropertyToFalse() {
         // Given
-        let expectedIsSignedIn = false
+        let expectedAuthorizationStatus = false
 
         // When
         Authentication.signOut { _ in }
 
         // Then
-        let isSignedIn = Authentication.isSignedIn
-        XCTAssertEqual(isSignedIn, expectedIsSignedIn)
+        XCTAssertEqual(Authentication.isSignedIn, expectedAuthorizationStatus)
     }
 
-    func testSignInMethodСhangesIsSignedInPropertyInUserDefaults() {
+    func testSignInMethodStoresSignedInStatusInUserDefaults() {
         // Given
-        let expectedIsSignedIn = true
+        let expectedAuthorizationStatus = true
 
         // When
         Authentication.signIn { _ in }
 
         // Then
-        let userDefaultsIsSignedIn = UserDefaults.standard.bool(forKey: UserDefaultsKey.isSignedIn)
-        XCTAssertNotNil(userDefaultsIsSignedIn)
-        XCTAssertEqual(userDefaultsIsSignedIn, expectedIsSignedIn)
+        let signedInStoredStatus = UserDefaults.standard.bool(forKey: UserDefaultsKeys.isSignedIn)
+        XCTAssertNotNil(signedInStoredStatus)
+        XCTAssertEqual(signedInStoredStatus, expectedAuthorizationStatus)
     }
 
-    func testSignOutMethodСhangesIsSignedInPropertyInUserDefaults() {
+    func testSignOutMethodStoresSignedInStatusInUserDefaults() {
         // Given
-        let expectedIsSignedIn = false
+        let expectedAuthorizationStatus = false
 
         // When
         Authentication.signOut { _ in }
 
         // Then
-        let userDefaultsIsSignedIn = UserDefaults.standard.bool(forKey: UserDefaultsKey.isSignedIn)
-        XCTAssertNotNil(userDefaultsIsSignedIn)
-        XCTAssertEqual(userDefaultsIsSignedIn, expectedIsSignedIn)
+        let signedInStoredStatus = UserDefaults.standard.bool(forKey: UserDefaultsKeys.isSignedIn)
+        XCTAssertNotNil(signedInStoredStatus)
+        XCTAssertEqual(signedInStoredStatus, expectedAuthorizationStatus)
     }
 }
