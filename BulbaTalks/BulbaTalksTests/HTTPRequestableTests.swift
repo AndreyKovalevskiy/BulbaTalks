@@ -3,17 +3,6 @@ import XCTest
 
 class HTTPRequestableTests: XCTestCase {
     /**
-     Type conforming to the HTTPRequestable protocol for testing.
-     */
-    private struct HTTPRequestableStub: HTTPRequestable {
-        var method: HTTPMethodType = .post
-        var path: String = "validTestPath"
-        var headerParameters: HTTPHeaderParameters = ["headerParameter": "headerValue"]
-        var queryParameters: HTTPQueryParameters = ["queryKey": "queryValue"]
-        var bodyParameters: HTTPBodyParameters = ["bodyKey": "bodyValue"]
-    }
-
-    /**
      Base URL of the absolute resource URL. Contains base URL
      used in tests to initialize network configurations.
      */

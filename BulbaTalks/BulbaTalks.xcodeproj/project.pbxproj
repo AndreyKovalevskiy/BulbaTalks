@@ -49,6 +49,7 @@
 		A8A54A1E247FB8C10089FD8D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A1C247FB8C00089FD8D /* LoginButton.swift */; };
 		A8A54A21247FB9250089FD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A20247FB9250089FD8D /* AuthorizationViewController.swift */; };
 		A8A54A24247FB92E0089FD8D /* UIViewController+StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */; };
+		AA31B1C7249CD58300962807 /* HTTPRequestableStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31B1C6249CD58300962807 /* HTTPRequestableStub.swift */; };
 		AA846171247EB20400BC950C /* HTTPRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA84616F247EB20300BC950C /* HTTPRequestable.swift */; };
 		AA846172247EB20400BC950C /* HTTPMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA846170247EB20400BC950C /* HTTPMethodType.swift */; };
 		AA5938DA2465875700EAFA74 /* TwitterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5938D92465875700EAFA74 /* TwitterDataSource.swift */; };
@@ -114,6 +115,7 @@
 		A8A54A22247FB92E0089FD8D /* UIViewController+StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardID.swift"; sourceTree = "<group>"; };
 		A8A57CD0248E52A10033EE2C /* BulbaTalksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BulbaTalksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A57CD4248E52A10033EE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA31B1C6249CD58300962807 /* HTTPRequestableStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestableStub.swift; sourceTree = "<group>"; };
 		AA84616F247EB20300BC950C /* HTTPRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestable.swift; sourceTree = "<group>"; };
 		AA846170247EB20400BC950C /* HTTPMethodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethodType.swift; sourceTree = "<group>"; };
 		AA5938D92465875700EAFA74 /* TwitterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDataSource.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				A8A57CD4248E52A10033EE2C /* Info.plist */,
 				AA98F7BC2490F83000851D1A /* SettingsTests.swift */,
 				AAE84A37249270F500DC8FFA /* HTTPRequestableTests.swift */,
+				AA31B1C6249CD58300962807 /* HTTPRequestableStub.swift */,
 			);
 			path = BulbaTalksTests;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				AA98F7BD2490F83000851D1A /* SettingsTests.swift in Sources */,
 				421032DE2490252600B2D2D2 /* HTTPEndpointTests.swift in Sources */,
 				AAE84A38249270F500DC8FFA /* HTTPRequestableTests.swift in Sources */,
+				AA31B1C7249CD58300962807 /* HTTPRequestableStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
