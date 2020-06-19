@@ -15,7 +15,7 @@ class Settings {
     /**
      A shared singleton settings object.
      */
-    static let shared = Settings()
+    private(set) static var shared = Settings()
 
     /**
      Describes the keys for the user defaults database.
@@ -42,6 +42,15 @@ class Settings {
                                       forKey: Keys.activeConfiguration)
         }
     }
+
+    #if DEBUG
+        /**
+         Reinitialize current instance.
+         */
+        func reset() {
+            Settings.shared = Settings()
+        }
+    #endif
 
     /**
      Activates the network configuration with a given type.
