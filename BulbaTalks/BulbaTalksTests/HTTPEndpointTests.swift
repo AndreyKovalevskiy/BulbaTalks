@@ -8,8 +8,9 @@ class HTTPEndpointTests: XCTestCase {
         let expectedPath = "1.1/statuses/home_timeline.json"
         let expectedHeaderParameters = [String: String]()
         let expectedQueryParameters = [String: String]()
-        let expectedBodyParameters = ["bodyParameterName": "bodyParameterValue"]
-        let expectedParameterValue = expectedBodyParameters["bodyParameterName"]
+        let bodyParameterKey = "bodyParameterName"
+        let expectedBodyParameters = [bodyParameterKey: "bodyParameterValue"]
+        let expectedParameterValue = expectedBodyParameters[bodyParameterKey]
 
         // When
         let timelineEndpoint = HTTPEndpoint(method: expectedMethod,
@@ -23,7 +24,8 @@ class HTTPEndpointTests: XCTestCase {
         XCTAssertEqual(timelineEndpoint.path, expectedPath)
         XCTAssertEqual(timelineEndpoint.headerParameters, expectedHeaderParameters)
         XCTAssertEqual(timelineEndpoint.queryParameters, expectedQueryParameters)
-        let bodyParameterValue = timelineEndpoint.bodyParameters["bodyParameterName"] as? String
+
+        let bodyParameterValue = timelineEndpoint.bodyParameters[bodyParameterKey] as? String
         XCTAssertNotNil(bodyParameterValue)
         XCTAssertEqual(bodyParameterValue, expectedParameterValue)
     }
