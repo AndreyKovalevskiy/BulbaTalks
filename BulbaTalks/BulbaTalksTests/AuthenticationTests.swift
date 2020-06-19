@@ -82,4 +82,27 @@ class AuthenticationTests: XCTestCase {
         XCTAssertNotNil(signedInStoredStatus)
         XCTAssertEqual(signedInStoredStatus, expectedAuthorizationStatus)
     }
+
+    func testIsSignedInPropertyReturnsFalseWhenUserDefaultsHasInvalidValueForSignedInKey() {
+        // Given
+        let expectedAuthorizationStatus = false
+
+        // When
+        UserDefaults.standard.set("InvalidValue", forKey: UserDefaultsKeys.isSignedIn)
+
+        // Then
+        XCTAssertEqual(Authentication.isSignedIn, expectedAuthorizationStatus)
+    }
+
+    func testIsSignedInPropertyReturnsTrueWhenSignInMethodCallsSequentially() {
+        // Given
+        let expectedAuthorizationStatus = true
+
+        // When
+        Authentication.signIn { _ in }
+        Authentication.signIn { _ in }
+
+        // Then
+        XCTAssertEqual(Authentication.isSignedIn, expectedAuthorizationStatus)
+    }
 }
