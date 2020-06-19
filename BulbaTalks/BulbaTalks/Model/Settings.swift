@@ -45,7 +45,7 @@ class Settings {
 
     #if DEBUG
         /**
-         Reinitialize a singletone instance.
+         Reinitialize current instance.
          */
         func reset() {
             Settings.shared = Settings()

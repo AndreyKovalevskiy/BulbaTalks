@@ -85,10 +85,8 @@ class SettingsTests: XCTestCase {
         XCTAssert(activeNC is MockNetworkConfiguration)
     }
 
-    func testActivateNetworkConfigurationMethodChangesActiveNetworkConfigurationToMockAsExpected() {
-        // Given
-
-        // When
+    func testActivateNetworkConfigurationMethodChangesActiveNetworkConfigurationToMockConfiguration() {
+        // Given // When
         Settings.shared.activateNetworkConfiguration(of: .mock)
 
         // Then
@@ -96,10 +94,8 @@ class SettingsTests: XCTestCase {
         XCTAssert(activeNC is MockNetworkConfiguration)
     }
 
-    func testActivateNetworkConfigurationMethodChangesActiveNetworkConfigurationToRemoteAsExpected() {
-        // Given
-
-        // When
+    func testActivateNetworkConfigurationMethodChangesActiveNetworkConfigurationToRemoteConfiguration() {
+        // Given // When
         Settings.shared.activateNetworkConfiguration(of: .remote)
 
         // Then
