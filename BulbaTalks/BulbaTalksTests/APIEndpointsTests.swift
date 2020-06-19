@@ -2,7 +2,7 @@
 import XCTest
 
 class APIEndpointsTests: XCTestCase {
-    func testGetHomeTimelineMethodReturnsExpectedHTTPEndpoint() {
+    func testGetHomeTimelineMethodReturnsHomeTimelineHTTPEndpointWithGivenParameters() {
         // Given
         let expectedMethodType = HTTPMethodType.get
         let expectedPath = "1.1/statuses/home_timeline.json"
@@ -20,10 +20,10 @@ class APIEndpointsTests: XCTestCase {
         XCTAssertEqual(endpoint.path, expectedPath)
         XCTAssertEqual(endpoint.headerParameters, expectedHeaderParameters)
         XCTAssertEqual(endpoint.queryParameters, expectedQueryParameters)
-        XCTAssert(endpoint.bodyParameters.isEmpty)
+        XCTAssertTrue(endpoint.bodyParameters.isEmpty)
     }
 
-    func testGetAuthenticatedUserMethodReturnsExpectedHTTPEndpoint() {
+    func testGetAuthenticatedUserMethodReturnsAuthenticatedUserHTTPEndpointWithGivenParameters() {
         // Given
         let expectedMethodType = HTTPMethodType.get
         let expectedPath = "1.1/account/verify_credentials.json"
@@ -37,7 +37,7 @@ class APIEndpointsTests: XCTestCase {
         XCTAssertEqual(endpoint.method, expectedMethodType)
         XCTAssertEqual(endpoint.path, expectedPath)
         XCTAssertEqual(endpoint.headerParameters, expectedHeaderParameters)
-        XCTAssert(endpoint.queryParameters.isEmpty)
-        XCTAssert(endpoint.bodyParameters.isEmpty)
+        XCTAssertTrue(endpoint.queryParameters.isEmpty)
+        XCTAssertTrue(endpoint.bodyParameters.isEmpty)
     }
 }
