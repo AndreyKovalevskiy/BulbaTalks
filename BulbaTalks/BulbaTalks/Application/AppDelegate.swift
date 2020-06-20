@@ -7,13 +7,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _:
         [UIApplication.LaunchOptionsKey: Any]? = nil)
         -> Bool {
-        if let viewController = Authentication.isSignedIn ?
-            AppStoryboard.listOfTweets.viewController(of: ListOfTweetsViewController.self) :
-            AppStoryboard.authorization.viewController(of: AuthorizationViewController.self) {
-            window = UIWindow(frame: UIScreen.main.bounds)
-            window?.rootViewController = viewController
-            window?.makeKeyAndVisible()
+        var viewController: UIViewController?
+        if Authentication.isSignedIn {
+            viewController = AppStoryboard.listOfTweets.viewController(of:
+                ListOfTweetsViewController.self)
+        } else {
+            viewController = AppStoryboard.authorization.viewController(of:
+                AuthorizationViewController.self)
         }
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
         return true
     }
 }
