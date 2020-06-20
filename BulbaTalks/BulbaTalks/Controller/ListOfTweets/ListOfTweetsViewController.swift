@@ -9,15 +9,6 @@ class ListOfTweetsViewController: UIViewController {
      */
     var user: User?
 
-    /**
-     `UIButton` used to create a left `UIBarButtonItem`
-     of navigation bar.
-     */
-    private let barButtonItem = UIButton(frame:
-        CGRect(x: 0, y: 0,
-               width: Constants.BarButtonItem.width,
-               height: Constants.BarButtonItem.height))
-
     // MARK: - IBOutlet
 
     @IBOutlet var tableView: UITableView!
@@ -28,11 +19,49 @@ class ListOfTweetsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
-        configureTabBar()
-        configureTitleViewOfNavigationBar()
-        configureLeftBarButtonItem()
-        getAndFillAuthenticatedUserAndSetImageInNavigationBar()
+
+        // Configure table view
+        tableView.registerCell(of: ListOfTweetsTableViewCell.self)
+
+        // Configure tab bar
+        tabBar.barTintColor = .white
+
+        // Add twitter logi in the navigation bar
+        if let logoOfTwitter = UIImage(named: "logoOfTwitter") {
+            let twitterLogoImageView = UIImageView(image: logoOfTwitter)
+            twitterLogoImageView.contentMode = .scaleAspectFit
+            navigationItem.titleView = twitterLogoImageView
+        }
+
+        // Configure button on the left of navigation bar
+        let barButtonFrame = CGRect(x: 0, y: 0,
+                                    width: Constants.BarButtonItem.width,
+                                    height: Constants.BarButtonItem.height)
+        let button = UIButton(frame: barButtonFrame)
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = button.frame.height / 2
+        button.widthAnchor.constraint(equalToConstant:
+            Constants.BarButtonItem.Anchor.width).isActive = true
+        button.heightAnchor.constraint(equalToConstant:
+            Constants.BarButtonItem.Anchor.height).isActive = true
+        button.addTarget(self, action: #selector(openProfile), for: .touchUpInside)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+
+        navigationBar.items = [navigationItem]
+
+        // Get an authenticated user and show his image
+        // on the navigation bar
+
+        TwitterDataSource().getAuthenticatedUser { user in
+            if let user = user {
+                self.user = user
+                Bundle.main.getImage(at: URL(fileURLWithPath: user.profileImageURLString)) { image in
+                    DispatchQueue.main.async {
+                        button.setImage(image, for: .normal)
+                    }
+                }
+            }
+        }
     }
 
     override func viewDidLayoutSubviews() {
@@ -41,63 +70,6 @@ class ListOfTweetsViewController: UIViewController {
             tabBar.frame.size.height = Constants.TabBar.heightInLandscapeOrientation
             tabBar.frame.origin.y = view.frame.height - Constants.TabBar.heightInLandscapeOrientation
         }
-    }
-
-    // MARK: - Private functions
-
-    /**
-     Gets an authenticated user, or `nil`
-     if the authenticated user was not received.
-     If user was received, fill received user and
-     set the user's image in the left `UIBarButtonItem`
-     of navigation bar.
-     */
-    private func getAndFillAuthenticatedUserAndSetImageInNavigationBar() {
-        TwitterDataSource().getAuthenticatedUser { user in
-            if let user = user {
-                self.user = user
-                Bundle.main.getImage(at: URL(fileURLWithPath: user.profileImageURLString)) { image in
-                    DispatchQueue.main.async {
-                        self.barButtonItem.setImage(image, for: .normal)
-                    }
-                }
-            }
-        }
-    }
-
-    /// Configures `UITableView`.
-    private func configureTableView() {
-        tableView.registerCell(of: ListOfTweetsTableViewCell.self)
-    }
-
-    /// Configures `UITabBar`.
-    private func configureTabBar() {
-        tabBar.barTintColor = .white
-    }
-
-    /// Adds `UIImage` in the title of navigation bar.
-    private func configureTitleViewOfNavigationBar() {
-        if let logoOfTwitter = UIImage(named: "logoOfTwitter") {
-            let twitterLogoImageView = UIImageView(image: logoOfTwitter)
-            twitterLogoImageView.contentMode = .scaleAspectFit
-            navigationItem.titleView = twitterLogoImageView
-        }
-    }
-
-    /**
-     Adds a rounded left `UIBarButtonItem` of navigation bar.
-     */
-    private func configureLeftBarButtonItem() {
-        barButtonItem.layer.masksToBounds = true
-        barButtonItem.layer.cornerRadius = barButtonItem.frame.height / 2
-        barButtonItem.widthAnchor.constraint(equalToConstant:
-            Constants.BarButtonItem.Anchor.width).isActive = true
-        barButtonItem.heightAnchor.constraint(equalToConstant:
-            Constants.BarButtonItem.Anchor.height).isActive = true
-        barButtonItem.addTarget(self, action: #selector(openProfile), for: .touchUpInside)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: barButtonItem)
-
-        navigationBar.items = [navigationItem]
     }
 
     // MARK: - IBAction
