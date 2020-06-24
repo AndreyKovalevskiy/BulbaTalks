@@ -22,6 +22,7 @@
 		690FD64E246EFE8F00728925 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64D246EFE8F00728925 /* NetworkError.swift */; };
 		690FD64B246EE87200728925 /* HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64A246EE87200728925 /* HTTPNetworking.swift */; };
 		69042FB2246AC0BB00B651D3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69042FB1246AC0BB00B651D3 /* NetworkService.swift */; };
+		690FD64B246EE87200728925 /* HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FD64A246EE87200728925 /* HTTPNetworking.swift */; };
 		951ECB432462B92B009367A8 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951ECB422462B92B009367A8 /* Tweet.swift */; };
 		953CD27C2464692300334E81 /* DateFormatter+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */; };
 		953CD27F2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */; };
@@ -83,6 +84,7 @@
 		690FD64D246EFE8F00728925 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		690FD64A246EE87200728925 /* HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworking.swift; sourceTree = "<group>"; };
 		69042FB1246AC0BB00B651D3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		690FD64A246EE87200728925 /* HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworking.swift; sourceTree = "<group>"; };
 		951ECB422462B92B009367A8 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = BulbaTalks/Model/Tweet.swift; sourceTree = SOURCE_ROOT; };
 		953CD27B2464692300334E81 /* DateFormatter+Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Twitter.swift"; sourceTree = "<group>"; };
 		953CD27E2464880A00334E81 /* JSONDecoder+TwitterResponseDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+TwitterResponseDecoding.swift"; sourceTree = "<group>"; };
