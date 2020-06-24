@@ -6,60 +6,43 @@ class HTTPRequestableTests: XCTestCase {
      Base URL of the absolute resource URL. Contains base URL
      used in tests to initialize network configurations.
      */
-    private enum BasePartsOfTheAbsoluteURL {
-        /**
-         Base URL used to initialize mock network configuration.
-         */
-        static let mockBaseURL = URL(string: "file:///Some/base/URL/to/mock/data/")!
+    private enum BaseURL {
+        /// Base URL used to initialize mock network configuration.
+        static let mock = URL(string: "file:///Some/base/URL/to/mock/data/")!
 
-        /**
-         Base URL used to initialize remote network configuration.
-         */
-        static let remoteBaseURL = URL(string: "https://api.twitter.com/")!
+        /// Base URL used to initialize remote network configuration.
+        static let remote = URL(string: "https://api.twitter.com/")!
     }
 
     /**
      Relative paths of an absolute resource URL. Used in tests to
      generate different variants of an absolute resource URL.
      */
-    private enum RelativePathsOfTheAbsoluteURL {
-        /**
-         Relative path of the URL used to form an invalid URL.
-         */
-        static let invalidPathContainingSpaces = "invalidTestPath With Spaces?queryKey=queryValue"
+    private enum URLPath {
+        /// Relative path of the URL used to form URL with spaces.
+        static let containingSpaces = "TestPathWithSpaces?queryKey=queryValue "
     }
 
-    /**
-     The instance of the type conforming to the HTTPRequestable
-     protocol.
-     */
-    private var testableStruct: HTTPRequestableStub!
-
-    /**
-     Mock network cofiguration used in `urlRequest(:)`
-     */
+    /// Mock network cofiguration used in `urlRequest(:)`
     private var mockNetworkConfiguration: MockNetworkConfiguration!
 
-    /**
-     Remote network cofiguration used in `urlRequest(:)`
-     */
+    /// Remote network cofiguration used in `urlRequest(:)`
     private var remoteNetworkConfiguration: RemoteNetworkConfiguration!
 
     override func setUp() {
         super.setUp()
-        testableStruct = HTTPRequestableStub()
-        mockNetworkConfiguration = MockNetworkConfiguration(baseURL: BasePartsOfTheAbsoluteURL.mockBaseURL,
+        mockNetworkConfiguration = MockNetworkConfiguration(baseURL: BaseURL.mock,
                                                             commonHeaders: [:])
-        remoteNetworkConfiguration = RemoteNetworkConfiguration(baseURL: BasePartsOfTheAbsoluteURL.remoteBaseURL,
+        remoteNetworkConfiguration = RemoteNetworkConfiguration(baseURL: BaseURL.remote,
                                                                 commonHeaders: [:])
     }
 
     func testURLRequestMethodReturnsNilWhenPropertyPathContainsSpacesAndNetworkConfigurationIsMock() {
         // Given
-        testableStruct.path = RelativePathsOfTheAbsoluteURL.invalidPathContainingSpaces
+        let invalidHTTPRequestable = HTTPRequestableStub(path: URLPath.containingSpaces)
 
         // When
-        let urlRequest = testableStruct.urlRequest(using: mockNetworkConfiguration)
+        let urlRequest = invalidHTTPRequestable.urlRequest(using: mockNetworkConfiguration)
 
         // Then
         XCTAssertNil(urlRequest)
@@ -67,50 +50,51 @@ class HTTPRequestableTests: XCTestCase {
 
     func testURLRequestMethodReturnsNilWhenPropertyPathContainsSpacesAndNetworkConfigurationIsRemote() {
         // Given
-        testableStruct.path = RelativePathsOfTheAbsoluteURL.invalidPathContainingSpaces
+        let invalidHTTPRequestable = HTTPRequestableStub(path: URLPath.containingSpaces)
 
         // When
-        let urlRequest = testableStruct.urlRequest(using: remoteNetworkConfiguration)
+        let urlRequest = invalidHTTPRequestable.urlRequest(using: remoteNetworkConfiguration)
 
         // Then
         XCTAssertNil(urlRequest)
     }
 
-    func testURLRequestMethodReturnsRequestThatContainsExpectedURLForMockConfiguration() {
+    func testURLRequestMethodReturnsURLRequestWithExpectedURLWhenGivenMockConfiguration() {
         // Given
+        let validHTTPRequestable = HTTPRequestableStub()
         let expectedURL = URL(string: "file:///Some/base/URL/to/mock/data/validTestPath?queryKey=queryValue")
 
         // When
-        let requestURL = testableStruct.urlRequest(using: mockNetworkConfiguration)?.url
+        let resultURL = validHTTPRequestable.urlRequest(using: mockNetworkConfiguration)?.url
 
         // Then
-        XCTAssertNotNil(expectedURL)
-        XCTAssertNotNil(requestURL)
-        XCTAssertEqual(requestURL, expectedURL)
+        XCTAssertNotNil(resultURL)
+        XCTAssertEqual(resultURL, expectedURL)
     }
 
-    func testURLRequestMethodReturnsRequestThatContainsExpectedURLForRemoteConfiguration() {
+    func testURLRequestMethodReturnsURLRequestWithExpectedURLWhenGivenRemoteConfiguration() {
         // Given
+        let validHTTPRequestable = HTTPRequestableStub()
         let expectedURL = URL(string: "https://api.twitter.com/validTestPath?queryKey=queryValue")
 
         // When
-        let requestURL = testableStruct.urlRequest(using: remoteNetworkConfiguration)?.url
+        let resultURL = validHTTPRequestable.urlRequest(using: remoteNetworkConfiguration)?.url
 
         // Then
-        XCTAssertNotNil(expectedURL)
-        XCTAssertNotNil(requestURL)
-        XCTAssertEqual(requestURL, expectedURL)
+        XCTAssertNotNil(resultURL)
+        XCTAssertEqual(resultURL, expectedURL)
     }
 
     func testURLRequestMethodReturnsRequestThatContainsExpectedProperties() {
         // Given
-        let expectedHTTPMethod = testableStruct.method.rawValue
+        let validHTTPRequestable = HTTPRequestableStub()
+        let expectedHTTPMethod = validHTTPRequestable.method.rawValue
         let expectedHeaderParameters = ["headerParameter": "headerValue"]
         let expectedBody = "bodyKey=bodyValue"
             .data(using: .ascii, allowLossyConversion: true)
 
         // When
-        let urlRequest = testableStruct.urlRequest(using: mockNetworkConfiguration)
+        let urlRequest = validHTTPRequestable.urlRequest(using: mockNetworkConfiguration)
 
         // Then
         XCTAssertNotNil(urlRequest)
