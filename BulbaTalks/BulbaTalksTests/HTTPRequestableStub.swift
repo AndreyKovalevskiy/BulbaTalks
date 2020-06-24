@@ -19,6 +19,5 @@ struct HTTPRequestableStub: HTTPRequestable {
         self.headerParameters = headerParameters
         self.queryParameters = queryParameters
         self.bodyParameters = bodyParameters
-
     }
 }
