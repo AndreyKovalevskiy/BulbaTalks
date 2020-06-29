@@ -38,7 +38,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="redirectToTwitterLoginPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kcp-7H-viF"/>
+                                    <action selector="redirectToTwitterLoginPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7X-Li-OKK"/>
                                 </connections>
                             </button>
                         </subviews>

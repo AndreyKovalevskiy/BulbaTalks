@@ -8,8 +8,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         [UIApplication.LaunchOptionsKey: Any]? = nil)
         -> Bool {
         guard let viewController =
-            AppStoryboard.listOfTweets.viewController(
-                of: ListOfTweetsViewController.self) else {
+            AppStoryboard.authorization.viewController(
+                of: AuthorizationViewController.self) else {
             return true
         }
         window = UIWindow(frame: UIScreen.main.bounds)
